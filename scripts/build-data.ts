@@ -406,6 +406,32 @@ function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
 }
 
 // ============================================================================
+// Validation
+// ============================================================================
+
+function validatePeriodIntegrity(periods: RawPeriod[]): void {
+    const ids = new Set<string>();
+    const sorted = [...periods].sort((a, b) => b.startYear - a.startYear);
+
+    for (const p of sorted) {
+        if (ids.has(p.id)) {
+            throw new Error(`Duplicate period ID: "${p.id}"`);
+        }
+        ids.add(p.id);
+    }
+
+    for (let i = 0; i < sorted.length - 1; i++) {
+        const a = sorted[i];
+        const b = sorted[i + 1];
+        if (a.endYear > b.startYear) {
+            throw new Error(
+                `Overlapping periods: "${a.id}" (${a.startYear}-${a.endYear}) overlaps "${b.id}" (${b.startYear}-${b.endYear})`
+            );
+        }
+    }
+}
+
+// ============================================================================
 // Main Build
 // ============================================================================
 
@@ -433,6 +459,9 @@ function build() {
     const rawThemes: RawTheme[] = JSON.parse(
         fs.readFileSync(path.join(RAW_DIR, 'themes.json'), 'utf-8')
     );
+
+    // Validate period integrity before transform
+    validatePeriodIntegrity(rawPeriods);
 
     // Transform
     const people = rawPeople.map(transformPerson);
