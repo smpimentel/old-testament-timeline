@@ -293,7 +293,7 @@ export function TimelineNode({
   // Node sizing from centralized config (height prop kept for interface compat)
   void height;
   const metrics = getNodeMetrics(entity.type, zoomLevel);
-  const nodeHeight = metrics.height;
+  const nodeHeight = Math.max(metrics.minHeight, metrics.height);
   const showLabel = labelVisible !== undefined ? labelVisible : metrics.showLabel;
   const showBadges = metrics.showBadges;
 

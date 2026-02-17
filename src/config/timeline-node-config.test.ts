@@ -13,25 +13,25 @@ describe('timeline-node-config', () => {
       // Tests at exact tier boundary (exclusive check: zoomLevel < maxZoom)
       it.each([
         // Person tiers: 0.4, 0.65, 0.75, 1.0, Infinity
-        ['person', 0.39, 4, false, false],   // just below 0.4
-        ['person', 0.4, 8, false, false],    // at 0.4 -> moves to next tier
-        ['person', 0.64, 8, false, false],   // just below 0.65
-        ['person', 0.65, 16, false, false],  // at 0.65 -> moves to next tier
-        ['person', 0.74, 16, false, false],  // just below 0.75
-        ['person', 0.75, 16, true, false],   // at 0.75 -> label tier
+        ['person', 0.39, 4, true, false],    // just below 0.4
+        ['person', 0.4, 8, true, false],     // at 0.4 -> moves to next tier
+        ['person', 0.64, 8, true, false],    // just below 0.65
+        ['person', 0.65, 16, true, false],   // at 0.65 -> moves to next tier
+        ['person', 0.74, 16, true, false],   // just below 0.75
+        ['person', 0.75, 16, true, false],   // at 0.75
         ['person', 0.99, 16, true, false],   // just below 1.0
         ['person', 1.0, 24, true, true],     // at 1.0 -> full tier
         ['person', 5.0, 24, true, true],     // high zoom -> max tier
 
         // Event tiers
-        ['event', 0.39, 6, false, false],
-        ['event', 0.4, 10, false, false],
+        ['event', 0.39, 6, true, false],
+        ['event', 0.4, 10, true, false],
         ['event', 0.75, 16, true, false],
         ['event', 1.0, 20, true, true],
 
         // Book tiers
-        ['book', 0.39, 3, false, false],
-        ['book', 0.4, 6, false, false],
+        ['book', 0.39, 3, true, false],
+        ['book', 0.4, 6, true, false],
         ['book', 0.75, 12, true, false],
         ['book', 1.0, 18, true, true],
       ] as const)(
@@ -48,7 +48,7 @@ describe('timeline-node-config', () => {
     describe('zoom level 0 (minimum)', () => {
       it.each(entityTypes)('%s returns smallest metrics at zoom 0', (entityType) => {
         const metrics = getNodeMetrics(entityType, 0);
-        expect(metrics.showLabel).toBe(false);
+        expect(metrics.showLabel).toBe(true);
         expect(metrics.showBadges).toBe(false);
         expect(metrics.height).toBeLessThan(10);
       });
@@ -66,7 +66,7 @@ describe('timeline-node-config', () => {
       it.each(entityTypes)('%s handles negative zoom gracefully', (entityType) => {
         const metrics = getNodeMetrics(entityType, -1);
         // Negative zoom < 0.4 so should hit first tier
-        expect(metrics.showLabel).toBe(false);
+        expect(metrics.showLabel).toBe(true);
         expect(metrics.showBadges).toBe(false);
       });
     });

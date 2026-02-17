@@ -7,6 +7,7 @@ import type { EntityType } from '../data/timeline-data';
 
 export interface NodeMetrics {
   height: number;
+  minHeight: number;
   showLabel: boolean;
   showBadges: boolean;
 }
@@ -19,27 +20,27 @@ export interface ZoomTier {
 // Zoom tier configs per entity type
 // Tiers are checked in order; first match where zoomLevel < maxZoom wins
 const personZoomTiers: ZoomTier[] = [
-  { maxZoom: 0.4, metrics: { height: 4, showLabel: false, showBadges: false } },
-  { maxZoom: 0.65, metrics: { height: 8, showLabel: false, showBadges: false } },
-  { maxZoom: 0.75, metrics: { height: 16, showLabel: false, showBadges: false } },
-  { maxZoom: 1.0, metrics: { height: 16, showLabel: true, showBadges: false } },
-  { maxZoom: Infinity, metrics: { height: 24, showLabel: true, showBadges: true } },
+  { maxZoom: 0.4, metrics: { height: 4, minHeight: 8, showLabel: true, showBadges: false } },
+  { maxZoom: 0.65, metrics: { height: 8, minHeight: 8, showLabel: true, showBadges: false } },
+  { maxZoom: 0.75, metrics: { height: 16, minHeight: 16, showLabel: true, showBadges: false } },
+  { maxZoom: 1.0, metrics: { height: 16, minHeight: 16, showLabel: true, showBadges: false } },
+  { maxZoom: Infinity, metrics: { height: 24, minHeight: 24, showLabel: true, showBadges: true } },
 ];
 
 const eventZoomTiers: ZoomTier[] = [
-  { maxZoom: 0.4, metrics: { height: 6, showLabel: false, showBadges: false } },
-  { maxZoom: 0.65, metrics: { height: 10, showLabel: false, showBadges: false } },
-  { maxZoom: 0.75, metrics: { height: 16, showLabel: false, showBadges: false } },
-  { maxZoom: 1.0, metrics: { height: 16, showLabel: true, showBadges: false } },
-  { maxZoom: Infinity, metrics: { height: 20, showLabel: true, showBadges: true } },
+  { maxZoom: 0.4, metrics: { height: 6, minHeight: 10, showLabel: true, showBadges: false } },
+  { maxZoom: 0.65, metrics: { height: 10, minHeight: 10, showLabel: true, showBadges: false } },
+  { maxZoom: 0.75, metrics: { height: 16, minHeight: 16, showLabel: true, showBadges: false } },
+  { maxZoom: 1.0, metrics: { height: 16, minHeight: 16, showLabel: true, showBadges: false } },
+  { maxZoom: Infinity, metrics: { height: 20, minHeight: 20, showLabel: true, showBadges: true } },
 ];
 
 const bookZoomTiers: ZoomTier[] = [
-  { maxZoom: 0.4, metrics: { height: 3, showLabel: false, showBadges: false } },
-  { maxZoom: 0.65, metrics: { height: 6, showLabel: false, showBadges: false } },
-  { maxZoom: 0.75, metrics: { height: 12, showLabel: false, showBadges: false } },
-  { maxZoom: 1.0, metrics: { height: 12, showLabel: true, showBadges: false } },
-  { maxZoom: Infinity, metrics: { height: 18, showLabel: true, showBadges: true } },
+  { maxZoom: 0.4, metrics: { height: 3, minHeight: 6, showLabel: true, showBadges: false } },
+  { maxZoom: 0.65, metrics: { height: 6, minHeight: 6, showLabel: true, showBadges: false } },
+  { maxZoom: 0.75, metrics: { height: 12, minHeight: 12, showLabel: true, showBadges: false } },
+  { maxZoom: 1.0, metrics: { height: 12, minHeight: 12, showLabel: true, showBadges: false } },
+  { maxZoom: Infinity, metrics: { height: 18, minHeight: 18, showLabel: true, showBadges: true } },
 ];
 
 const zoomTiersByType: Record<EntityType, ZoomTier[]> = {

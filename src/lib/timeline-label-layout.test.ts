@@ -53,15 +53,28 @@ describe('timeline-label-layout', () => {
       expect(visibility['lane-1']).toBe(true);
     });
 
-    it('hides labels when the zoom tier has labels disabled', () => {
+    it('shows labels at low zoom when no collision exists', () => {
       const visibility = computeNodeLabelVisibility(
         [
-          { id: 'zoom-hidden', type: 'book', swimlane: 0, x: 100, width: 120, name: 'Genesis', priority: 1 },
+          { id: 'low-zoom', type: 'book', swimlane: 0, x: 100, width: 120, name: 'Genesis', priority: 1 },
         ],
         0.5,
       );
 
-      expect(visibility['zoom-hidden']).toBe(false);
+      expect(visibility['low-zoom']).toBe(true);
+    });
+
+    it('hides lower-priority label when overlapping at low zoom', () => {
+      const visibility = computeNodeLabelVisibility(
+        [
+          { id: 'high', type: 'book', swimlane: 0, x: 100, width: 120, name: 'Genesis', priority: 1 },
+          { id: 'low', type: 'book', swimlane: 0, x: 104, width: 120, name: 'Exodus', priority: 3 },
+        ],
+        0.5,
+      );
+
+      expect(visibility['high']).toBe(true);
+      expect(visibility['low']).toBe(false);
     });
   });
 });
