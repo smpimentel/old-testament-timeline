@@ -5,6 +5,8 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Use relative asset paths so GitHub Pages project sites render correctly.
+  base: './',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
