@@ -11,7 +11,7 @@ import relationshipsData from './compiled/relationships.json';
 // ===== TYPES =====
 export type EntityType = 'person' | 'event' | 'book';
 export type PersonRole = 'king' | 'prophet' | 'judge' | 'priest' | 'patriarch' | 'warrior' | 'scribe' | 'other';
-export type BookGenre = 'political' | 'cultural' | 'religious' | 'economic' | 'military' | 'scientific' | 'agricultural' | 'maritime';
+export type BookGenre = 'pentateuch' | 'historical' | 'prophets';
 export type DateCertainty = 'exact' | 'approximate' | 'estimated';
 
 export const THEME_TAGS = [
@@ -189,14 +189,14 @@ export const themeColors: Record<ThemeTag, string> = buildThemeColors(
 
 // ===== ROLE COLOR MAPPING =====
 export const roleColors: Record<PersonRole, string> = {
-  king: '#F5D99F',
-  prophet: '#C8B8D4',
-  judge: '#B8C4A8',
-  priest: '#D4C5E0',
-  patriarch: '#C8D4B8',
-  warrior: '#D9B5A0',
-  scribe: '#E6DCC8',
-  other: '#D4D9DE',
+  king: '#B7CCA9',
+  prophet: '#B7CCA9',
+  judge: '#B7CCA9',
+  priest: '#B7CCA9',
+  patriarch: '#B7CCA9',
+  warrior: '#B7CCA9',
+  scribe: '#B7CCA9',
+  other: '#B7CCA9',
 };
 
 // ===== EVENT CATEGORY COLOR MAPPING =====
@@ -204,25 +204,20 @@ export const eventColors: Record<EventCategory, string> = {
   judgment: '#E6A8A8',
   covenant: '#F4D19B',
   deliverance: '#B8D9E6',
-  temple: '#E6D4B8',
-  origins: '#C8C4BC',
-  patriarchs: '#F4E0C8',
-  conquest: '#D9B8A8',
-  monarchy: '#CFB8D4',
-  restoration: '#C8E6C9',
-  event: '#D4D9DE',
+  temple: '#D9C4A8',
+  origins: '#D9C4A8',
+  patriarchs: '#F4D19B',
+  conquest: '#C8D4B8',
+  monarchy: '#F4D19B',
+  restoration: '#C8D4B8',
+  event: '#D9C4A8',
 };
 
 // ===== BOOK GENRE COLOR MAPPING =====
 export const genreColors: Record<BookGenre, string> = {
-  political: '#A8C4E0',
-  cultural: '#F4D4C8',
-  religious: '#D4C8E0',
-  economic: '#E6D4A8',
-  military: '#D9B8A8',
-  scientific: '#B8DDE0',
-  agricultural: '#C8D9B8',
-  maritime: '#B8CFD9',
+  pentateuch: '#A07070',
+  historical: '#8E8568',
+  prophets: '#7B7EA8',
 };
 
 function normalizeToken(value: string): string {
@@ -317,16 +312,16 @@ function mapPersonCategory(categories: string[]): PersonRole {
 }
 
 function mapBookCategory(categories: string[]): BookGenre {
-  const cat = categories[0]?.toLowerCase() || 'religious';
+  const cat = categories[0]?.toLowerCase() || 'historical';
   const genreMap: Record<string, BookGenre> = {
-    pentateuch: 'religious',
-    history: 'political',
-    poetry: 'cultural',
-    'major prophets': 'religious',
-    'minor prophets': 'religious',
-    wisdom: 'cultural',
+    pentateuch: 'pentateuch',
+    history: 'historical',
+    poetry: 'prophets',
+    'major prophets': 'prophets',
+    'minor prophets': 'prophets',
+    wisdom: 'prophets',
   };
-  return genreMap[cat] || 'religious';
+  return genreMap[cat] || 'historical';
 }
 
 // ===== BUILD RELATIONSHIPS MAP =====
@@ -514,6 +509,8 @@ export interface TimelineDomain {
 export function computeTimelineDomain(
   entities: TimelineEntity[],
   periodList: Period[],
+  earlyPadding = 100,
+  latePadding = 50,
 ): TimelineDomain {
   const startYearCandidates = [
     ...entities.map((entity) => entity.startYear),
@@ -526,8 +523,8 @@ export function computeTimelineDomain(
   ];
 
   return {
-    startYear: Math.max(...startYearCandidates),
-    endYear: Math.min(...endYearCandidates),
+    startYear: Math.max(...startYearCandidates) + earlyPadding,
+    endYear: Math.min(...endYearCandidates) - latePadding,
   };
 }
 

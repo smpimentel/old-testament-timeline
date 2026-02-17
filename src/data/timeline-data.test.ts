@@ -40,8 +40,8 @@ describe('timeline-data integrity', () => {
   it('emits one period per date range after canonicalization', () => {
     const rangeKeys = periods.map((period) => `${period.startYear}-${period.endYear}`);
     expect(new Set(rangeKeys).size).toBe(periods.length);
-    expect(periods.some((period) => period.name === 'Israel in Egypt')).toBe(false);
-    expect(periods.some((period) => period.name === 'Wandering')).toBe(false);
+    expect(periods.some((period) => period.name === 'Sojourn')).toBe(true);
+    expect(periods.some((period) => period.name === 'Conquest/Judges')).toBe(true);
   });
 
   it('attaches normalized themes to entities from the configured theme list', () => {
@@ -55,6 +55,11 @@ describe('timeline-data integrity', () => {
         expect(themeTags).toContain(theme);
       }
     }
+  });
+
+  it('timelineDomain includes asymmetric padding', () => {
+    expect(timelineDomain.startYear).toBeGreaterThan(4004);
+    expect(timelineDomain.endYear).toBeLessThan(400);
   });
 
   it('preserves semantic event categories from raw to compiled data', () => {
