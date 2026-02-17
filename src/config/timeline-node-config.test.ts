@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest';
+import type { EntityType } from '../data/timeline-data';
 import {
   getNodeMetrics,
   getMaxNodeHeight,
-  type EntityType,
 } from './timeline-node-config';
 
 describe('timeline-node-config', () => {
@@ -12,28 +12,28 @@ describe('timeline-node-config', () => {
     describe('zoom tier boundaries', () => {
       // Tests at exact tier boundary (exclusive check: zoomLevel < maxZoom)
       it.each([
-        // Person tiers: 0.75, 1.25, 1.5, 1.75, Infinity
-        ['person', 0.74, 4, false, false],   // just below 0.75
-        ['person', 0.75, 8, false, false],   // at 0.75 -> moves to next tier
-        ['person', 1.24, 8, false, false],   // just below 1.25
-        ['person', 1.25, 16, false, false],  // at 1.25 -> moves to next tier
-        ['person', 1.49, 16, false, false],  // just below 1.5
-        ['person', 1.5, 16, true, false],    // at 1.5 -> label tier
-        ['person', 1.74, 16, true, false],   // just below 1.75
-        ['person', 1.75, 24, true, true],    // at 1.75 -> full tier
+        // Person tiers: 0.4, 0.65, 0.75, 1.0, Infinity
+        ['person', 0.39, 4, false, false],   // just below 0.4
+        ['person', 0.4, 8, false, false],    // at 0.4 -> moves to next tier
+        ['person', 0.64, 8, false, false],   // just below 0.65
+        ['person', 0.65, 16, false, false],  // at 0.65 -> moves to next tier
+        ['person', 0.74, 16, false, false],  // just below 0.75
+        ['person', 0.75, 16, true, false],   // at 0.75 -> label tier
+        ['person', 0.99, 16, true, false],   // just below 1.0
+        ['person', 1.0, 24, true, true],     // at 1.0 -> full tier
         ['person', 5.0, 24, true, true],     // high zoom -> max tier
 
         // Event tiers
-        ['event', 0.74, 6, false, false],
-        ['event', 0.75, 10, false, false],
-        ['event', 1.5, 16, true, false],
-        ['event', 1.75, 20, true, true],
+        ['event', 0.39, 6, false, false],
+        ['event', 0.4, 10, false, false],
+        ['event', 0.75, 16, true, false],
+        ['event', 1.0, 20, true, true],
 
         // Book tiers
-        ['book', 0.74, 3, false, false],
-        ['book', 0.75, 6, false, false],
-        ['book', 1.5, 12, true, false],
-        ['book', 1.75, 18, true, true],
+        ['book', 0.39, 3, false, false],
+        ['book', 0.4, 6, false, false],
+        ['book', 0.75, 12, true, false],
+        ['book', 1.0, 18, true, true],
       ] as const)(
         '%s at zoom %s returns height=%s, showLabel=%s, showBadges=%s',
         (entityType, zoomLevel, height, showLabel, showBadges) => {
@@ -65,7 +65,7 @@ describe('timeline-node-config', () => {
     describe('negative zoom handling', () => {
       it.each(entityTypes)('%s handles negative zoom gracefully', (entityType) => {
         const metrics = getNodeMetrics(entityType, -1);
-        // Negative zoom < 0.75 so should hit first tier
+        // Negative zoom < 0.4 so should hit first tier
         expect(metrics.showLabel).toBe(false);
         expect(metrics.showBadges).toBe(false);
       });
@@ -73,7 +73,7 @@ describe('timeline-node-config', () => {
 
     describe('monotonic height increase with zoom', () => {
       it.each(entityTypes)('%s height never decreases as zoom increases', (entityType) => {
-        const zoomLevels = [0, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 3.0];
+        const zoomLevels = [0, 0.25, 0.4, 0.5, 0.65, 0.75, 0.85, 1.0, 1.5, 2.0, 3.0];
         let prevHeight = 0;
 
         for (const zoom of zoomLevels) {
@@ -86,7 +86,7 @@ describe('timeline-node-config', () => {
 
     describe('label/badge visibility progression', () => {
       it.each(entityTypes)('%s shows label before badges', (entityType) => {
-        const zoomLevels = [0, 0.5, 1.0, 1.25, 1.5, 1.6, 1.75, 2.0, 3.0];
+        const zoomLevels = [0, 0.25, 0.4, 0.5, 0.65, 0.75, 0.85, 1.0, 1.5, 2.0, 3.0];
         let labelSeen = false;
 
         for (const zoom of zoomLevels) {

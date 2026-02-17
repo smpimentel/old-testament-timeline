@@ -3,7 +3,7 @@
  * Single source of truth for zoom tiers and node metrics.
  */
 
-export type EntityType = 'person' | 'event' | 'book';
+import type { EntityType } from '../data/timeline-data';
 
 export interface NodeMetrics {
   height: number;
@@ -19,26 +19,26 @@ export interface ZoomTier {
 // Zoom tier configs per entity type
 // Tiers are checked in order; first match where zoomLevel < maxZoom wins
 const personZoomTiers: ZoomTier[] = [
-  { maxZoom: 0.75, metrics: { height: 4, showLabel: false, showBadges: false } },
-  { maxZoom: 1.25, metrics: { height: 8, showLabel: false, showBadges: false } },
-  { maxZoom: 1.5, metrics: { height: 16, showLabel: false, showBadges: false } },
-  { maxZoom: 1.75, metrics: { height: 16, showLabel: true, showBadges: false } },
+  { maxZoom: 0.4, metrics: { height: 4, showLabel: false, showBadges: false } },
+  { maxZoom: 0.65, metrics: { height: 8, showLabel: false, showBadges: false } },
+  { maxZoom: 0.75, metrics: { height: 16, showLabel: false, showBadges: false } },
+  { maxZoom: 1.0, metrics: { height: 16, showLabel: true, showBadges: false } },
   { maxZoom: Infinity, metrics: { height: 24, showLabel: true, showBadges: true } },
 ];
 
 const eventZoomTiers: ZoomTier[] = [
-  { maxZoom: 0.75, metrics: { height: 6, showLabel: false, showBadges: false } },
-  { maxZoom: 1.25, metrics: { height: 10, showLabel: false, showBadges: false } },
-  { maxZoom: 1.5, metrics: { height: 16, showLabel: false, showBadges: false } },
-  { maxZoom: 1.75, metrics: { height: 16, showLabel: true, showBadges: false } },
+  { maxZoom: 0.4, metrics: { height: 6, showLabel: false, showBadges: false } },
+  { maxZoom: 0.65, metrics: { height: 10, showLabel: false, showBadges: false } },
+  { maxZoom: 0.75, metrics: { height: 16, showLabel: false, showBadges: false } },
+  { maxZoom: 1.0, metrics: { height: 16, showLabel: true, showBadges: false } },
   { maxZoom: Infinity, metrics: { height: 20, showLabel: true, showBadges: true } },
 ];
 
 const bookZoomTiers: ZoomTier[] = [
-  { maxZoom: 0.75, metrics: { height: 3, showLabel: false, showBadges: false } },
-  { maxZoom: 1.25, metrics: { height: 6, showLabel: false, showBadges: false } },
-  { maxZoom: 1.5, metrics: { height: 12, showLabel: false, showBadges: false } },
-  { maxZoom: 1.75, metrics: { height: 12, showLabel: true, showBadges: false } },
+  { maxZoom: 0.4, metrics: { height: 3, showLabel: false, showBadges: false } },
+  { maxZoom: 0.65, metrics: { height: 6, showLabel: false, showBadges: false } },
+  { maxZoom: 0.75, metrics: { height: 12, showLabel: false, showBadges: false } },
+  { maxZoom: 1.0, metrics: { height: 12, showLabel: true, showBadges: false } },
   { maxZoom: Infinity, metrics: { height: 18, showLabel: true, showBadges: true } },
 ];
 
