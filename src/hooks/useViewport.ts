@@ -4,11 +4,9 @@ import { timelineDomain } from '../data/timeline-data';
 // Timeline constants
 export const START_YEAR = timelineDomain.startYear;
 export const END_YEAR = timelineDomain.endYear;
-export const BASE_PIXELS_PER_YEAR = 2;
+export const BASE_PIXELS_PER_YEAR = 4;
 export const TIMELINE_WIDTH = (START_YEAR - END_YEAR) * BASE_PIXELS_PER_YEAR;
-/** @deprecated Use trackLayout.totalHeight from computeTrackLayout() instead */
-export const TIMELINE_HEIGHT = 800;
-export const MIN_ZOOM = 0.5;
+export const MIN_ZOOM = 0.25;
 export const MAX_ZOOM = 3;
 export const DRAG_THRESHOLD = 5;
 
@@ -19,7 +17,7 @@ interface UseViewportOptions {
 
 export function useViewport({ selectedEntityOpen, railWidth }: UseViewportOptions) {
   // Canvas/Viewport State
-  const [panX, setPanX] = useState(-2000);
+  const [panX, setPanX] = useState(-4000);
   const [panY, setPanY] = useState(0);
   const [zoomLevel, setZoomLevel] = useState(1);
   const [isDragging, setIsDragging] = useState(false);
@@ -70,7 +68,7 @@ export function useViewport({ selectedEntityOpen, railWidth }: UseViewportOption
 
   const handleFitView = useCallback(() => {
     setZoomLevel(1);
-    setPanX(-2000);
+    setPanX(-4000);
     setPanY(0);
   }, []);
 
