@@ -299,7 +299,7 @@ describe('timeline-track-layout', () => {
 
       expect(config.laneCount.event).toBe(6);
       expect(config.laneCount.person).toBe(11);
-      expect(config.laneCount.book).toBe(3);
+      expect(config.laneCount.book).toBe(5);
     });
 
     it('ensures minimum of 1 lane per type', () => {
@@ -329,7 +329,7 @@ describe('timeline-track-layout', () => {
       const layout = computeTrackLayout();
 
       // Snapshot of expected values - test fails if layout algorithm changes unexpectedly
-      expect(layout.events.baseY).toBe(100); // headerOffset
+      expect(layout.events.baseY).toBe(120); // headerOffset
       expect(layout.events.laneStride).toBe(32); // 24 + 8
       expect(layout.events.bandHeight).toBe(128); // 32 * 4
 
@@ -337,7 +337,7 @@ describe('timeline-track-layout', () => {
       expect(layout.people.bandHeight).toBe(216); // 36 * 6
 
       expect(layout.books.laneStride).toBe(30); // 22 + 8
-      expect(layout.books.bandHeight).toBe(90); // 30 * 3
+      expect(layout.books.bandHeight).toBe(150); // 30 * 5
     });
 
     it('track stacking follows expected formula', () => {
@@ -360,6 +360,13 @@ describe('timeline-track-layout', () => {
       expect(config.laneCount.event).toBeGreaterThanOrEqual(requiredLanes.event);
       expect(config.laneCount.person).toBeGreaterThanOrEqual(requiredLanes.person);
       expect(config.laneCount.book).toBeGreaterThanOrEqual(requiredLanes.book);
+    });
+
+    it('entity-derived lane counts accommodate actual dataset swimlane maxima', () => {
+      const config = createConfigFromEntities(timelineData);
+      expect(config.laneCount.person).toBeGreaterThanOrEqual(16);
+      expect(config.laneCount.event).toBeGreaterThanOrEqual(2);
+      expect(config.laneCount.book).toBeGreaterThanOrEqual(5);
     });
 
     it('entities remain inside their track bands across zoom levels', () => {
