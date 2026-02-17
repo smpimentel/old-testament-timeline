@@ -366,7 +366,6 @@ function App() {
                 width={width}
                 totalHeight={sectionLayout.periodSectionHeight}
                 labelLane={labelPlacement?.lane}
-                hideLabel={labelPlacement?.hidden}
               />
             );
           })}

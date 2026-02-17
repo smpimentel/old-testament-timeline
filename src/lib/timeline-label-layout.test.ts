@@ -3,7 +3,7 @@ import { computeNodeLabelVisibility, computePeriodLabelLayout } from './timeline
 
 describe('timeline-label-layout', () => {
   describe('computePeriodLabelLayout', () => {
-    it('stacks overlapping period labels into lanes and hides overflow', () => {
+    it('stacks overlapping period labels into unlimited lanes', () => {
       const layout = computePeriodLabelLayout([
         { id: 'p1', x: 0, width: 240, name: 'Primeval History' },
         { id: 'p2', x: 8, width: 240, name: 'Patriarchal Period' },
@@ -12,12 +12,8 @@ describe('timeline-label-layout', () => {
         { id: 'p5', x: 32, width: 240, name: 'Conquest and Settlement' },
       ]);
 
-      expect(layout.p1.hidden).toBe(false);
-      expect(layout.p2.hidden).toBe(false);
-      expect(layout.p3.hidden).toBe(false);
-      expect(layout.p4.hidden).toBe(false);
-      expect(layout.p5.hidden).toBe(true);
-      expect(new Set([layout.p1.lane, layout.p2.lane, layout.p3.lane, layout.p4.lane]).size).toBe(4);
+      expect(new Set([layout.p1.lane, layout.p2.lane, layout.p3.lane, layout.p4.lane, layout.p5.lane]).size).toBe(5);
+      expect(layout.p5.lane).toBe(4);
     });
 
     it('reuses the same lane for non-overlapping labels', () => {
@@ -26,8 +22,6 @@ describe('timeline-label-layout', () => {
         { id: 'late', x: 260, width: 120, name: 'Late Period' },
       ]);
 
-      expect(layout.early.hidden).toBe(false);
-      expect(layout.late.hidden).toBe(false);
       expect(layout.early.lane).toBe(layout.late.lane);
     });
   });
@@ -64,7 +58,7 @@ describe('timeline-label-layout', () => {
         [
           { id: 'zoom-hidden', type: 'book', swimlane: 0, x: 100, width: 120, name: 'Genesis', priority: 1 },
         ],
-        1.0,
+        0.5,
       );
 
       expect(visibility['zoom-hidden']).toBe(false);

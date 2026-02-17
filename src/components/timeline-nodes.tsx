@@ -6,39 +6,56 @@ interface PeriodBandProps {
   period: Period;
   x: number;
   width: number;
+  totalHeight: number;
   labelLane?: number;
-  hideLabel?: boolean;
 }
 
-export function PeriodBand({ period, x, width, labelLane = 0, hideLabel = false }: PeriodBandProps) {
-  const labelTop = 4 + (labelLane * 18);
+export function PeriodBand({ period, x, width, totalHeight, labelLane = 0 }: PeriodBandProps) {
+  const labelTop = 8 + (labelLane * 30);
+  const showDate = width >= 140 && period.id !== 'dates-unknown';
+
   return (
     <div
-      className="absolute top-0 pointer-events-none transition-opacity"
+      className="absolute top-0 pointer-events-none"
       style={{
         left: x,
         width,
-        height: 88,
-        background: `linear-gradient(180deg, ${period.color}40 0%, ${period.color}10 100%)`,
-        borderRight: `1px solid ${period.color}80`,
+        height: totalHeight,
+        background: 'transparent',
+        borderRight: '1px solid rgba(111, 98, 84, 0.22)',
       }}
     >
-      {!hideLabel && (
+      <div
+        className="absolute left-4"
+        style={{ top: labelTop }}
+      >
         <div
-          className="absolute left-4 whitespace-nowrap overflow-hidden text-ellipsis"
+          className="whitespace-nowrap overflow-hidden text-ellipsis"
           style={{
-            top: labelTop,
-            maxWidth: Math.max(20, width - 8),
-            fontSize: 'var(--type-label-xs-size)',
+            maxWidth: Math.max(20, width - 10),
+            fontSize: '14px',
             fontWeight: 600,
-            color: 'var(--color-base-text-secondary)',
-            textTransform: 'uppercase',
-            letterSpacing: '0.05em',
+            fontFamily: 'var(--font-timeline)',
+            color: '#3A3F44',
           }}
         >
           {period.name}
         </div>
-      )}
+        {showDate && (
+          <div
+            className="whitespace-nowrap overflow-hidden text-ellipsis"
+            style={{
+              maxWidth: Math.max(20, width - 10),
+              fontSize: '11px',
+              fontWeight: 400,
+              fontFamily: 'var(--font-timeline)',
+              color: '#666666',
+            }}
+          >
+            {period.startYear}–{period.endYear} BC
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -49,25 +66,35 @@ interface TimeGridProps {
   endYear: number;
   pixelsPerYear: number;
   height: number;
+  axisY?: number;
+  unscaledUntilYear?: number;
 }
 
-export function TimeGrid({ startYear, endYear, pixelsPerYear, height }: TimeGridProps) {
+export function TimeGrid({
+  startYear,
+  endYear,
+  pixelsPerYear,
+  height,
+  axisY: axisYOverride,
+  unscaledUntilYear,
+}: TimeGridProps) {
   const gridLines = [];
-  
-  // Determine grid interval based on zoom
+
+  // Determine grid interval based on zoom (adjusted for 4px/yr)
   let majorInterval = 500;
   let minorInterval = 100;
-  
-  if (pixelsPerYear >= 3) {
+
+  if (pixelsPerYear >= 6) {
     majorInterval = 100;
     minorInterval = 20;
-  } else if (pixelsPerYear >= 1.5) {
+  } else if (pixelsPerYear >= 2) {
     majorInterval = 200;
     minorInterval = 50;
   }
 
   // Major grid lines
   for (let year = Math.ceil(endYear / majorInterval) * majorInterval; year <= startYear; year += majorInterval) {
+    if (unscaledUntilYear !== undefined && year > unscaledUntilYear) continue;
     const x = (startYear - year) * pixelsPerYear;
     gridLines.push(
       <div
@@ -77,15 +104,16 @@ export function TimeGrid({ startYear, endYear, pixelsPerYear, height }: TimeGrid
           left: x,
           height,
           width: '1px',
-          background: 'var(--color-base-grid-major)',
+          background: '#C7B8A2',
         }}
       >
         <div
-          className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono"
+          className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap"
           style={{
             fontSize: 'var(--type-label-xs-size)',
-            color: 'var(--color-base-text-secondary)',
+            color: '#6F6254',
             fontWeight: 600,
+            fontFamily: 'var(--font-timeline)',
           }}
         >
           {year} BC
@@ -98,6 +126,7 @@ export function TimeGrid({ startYear, endYear, pixelsPerYear, height }: TimeGrid
   if (pixelsPerYear >= 1) {
     for (let year = Math.ceil(endYear / minorInterval) * minorInterval; year <= startYear; year += minorInterval) {
       if (year % majorInterval !== 0) {
+        if (unscaledUntilYear !== undefined && year > unscaledUntilYear) continue;
         const x = (startYear - year) * pixelsPerYear;
         gridLines.push(
           <div
@@ -107,7 +136,7 @@ export function TimeGrid({ startYear, endYear, pixelsPerYear, height }: TimeGrid
               left: x,
               height,
               width: '1px',
-              background: 'var(--color-base-grid-minor)',
+              background: '#E3D7C4',
             }}
           />
         );
@@ -115,7 +144,50 @@ export function TimeGrid({ startYear, endYear, pixelsPerYear, height }: TimeGrid
     }
   }
 
-  return <>{gridLines}</>;
+  // Timeline axis in the vertical center, matching the concept layout foundation.
+  const axisY = axisYOverride ?? Math.round(height / 2);
+  const axisTicks = [];
+  for (let year = Math.ceil(endYear / 100) * 100; year <= startYear; year += 100) {
+    if (unscaledUntilYear !== undefined && year > unscaledUntilYear) continue;
+    const x = (startYear - year) * pixelsPerYear;
+    axisTicks.push(
+      <svg
+        key={`axis-tick-${year}`}
+        className="absolute"
+        style={{ left: x - 3.5, top: axisY - 7.5 }}
+        width="7"
+        height="15"
+        viewBox="0 0 7 15"
+      >
+        <polygon points="3.5,0 6.5,5 0.5,5" fill="#F5EDD6" />
+        <polygon points="3.5,15 6.5,10 0.5,10" fill="#F5EDD6" />
+      </svg>
+    );
+  }
+
+  // Axis line
+  const axisLine = (
+    <div
+      key="axis-line"
+      className="absolute"
+      style={{
+        left: 0,
+        top: axisY - 2.5,
+        width: (startYear - endYear) * pixelsPerYear,
+        height: '5px',
+        background: '#F5EDD6',
+        boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.15)',
+      }}
+    />
+  );
+
+  return (
+    <>
+      {gridLines}
+      {axisLine}
+      {axisTicks}
+    </>
+  );
 }
 
 // ===== ROLE BADGE =====
@@ -124,7 +196,7 @@ interface RoleBadgeProps {
   size?: 'small' | 'medium';
 }
 
-function RoleBadge({ role, size = 'medium' }: RoleBadgeProps) {
+export function RoleBadge({ role, size = 'medium' }: RoleBadgeProps) {
   const color = roleColors[role as keyof typeof roleColors] || roleColors.other;
   const isSmall = size === 'small';
   
@@ -194,6 +266,7 @@ interface TimelineNodeProps {
   isInBreadcrumb: boolean;
   breadcrumbNumber?: number;
   labelVisible?: boolean;
+  forcePointNode?: boolean;
   onClick: () => void;
   onMouseEnter: (e: React.MouseEvent) => void;
   onMouseLeave: () => void;
@@ -212,6 +285,7 @@ export function TimelineNode({
   isInBreadcrumb,
   breadcrumbNumber,
   labelVisible,
+  forcePointNode = false,
   onClick,
   onMouseEnter,
   onMouseLeave,
@@ -239,8 +313,8 @@ export function TimelineNode({
 
   // Highlight/dim logic
   let opacity = 1;
-  let borderColor = 'var(--color-base-text-primary)';
-  let borderWidth = '1.5px';
+  let borderColor = '#6B5D3E';
+  let borderWidth = '1px';
   
   if (isDimmed) {
     opacity = 0.25;
@@ -260,9 +334,9 @@ export function TimelineNode({
     opacity = 1;
   }
 
-  // Event point vs span
-  const isEventPoint = entity.type === 'event' && !entity.endYear;
-  const nodeWidth = isEventPoint ? nodeHeight : width;
+  // Point node vs span (events are points; unknown-era people can be forced to points)
+  const isPointNode = forcePointNode || (entity.type === 'event' && !entity.endYear);
+  const nodeWidth = isPointNode ? nodeHeight : width;
 
   // Accessibility: year range label
   const yearRange = entity.endYear
@@ -307,10 +381,10 @@ export function TimelineNode({
         style={{
           background: backgroundColor,
           border: `${borderWidth} solid ${borderColor}`,
-          borderRadius: isEventPoint ? '50%' : 'var(--radius-sm)',
-          boxShadow: isInBreadcrumb || isHighlighted 
-            ? '0 2px 8px rgba(45, 36, 28, 0.15)' 
-            : '0 1px 3px rgba(45, 36, 28, 0.1)',
+          borderRadius: isPointNode ? '50%' : '5px',
+          boxShadow: isInBreadcrumb || isHighlighted
+            ? '0 2px 8px rgba(45, 36, 28, 0.15)'
+            : '0px 4px 4px rgba(0,0,0,0.25)',
         }}
       />
 
@@ -333,30 +407,75 @@ export function TimelineNode({
         </div>
       )}
 
-      {/* Role badge for people */}
-      {entity.type === 'person' && entity.role && showBadges && (
-        <div className="absolute -top-1 -left-1">
-          <RoleBadge role={entity.role} size={nodeHeight < 20 ? 'small' : 'medium'} />
-        </div>
-      )}
-
       {/* Label */}
-      {showLabel && (
-        <div
-          className="absolute left-0 whitespace-nowrap pointer-events-none"
-          style={{
-            top: nodeHeight + 4,
-            fontSize: nodeHeight < 16 ? '11px' : 'var(--type-label-xs-size)',
-            fontWeight: 600,
-            color: 'var(--color-base-text-primary)',
-            maxWidth: isEventPoint ? 'none' : width,
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-          }}
-        >
-          {entity.name}
-        </div>
-      )}
+      {showLabel && (() => {
+        const isInsidePerson = entity.type === 'person' && nodeHeight >= 16;
+        const isInsideBook = entity.type === 'book' && nodeHeight >= 14;
+        const isInside = isInsidePerson || isInsideBook;
+        const isEvent = entity.type === 'event';
+        const usePointLabel = isEvent || forcePointNode;
+
+        if (usePointLabel) {
+          // Event labels: right of circle, vertically centered
+          return (
+            <div
+              className="absolute whitespace-nowrap pointer-events-none"
+              style={{
+                left: isPointNode ? nodeHeight + 6 : nodeWidth + 6,
+                top: '50%',
+                transform: 'translateY(-50%)',
+                fontSize: '11px',
+                fontWeight: 400,
+                fontFamily: 'var(--font-timeline)',
+                color: '#3D3929',
+              }}
+            >
+              {entity.name}
+            </div>
+          );
+        }
+
+        if (isInside) {
+          // Inside bar labels
+          return (
+            <div
+              className="absolute whitespace-nowrap pointer-events-none overflow-hidden text-ellipsis"
+              style={{
+                left: 8,
+                top: '50%',
+                transform: 'translateY(-50%)',
+                maxWidth: nodeWidth - 16,
+                fontSize: isInsideBook ? `${Math.min(20, Math.max(14, nodeHeight - 4))}px` : '14px',
+                fontWeight: 400,
+                fontFamily: 'var(--font-timeline-serif)',
+                color: isInsideBook ? '#F5F0E0' : '#3A3535',
+                textShadow: '0px 2px 5px rgba(0,0,0,0.25)',
+              }}
+            >
+              {entity.name}
+            </div>
+          );
+        }
+
+        // Below bar labels (low zoom)
+        return (
+          <div
+            className="absolute left-0 whitespace-nowrap pointer-events-none"
+            style={{
+              top: nodeHeight + 4,
+              fontSize: '11px',
+              fontWeight: 400,
+              fontFamily: 'var(--font-timeline)',
+              color: '#3D3929',
+              maxWidth: width,
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            {entity.name}
+          </div>
+        );
+      })()}
 
       {/* Date badge on hover for higher zoom */}
       {showBadges && (
