@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "themes.raw.schema.json",
+  "title": "Themes Raw Schema",
+  "description": "Schema for raw themes data as authored",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Theme identifier (can be mixed case)"
+      },
+      "color": {
+        "$ref": "common.raw.schema.json#/definitions/hexColor"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": ["id", "color"],
+    "additionalProperties": false
+  }
+}

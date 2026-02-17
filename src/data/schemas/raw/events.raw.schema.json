@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "events.raw.schema.json",
+  "title": "Events Raw Schema",
+  "description": "Schema for raw events data as authored",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "$ref": "common.raw.schema.json#/definitions/id"
+      },
+      "name": {
+        "type": "string"
+      },
+      "year": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Event year (positive integer)"
+      },
+      "endYear": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "End year for spanning events"
+      },
+      "era": {
+        "$ref": "common.raw.schema.json#/definitions/era"
+      },
+      "approximate": {
+        "type": "boolean",
+        "default": false
+      },
+      "category": {
+        "type": "string",
+        "description": "Optional category hint, defaults to 'Historical' during compilation"
+      },
+      "priority": {
+        "$ref": "common.raw.schema.json#/definitions/priority"
+      },
+      "track": {
+        "type": "string",
+        "const": "events"
+      },
+      "description": {
+        "type": "string"
+      },
+      "scriptureRefs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "relatedPeople": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "relatedBooks": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": ["id", "name", "year", "era", "priority", "track"],
+    "additionalProperties": false
+  }
+}

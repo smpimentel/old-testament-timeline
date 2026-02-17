@@ -1,0 +1,61 @@
+<svg width="1728" height="1080" viewBox="0 0 1728 1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1728" height="1080" fill="#F7F1E4"/>
+  <text x="28" y="38" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#2D241C">Desktop Timeline - Zoom 100%</text>
+  <text x="28" y="62" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">Baseline flow: low label density, strong track hierarchy, rail closed</text>
+
+  <rect x="16" y="80" width="1696" height="88" rx="10" fill="#FFFDF7" stroke="#C7B8A2"/>
+  <rect x="38" y="108" width="280" height="34" rx="8" fill="#F7F1E4" stroke="#C7B8A2"/>
+  <text x="52" y="129" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">Search people, events, books</text>
+  <rect x="340" y="108" width="36" height="34" rx="8" fill="#FFFDF7" stroke="#C7B8A2"/><text x="354" y="129" font-family="IBM Plex Mono, monospace" font-size="12" fill="#2D241C">-</text>
+  <rect x="382" y="108" width="64" height="34" rx="8" fill="#FFFDF7" stroke="#C7B8A2"/><text x="399" y="129" font-family="IBM Plex Mono, monospace" font-size="12" fill="#2D241C">100%</text>
+  <rect x="452" y="108" width="36" height="34" rx="8" fill="#FFFDF7" stroke="#C7B8A2"/><text x="466" y="129" font-family="IBM Plex Mono, monospace" font-size="12" fill="#2D241C">+</text>
+  <rect x="530" y="108" width="90" height="30" rx="15" fill="#F4D19B" stroke="#2D241C" stroke-width="1.5"/><text x="548" y="127" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Covenant</text>
+  <rect x="630" y="108" width="88" height="30" rx="15" fill="none" stroke="#C7B8A2" stroke-width="1.5"/><text x="654" y="127" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Land</text>
+
+  <rect x="16" y="180" width="1696" height="872" rx="12" fill="#FFFDF7" stroke="#C7B8A2"/>
+
+  <rect x="36" y="202" width="1660" height="88" fill="#8B451318" stroke="#8B451355"/>
+  <text x="52" y="224" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">PRIMEVAL HISTORY</text>
+  <rect x="292" y="202" width="420" height="88" fill="#DAA52018" stroke="#DAA52055"/>
+  <text x="308" y="242" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">PATRIARCHAL PERIOD</text>
+  <rect x="692" y="202" width="330" height="88" fill="#CD853F18" stroke="#CD853F55"/>
+  <text x="708" y="260" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">EGYPTIAN SOJOURN</text>
+
+  <line x1="120" y1="296" x2="120" y2="1038" stroke="#C7B8A2" stroke-width="1"/>
+  <line x1="460" y1="296" x2="460" y2="1038" stroke="#C7B8A2" stroke-width="1"/>
+  <line x1="800" y1="296" x2="800" y2="1038" stroke="#C7B8A2" stroke-width="1"/>
+  <line x1="1140" y1="296" x2="1140" y2="1038" stroke="#C7B8A2" stroke-width="1"/>
+  <line x1="1480" y1="296" x2="1480" y2="1038" stroke="#C7B8A2" stroke-width="1"/>
+  <text x="105" y="286" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">3000 BC</text>
+  <text x="445" y="286" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">2200 BC</text>
+  <text x="785" y="286" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">1600 BC</text>
+  <text x="1125" y="286" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">1000 BC</text>
+  <text x="1465" y="286" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">500 BC</text>
+
+  <rect x="28" y="320" width="84" height="24" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/><text x="46" y="336" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">EVENTS</text>
+  <rect x="28" y="494" width="84" height="24" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/><text x="48" y="510" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">PEOPLE</text>
+  <rect x="28" y="810" width="84" height="24" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/><text x="52" y="826" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">BOOKS</text>
+
+  <line x1="36" y1="470" x2="1696" y2="470" stroke="#E3D7C4"/>
+  <line x1="36" y1="786" x2="1696" y2="786" stroke="#E3D7C4"/>
+
+  <circle cx="756" cy="354" r="11" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+  <circle cx="844" cy="354" r="11" fill="#E6C7C0" stroke="#F4D19B" stroke-width="2.5"/>
+  <circle cx="1148" cy="354" r="11" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+
+  <rect x="658" y="540" width="80" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+  <rect x="726" y="576" width="88" height="24" rx="6" fill="#C8D4B8" stroke="#F4D19B" stroke-width="2.5"/>
+  <rect x="804" y="612" width="92" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+  <rect x="900" y="648" width="98" height="24" rx="6" fill="#C8D4B8" fill-opacity="0.3" stroke="#2D241C" stroke-width="1.5"/>
+
+  <rect x="724" y="846" width="118" height="20" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+  <rect x="836" y="880" width="126" height="20" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+
+  <text x="741" y="373" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Exodus</text>
+  <text x="1133" y="373" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Temple Built</text>
+  <text x="734" y="597" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Moses</text>
+  <text x="813" y="633" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Joshua</text>
+
+  <rect x="1490" y="1002" width="200" height="36" rx="8" fill="#FFFDF7" stroke="#C7B8A2"/>
+  <text x="1510" y="1024" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Node labels: sparse @ 100%</text>
+</svg>

@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "Bash(for file in /Users/Stephen1/Desktop/gitprojects/old-testament-timline/prototype/old-testament-timeline-prototype/src/app/components/*.tsx /Users/Stephen1/Desktop/gitprojects/old-testament-timline/prototype/old-testament-timeline-prototype/src/app/components/figma/*.tsx)",
+      "Bash(wc:*)",
+      "WebSearch",
+      "Bash(npx tsx:*)",
+      "Bash(npm run validate:*)",
+      "Bash(npm run dev:*)",
+      "Bash(curl:*)",
+      "Bash(npm run build:*)",
+      "Bash(grep:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npx tsc:*)",
+      "Bash(xargs grep:*)",
+      "Bash(ls:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run test:run:*)",
+      "Bash(npx vite build:*)",
+      "mcp__figma-desktop__get_screenshot",
+      "mcp__figma-desktop__get_metadata",
+      "Bash(python3:*)",
+      "Bash(head:*)",
+      "mcp__figma-desktop__get_design_context",
+      "Bash(npx vitest run:*)"
+    ]
+  }
+}

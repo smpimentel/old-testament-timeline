@@ -1,0 +1,107 @@
+<svg width="1232" height="812" viewBox="0 0 1232 812" xmlns="http://www.w3.org/2000/svg">
+<rect width="1232" height="812" fill="#F7F1E4"/>
+<text x="20" y="34" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#2D241C">Israel in Egypt</text>
+<text x="20" y="58" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">1876-1446 BC - Israel enslaved in Egypt</text>
+<text x="20" y="78" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Nodes included by start year in this period. Move nodes in Figma, then share updated coordinates.</text>
+<rect x="10" y="100" width="1212" height="694" rx="10" fill="#FFFDF7" stroke="#C7B8A2"/>
+<rect x="120" y="116" width="1032" height="84" fill="#FFCCBC44" stroke="#FFCCBC"/>
+<text x="132" y="142" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">EGYPT</text>
+<line x1="1022.4" y1="200" x2="1022.4" y2="786" stroke="#C7B8A2" stroke-width="1"/>
+<text x="1002.4" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">1500</text>
+<line x1="782.4" y1="200" x2="782.4" y2="786" stroke="#C7B8A2" stroke-width="1"/>
+<text x="762.4" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">1600</text>
+<line x1="542.4" y1="200" x2="542.4" y2="786" stroke="#C7B8A2" stroke-width="1"/>
+<text x="522.4" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">1700</text>
+<line x1="302.4" y1="200" x2="302.4" y2="786" stroke="#C7B8A2" stroke-width="1"/>
+<text x="282.4" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">1800</text>
+<line x1="1142.4" y1="200" x2="1142.4" y2="786" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="902.4" y1="200" x2="902.4" y2="786" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="662.4" y1="200" x2="662.4" y2="786" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="422.4" y1="200" x2="422.4" y2="786" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="182.4" y1="200" x2="182.4" y2="786" stroke="#E3D7C4" stroke-width="1"/>
+<rect x="20" y="218" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="233" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">EVENTS</text>
+<rect x="20" y="322" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="337" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">PEOPLE</text>
+<rect x="20" y="638" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="41" y="653" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">BOOKS</text>
+<line x1="120" y1="300" x2="1152" y2="300" stroke="#E3D7C4"/>
+<line x1="120" y1="616" x2="1152" y2="616" stroke="#E3D7C4"/>
+<g id="book-genesis">
+<rect x="-4977.599999999999" y="668" width="5268" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-4971.599999999999" y="700" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Genesis (Pentateuch)</text>
+</g>
+<g id="person-jacob">
+<rect x="-192" y="454" width="353" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-186" y="492" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Jacob (Israel) (Patriarch)</text>
+</g>
+<g id="person-asenath">
+<rect x="24" y="556" width="168" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="30" y="594" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Asenath (Other)</text>
+</g>
+<g id="person-joseph">
+<rect x="24" y="352" width="264" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="30" y="390" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Joseph (Patriarch)</text>
+</g>
+<g id="person-ephraim">
+<rect x="96" y="420" width="168" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="102" y="458" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Ephraim (Other)</text>
+</g>
+<g id="person-manasseh">
+<rect x="96" y="386" width="168" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="102" y="424" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Manasseh (Other)</text>
+</g>
+<g id="person-amram">
+<rect x="782.4" y="352" width="329" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="788.4" y="390" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Amram (Other)</text>
+</g>
+<g id="person-jochebed">
+<rect x="794.4" y="386" width="324" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="800.4" y="424" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Jochebed (Other)</text>
+</g>
+<g id="person-moses">
+<rect x="960" y="420" width="288" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="966" y="458" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Moses (Prophet)</text>
+</g>
+<g id="person-nun">
+<rect x="986.4" y="454" width="168" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="992.4" y="492" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Nun (Other)</text>
+</g>
+<g id="person-zipporah">
+<rect x="998.4" y="488" width="264" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1004.4" y="526" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Zipporah (Other)</text>
+</g>
+<g id="person-gershom">
+<rect x="1058.4" y="522" width="204" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1064.4" y="560" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Gershom (Other)</text>
+</g>
+<g id="person-joshua">
+<rect x="1058.4" y="556" width="264" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1064.4" y="594" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Joshua (Warrior)</text>
+</g>
+<g id="person-eliezer">
+<rect x="1070.4" y="590" width="204" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1076.4" y="628" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Eliezer (Other)</text>
+</g>
+<g id="event-exodus">
+<circle cx="1152" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1166" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Exodus from Egypt (deliverance)</text>
+</g>
+<g id="event-mosaic-covenant">
+<circle cx="1152" cy="288" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1166" y="292" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Mosaic Covenant (covenant)</text>
+</g>
+<g id="book-exodus-book">
+<rect x="1152" y="668" width="96" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1158" y="700" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Exodus (Pentateuch)</text>
+</g>
+<g id="book-leviticus">
+<rect x="1152" y="696" width="96" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1158" y="728" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Leviticus (Pentateuch)</text>
+</g>
+<g id="book-numbers">
+<rect x="1152" y="724" width="96" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1158" y="756" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Numbers (Pentateuch)</text>
+</g>
+<text x="20" y="798" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">Counts: events 2, people 13, books 4, total 19</text>
+</svg>

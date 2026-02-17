@@ -1,0 +1,33 @@
+{
+  "timeline": {
+    "startYear": 4004,
+    "endYear": 400,
+    "basePixelsPerYear": 2,
+    "headerOffset": 100,
+    "trackGap": 48,
+    "laneGap": 8
+  },
+  "tracks": {
+    "events": { "maxNodeHeight": 24, "laneCount": 4 },
+    "people": { "maxNodeHeight": 28, "laneCount": 16 },
+    "books": { "maxNodeHeight": 22, "laneCount": 5 }
+  },
+  "labelBehavior": {
+    "period": {
+      "maxLabelLanes": 4,
+      "laneOffset": 18,
+      "overflowStrategy": "hide"
+    },
+    "nodes": {
+      "collisionMode": "per-track-per-swimlane",
+      "priorityOrder": "1(high) -> 4(low)",
+      "labelVisibleAtZoom": 1.5,
+      "denseSameYearStrategy": "hide-lower-priority"
+    }
+  },
+  "interaction": {
+    "themeFilter": "dim non-matching to 0.25 opacity",
+    "highlight": "accent border by first matched theme",
+    "rightRail": "360 desktop / full overlay mobile"
+  }
+}

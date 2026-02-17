@@ -1,0 +1,1306 @@
+[
+  {
+    "id": "terah",
+    "name": "Terah",
+    "birthYear": 2296,
+    "deathYear": 2091,
+    "era": "BC",
+    "approximate": true,
+    "role": "Patriarch",
+    "priority": 3,
+    "track": "people",
+    "description": "Father of Abraham",
+    "bio": "Father of Abraham, Nahor, and Haran. Originally from Ur of the Chaldeans, he began the journey toward Canaan but settled in Haran.",
+    "scriptureRefs": [
+      "Genesis 11:26-32"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": [
+        "abraham"
+      ]
+    }
+  },
+  {
+    "id": "sarah",
+    "name": "Sarah",
+    "birthYear": 2156,
+    "deathYear": 2029,
+    "era": "BC",
+    "approximate": true,
+    "role": "Patriarch",
+    "priority": 2,
+    "track": "people",
+    "description": "Wife of Abraham, mother of Isaac",
+    "bio": "Originally named Sarai, she was Abraham's wife and half-sister. Despite being barren until age 90, God promised she would bear a son. She gave birth to Isaac, the child of promise.",
+    "scriptureRefs": [
+      "Genesis 17:15-16",
+      "Genesis 21:1-7",
+      "Hebrews 11:11"
+    ],
+    "relatedEvents": [
+      "call-of-abraham"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": "abraham",
+      "children": [
+        "isaac"
+      ]
+    }
+  },
+  {
+    "id": "isaac",
+    "name": "Isaac",
+    "birthYear": 2066,
+    "deathYear": 1886,
+    "era": "BC",
+    "approximate": false,
+    "role": "Patriarch",
+    "priority": 1,
+    "track": "people",
+    "description": "The promised son of Abraham and Sarah, father of Jacob.",
+    "bio": "The promised son of Abraham and Sarah, born when they were elderly. Nearly sacrificed by Abraham as a test of faith. Married Rebekah and fathered Jacob and Esau.",
+    "scriptureRefs": [
+      "Genesis 21:1-7",
+      "Genesis 22:1-19",
+      "Genesis 25:19-26",
+      "Gen 25-27"
+    ],
+    "relatedEvents": [
+      "birth-of-isaac"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": "abraham",
+      "mother": "sarah",
+      "spouse": "rebekah",
+      "children": [
+        "jacob",
+        "esau"
+      ]
+    }
+  },
+  {
+    "id": "ishmael",
+    "name": "Ishmael",
+    "birthYear": 2080,
+    "deathYear": 1943,
+    "era": "BC",
+    "approximate": true,
+    "role": "Patriarch",
+    "priority": 3,
+    "track": "people",
+    "description": "Son of Abraham and Hagar",
+    "bio": "Firstborn son of Abraham through Hagar, Sarah's Egyptian servant. Father of twelve princes and considered the ancestor of many Arab peoples.",
+    "scriptureRefs": [
+      "Genesis 16:1-16",
+      "Genesis 21:8-21",
+      "Genesis 25:12-18"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": "abraham",
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "amram",
+    "name": "Amram",
+    "birthYear": 1600,
+    "deathYear": 1463,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 3,
+    "track": "people",
+    "description": "Father of Moses, Aaron, and Miriam",
+    "bio": "A Levite who married Jochebed. Father of Moses, Aaron, and Miriam. Lived during the Egyptian slavery period.",
+    "scriptureRefs": [
+      "Exodus 6:18-20",
+      "Numbers 26:59"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [
+      "exodus-book"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": "jochebed",
+      "children": [
+        "moses"
+      ]
+    }
+  },
+  {
+    "id": "jochebed",
+    "name": "Jochebed",
+    "birthYear": 1595,
+    "deathYear": 1460,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 3,
+    "track": "people",
+    "description": "Mother of Moses, Aaron, and Miriam",
+    "bio": "A Levite woman who married Amram. Hid baby Moses for three months then placed him in a basket on the Nile. Later hired as his nurse by Pharaoh's daughter.",
+    "scriptureRefs": [
+      "Exodus 2:1-10",
+      "Exodus 6:20",
+      "Hebrews 11:23"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [
+      "exodus-book"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": "amram",
+      "children": [
+        "moses"
+      ]
+    }
+  },
+  {
+    "id": "zipporah",
+    "name": "Zipporah",
+    "birthYear": 1510,
+    "deathYear": 1400,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 3,
+    "track": "people",
+    "description": "Wife of Moses, daughter of Jethro",
+    "bio": "Daughter of Jethro, priest of Midian. Moses met her at a well while fleeing Egypt. She bore him two sons: Gershom and Eliezer.",
+    "scriptureRefs": [
+      "Exodus 2:16-22",
+      "Exodus 4:24-26",
+      "Exodus 18:1-6"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [
+      "exodus-book"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": "moses",
+      "children": [
+        "gershom",
+        "eliezer"
+      ]
+    }
+  },
+  {
+    "id": "gershom",
+    "name": "Gershom",
+    "birthYear": 1485,
+    "deathYear": 1400,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Firstborn son of Moses and Zipporah",
+    "bio": "Firstborn son of Moses, born in Midian. His name means 'sojourner there' reflecting Moses' status as a stranger in a foreign land.",
+    "scriptureRefs": [
+      "Exodus 2:22",
+      "Exodus 18:3"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [
+      "exodus-book"
+    ],
+    "familyTree": {
+      "father": "moses",
+      "mother": "zipporah",
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "eliezer",
+    "name": "Eliezer",
+    "birthYear": 1480,
+    "deathYear": 1395,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Second son of Moses and Zipporah",
+    "bio": "Second son of Moses. His name means 'God of my father was my help' commemorating God's deliverance of Moses from Pharaoh.",
+    "scriptureRefs": [
+      "Exodus 18:4",
+      "1 Chronicles 23:15"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [
+      "exodus-book"
+    ],
+    "familyTree": {
+      "father": "moses",
+      "mother": "zipporah",
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "jesse",
+    "name": "Jesse",
+    "birthYear": 1080,
+    "deathYear": 1000,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 3,
+    "track": "people",
+    "description": "Father of King David",
+    "bio": "A Bethlehemite of the tribe of Judah. Father of eight sons including David. Grandson of Ruth and Boaz.",
+    "scriptureRefs": [
+      "1 Samuel 16:1-13",
+      "Ruth 4:17-22",
+      "Isaiah 11:1"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": [
+        "david"
+      ]
+    }
+  },
+  {
+    "id": "bathsheba",
+    "name": "Bathsheba",
+    "birthYear": 1025,
+    "deathYear": 950,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 3,
+    "track": "people",
+    "description": "Wife of David, mother of Solomon",
+    "bio": "Originally wife of Uriah the Hittite. David saw her bathing and committed adultery with her, later arranging Uriah's death. She became David's wife and mother of Solomon.",
+    "scriptureRefs": [
+      "2 Samuel 11:1-27",
+      "2 Samuel 12:24",
+      "1 Kings 1:11-31"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": "david",
+      "children": [
+        "solomon"
+      ]
+    }
+  },
+  {
+    "id": "solomon",
+    "name": "Solomon",
+    "birthYear": 990,
+    "deathYear": 931,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "priority": 2,
+    "track": "people",
+    "description": "Son of David, builder of the Temple",
+    "bio": "Third king of Israel, known for wisdom granted by God. Built the First Temple in Jerusalem. Author of Proverbs, Ecclesiastes, and Song of Solomon. His reign marked Israel's golden age.",
+    "scriptureRefs": [
+      "1 Kings 3:5-14",
+      "1 Kings 6:1-38",
+      "1 Kings 11:1-13"
+    ],
+    "relatedEvents": [
+      "temple-built"
+    ],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": "david",
+      "mother": "bathsheba",
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "absalom",
+    "name": "Absalom",
+    "birthYear": 1010,
+    "deathYear": 980,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 3,
+    "track": "people",
+    "description": "Son of David who rebelled against him",
+    "bio": "Third son of David, known for his handsome appearance. Killed his half-brother Amnon for raping his sister Tamar. Later led a rebellion against David but was killed by Joab.",
+    "scriptureRefs": [
+      "2 Samuel 13:1-39",
+      "2 Samuel 15:1-12",
+      "2 Samuel 18:9-15"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": "david",
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "abraham",
+    "name": "Abraham",
+    "birthYear": 2166,
+    "deathYear": 1991,
+    "era": "BC",
+    "approximate": false,
+    "role": "Patriarch",
+    "priority": 1,
+    "track": "people",
+    "description": "Father of the Hebrew nation, called by God to leave Ur.",
+    "bio": "Abraham (originally Abram) is the father of the Hebrew nation. God called him to leave Ur and promised to make him a great nation and bless all families of the earth through him.",
+    "scriptureRefs": [
+      "Genesis 12:1-3",
+      "Genesis 15:1-6",
+      "Hebrews 11:8-12",
+      "Gen 11-25"
+    ],
+    "relatedEvents": [
+      "call-of-abraham",
+      "birth-of-isaac",
+      "ishmael-born"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": "terah",
+      "mother": null,
+      "spouse": "sarah",
+      "children": [
+        "isaac",
+        "ishmael"
+      ]
+    }
+  },
+  {
+    "id": "moses",
+    "name": "Moses",
+    "birthYear": 1526,
+    "deathYear": 1406,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 1,
+    "track": "people",
+    "description": "Deliverer of Israel from Egypt, received the Law at Sinai.",
+    "bio": "Born in Egypt during Hebrew slavery, Moses was rescued by Pharaoh's daughter. Called by God at the burning bush, he led Israel out of Egypt and received the Law at Sinai.",
+    "scriptureRefs": [
+      "Exodus 3:1-10",
+      "Exodus 20:1-17",
+      "Deuteronomy 34:10-12",
+      "Exod 2-Deut 34"
+    ],
+    "relatedEvents": [
+      "exodus",
+      "mosaic-covenant"
+    ],
+    "relatedBooks": [
+      "exodus-book",
+      "leviticus",
+      "numbers",
+      "deuteronomy"
+    ],
+    "familyTree": {
+      "father": "amram",
+      "mother": "jochebed",
+      "spouse": "zipporah",
+      "children": [
+        "gershom",
+        "eliezer"
+      ]
+    }
+  },
+  {
+    "id": "david",
+    "name": "David",
+    "birthYear": 1040,
+    "deathYear": 970,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "priority": 1,
+    "track": "people",
+    "description": "Israel's greatest king, ancestor of Christ",
+    "bio": "A shepherd from Bethlehem, David was anointed king by Samuel. He united Israel, conquered Jerusalem, and established a dynasty through which the Messiah would come.",
+    "scriptureRefs": [
+      "1 Samuel 16:1-13",
+      "2 Samuel 7:12-16",
+      "Psalm 23"
+    ],
+    "relatedEvents": [
+      "temple-built"
+    ],
+    "relatedBooks": [
+      "psalms"
+    ],
+    "familyTree": {
+      "father": "jesse",
+      "mother": null,
+      "spouse": "bathsheba",
+      "children": [
+        "solomon",
+        "absalom"
+      ]
+    }
+  },
+  {
+    "id": "adam",
+    "name": "Adam",
+    "birthYear": 4004,
+    "deathYear": 3074,
+    "era": "BC",
+    "approximate": true,
+    "role": "Patriarch",
+    "priority": 1,
+    "track": "people",
+    "description": "The first man, created by God from the dust of the ground.",
+    "bio": "God formed Adam from the dust and created Eve from his rib. They lived in perfect fellowship with God in the Garden of Eden.",
+    "scriptureRefs": [
+      "Gen 1-2"
+    ],
+    "relatedEvents": [
+      "creation",
+      "the-fall"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": "eve",
+      "children": [
+        "cain",
+        "abel",
+        "seth"
+      ]
+    }
+  },
+  {
+    "id": "eve",
+    "name": "Eve",
+    "birthYear": 4004,
+    "deathYear": 3074,
+    "era": "BC",
+    "approximate": true,
+    "role": "Patriarch",
+    "priority": 2,
+    "track": "people",
+    "description": "The first woman, created from Adam's rib.",
+    "bio": "Eve was created by God from Adam's rib to be his companion. Together they were tempted by the serpent and disobeyed God.",
+    "scriptureRefs": [
+      "Gen 1-3"
+    ],
+    "relatedEvents": [
+      "creation",
+      "the-fall"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": "adam",
+      "children": [
+        "cain",
+        "abel",
+        "seth"
+      ]
+    }
+  },
+  {
+    "id": "noah",
+    "name": "Noah",
+    "birthYear": 2948,
+    "deathYear": 1998,
+    "era": "BC",
+    "approximate": true,
+    "role": "Patriarch",
+    "priority": 1,
+    "track": "people",
+    "description": "Righteous man who built the ark and preserved humanity through the Flood.",
+    "bio": "Noah was a righteous man who walked with God. He built the ark and preserved humanity and animal kinds through the Flood.",
+    "scriptureRefs": [
+      "Gen 6-9"
+    ],
+    "relatedEvents": [
+      "flood"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": "lamech",
+      "mother": null,
+      "spouse": null,
+      "children": [
+        "shem",
+        "ham",
+        "japheth"
+      ]
+    }
+  },
+  {
+    "id": "jacob",
+    "name": "Jacob (Israel)",
+    "birthYear": 2006,
+    "deathYear": 1859,
+    "era": "BC",
+    "approximate": false,
+    "role": "Patriarch",
+    "priority": 1,
+    "track": "people",
+    "description": "Younger twin of Isaac, renamed Israel, father of the twelve tribes.",
+    "bio": "Jacob (later renamed Israel) was the younger twin son of Isaac. He fathered the twelve tribes of Israel and received the covenant blessing from God.",
+    "scriptureRefs": [
+      "Gen 27-36"
+    ],
+    "relatedEvents": [
+      "twelve-tribes-of-israel"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": "isaac",
+      "mother": "rebekah",
+      "spouse": "rachel",
+      "children": [
+        "joseph",
+        "reuben",
+        "simeon",
+        "levi",
+        "judah",
+        "dan",
+        "naphtali",
+        "gad",
+        "asher",
+        "issachar",
+        "zebulun",
+        "benjamin"
+      ]
+    }
+  },
+  {
+    "id": "joseph",
+    "name": "Joseph",
+    "birthYear": 1916,
+    "deathYear": 1806,
+    "era": "BC",
+    "approximate": false,
+    "role": "Patriarch",
+    "priority": 1,
+    "track": "people",
+    "description": "Son of Jacob who rose to second-in-command in Egypt.",
+    "bio": "Sold into slavery by his brothers, Joseph rose to become second-in-command in Egypt. He saved Egypt and his family from famine through God-given wisdom.",
+    "scriptureRefs": [
+      "Gen 37-50"
+    ],
+    "relatedEvents": [
+      "josephs-exaltation-in-egypt"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": "jacob",
+      "mother": "rachel",
+      "spouse": "asenath",
+      "children": [
+        "manasseh",
+        "ephraim"
+      ]
+    }
+  },
+  {
+    "id": "joshua",
+    "name": "Joshua",
+    "birthYear": 1485,
+    "deathYear": 1375,
+    "era": "BC",
+    "approximate": true,
+    "role": "Warrior",
+    "priority": 1,
+    "track": "people",
+    "description": "Moses' successor who led Israel into the Promised Land.",
+    "bio": "Originally named Hoshea, Joshua was Moses' longtime assistant and the faithful military leader who succeeded him as the commander of Israel. He courageously led the Israelites across the Jordan River into the Promised Land and directed the conquest of Canaan.",
+    "scriptureRefs": [
+      "Josh 1-24"
+    ],
+    "relatedEvents": [
+      "conquest-of-canaan",
+      "division-of-the-land"
+    ],
+    "relatedBooks": [
+      "joshua"
+    ],
+    "familyTree": {
+      "father": "nun",
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "samuel",
+    "name": "Samuel",
+    "birthYear": 1100,
+    "deathYear": 1015,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 1,
+    "track": "people",
+    "description": "Last judge, prophet, and priest who anointed Israel's first two kings.",
+    "bio": "Samuel was the last judge, a prophet, and priest. He anointed Israel's first two kings (Saul and David) and called the nation back to faithfulness to God.",
+    "scriptureRefs": [
+      "1 Sam 1-25"
+    ],
+    "relatedEvents": [
+      "selection-of-king-saul"
+    ],
+    "relatedBooks": [
+      "1-samuel"
+    ],
+    "familyTree": {
+      "father": "elkanah",
+      "mother": "hannah",
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "cain",
+    "name": "Cain",
+    "birthYear": 3974,
+    "deathYear": 3904,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "abel",
+    "name": "Abel",
+    "birthYear": 3974,
+    "deathYear": 3904,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "seth",
+    "name": "Seth",
+    "birthYear": 3974,
+    "deathYear": 3904,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "lamech",
+    "name": "Lamech",
+    "birthYear": 2978,
+    "deathYear": 2908,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "shem",
+    "name": "Shem",
+    "birthYear": 2918,
+    "deathYear": 2848,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "ham",
+    "name": "Ham",
+    "birthYear": 2918,
+    "deathYear": 2848,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "japheth",
+    "name": "Japheth",
+    "birthYear": 2918,
+    "deathYear": 2848,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "rebekah",
+    "name": "Rebekah",
+    "birthYear": 2051,
+    "deathYear": 1981,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "esau",
+    "name": "Esau",
+    "birthYear": 2036,
+    "deathYear": 1966,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "rachel",
+    "name": "Rachel",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "reuben",
+    "name": "Reuben",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "simeon",
+    "name": "Simeon",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "levi",
+    "name": "Levi",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "judah",
+    "name": "Judah",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "dan",
+    "name": "Dan",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "naphtali",
+    "name": "Naphtali",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "gad",
+    "name": "Gad",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "asher",
+    "name": "Asher",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "issachar",
+    "name": "Issachar",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "zebulun",
+    "name": "Zebulun",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "benjamin",
+    "name": "Benjamin",
+    "birthYear": 1976,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "asenath",
+    "name": "Asenath",
+    "birthYear": 1916,
+    "deathYear": 1846,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "manasseh",
+    "name": "Manasseh",
+    "birthYear": 1886,
+    "deathYear": 1816,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "ephraim",
+    "name": "Ephraim",
+    "birthYear": 1886,
+    "deathYear": 1816,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "nun",
+    "name": "Nun",
+    "birthYear": 1515,
+    "deathYear": 1445,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "elkanah",
+    "name": "Elkanah",
+    "birthYear": 1130,
+    "deathYear": 1060,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  },
+  {
+    "id": "hannah",
+    "name": "Hannah",
+    "birthYear": 1130,
+    "deathYear": 1060,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 4,
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    }
+  }
+]

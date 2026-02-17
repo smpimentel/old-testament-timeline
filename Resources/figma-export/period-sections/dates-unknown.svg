@@ -1,0 +1,94 @@
+<svg width="2900" height="654" viewBox="0 0 2900 654" xmlns="http://www.w3.org/2000/svg">
+<rect width="2900" height="654" fill="#F7F1E4"/>
+<text x="20" y="34" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#2D241C">Dates Unknown</text>
+<text x="20" y="58" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">4000-2500 BC - Creation, Fall, Flood, Tower of Babel</text>
+<text x="20" y="78" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Nodes included by start year in this period. Move nodes in Figma, then share updated coordinates.</text>
+<rect x="10" y="100" width="2880" height="536" rx="10" fill="#FFFDF7" stroke="#C7B8A2"/>
+<rect x="120" y="116" width="2700" height="84" fill="#E0E0E044" stroke="#E0E0E0"/>
+<text x="132" y="142" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">DATES-UNKNOWN</text>
+<line x1="2640" y1="200" x2="2640" y2="628" stroke="#C7B8A2" stroke-width="1"/>
+<text x="2620" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">2600</text>
+<line x1="2280" y1="200" x2="2280" y2="628" stroke="#C7B8A2" stroke-width="1"/>
+<text x="2260" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">2800</text>
+<line x1="1920" y1="200" x2="1920" y2="628" stroke="#C7B8A2" stroke-width="1"/>
+<text x="1900" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">3000</text>
+<line x1="1560" y1="200" x2="1560" y2="628" stroke="#C7B8A2" stroke-width="1"/>
+<text x="1540" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">3200</text>
+<line x1="1200" y1="200" x2="1200" y2="628" stroke="#C7B8A2" stroke-width="1"/>
+<text x="1180" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">3400</text>
+<line x1="840" y1="200" x2="840" y2="628" stroke="#C7B8A2" stroke-width="1"/>
+<text x="820" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">3600</text>
+<line x1="480" y1="200" x2="480" y2="628" stroke="#C7B8A2" stroke-width="1"/>
+<text x="460" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">3800</text>
+<line x1="120" y1="200" x2="120" y2="628" stroke="#C7B8A2" stroke-width="1"/>
+<text x="100" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">4000</text>
+<line x1="2820" y1="200" x2="2820" y2="628" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="2460" y1="200" x2="2460" y2="628" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="2100" y1="200" x2="2100" y2="628" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="1740" y1="200" x2="1740" y2="628" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="1380" y1="200" x2="1380" y2="628" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="1020" y1="200" x2="1020" y2="628" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="660" y1="200" x2="660" y2="628" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="300" y1="200" x2="300" y2="628" stroke="#E3D7C4" stroke-width="1"/>
+<rect x="20" y="218" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="233" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">EVENTS</text>
+<rect x="20" y="322" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="337" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">PEOPLE</text>
+<rect x="20" y="536" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="41" y="551" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">BOOKS</text>
+<line x1="120" y1="300" x2="2820" y2="300" stroke="#E3D7C4"/>
+<line x1="120" y1="514" x2="2820" y2="514" stroke="#E3D7C4"/>
+<g id="event-creation">
+<circle cx="112.8" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="126.8" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Creation (origins)</text>
+</g>
+<g id="event-the-fall">
+<circle cx="112.8" cy="288" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="126.8" y="292" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Fall (origins)</text>
+</g>
+<g id="person-adam">
+<rect x="112.8" y="352" width="1674" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="118.8" y="390" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Adam (Patriarch)</text>
+</g>
+<g id="person-eve">
+<rect x="112.8" y="386" width="1674" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="118.8" y="424" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Eve (Patriarch)</text>
+</g>
+<g id="book-genesis">
+<rect x="120" y="566" width="3951" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="126" y="598" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Genesis (Pentateuch)</text>
+</g>
+<g id="person-abel">
+<rect x="166.8" y="454" width="126" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="172.8" y="492" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Abel (Other)</text>
+</g>
+<g id="person-cain">
+<rect x="166.8" y="420" width="126" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="172.8" y="458" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Cain (Other)</text>
+</g>
+<g id="person-seth">
+<rect x="166.8" y="488" width="126" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="172.8" y="526" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Seth (Other)</text>
+</g>
+<g id="person-lamech">
+<rect x="1959.6000000000001" y="352" width="126" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1965.6000000000001" y="390" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Lamech (Other)</text>
+</g>
+<g id="person-noah">
+<rect x="2013.6000000000001" y="386" width="1710" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="2019.6000000000001" y="424" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Noah (Patriarch)</text>
+</g>
+<g id="person-ham">
+<rect x="2067.6000000000004" y="454" width="126" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="2073.6000000000004" y="492" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Ham (Other)</text>
+</g>
+<g id="person-japheth">
+<rect x="2067.6000000000004" y="488" width="126" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="2073.6000000000004" y="526" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Japheth (Other)</text>
+</g>
+<g id="person-shem">
+<rect x="2067.6000000000004" y="420" width="126" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="2073.6000000000004" y="458" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Shem (Other)</text>
+</g>
+<text x="20" y="640" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">Counts: events 2, people 10, books 1, total 13</text>
+</svg>

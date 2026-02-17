@@ -1,0 +1,231 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+
+  /* ===== BASE COLORS ===== */
+  --color-base-papyrus-cream: #F0E6D2;
+  --color-base-parchment: #F6F0E1;
+  --color-base-parchment-deep: #EBDDCC;
+  --color-base-text-primary: #2D241C;
+  --color-base-text-secondary: #5A4B3D;
+  --color-base-grid-major: rgba(45, 36, 28, 0.12);
+  --color-base-grid-minor: rgba(45, 36, 28, 0.06);
+  --color-base-surface-panel: #FFF9ED;
+  --color-base-surface-elevated: #FFFDF7;
+  --color-base-focus: #1F6FEB;
+
+  /* ===== HISTORICAL THEME PALETTE ===== */
+  --color-theme-mediterranean-blue: #A8D5E2;
+  --color-theme-egyptian-amber: #F4D19B;
+  --color-theme-roman-purple: #D4B5D4;
+  --color-theme-greek-terracotta: #E6C4A8;
+  --color-theme-persian-indigo: #B8C5D6;
+  --color-theme-olive-grove: #C8D4B8;
+  --color-theme-jade-stone: #B5D4C8;
+
+  /* ===== PEOPLE ROLE PALETTE (OT) ===== */
+  --color-role-king: #F5D99F;
+  --color-role-prophet: #C8B8D4;
+  --color-role-judge: #B8C4A8;
+  --color-role-priest: #D4C5E0;
+  --color-role-patriarch: #C8D4B8;
+  --color-role-warrior: #D9B5A0;
+  --color-role-scribe: #E6DCC8;
+  --color-role-other: #D4D9DE;
+
+  /* ===== EVENT CATEGORY PALETTE ===== */
+  --color-event-war: #E6A8A8;
+  --color-event-treaty: #E0E6E8;
+  --color-event-discovery: #B8D9E6;
+  --color-event-construction: #E6D4B8;
+  --color-event-festival: #F0C8D4;
+  --color-event-succession: #CFB8D4;
+  --color-event-disaster: #C8C4BC;
+  --color-event-renaissance: #F4E0C8;
+
+  /* ===== BOOK/GENRE PALETTE ===== */
+  --color-genre-political: #A8C4E0;
+  --color-genre-cultural: #F4D4C8;
+  --color-genre-religious: #D4C8E0;
+  --color-genre-economic: #E6D4A8;
+  --color-genre-military: #D9B8A8;
+  --color-genre-scientific: #B8DDE0;
+  --color-genre-agricultural: #C8D9B8;
+  --color-genre-maritime: #B8CFD9;
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Source Sans 3', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Type scale: size/lineHeight/weight */
+  --type-display-1-size: 48px;
+  --type-display-1-line: 56px;
+  --type-display-1-weight: 700;
+
+  --type-heading-1-size: 32px;
+  --type-heading-1-line: 40px;
+  --type-heading-1-weight: 700;
+
+  --type-heading-2-size: 24px;
+  --type-heading-2-line: 32px;
+  --type-heading-2-weight: 700;
+
+  --type-body-md-size: 16px;
+  --type-body-md-line: 24px;
+  --type-body-md-weight: 400;
+
+  --type-body-sm-size: 14px;
+  --type-body-sm-line: 20px;
+  --type-body-sm-weight: 400;
+
+  --type-label-xs-size: 12px;
+  --type-label-xs-line: 16px;
+  --type-label-xs-weight: 600;
+
+  /* ===== SPACING ===== */
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+
+  /* ===== RADIUS ===== */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 999px;
+
+  /* ===== SIDEBAR ===== */
+  --sidebar-width-open: 220px;
+  --sidebar-width-closed: 60px;
+  --toolbar-touch-target: 44px;
+
+  /* ===== MOTION ===== */
+  --motion-fast: 200ms;
+  --motion-standard: 250ms;
+  --motion-expressive: 300ms;
+  --motion-easing: ease-out;
+
+  /* ===== LEGACY MAPPINGS FOR TAILWIND ===== */
+  --background: var(--color-base-parchment);
+  --foreground: var(--color-base-text-primary);
+  --card: var(--color-base-surface-elevated);
+  --card-foreground: var(--color-base-text-primary);
+  --popover: var(--color-base-surface-elevated);
+  --popover-foreground: var(--color-base-text-primary);
+  --primary: var(--color-base-text-secondary);
+  --primary-foreground: var(--color-base-surface-elevated);
+  --secondary: var(--color-base-parchment-deep);
+  --secondary-foreground: var(--color-base-text-primary);
+  --muted: var(--color-base-parchment-deep);
+  --muted-foreground: var(--color-base-text-secondary);
+  --accent: var(--color-theme-egyptian-amber);
+  --accent-foreground: var(--color-base-text-primary);
+  --destructive: #a84632;
+  --destructive-foreground: var(--color-base-surface-elevated);
+  --border: var(--color-base-grid-major);
+  --input: transparent;
+  --input-background: var(--color-base-surface-panel);
+  --ring: var(--color-base-focus);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --radius: var(--radius-md);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+  }
+
+  h1 {
+    font-size: var(--type-heading-1-size);
+    font-weight: var(--type-heading-1-weight);
+    line-height: var(--type-heading-1-line);
+  }
+
+  h2 {
+    font-size: var(--type-heading-2-size);
+    font-weight: var(--type-heading-2-weight);
+    line-height: var(--type-heading-2-line);
+  }
+
+  h3 {
+    font-size: var(--type-body-md-size);
+    font-weight: 600;
+    line-height: var(--type-body-md-line);
+  }
+
+  h4 {
+    font-size: var(--type-body-sm-size);
+    font-weight: 600;
+    line-height: var(--type-body-sm-line);
+  }
+
+  label {
+    font-size: var(--type-body-sm-size);
+    font-weight: 500;
+    line-height: var(--type-body-sm-line);
+  }
+
+  button {
+    font-size: var(--type-body-sm-size);
+    font-weight: 500;
+    line-height: var(--type-body-sm-line);
+  }
+
+  input {
+    font-size: var(--type-body-sm-size);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--type-body-sm-line);
+  }
+}
+
+/* ===== SIDEBAR STYLES ===== */
+/* Hide sidebar on mobile — nav handled differently */
+@media (max-width: 639px) {
+  .side-navigator {
+    display: none;
+  }
+}

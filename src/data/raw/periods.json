@@ -1,0 +1,83 @@
+[
+  {
+    "id": "dates-unknown",
+    "name": "Dates Unknown",
+    "startYear": 4000,
+    "endYear": 2500,
+    "era": "BC",
+    "color": "#E0E0E0",
+    "description": "Creation, Fall, Flood, Tower of Babel"
+  },
+  {
+    "id": "patriarchs",
+    "name": "Time of the Patriarchs",
+    "startYear": 2166,
+    "endYear": 1876,
+    "era": "BC",
+    "color": "#FFF9C4",
+    "description": "Abraham, Isaac, Jacob"
+  },
+  {
+    "id": "egypt",
+    "name": "Israel in Egypt",
+    "startYear": 1876,
+    "endYear": 1446,
+    "era": "BC",
+    "color": "#FFCCBC",
+    "description": "Israel enslaved in Egypt"
+  },
+  {
+    "id": "wandering",
+    "name": "Wandering",
+    "startYear": 1446,
+    "endYear": 1406,
+    "era": "BC",
+    "color": "#D7CCC8",
+    "description": "Wilderness journey to Promised Land"
+  },
+  {
+    "id": "judges",
+    "name": "Era of the Judges",
+    "startYear": 1406,
+    "endYear": 1050,
+    "era": "BC",
+    "color": "#C8E6C9",
+    "description": "Israel repeatedly fell into idolatry, oppression, repentance, and deliverance through judges (military leaders/prophets). This cycle lasted about 350 years."
+  },
+  {
+    "id": "united-kingdom",
+    "name": "The Kings / United Kingdom",
+    "startYear": 1050,
+    "endYear": 930,
+    "era": "BC",
+    "color": "#BBDEFB",
+    "description": "Saul, David, Solomon united Israel"
+  },
+  {
+    "id": "divided-kingdom",
+    "name": "Kingdom Divides",
+    "startYear": 930,
+    "endYear": 586,
+    "era": "BC",
+    "color": "#E1BEE7",
+    "description": "The kingdom split into Israel (north, 10 tribes) and Judah (south, 2 tribes). Ended with the fall of both kingdoms."
+  },
+  {
+    "id": "exile",
+    "name": "Exile",
+    "startYear": 586,
+    "endYear": 538,
+    "era": "BC",
+    "color": "#BDBDBD",
+    "description": "Babylonian captivity"
+  },
+  {
+    "id": "restoration",
+    "name": "The Restoration",
+    "startYear": 538,
+    "endYear": 400,
+    "era": "BC",
+    "color": "#B2DFDB",
+    "description": "Return from exile, temple rebuilt"
+  }
+]

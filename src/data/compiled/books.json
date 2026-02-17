@@ -1,0 +1,254 @@
+[
+  {
+    "id": "genesis",
+    "type": "book",
+    "name": "Genesis",
+    "startYear": 4000,
+    "endYear": 1805,
+    "certainty": "approximate",
+    "categories": [
+      "Pentateuch"
+    ],
+    "priority": 1,
+    "author": "Moses (traditional)",
+    "description": "Creation, Fall, Flood, Patriarchs",
+    "scriptureRefs": [
+      "Genesis 1:1"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "exodus-book",
+    "type": "book",
+    "name": "Exodus",
+    "startYear": 1446,
+    "endYear": 1406,
+    "certainty": "approximate",
+    "categories": [
+      "Pentateuch"
+    ],
+    "priority": 1,
+    "author": "Moses",
+    "description": "Israel's deliverance from Egypt and receiving the Law at Sinai",
+    "scriptureRefs": [
+      "Exodus 1:1"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "psalms",
+    "type": "book",
+    "name": "Psalms",
+    "startYear": 1000,
+    "endYear": 400,
+    "certainty": "approximate",
+    "categories": [
+      "Poetry"
+    ],
+    "priority": 1,
+    "author": "David, Asaph, Sons of Korah, others",
+    "description": "Songs of worship, lament, and praise spanning centuries",
+    "scriptureRefs": [
+      "Psalm 1:1"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "leviticus",
+    "type": "book",
+    "name": "Leviticus",
+    "startYear": 1446,
+    "endYear": 1406,
+    "certainty": "approximate",
+    "categories": [
+      "Pentateuch"
+    ],
+    "priority": 2,
+    "author": "Moses",
+    "description": "Laws for holiness, worship, sacrifices, and priestly ministry.",
+    "scriptureRefs": [
+      "Leviticus 1:1"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "numbers",
+    "type": "book",
+    "name": "Numbers",
+    "startYear": 1446,
+    "endYear": 1406,
+    "certainty": "approximate",
+    "categories": [
+      "Pentateuch"
+    ],
+    "priority": 2,
+    "author": "Moses",
+    "description": "Wilderness journey, censuses, rebellion, and preparation to enter Canaan.",
+    "scriptureRefs": [
+      "Numbers 1:1"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "deuteronomy",
+    "type": "book",
+    "name": "Deuteronomy",
+    "startYear": 1406,
+    "endYear": 1406,
+    "certainty": "approximate",
+    "categories": [
+      "Pentateuch"
+    ],
+    "priority": 2,
+    "author": "Moses",
+    "description": "Moses final covenant sermons before Israel enters the land.",
+    "scriptureRefs": [
+      "Deuteronomy 1:1"
+    ],
+    "swimlane": 3
+  },
+  {
+    "id": "joshua",
+    "type": "book",
+    "name": "Joshua",
+    "startYear": 1406,
+    "endYear": 1375,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "priority": 2,
+    "author": "Joshua (traditional)",
+    "description": "Israel crosses Jordan, conquers Canaan, and receives tribal allotments.",
+    "scriptureRefs": [
+      "Joshua 1:1"
+    ],
+    "swimlane": 4
+  },
+  {
+    "id": "1-samuel",
+    "type": "book",
+    "name": "1 Samuel",
+    "startYear": 1100,
+    "endYear": 1010,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "priority": 2,
+    "author": "Samuel, Gad, Nathan (traditional)",
+    "description": "Transition from judges to monarchy; Saul reign and David rise.",
+    "scriptureRefs": [
+      "1 Samuel 1:1"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "2-samuel",
+    "type": "book",
+    "name": "2 Samuel",
+    "startYear": 1010,
+    "endYear": 970,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "priority": 2,
+    "author": "Gad, Nathan (traditional)",
+    "description": "David reign over Israel, covenant promise, victories, and failures.",
+    "scriptureRefs": [
+      "2 Samuel 1:1"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "1-kings",
+    "type": "book",
+    "name": "1 Kings",
+    "startYear": 970,
+    "endYear": 853,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "priority": 2,
+    "author": "Jeremiah (traditional)",
+    "description": "Solomon reign, temple construction, and division of the kingdom.",
+    "scriptureRefs": [
+      "1 Kings 1:1"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "2-kings",
+    "type": "book",
+    "name": "2 Kings",
+    "startYear": 853,
+    "endYear": 586,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "priority": 2,
+    "author": "Jeremiah (traditional)",
+    "description": "History of divided kingdoms through exile and Jerusalem destruction.",
+    "scriptureRefs": [
+      "2 Kings 1:1"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "jeremiah",
+    "type": "book",
+    "name": "Jeremiah",
+    "startYear": 627,
+    "endYear": 580,
+    "certainty": "approximate",
+    "categories": [
+      "Major Prophets"
+    ],
+    "priority": 2,
+    "author": "Jeremiah",
+    "description": "Prophetic warnings, calls to repentance, and hope amid coming judgment.",
+    "scriptureRefs": [
+      "Jeremiah 1:1"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "ezra",
+    "type": "book",
+    "name": "Ezra",
+    "startYear": 538,
+    "endYear": 457,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "priority": 2,
+    "author": "Ezra",
+    "description": "Return from exile and restoration of worship and covenant life.",
+    "scriptureRefs": [
+      "Ezra 1:1"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "nehemiah",
+    "type": "book",
+    "name": "Nehemiah",
+    "startYear": 445,
+    "endYear": 430,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "priority": 2,
+    "author": "Nehemiah",
+    "description": "Rebuilding Jerusalem walls and spiritual reform in Judah.",
+    "scriptureRefs": [
+      "Nehemiah 1:1"
+    ],
+    "swimlane": 1
+  }
+]

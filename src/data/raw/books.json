@@ -1,0 +1,318 @@
+[
+  {
+    "id": "genesis",
+    "name": "Genesis",
+    "startYear": 4000,
+    "endYear": 1805,
+    "era": "BC",
+    "category": "Pentateuch",
+    "priority": 1,
+    "track": "books",
+    "description": "Creation, Fall, Flood, Patriarchs",
+    "author": "Moses (traditional)",
+    "dateRange": "Creation - 1805 BC",
+    "scriptureRefs": [
+      "Genesis 1:1"
+    ],
+    "relatedPeople": [
+      "abraham",
+      "terah",
+      "sarah",
+      "isaac",
+      "ishmael",
+      "adam",
+      "eve",
+      "noah",
+      "jacob",
+      "joseph"
+    ],
+    "relatedEvents": [
+      "flood",
+      "call-of-abraham",
+      "creation",
+      "the-fall",
+      "tower-of-babel",
+      "ishmael-born",
+      "birth-of-isaac",
+      "twelve-tribes-of-israel",
+      "josephs-exaltation-in-egypt"
+    ]
+  },
+  {
+    "id": "exodus-book",
+    "name": "Exodus",
+    "startYear": 1446,
+    "endYear": 1406,
+    "era": "BC",
+    "category": "Pentateuch",
+    "priority": 1,
+    "track": "books",
+    "description": "Israel's deliverance from Egypt and receiving the Law at Sinai",
+    "author": "Moses",
+    "dateRange": "1446-1406 BC",
+    "scriptureRefs": [
+      "Exodus 1:1"
+    ],
+    "relatedPeople": [
+      "moses",
+      "amram",
+      "jochebed",
+      "zipporah",
+      "gershom",
+      "eliezer"
+    ],
+    "relatedEvents": [
+      "exodus",
+      "mosaic-covenant"
+    ]
+  },
+  {
+    "id": "psalms",
+    "name": "Psalms",
+    "startYear": 1000,
+    "endYear": 400,
+    "era": "BC",
+    "category": "Poetry",
+    "priority": 1,
+    "track": "books",
+    "description": "Songs of worship, lament, and praise spanning centuries",
+    "author": "David, Asaph, Sons of Korah, others",
+    "dateRange": "1000-400 BC",
+    "scriptureRefs": [
+      "Psalm 1:1"
+    ],
+    "relatedPeople": [
+      "david"
+    ],
+    "relatedEvents": []
+  },
+  {
+    "id": "leviticus",
+    "name": "Leviticus",
+    "startYear": 1446,
+    "endYear": 1406,
+    "era": "BC",
+    "category": "Pentateuch",
+    "priority": 2,
+    "track": "books",
+    "description": "Laws for holiness, worship, sacrifices, and priestly ministry.",
+    "author": "Moses",
+    "dateRange": "1446-1406 BC",
+    "scriptureRefs": [
+      "Leviticus 1:1"
+    ],
+    "relatedPeople": [
+      "moses"
+    ],
+    "relatedEvents": []
+  },
+  {
+    "id": "numbers",
+    "name": "Numbers",
+    "startYear": 1446,
+    "endYear": 1406,
+    "era": "BC",
+    "category": "Pentateuch",
+    "priority": 2,
+    "track": "books",
+    "description": "Wilderness journey, censuses, rebellion, and preparation to enter Canaan.",
+    "author": "Moses",
+    "dateRange": "1446-1406 BC",
+    "scriptureRefs": [
+      "Numbers 1:1"
+    ],
+    "relatedPeople": [
+      "moses"
+    ],
+    "relatedEvents": []
+  },
+  {
+    "id": "deuteronomy",
+    "name": "Deuteronomy",
+    "startYear": 1406,
+    "endYear": 1406,
+    "era": "BC",
+    "category": "Pentateuch",
+    "priority": 2,
+    "track": "books",
+    "description": "Moses final covenant sermons before Israel enters the land.",
+    "author": "Moses",
+    "dateRange": "1406 BC",
+    "scriptureRefs": [
+      "Deuteronomy 1:1"
+    ],
+    "relatedPeople": [
+      "moses"
+    ],
+    "relatedEvents": []
+  },
+  {
+    "id": "joshua",
+    "name": "Joshua",
+    "startYear": 1406,
+    "endYear": 1375,
+    "era": "BC",
+    "category": "History",
+    "priority": 2,
+    "track": "books",
+    "description": "Israel crosses Jordan, conquers Canaan, and receives tribal allotments.",
+    "author": "Joshua (traditional)",
+    "dateRange": "1406-1375 BC",
+    "scriptureRefs": [
+      "Joshua 1:1"
+    ],
+    "relatedPeople": [
+      "joshua"
+    ],
+    "relatedEvents": [
+      "conquest-of-canaan",
+      "division-of-the-land"
+    ]
+  },
+  {
+    "id": "1-samuel",
+    "name": "1 Samuel",
+    "startYear": 1100,
+    "endYear": 1010,
+    "era": "BC",
+    "category": "History",
+    "priority": 2,
+    "track": "books",
+    "description": "Transition from judges to monarchy; Saul reign and David rise.",
+    "author": "Samuel, Gad, Nathan (traditional)",
+    "dateRange": "1100-1010 BC",
+    "scriptureRefs": [
+      "1 Samuel 1:1"
+    ],
+    "relatedPeople": [
+      "samuel"
+    ],
+    "relatedEvents": [
+      "selection-of-king-saul"
+    ]
+  },
+  {
+    "id": "2-samuel",
+    "name": "2 Samuel",
+    "startYear": 1010,
+    "endYear": 970,
+    "era": "BC",
+    "category": "History",
+    "priority": 2,
+    "track": "books",
+    "description": "David reign over Israel, covenant promise, victories, and failures.",
+    "author": "Gad, Nathan (traditional)",
+    "dateRange": "1010-970 BC",
+    "scriptureRefs": [
+      "2 Samuel 1:1"
+    ],
+    "relatedPeople": [],
+    "relatedEvents": [
+      "reign-of-king-david"
+    ]
+  },
+  {
+    "id": "1-kings",
+    "name": "1 Kings",
+    "startYear": 970,
+    "endYear": 853,
+    "era": "BC",
+    "category": "History",
+    "priority": 2,
+    "track": "books",
+    "description": "Solomon reign, temple construction, and division of the kingdom.",
+    "author": "Jeremiah (traditional)",
+    "dateRange": "970-853 BC",
+    "scriptureRefs": [
+      "1 Kings 1:1"
+    ],
+    "relatedPeople": [],
+    "relatedEvents": [
+      "temple-built",
+      "reign-of-king-david",
+      "division-of-the-kingdom"
+    ]
+  },
+  {
+    "id": "2-kings",
+    "name": "2 Kings",
+    "startYear": 853,
+    "endYear": 586,
+    "era": "BC",
+    "category": "History",
+    "priority": 2,
+    "track": "books",
+    "description": "History of divided kingdoms through exile and Jerusalem destruction.",
+    "author": "Jeremiah (traditional)",
+    "dateRange": "853-586 BC",
+    "scriptureRefs": [
+      "2 Kings 1:1"
+    ],
+    "relatedPeople": [],
+    "relatedEvents": [
+      "fall-of-northern-kingdom",
+      "destruction-of-jerusalem"
+    ]
+  },
+  {
+    "id": "jeremiah",
+    "name": "Jeremiah",
+    "startYear": 627,
+    "endYear": 580,
+    "era": "BC",
+    "category": "Major Prophets",
+    "priority": 2,
+    "track": "books",
+    "description": "Prophetic warnings, calls to repentance, and hope amid coming judgment.",
+    "author": "Jeremiah",
+    "dateRange": "627-580 BC",
+    "scriptureRefs": [
+      "Jeremiah 1:1"
+    ],
+    "relatedPeople": [],
+    "relatedEvents": [
+      "destruction-of-jerusalem"
+    ]
+  },
+  {
+    "id": "ezra",
+    "name": "Ezra",
+    "startYear": 538,
+    "endYear": 457,
+    "era": "BC",
+    "category": "History",
+    "priority": 2,
+    "track": "books",
+    "description": "Return from exile and restoration of worship and covenant life.",
+    "author": "Ezra",
+    "dateRange": "538-457 BC",
+    "scriptureRefs": [
+      "Ezra 1:1"
+    ],
+    "relatedPeople": [],
+    "relatedEvents": [
+      "return-from-exile",
+      "dedication-of-second-temple"
+    ]
+  },
+  {
+    "id": "nehemiah",
+    "name": "Nehemiah",
+    "startYear": 445,
+    "endYear": 430,
+    "era": "BC",
+    "category": "History",
+    "priority": 2,
+    "track": "books",
+    "description": "Rebuilding Jerusalem walls and spiritual reform in Judah.",
+    "author": "Nehemiah",
+    "dateRange": "445-430 BC",
+    "scriptureRefs": [
+      "Nehemiah 1:1"
+    ],
+    "relatedPeople": [],
+    "relatedEvents": [
+      "rebuilding-jerusalems-walls"
+    ]
+  }
+]

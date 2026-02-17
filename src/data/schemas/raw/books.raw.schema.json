@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "books.raw.schema.json",
+  "title": "Books Raw Schema",
+  "description": "Schema for raw books data as authored",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "$ref": "common.raw.schema.json#/definitions/id"
+      },
+      "name": {
+        "type": "string"
+      },
+      "startYear": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Start year of period covered"
+      },
+      "endYear": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "End year of period covered"
+      },
+      "era": {
+        "$ref": "common.raw.schema.json#/definitions/era"
+      },
+      "category": {
+        "type": "string",
+        "enum": ["Pentateuch", "History", "Poetry", "Major Prophets", "Minor Prophets"],
+        "description": "Book category"
+      },
+      "priority": {
+        "$ref": "common.raw.schema.json#/definitions/priority"
+      },
+      "track": {
+        "type": "string",
+        "const": "books"
+      },
+      "description": {
+        "type": "string"
+      },
+      "author": {
+        "type": "string"
+      },
+      "dateRange": {
+        "type": "string",
+        "description": "Human-readable date range"
+      },
+      "scriptureRefs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "relatedPeople": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "relatedEvents": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": ["id", "name", "startYear", "endYear", "era", "category", "priority", "track"],
+    "additionalProperties": false
+  }
+}

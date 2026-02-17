@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "people.compiled.schema.json",
+  "title": "People Compiled Schema",
+  "description": "Schema for UI-ready compiled people data",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "$ref": "common.compiled.schema.json#/definitions/id"
+      },
+      "type": {
+        "type": "string",
+        "const": "person"
+      },
+      "name": {
+        "type": "string"
+      },
+      "startYear": {
+        "type": "integer",
+        "description": "Birth year (BC as positive integer)"
+      },
+      "endYear": {
+        "type": "integer",
+        "description": "Death year (BC as positive integer)"
+      },
+      "certainty": {
+        "type": "string",
+        "enum": ["exact", "approximate", "estimated"]
+      },
+      "categories": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Categories/roles for this person"
+      },
+      "swimlane": {
+        "type": "integer",
+        "description": "Assigned swimlane for timeline display"
+      },
+      "priority": {
+        "$ref": "common.compiled.schema.json#/definitions/priority"
+      },
+      "description": {
+        "type": "string"
+      },
+      "bio": {
+        "type": "string"
+      },
+      "scriptureRefs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": ["id", "type", "name", "startYear", "certainty", "categories"],
+    "additionalProperties": false
+  }
+}

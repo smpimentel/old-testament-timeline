@@ -1,0 +1,51 @@
+<svg width="780" height="516" viewBox="0 0 780 516" xmlns="http://www.w3.org/2000/svg">
+<rect width="780" height="516" fill="#F7F1E4"/>
+<text x="20" y="34" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#2D241C">The Restoration</text>
+<text x="20" y="58" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">538-400 BC - Return from exile, temple rebuilt</text>
+<text x="20" y="78" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Nodes included by start year in this period. Move nodes in Figma, then share updated coordinates.</text>
+<rect x="10" y="100" width="760" height="398" rx="10" fill="#FFFDF7" stroke="#C7B8A2"/>
+<rect x="120" y="116" width="580" height="84" fill="#B2DFDB44" stroke="#B2DFDB"/>
+<text x="132" y="142" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">RESTORATION</text>
+<line x1="699.6" y1="200" x2="699.6" y2="490" stroke="#C7B8A2" stroke-width="1"/>
+<text x="679.6" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">400</text>
+<line x1="489.6" y1="200" x2="489.6" y2="490" stroke="#C7B8A2" stroke-width="1"/>
+<text x="469.6" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">450</text>
+<line x1="279.6" y1="200" x2="279.6" y2="490" stroke="#C7B8A2" stroke-width="1"/>
+<text x="259.6" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">500</text>
+<line x1="594.6" y1="200" x2="594.6" y2="490" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="384.6" y1="200" x2="384.6" y2="490" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="174.6" y1="200" x2="174.6" y2="490" stroke="#E3D7C4" stroke-width="1"/>
+<rect x="20" y="218" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="233" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">EVENTS</text>
+<rect x="20" y="292" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="307" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">PEOPLE</text>
+<rect x="20" y="370" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="41" y="385" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">BOOKS</text>
+<line x1="120" y1="270" x2="700" y2="270" stroke="#E3D7C4"/>
+<line x1="120" y1="348" x2="700" y2="348" stroke="#E3D7C4"/>
+<g id="book-psalms">
+<rect x="-1820.4" y="400" width="2520" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-1814.4" y="432" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Psalms (Poetry)</text>
+</g>
+<g id="event-return-from-exile">
+<circle cx="120" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="134" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Return from Exile (restoration)</text>
+</g>
+<g id="book-ezra">
+<rect x="120" y="428" width="340" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="126" y="460" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Ezra (History)</text>
+</g>
+<g id="event-dedication-of-second-temple">
+<circle cx="216.60000000000002" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="230.60000000000002" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Dedication of the Second Temple (temple)</text>
+</g>
+<g id="book-nehemiah">
+<rect x="510.6" y="428" width="63" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="516.6" y="460" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Nehemiah (History)</text>
+</g>
+<g id="event-rebuilding-jerusalems-walls">
+<circle cx="514.8" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="528.8" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Rebuilding of Jerusalem&apos;s Walls (restoration)</text>
+</g>
+<text x="20" y="502" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">Counts: events 3, people 0, books 3, total 6</text>
+</svg>

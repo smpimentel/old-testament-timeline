@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "common.raw.schema.json",
+  "title": "Common Raw Definitions",
+  "description": "Shared definitions for raw/authored data",
+  "definitions": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique lowercase identifier"
+    },
+    "scriptureRefString": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9 ]+\\s+\\d+:\\d+(-\\d+)?$",
+      "description": "Scripture reference as string (e.g., 'Genesis 12:1-3')"
+    },
+    "priority": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4],
+      "description": "Display priority: 1=major, 2=significant, 3=moderate, 4=minor"
+    },
+    "era": {
+      "type": "string",
+      "enum": ["BC", "AD"],
+      "default": "BC"
+    },
+    "hexColor": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+    }
+  }
+}

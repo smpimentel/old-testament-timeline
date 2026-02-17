@@ -1,0 +1,132 @@
+[
+  {
+    "id": "primeval-history",
+    "type": "period",
+    "name": "Primeval History",
+    "startYear": 4004,
+    "endYear": 2166,
+    "certainty": "approximate",
+    "categories": [
+      "period"
+    ],
+    "color": "#8B4513",
+    "description": "From Creation through the Flood and Tower of Babel to the call of Abraham. Covers Genesis 1-11."
+  },
+  {
+    "id": "dates-unknown",
+    "type": "period",
+    "name": "Dates Unknown",
+    "startYear": 4000,
+    "endYear": 2500,
+    "certainty": "approximate",
+    "categories": [
+      "period"
+    ],
+    "color": "#E0E0E0",
+    "description": "Creation, Fall, Flood, Tower of Babel"
+  },
+  {
+    "id": "patriarchal-period",
+    "type": "period",
+    "name": "Patriarchal Period",
+    "startYear": 2166,
+    "endYear": 1806,
+    "certainty": "approximate",
+    "categories": [
+      "period"
+    ],
+    "color": "#DAA520",
+    "description": "The era of Abraham, Isaac, Jacob, and Joseph. God establishes His covenant with Abraham and his descendants."
+  },
+  {
+    "id": "egyptian-sojourn",
+    "type": "period",
+    "name": "Egyptian Sojourn",
+    "startYear": 1876,
+    "endYear": 1446,
+    "certainty": "approximate",
+    "categories": [
+      "period"
+    ],
+    "color": "#CD853F",
+    "description": "Israel's time in Egypt, from Jacob's family settling in Goshen through their enslavement and eventual deliverance."
+  },
+  {
+    "id": "wilderness-wanderings",
+    "type": "period",
+    "name": "Wilderness",
+    "startYear": 1446,
+    "endYear": 1406,
+    "certainty": "approximate",
+    "categories": [
+      "period"
+    ],
+    "color": "#D2B48C",
+    "description": "Israel wandered 40 years in the wilderness due to unbelief. God provided manna, water, and the Law while preparing a new generation to enter the Promised Land."
+  },
+  {
+    "id": "judges",
+    "type": "period",
+    "name": "Era of the Judges",
+    "startYear": 1406,
+    "endYear": 1050,
+    "certainty": "approximate",
+    "categories": [
+      "period"
+    ],
+    "color": "#C8E6C9",
+    "description": "Israel repeatedly fell into idolatry, oppression, repentance, and deliverance through judges (military leaders/prophets). This cycle lasted about 350 years."
+  },
+  {
+    "id": "united-kingdom",
+    "type": "period",
+    "name": "The Kings / United Kingdom",
+    "startYear": 1050,
+    "endYear": 930,
+    "certainty": "approximate",
+    "categories": [
+      "period"
+    ],
+    "color": "#BBDEFB",
+    "description": "Saul, David, Solomon united Israel"
+  },
+  {
+    "id": "divided-kingdom",
+    "type": "period",
+    "name": "Kingdom Divides",
+    "startYear": 930,
+    "endYear": 586,
+    "certainty": "approximate",
+    "categories": [
+      "period"
+    ],
+    "color": "#E1BEE7",
+    "description": "The kingdom split into Israel (north, 10 tribes) and Judah (south, 2 tribes). Ended with the fall of both kingdoms."
+  },
+  {
+    "id": "babylonian-exile",
+    "type": "period",
+    "name": "Babylonian Exile",
+    "startYear": 586,
+    "endYear": 538,
+    "certainty": "approximate",
+    "categories": [
+      "period"
+    ],
+    "color": "#2F4F4F",
+    "description": "The 70-year period of Judah's captivity in Babylon following the destruction of Jerusalem and the Temple."
+  },
+  {
+    "id": "restoration-period",
+    "type": "period",
+    "name": "Restoration Period",
+    "startYear": 538,
+    "endYear": 400,
+    "certainty": "approximate",
+    "categories": [
+      "period"
+    ],
+    "color": "#2E8B57",
+    "description": "The return from exile, rebuilding of the Temple and Jerusalem's walls under Zerubbabel, Ezra, and Nehemiah."
+  }
+]

@@ -1,0 +1,82 @@
+<svg width="704" height="646" viewBox="0 0 704 646" xmlns="http://www.w3.org/2000/svg">
+<rect width="704" height="646" fill="#F7F1E4"/>
+<text x="20" y="34" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#2D241C">The Kings / United Kingdom</text>
+<text x="20" y="58" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">1050-930 BC - Saul, David, Solomon united Israel</text>
+<text x="20" y="78" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Nodes included by start year in this period. Move nodes in Figma, then share updated coordinates.</text>
+<rect x="10" y="100" width="684" height="528" rx="10" fill="#FFFDF7" stroke="#C7B8A2"/>
+<rect x="120" y="116" width="504" height="84" fill="#BBDEFB44" stroke="#BBDEFB"/>
+<text x="132" y="142" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">UNITED-KINGDOM</text>
+<line x1="540" y1="200" x2="540" y2="620" stroke="#C7B8A2" stroke-width="1"/>
+<text x="520" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">950</text>
+<line x1="330" y1="200" x2="330" y2="620" stroke="#C7B8A2" stroke-width="1"/>
+<text x="310" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">1000</text>
+<line x1="120" y1="200" x2="120" y2="620" stroke="#C7B8A2" stroke-width="1"/>
+<text x="100" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">1050</text>
+<line x1="435" y1="200" x2="435" y2="620" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="225" y1="200" x2="225" y2="620" stroke="#E3D7C4" stroke-width="1"/>
+<rect x="20" y="218" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="233" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">EVENTS</text>
+<rect x="20" y="292" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="307" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">PEOPLE</text>
+<rect x="20" y="472" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="41" y="487" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">BOOKS</text>
+<line x1="120" y1="270" x2="624" y2="270" stroke="#E3D7C4"/>
+<line x1="120" y1="450" x2="624" y2="450" stroke="#E3D7C4"/>
+<g id="person-samuel">
+<rect x="-90" y="390" width="357" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-84" y="428" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Samuel (Prophet)</text>
+</g>
+<g id="book-1-samuel">
+<rect x="-90" y="502" width="378" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-84" y="534" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">1 Samuel (History)</text>
+</g>
+<g id="person-jesse">
+<rect x="-6" y="424" width="336" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="0" y="462" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Jesse (Other)</text>
+</g>
+<g id="event-selection-of-king-saul">
+<circle cx="120" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="134" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Selection of King Saul (monarchy)</text>
+</g>
+<g id="person-david">
+<rect x="162" y="322" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="168" y="360" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">David (King)</text>
+</g>
+<g id="person-bathsheba">
+<rect x="225" y="356" width="315" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="231" y="394" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Bathsheba (Other)</text>
+</g>
+<g id="event-reign-of-king-david">
+<circle cx="288" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="302" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Reign of King David (monarchy)</text>
+</g>
+<g id="person-absalom">
+<rect x="288" y="390" width="126" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="294" y="428" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Absalom (Other)</text>
+</g>
+<g id="book-2-samuel">
+<rect x="288" y="530" width="168" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="294" y="562" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">2 Samuel (History)</text>
+</g>
+<g id="book-psalms">
+<rect x="330" y="502" width="2520" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="336" y="534" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Psalms (Poetry)</text>
+</g>
+<g id="person-solomon">
+<rect x="372" y="424" width="248" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="378" y="462" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Solomon (King)</text>
+</g>
+<g id="book-1-kings">
+<rect x="456" y="558" width="491" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="462" y="590" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">1 Kings (History)</text>
+</g>
+<g id="event-temple-built">
+<circle cx="472.8" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="486.8" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Construction of the First Temple (temple)</text>
+</g>
+<g id="event-division-of-the-kingdom">
+<circle cx="619.8" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="633.8" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Division of the Kingdom (monarchy)</text>
+</g>
+<text x="20" y="632" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">Counts: events 4, people 6, books 4, total 14</text>
+</svg>

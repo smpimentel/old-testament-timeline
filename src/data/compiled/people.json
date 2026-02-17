@@ -1,0 +1,878 @@
+[
+  {
+    "id": "terah",
+    "type": "person",
+    "name": "Terah",
+    "startYear": 2296,
+    "endYear": 2091,
+    "certainty": "approximate",
+    "categories": [
+      "Patriarch"
+    ],
+    "priority": 3,
+    "description": "Father of Abraham",
+    "bio": "Father of Abraham, Nahor, and Haran. Originally from Ur of the Chaldeans, he began the journey toward Canaan but settled in Haran.",
+    "scriptureRefs": [
+      "Genesis 11:26-32"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "sarah",
+    "type": "person",
+    "name": "Sarah",
+    "startYear": 2156,
+    "endYear": 2029,
+    "certainty": "approximate",
+    "categories": [
+      "Patriarch"
+    ],
+    "priority": 2,
+    "description": "Wife of Abraham, mother of Isaac",
+    "bio": "Originally named Sarai, she was Abraham's wife and half-sister. Despite being barren until age 90, God promised she would bear a son. She gave birth to Isaac, the child of promise.",
+    "scriptureRefs": [
+      "Genesis 17:15-16",
+      "Genesis 21:1-7",
+      "Hebrews 11:11"
+    ],
+    "swimlane": 3
+  },
+  {
+    "id": "isaac",
+    "type": "person",
+    "name": "Isaac",
+    "startYear": 2066,
+    "endYear": 1886,
+    "certainty": "exact",
+    "categories": [
+      "Patriarch"
+    ],
+    "priority": 1,
+    "description": "The promised son of Abraham and Sarah, father of Jacob.",
+    "bio": "The promised son of Abraham and Sarah, born when they were elderly. Nearly sacrificed by Abraham as a test of faith. Married Rebekah and fathered Jacob and Esau.",
+    "scriptureRefs": [
+      "Genesis 21:1-7",
+      "Genesis 22:1-19",
+      "Genesis 25:19-26",
+      "Gen 25-27"
+    ],
+    "swimlane": 4
+  },
+  {
+    "id": "ishmael",
+    "type": "person",
+    "name": "Ishmael",
+    "startYear": 2080,
+    "endYear": 1943,
+    "certainty": "approximate",
+    "categories": [
+      "Patriarch"
+    ],
+    "priority": 3,
+    "description": "Son of Abraham and Hagar",
+    "bio": "Firstborn son of Abraham through Hagar, Sarah's Egyptian servant. Father of twelve princes and considered the ancestor of many Arab peoples.",
+    "scriptureRefs": [
+      "Genesis 16:1-16",
+      "Genesis 21:8-21",
+      "Genesis 25:12-18"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "amram",
+    "type": "person",
+    "name": "Amram",
+    "startYear": 1600,
+    "endYear": 1463,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 3,
+    "description": "Father of Moses, Aaron, and Miriam",
+    "bio": "A Levite who married Jochebed. Father of Moses, Aaron, and Miriam. Lived during the Egyptian slavery period.",
+    "scriptureRefs": [
+      "Exodus 6:18-20",
+      "Numbers 26:59"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "jochebed",
+    "type": "person",
+    "name": "Jochebed",
+    "startYear": 1595,
+    "endYear": 1460,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 3,
+    "description": "Mother of Moses, Aaron, and Miriam",
+    "bio": "A Levite woman who married Amram. Hid baby Moses for three months then placed him in a basket on the Nile. Later hired as his nurse by Pharaoh's daughter.",
+    "scriptureRefs": [
+      "Exodus 2:1-10",
+      "Exodus 6:20",
+      "Hebrews 11:23"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "zipporah",
+    "type": "person",
+    "name": "Zipporah",
+    "startYear": 1510,
+    "endYear": 1400,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 3,
+    "description": "Wife of Moses, daughter of Jethro",
+    "bio": "Daughter of Jethro, priest of Midian. Moses met her at a well while fleeing Egypt. She bore him two sons: Gershom and Eliezer.",
+    "scriptureRefs": [
+      "Exodus 2:16-22",
+      "Exodus 4:24-26",
+      "Exodus 18:1-6"
+    ],
+    "swimlane": 4
+  },
+  {
+    "id": "gershom",
+    "type": "person",
+    "name": "Gershom",
+    "startYear": 1485,
+    "endYear": 1400,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Firstborn son of Moses and Zipporah",
+    "bio": "Firstborn son of Moses, born in Midian. His name means 'sojourner there' reflecting Moses' status as a stranger in a foreign land.",
+    "scriptureRefs": [
+      "Exodus 2:22",
+      "Exodus 18:3"
+    ],
+    "swimlane": 5
+  },
+  {
+    "id": "eliezer",
+    "type": "person",
+    "name": "Eliezer",
+    "startYear": 1480,
+    "endYear": 1395,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Second son of Moses and Zipporah",
+    "bio": "Second son of Moses. His name means 'God of my father was my help' commemorating God's deliverance of Moses from Pharaoh.",
+    "scriptureRefs": [
+      "Exodus 18:4",
+      "1 Chronicles 23:15"
+    ],
+    "swimlane": 7
+  },
+  {
+    "id": "jesse",
+    "type": "person",
+    "name": "Jesse",
+    "startYear": 1080,
+    "endYear": 1000,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 3,
+    "description": "Father of King David",
+    "bio": "A Bethlehemite of the tribe of Judah. Father of eight sons including David. Grandson of Ruth and Boaz.",
+    "scriptureRefs": [
+      "1 Samuel 16:1-13",
+      "Ruth 4:17-22",
+      "Isaiah 11:1"
+    ],
+    "swimlane": 3
+  },
+  {
+    "id": "bathsheba",
+    "type": "person",
+    "name": "Bathsheba",
+    "startYear": 1025,
+    "endYear": 950,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 3,
+    "description": "Wife of David, mother of Solomon",
+    "bio": "Originally wife of Uriah the Hittite. David saw her bathing and committed adultery with her, later arranging Uriah's death. She became David's wife and mother of Solomon.",
+    "scriptureRefs": [
+      "2 Samuel 11:1-27",
+      "2 Samuel 12:24",
+      "1 Kings 1:11-31"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "solomon",
+    "type": "person",
+    "name": "Solomon",
+    "startYear": 990,
+    "endYear": 931,
+    "certainty": "exact",
+    "categories": [
+      "King"
+    ],
+    "priority": 2,
+    "description": "Son of David, builder of the Temple",
+    "bio": "Third king of Israel, known for wisdom granted by God. Built the First Temple in Jerusalem. Author of Proverbs, Ecclesiastes, and Song of Solomon. His reign marked Israel's golden age.",
+    "scriptureRefs": [
+      "1 Kings 3:5-14",
+      "1 Kings 6:1-38",
+      "1 Kings 11:1-13"
+    ],
+    "swimlane": 3
+  },
+  {
+    "id": "absalom",
+    "type": "person",
+    "name": "Absalom",
+    "startYear": 1010,
+    "endYear": 980,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 3,
+    "description": "Son of David who rebelled against him",
+    "bio": "Third son of David, known for his handsome appearance. Killed his half-brother Amnon for raping his sister Tamar. Later led a rebellion against David but was killed by Joab.",
+    "scriptureRefs": [
+      "2 Samuel 13:1-39",
+      "2 Samuel 15:1-12",
+      "2 Samuel 18:9-15"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "abraham",
+    "type": "person",
+    "name": "Abraham",
+    "startYear": 2166,
+    "endYear": 1991,
+    "certainty": "exact",
+    "categories": [
+      "Patriarch"
+    ],
+    "priority": 1,
+    "description": "Father of the Hebrew nation, called by God to leave Ur.",
+    "bio": "Abraham (originally Abram) is the father of the Hebrew nation. God called him to leave Ur and promised to make him a great nation and bless all families of the earth through him.",
+    "scriptureRefs": [
+      "Genesis 12:1-3",
+      "Genesis 15:1-6",
+      "Hebrews 11:8-12",
+      "Gen 11-25"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "moses",
+    "type": "person",
+    "name": "Moses",
+    "startYear": 1526,
+    "endYear": 1406,
+    "certainty": "approximate",
+    "categories": [
+      "Prophet"
+    ],
+    "priority": 1,
+    "description": "Deliverer of Israel from Egypt, received the Law at Sinai.",
+    "bio": "Born in Egypt during Hebrew slavery, Moses was rescued by Pharaoh's daughter. Called by God at the burning bush, he led Israel out of Egypt and received the Law at Sinai.",
+    "scriptureRefs": [
+      "Exodus 3:1-10",
+      "Exodus 20:1-17",
+      "Deuteronomy 34:10-12",
+      "Exod 2-Deut 34"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "david",
+    "type": "person",
+    "name": "David",
+    "startYear": 1040,
+    "endYear": 970,
+    "certainty": "exact",
+    "categories": [
+      "King"
+    ],
+    "priority": 1,
+    "description": "Israel's greatest king, ancestor of Christ",
+    "bio": "A shepherd from Bethlehem, David was anointed king by Samuel. He united Israel, conquered Jerusalem, and established a dynasty through which the Messiah would come.",
+    "scriptureRefs": [
+      "1 Samuel 16:1-13",
+      "2 Samuel 7:12-16",
+      "Psalm 23"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "adam",
+    "type": "person",
+    "name": "Adam",
+    "startYear": 4004,
+    "endYear": 3074,
+    "certainty": "approximate",
+    "categories": [
+      "Patriarch"
+    ],
+    "priority": 1,
+    "description": "The first man, created by God from the dust of the ground.",
+    "bio": "God formed Adam from the dust and created Eve from his rib. They lived in perfect fellowship with God in the Garden of Eden.",
+    "scriptureRefs": [
+      "Gen 1-2"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "eve",
+    "type": "person",
+    "name": "Eve",
+    "startYear": 4004,
+    "endYear": 3074,
+    "certainty": "approximate",
+    "categories": [
+      "Patriarch"
+    ],
+    "priority": 2,
+    "description": "The first woman, created from Adam's rib.",
+    "bio": "Eve was created by God from Adam's rib to be his companion. Together they were tempted by the serpent and disobeyed God.",
+    "scriptureRefs": [
+      "Gen 1-3"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "noah",
+    "type": "person",
+    "name": "Noah",
+    "startYear": 2948,
+    "endYear": 1998,
+    "certainty": "approximate",
+    "categories": [
+      "Patriarch"
+    ],
+    "priority": 1,
+    "description": "Righteous man who built the ark and preserved humanity through the Flood.",
+    "bio": "Noah was a righteous man who walked with God. He built the ark and preserved humanity and animal kinds through the Flood.",
+    "scriptureRefs": [
+      "Gen 6-9"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "jacob",
+    "type": "person",
+    "name": "Jacob (Israel)",
+    "startYear": 2006,
+    "endYear": 1859,
+    "certainty": "exact",
+    "categories": [
+      "Patriarch"
+    ],
+    "priority": 1,
+    "description": "Younger twin of Isaac, renamed Israel, father of the twelve tribes.",
+    "bio": "Jacob (later renamed Israel) was the younger twin son of Isaac. He fathered the twelve tribes of Israel and received the covenant blessing from God.",
+    "scriptureRefs": [
+      "Gen 27-36"
+    ],
+    "swimlane": 3
+  },
+  {
+    "id": "joseph",
+    "type": "person",
+    "name": "Joseph",
+    "startYear": 1916,
+    "endYear": 1806,
+    "certainty": "exact",
+    "categories": [
+      "Patriarch"
+    ],
+    "priority": 1,
+    "description": "Son of Jacob who rose to second-in-command in Egypt.",
+    "bio": "Sold into slavery by his brothers, Joseph rose to become second-in-command in Egypt. He saved Egypt and his family from famine through God-given wisdom.",
+    "scriptureRefs": [
+      "Gen 37-50"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "joshua",
+    "type": "person",
+    "name": "Joshua",
+    "startYear": 1485,
+    "endYear": 1375,
+    "certainty": "approximate",
+    "categories": [
+      "Warrior"
+    ],
+    "priority": 1,
+    "description": "Moses' successor who led Israel into the Promised Land.",
+    "bio": "Originally named Hoshea, Joshua was Moses' longtime assistant and the faithful military leader who succeeded him as the commander of Israel. He courageously led the Israelites across the Jordan River into the Promised Land and directed the conquest of Canaan.",
+    "scriptureRefs": [
+      "Josh 1-24"
+    ],
+    "swimlane": 6
+  },
+  {
+    "id": "samuel",
+    "type": "person",
+    "name": "Samuel",
+    "startYear": 1100,
+    "endYear": 1015,
+    "certainty": "approximate",
+    "categories": [
+      "Prophet"
+    ],
+    "priority": 1,
+    "description": "Last judge, prophet, and priest who anointed Israel's first two kings.",
+    "bio": "Samuel was the last judge, a prophet, and priest. He anointed Israel's first two kings (Saul and David) and called the nation back to faithfulness to God.",
+    "scriptureRefs": [
+      "1 Sam 1-25"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "cain",
+    "type": "person",
+    "name": "Cain",
+    "startYear": 3974,
+    "endYear": 3904,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 2
+  },
+  {
+    "id": "abel",
+    "type": "person",
+    "name": "Abel",
+    "startYear": 3974,
+    "endYear": 3904,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 3
+  },
+  {
+    "id": "seth",
+    "type": "person",
+    "name": "Seth",
+    "startYear": 3974,
+    "endYear": 3904,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 4
+  },
+  {
+    "id": "lamech",
+    "type": "person",
+    "name": "Lamech",
+    "startYear": 2978,
+    "endYear": 2908,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 0
+  },
+  {
+    "id": "shem",
+    "type": "person",
+    "name": "Shem",
+    "startYear": 2918,
+    "endYear": 2848,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 2
+  },
+  {
+    "id": "ham",
+    "type": "person",
+    "name": "Ham",
+    "startYear": 2918,
+    "endYear": 2848,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 3
+  },
+  {
+    "id": "japheth",
+    "type": "person",
+    "name": "Japheth",
+    "startYear": 2918,
+    "endYear": 2848,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 4
+  },
+  {
+    "id": "rebekah",
+    "type": "person",
+    "name": "Rebekah",
+    "startYear": 2051,
+    "endYear": 1981,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 5
+  },
+  {
+    "id": "esau",
+    "type": "person",
+    "name": "Esau",
+    "startYear": 2036,
+    "endYear": 1966,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 6
+  },
+  {
+    "id": "rachel",
+    "type": "person",
+    "name": "Rachel",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 1
+  },
+  {
+    "id": "reuben",
+    "type": "person",
+    "name": "Reuben",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 2
+  },
+  {
+    "id": "simeon",
+    "type": "person",
+    "name": "Simeon",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 5
+  },
+  {
+    "id": "levi",
+    "type": "person",
+    "name": "Levi",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 7
+  },
+  {
+    "id": "judah",
+    "type": "person",
+    "name": "Judah",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 8
+  },
+  {
+    "id": "dan",
+    "type": "person",
+    "name": "Dan",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 9
+  },
+  {
+    "id": "naphtali",
+    "type": "person",
+    "name": "Naphtali",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 10
+  },
+  {
+    "id": "gad",
+    "type": "person",
+    "name": "Gad",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 11
+  },
+  {
+    "id": "asher",
+    "type": "person",
+    "name": "Asher",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 12
+  },
+  {
+    "id": "issachar",
+    "type": "person",
+    "name": "Issachar",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 13
+  },
+  {
+    "id": "zebulun",
+    "type": "person",
+    "name": "Zebulun",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 14
+  },
+  {
+    "id": "benjamin",
+    "type": "person",
+    "name": "Benjamin",
+    "startYear": 1976,
+    "endYear": 1906,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 15
+  },
+  {
+    "id": "asenath",
+    "type": "person",
+    "name": "Asenath",
+    "startYear": 1916,
+    "endYear": 1846,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 6
+  },
+  {
+    "id": "manasseh",
+    "type": "person",
+    "name": "Manasseh",
+    "startYear": 1886,
+    "endYear": 1816,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 1
+  },
+  {
+    "id": "ephraim",
+    "type": "person",
+    "name": "Ephraim",
+    "startYear": 1886,
+    "endYear": 1816,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 2
+  },
+  {
+    "id": "nun",
+    "type": "person",
+    "name": "Nun",
+    "startYear": 1515,
+    "endYear": 1445,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 3
+  },
+  {
+    "id": "elkanah",
+    "type": "person",
+    "name": "Elkanah",
+    "startYear": 1130,
+    "endYear": 1060,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 0
+  },
+  {
+    "id": "hannah",
+    "type": "person",
+    "name": "Hannah",
+    "startYear": 1130,
+    "endYear": 1060,
+    "certainty": "approximate",
+    "categories": [
+      "Other"
+    ],
+    "priority": 4,
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [],
+    "swimlane": 1
+  }
+]

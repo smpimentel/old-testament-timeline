@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "common.compiled.schema.json",
+  "title": "Common Compiled Definitions",
+  "description": "Shared definitions for UI-ready compiled data",
+  "definitions": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique lowercase identifier"
+    },
+    "date": {
+      "type": "object",
+      "properties": {
+        "year": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "era": {
+          "type": "string",
+          "enum": ["BC", "AD"],
+          "default": "BC"
+        },
+        "certainty": {
+          "type": "string",
+          "enum": ["exact", "approximate", "estimated"],
+          "default": "approximate"
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["year"],
+      "additionalProperties": false
+    },
+    "scriptureRef": {
+      "type": "object",
+      "properties": {
+        "book": {
+          "type": "string"
+        },
+        "chapter": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "startVerse": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "endVerse": {
+          "type": ["integer", "null"],
+          "minimum": 1
+        },
+        "text": {
+          "type": "string"
+        },
+        "display": {
+          "type": "string",
+          "description": "Human-readable reference string"
+        }
+      },
+      "required": ["book", "chapter"],
+      "additionalProperties": false
+    },
+    "themeTag": {
+      "type": "string",
+      "enum": ["Covenant", "Kingship", "Land", "Messiah", "Redemption", "Judgment", "Faithfulness", "Promise", "Exile", "Restoration"]
+    },
+    "priority": {
+      "type": "integer",
+      "enum": [1, 2, 3, 4]
+    },
+    "hexColor": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+    }
+  }
+}

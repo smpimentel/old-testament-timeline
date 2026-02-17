@@ -1,0 +1,547 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" compressed="false" version="29.3.0">
+  <diagram id="ot-timeline" name="Old Testament Timeline">
+    <mxGraphModel dx="9000" dy="1709" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="8500" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="track-events-bg" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#F7EFE4;strokeColor=#DCCFBF;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="128" width="7200" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="meta-note" parent="1" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF5D6;strokeColor=#D6B76E;fontSize=11;align=left;verticalAlign=middle;spacing=8;" value="Timeline Source: compiled JSON&lt;br&gt;Scale: 2 px/year&lt;br&gt;Convert X-&gt;year: year = 4000 - (x / 2)" vertex="1">
+          <mxGeometry height="64" width="520" y="-250" as="geometry" />
+        </mxCell>
+        <mxCell id="period-dates-unknown" parent="1" periodId="dates-unknown" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#E0E0E0;opacity=28;strokeColor=#E0E0E0;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="Dates Unknown&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;4000-2500 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="3000" x="1" y="-88" as="geometry" />
+        </mxCell>
+        <mxCell id="period-patriarchs" parent="1" periodId="patriarchs" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#FFF9C4;opacity=28;strokeColor=#FFF9C4;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="Time of the Patriarchs&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;2166-1876 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="580" x="3668" as="geometry" />
+        </mxCell>
+        <mxCell id="period-egypt" parent="1" periodId="egypt" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#FFCCBC;opacity=28;strokeColor=#FFCCBC;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="Israel in Egypt&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;1876-1446 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="860" x="4248" as="geometry" />
+        </mxCell>
+        <mxCell id="period-wandering" parent="1" periodId="wandering" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#D7CCC8;opacity=28;strokeColor=#D7CCC8;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="Wandering&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;1446-1406 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="80" x="5108" as="geometry" />
+        </mxCell>
+        <mxCell id="period-judges" parent="1" periodId="judges" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#C8E6C9;opacity=28;strokeColor=#C8E6C9;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="Era of the Judges&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;1406-1050 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="712" x="5188" as="geometry" />
+        </mxCell>
+        <mxCell id="period-united-kingdom" parent="1" periodId="united-kingdom" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#BBDEFB;opacity=28;strokeColor=#BBDEFB;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="The Kings / United Kingdom&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;1050-930 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="240" x="5900" as="geometry" />
+        </mxCell>
+        <mxCell id="period-divided-kingdom" parent="1" periodId="divided-kingdom" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#E1BEE7;opacity=28;strokeColor=#E1BEE7;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="Kingdom Divides&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;930-586 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="688" x="6140" as="geometry" />
+        </mxCell>
+        <mxCell id="period-exile" parent="1" periodId="exile" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#BDBDBD;opacity=28;strokeColor=#BDBDBD;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="Exile&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;586-538 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="96" x="6828" as="geometry" />
+        </mxCell>
+        <mxCell id="period-restoration" parent="1" periodId="restoration" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#B2DFDB;opacity=28;strokeColor=#B2DFDB;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="The Restoration&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;538-400 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="276" x="6924" as="geometry" />
+        </mxCell>
+        <mxCell id="period-primeval-history" parent="1" periodId="primeval-history" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#8B4513;opacity=28;strokeColor=#8B4513;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="Primeval History&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;4004-2166 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="3668" as="geometry" />
+        </mxCell>
+        <mxCell id="period-patriarchal-period" parent="1" periodId="patriarchal-period" periodType="period" style="shape=rectangle;rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=6;fillColor=#DAA520;opacity=28;strokeColor=#DAA520;strokeWidth=1;fontSize=11;fontStyle=1;fontColor=#3A322A;" value="Patriarchal Period&lt;br&gt;&lt;font color=&quot;#5C534A&quot;&gt;2166-1806 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="88" width="720" x="3668" y="-88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-400" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="7200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-400" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="400" vertex="1">
+          <mxGeometry height="14" width="42" x="7180" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-450" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="7100" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-500" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="7000" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-550" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="6900" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-600" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="6800" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-600" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="600" vertex="1">
+          <mxGeometry height="14" width="42" x="6780" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-650" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="6700" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-700" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="6600" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-750" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="6500" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-800" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="6400" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-800" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="800" vertex="1">
+          <mxGeometry height="14" width="42" x="6380" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-850" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="6300" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-900" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="6200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-950" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="6100" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1000" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="6000" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-1000" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="1000" vertex="1">
+          <mxGeometry height="14" width="42" x="5980" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1050" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="5900" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1100" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="5800" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1150" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="5700" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1200" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="5600" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-1200" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="1200" vertex="1">
+          <mxGeometry height="14" width="42" x="5580" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1250" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="5500" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1300" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="5400" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1350" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="5300" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1400" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="5200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-1400" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="1400" vertex="1">
+          <mxGeometry height="14" width="42" x="5180" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1450" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="5100" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1500" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="5000" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1550" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="4900" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1600" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="4800" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-1600" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="1600" vertex="1">
+          <mxGeometry height="14" width="42" x="4780" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1650" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="4700" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1700" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="4600" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1750" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="4500" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1800" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="4400" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-1800" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="1800" vertex="1">
+          <mxGeometry height="14" width="42" x="4380" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1850" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="4300" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1900" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="4200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-1950" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="4100" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2000" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="4000" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-2000" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="2000" vertex="1">
+          <mxGeometry height="14" width="42" x="3980" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2050" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="3900" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2100" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="3800" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2150" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="3700" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2200" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="3600" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-2200" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="2200" vertex="1">
+          <mxGeometry height="14" width="42" x="3580" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2250" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="3500" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2300" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="3400" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2350" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="3300" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2400" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="3200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-2400" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="2400" vertex="1">
+          <mxGeometry height="14" width="42" x="3180" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2450" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="3100" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2500" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="3000" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2550" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="2900" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2600" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="2800" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-2600" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="2600" vertex="1">
+          <mxGeometry height="14" width="42" x="2780" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2650" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="2700" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2700" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="2600" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2750" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="2500" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2800" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="2400" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-2800" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="2800" vertex="1">
+          <mxGeometry height="14" width="42" x="2380" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2850" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="2300" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2900" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="2200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-2950" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="2100" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3000" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="2000" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-3000" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="3000" vertex="1">
+          <mxGeometry height="14" width="42" x="1980" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3050" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="1900" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3100" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="1800" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3150" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="1700" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3200" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="1600" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-3200" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="3200" vertex="1">
+          <mxGeometry height="14" width="42" x="1580" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3250" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="1500" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3300" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="1400" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3350" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="1300" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3400" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="1200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-3400" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="3400" vertex="1">
+          <mxGeometry height="14" width="42" x="1180" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3450" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="1100" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3500" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="1000" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3550" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="900" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3600" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="800" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-3600" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="3600" vertex="1">
+          <mxGeometry height="14" width="42" x="780" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3650" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="700" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3700" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="600" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3750" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="500" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3800" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="400" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-3800" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="3800" vertex="1">
+          <mxGeometry height="14" width="42" x="380" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3850" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="300" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3900" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="200" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-3950" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#F1EADD;" value="" vertex="1">
+          <mxGeometry height="590" width="1" x="100" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="grid-4000" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;strokeColor=none;fillColor=#DDD4C7;" value="" vertex="1">
+          <mxGeometry height="590" width="1" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="year-4000" parent="1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontFamily=Courier New;fontColor=#6D6257;" value="4000" vertex="1">
+          <mxGeometry height="14" width="42" x="-20" y="88" as="geometry" />
+        </mxCell>
+        <mxCell id="track-events-label" parent="1" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF9;strokeColor=#D0C3B2;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" value="Events" vertex="1">
+          <mxGeometry height="20" width="70" x="10" y="72" as="geometry" />
+        </mxCell>
+        <mxCell id="track-people-bg" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#F4ECE0;strokeColor=#DCCFBF;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="364" width="7200" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="track-people-label" parent="1" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF9;strokeColor=#D0C3B2;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" value="People" vertex="1">
+          <mxGeometry height="20" width="70" x="10" y="248" as="geometry" />
+        </mxCell>
+        <mxCell id="track-books-bg" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#F8F1E7;strokeColor=#DCCFBF;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="248" width="7200" x="13" y="732" as="geometry" />
+        </mxCell>
+        <mxCell id="track-books-label" parent="1" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF9;strokeColor=#D0C3B2;fontSize=11;fontStyle=1;align=center;verticalAlign=middle;" value="Books" vertex="1">
+          <mxGeometry height="20" width="70" x="10" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-creation" certainty="approximate" endYear="4004" entityId="creation" entityType="event" parent="1" startYear="4004" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="Creation&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;~ BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="2" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-the-fall" certainty="approximate" endYear="4004" entityId="the-fall" entityType="event" parent="1" startYear="4004" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="1" value="The Fall&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;~ BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="13" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-adam" certainty="approximate" endYear="3074" entityId="adam" entityType="person" parent="1" startYear="4004" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="Adam&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;4004-3074 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="1860" x="10" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-eve" certainty="approximate" endYear="3074" entityId="eve" entityType="person" parent="1" startYear="4004" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="Eve&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;4004-3074 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="1860" x="10" y="324" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-genesis" certainty="approximate" endYear="1805" entityId="genesis" entityType="book" parent="1" startYear="4000" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4C8E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="Genesis&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;4000-1805 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="4390" x="18.5" y="744" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-cain" certainty="approximate" endYear="3904" entityId="cain" entityType="person" parent="1" startYear="3974" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="2" value="Cain&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;3974-3904 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="52" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-abel" certainty="approximate" endYear="3904" entityId="abel" entityType="person" parent="1" startYear="3974" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="3" value="Abel&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;3974-3904 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="52" y="396" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-seth" certainty="approximate" endYear="3904" entityId="seth" entityType="person" parent="1" startYear="3974" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="4" value="Seth&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;3974-3904 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="52" y="432" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-lamech" certainty="approximate" endYear="2908" entityId="lamech" entityType="person" parent="1" startYear="2978" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="Lamech&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2978-2908 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="2044" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-noah" certainty="approximate" endYear="1998" entityId="noah" entityType="person" parent="1" startYear="2948" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="Noah&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2948-1998 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="1900" x="2104" y="326" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-shem" certainty="approximate" endYear="2848" entityId="shem" entityType="person" parent="1" startYear="2918" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="2" value="Shem&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2918-2848 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="2164" y="362" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-ham" certainty="approximate" endYear="2848" entityId="ham" entityType="person" parent="1" startYear="2918" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="3" value="Ham&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2918-2848 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="2164" y="398" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-japheth" certainty="approximate" endYear="2848" entityId="japheth" entityType="person" parent="1" startYear="2918" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="4" value="Japheth&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2918-2848 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="2164" y="434" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-flood" certainty="approximate" endYear="2348" entityId="flood" entityType="event" parent="1" startYear="2348" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Great Flood&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;~2348 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="3301" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-terah" certainty="approximate" endYear="2091" entityId="terah" entityType="person" parent="1" startYear="2296" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="Terah&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2296-2091 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="410" x="3408" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-tower-of-babel" certainty="approximate" endYear="2242" entityId="tower-of-babel" entityType="event" parent="1" startYear="2242" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Dispersion of Nations (Tower of Babel)&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;~2242 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="3516" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-abraham" certainty="exact" endYear="1991" entityId="abraham" entityType="person" parent="1" startYear="2166" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="2" value="Abraham&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2166-1991 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="350" x="3668" y="362" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-sarah" certainty="approximate" endYear="2029" entityId="sarah" entityType="person" parent="1" startYear="2156" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="3" value="Sarah&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2156-2029 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="254" x="3688" y="398" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-call-of-abraham" certainty="approximate" endYear="2091" entityId="call-of-abraham" entityType="event" parent="1" startYear="2091" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Call of Abraham&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2091 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="3818" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-ishmael-born" certainty="exact" endYear="2080" entityId="ishmael-born" entityType="event" parent="1" startYear="2080" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="Ishmael Born&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2080 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="3840" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-ishmael" certainty="approximate" endYear="1943" entityId="ishmael" entityType="person" parent="1" startYear="2080" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="Ishmael&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2080-1943 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="274" x="3840" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-birth-of-isaac" certainty="exact" endYear="2066" entityId="birth-of-isaac" entityType="event" parent="1" startYear="2066" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Birth of Isaac&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2066 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="3868" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-isaac" certainty="exact" endYear="1886" entityId="isaac" entityType="person" parent="1" startYear="2066" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="4" value="Isaac&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2066-1886 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="360" x="3868" y="434" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-rebekah" certainty="approximate" endYear="1981" entityId="rebekah" entityType="person" parent="1" startYear="2051" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="5" value="Rebekah&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2051-1981 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="3898" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-jacob" certainty="exact" endYear="1859" entityId="jacob" entityType="person" parent="1" startYear="2006" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="3" value="Jacob (Israel)&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;2006-1859 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="294" x="3988" y="398" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-rachel" certainty="approximate" endYear="1906" entityId="rachel" entityType="person" parent="1" startYear="1976" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="Rachel&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1976-1906 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="4048" y="326" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-reuben" certainty="approximate" endYear="1906" entityId="reuben" entityType="person" parent="1" startYear="1976" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="2" value="Reuben&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1976-1906 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="4048" y="362" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-simeon" certainty="approximate" endYear="1906" entityId="simeon" entityType="person" parent="1" startYear="1976" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="5" value="Simeon&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1976-1906 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="4048" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-joseph" certainty="exact" endYear="1806" entityId="joseph" entityType="person" parent="1" startYear="1916" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="Joseph&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1916-1806 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="220" x="4168" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-asenath" certainty="approximate" endYear="1846" entityId="asenath" entityType="person" parent="1" startYear="1916" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="6" value="Asenath&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1916-1846 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="4168" y="506" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-twelve-tribes-of-israel" certainty="approximate" endYear="1915" entityId="twelve-tribes-of-israel" entityType="event" parent="1" startYear="1915" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Twelve Tribes of Israel&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1915 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="4168" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-josephs-exaltation-in-egypt" certainty="approximate" endYear="1899" entityId="josephs-exaltation-in-egypt" entityType="event" parent="1" startYear="1899" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="Joseph&#39;s Exaltation in Egypt&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1899 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="4201" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-manasseh" certainty="approximate" endYear="1816" entityId="manasseh" entityType="person" parent="1" startYear="1886" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="Manasseh&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1886-1816 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="4228" y="326" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-ephraim" certainty="approximate" endYear="1816" entityId="ephraim" entityType="person" parent="1" startYear="1886" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="2" value="Ephraim&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1886-1816 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="4228" y="362" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-moses" certainty="approximate" endYear="1406" entityId="moses" entityType="person" parent="1" startYear="1526" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8B8D4;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="2" value="Moses&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1526-1406 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="240" x="4948" y="348" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-joshua" certainty="approximate" endYear="1375" entityId="joshua" entityType="person" parent="1" startYear="1485" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D9B5A0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="6" value="Joshua&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1485-1375 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="220" x="5030" y="492" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-exodus" certainty="approximate" endYear="1446" entityId="exodus" entityType="event" parent="1" startYear="1446" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacing=15;" swimlane="0" value="Exodus from Egypt&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1446 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="5108" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-mosaic-covenant" certainty="approximate" endYear="1446" entityId="mosaic-covenant" entityType="event" parent="1" startYear="1446" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;" swimlane="1" value="The Mosaic Covenant&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1446 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="5120" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-exodus-book" certainty="approximate" endYear="1406" entityId="exodus-book" entityType="book" parent="1" startYear="1446" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4C8E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="Exodus&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1446-1406 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="80" x="5121" y="732" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-leviticus" certainty="approximate" endYear="1406" entityId="leviticus" entityType="book" parent="1" startYear="1446" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4C8E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="Leviticus&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1446-1406 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="80" x="5121" y="762" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-numbers" certainty="approximate" endYear="1406" entityId="numbers" entityType="book" parent="1" startYear="1446" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4C8E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="2" value="Numbers&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1446-1406 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="80" x="5121" y="792" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-conquest-of-canaan" certainty="approximate" endYear="1406" entityId="conquest-of-canaan" entityType="event" parent="1" startYear="1406" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Conquest of Canaan&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1406 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="5188" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-deuteronomy" certainty="approximate" endYear="1406" entityId="deuteronomy" entityType="book" parent="1" startYear="1406" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4C8E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="3" value="Deuteronomy&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1406 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="32" x="5201" y="822" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-joshua" certainty="approximate" endYear="1375" entityId="joshua" entityType="book" parent="1" startYear="1406" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#A8C4E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="4" value="Joshua&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1406-1375 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="62" x="5200" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-division-of-the-land" certainty="approximate" endYear="1400" entityId="division-of-the-land" entityType="event" parent="1" startYear="1400" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacing=15;" swimlane="0" value="Division of the Land&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1400 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="5202" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-elkanah" certainty="approximate" endYear="1060" entityId="elkanah" entityType="person" parent="1" startYear="1130" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="Elkanah&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1130-1060 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="5740" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-hannah" certainty="approximate" endYear="1060" entityId="hannah" entityType="person" parent="1" startYear="1130" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="Hannah&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1130-1060 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="5740" y="312" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-samuel" certainty="approximate" endYear="1015" entityId="samuel" entityType="person" parent="1" startYear="1100" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#C8B8D4;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="2" value="Samuel&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1100-1015 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="170" x="5800" y="348" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-1-samuel" certainty="approximate" endYear="1010" entityId="1-samuel" entityType="book" parent="1" startYear="1100" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#A8C4E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="1 Samuel&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1100-1010 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="180" x="5813" y="732" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-jesse" certainty="approximate" endYear="1000" entityId="jesse" entityType="person" parent="1" startYear="1080" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="3" value="Jesse&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1080-1000 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="160" x="5840" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-selection-of-king-saul" certainty="approximate" endYear="1050" entityId="selection-of-king-saul" entityType="event" parent="1" startYear="1050" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Selection of King Saul&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1050 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="5900" y="102" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-david" certainty="exact" endYear="970" entityId="david" entityType="person" parent="1" startYear="1040" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#F5D99F;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="David&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1040-970 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="140" x="5920" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-bathsheba" certainty="approximate" endYear="950" entityId="bathsheba" entityType="person" parent="1" startYear="1025" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="Bathsheba&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1025-950 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="150" x="5950" y="312" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-reign-of-king-david" certainty="approximate" endYear="1010" entityId="reign-of-king-david" entityType="event" parent="1" startYear="1010" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Reign of King David&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1010 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="5980" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-2-samuel" certainty="approximate" endYear="970" entityId="2-samuel" entityType="book" parent="1" startYear="1010" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#A8C4E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="2 Samuel&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1010-970 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="80" x="5993" y="762" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-psalms" certainty="approximate" endYear="400" entityId="psalms" entityType="book" parent="1" startYear="1000" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#F4D4C8;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="0" value="Psalms&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;1000-400 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="1200" x="6013" y="732" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-person-solomon" certainty="exact" endYear="931" entityId="solomon" entityType="person" parent="1" startYear="990" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#F5D99F;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="3" value="Solomon&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;990-931 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="24" width="118" x="6020" y="384" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-1-kings" certainty="approximate" endYear="853" entityId="1-kings" entityType="book" parent="1" startYear="970" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#A8C4E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="2" value="1 Kings&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;970-853 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="234" x="6073" y="792" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-temple-built" certainty="approximate" endYear="966" entityId="temple-built" entityType="event" parent="1" startYear="966" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="Construction of the First Temple&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;966 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="6069" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-division-of-the-kingdom" certainty="exact" endYear="931" entityId="division-of-the-kingdom" entityType="event" parent="1" startYear="931" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Division of the Kingdom&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;931 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="6138" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-2-kings" certainty="approximate" endYear="586" entityId="2-kings" entityType="book" parent="1" startYear="853" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#A8C4E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="2 Kings&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;853-586 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="534" x="6307" y="762" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-fall-of-northern-kingdom" certainty="exact" endYear="721" entityId="fall-of-northern-kingdom" entityType="event" parent="1" startYear="721" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Fall of the Northern Kingdom&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;721 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="6558" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-jeremiah" certainty="approximate" endYear="580" entityId="jeremiah" entityType="book" parent="1" startYear="627" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4C8E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="2" value="Jeremiah&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;627-580 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="94" x="6759" y="792" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-destruction-of-jerusalem" certainty="exact" endYear="586" entityId="destruction-of-jerusalem" entityType="event" parent="1" startYear="586" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="Destruction of Jerusalem and Babylonian Captivity&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;586 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="6828" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-return-from-exile" certainty="exact" endYear="538" entityId="return-from-exile" entityType="event" parent="1" startYear="538" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Return from Exile&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;538 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="6924" y="132" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-ezra" certainty="approximate" endYear="457" entityId="ezra" entityType="book" parent="1" startYear="538" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#A8C4E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="Ezra&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;538-457 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="162" x="6937" y="762" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-dedication-of-second-temple" certainty="exact" endYear="515" entityId="dedication-of-second-temple" entityType="event" parent="1" startYear="515" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Dedication of the Second Temple&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;515 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="6970" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-book-nehemiah" certainty="approximate" endYear="430" entityId="nehemiah" entityType="book" parent="1" startYear="445" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#A8C4E0;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;" swimlane="1" value="Nehemiah&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;445-430 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="18" width="30" x="7123" y="762" as="geometry" />
+        </mxCell>
+        <mxCell id="entity-event-rebuilding-jerusalems-walls" certainty="exact" endYear="444" entityId="rebuilding-jerusalems-walls" entityType="event" parent="1" startYear="444" style="shape=ellipse;rounded=1;html=1;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;fillColor=#D4D9DE;strokeColor=#2D241C;strokeWidth=1.5;fontSize=10;fontColor=#2D241C;spacingTop=0;spacingBottom=0;spacing=17;fontFamily=Helvetica;" swimlane="0" value="The Rebuilding of Jerusalem&#39;s Walls&lt;br&gt;&lt;font color=&quot;#5E564E&quot;&gt;444 BC&lt;/font&gt;" vertex="1">
+          <mxGeometry height="20" width="20" x="7112" y="112" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

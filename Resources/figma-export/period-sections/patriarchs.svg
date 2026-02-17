@@ -1,0 +1,151 @@
+<svg width="1418" height="998" viewBox="0 0 1418 998" xmlns="http://www.w3.org/2000/svg">
+<rect width="1418" height="998" fill="#F7F1E4"/>
+<text x="20" y="34" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#2D241C">Time of the Patriarchs</text>
+<text x="20" y="58" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">2166-1876 BC - Abraham, Isaac, Jacob</text>
+<text x="20" y="78" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Nodes included by start year in this period. Move nodes in Figma, then share updated coordinates.</text>
+<rect x="10" y="100" width="1398" height="880" rx="10" fill="#FFFDF7" stroke="#C7B8A2"/>
+<rect x="120" y="116" width="1218" height="84" fill="#FFF9C444" stroke="#FFF9C4"/>
+<text x="132" y="142" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">PATRIARCHS</text>
+<line x1="1237.2" y1="200" x2="1237.2" y2="972" stroke="#C7B8A2" stroke-width="1"/>
+<text x="1217.2" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">1900</text>
+<line x1="817.2" y1="200" x2="817.2" y2="972" stroke="#C7B8A2" stroke-width="1"/>
+<text x="797.2" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">2000</text>
+<line x1="397.2" y1="200" x2="397.2" y2="972" stroke="#C7B8A2" stroke-width="1"/>
+<text x="377.2" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">2100</text>
+<line x1="1027.2" y1="200" x2="1027.2" y2="972" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="607.2" y1="200" x2="607.2" y2="972" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="187.2" y1="200" x2="187.2" y2="972" stroke="#E3D7C4" stroke-width="1"/>
+<rect x="20" y="218" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="233" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">EVENTS</text>
+<rect x="20" y="292" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="307" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">PEOPLE</text>
+<rect x="20" y="880" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="41" y="895" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">BOOKS</text>
+<line x1="120" y1="270" x2="1338" y2="270" stroke="#E3D7C4"/>
+<line x1="120" y1="858" x2="1338" y2="858" stroke="#E3D7C4"/>
+<g id="book-genesis">
+<rect x="-7582.8" y="910" width="9219" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-7576.8" y="942" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Genesis (Pentateuch)</text>
+</g>
+<g id="person-noah">
+<rect x="-3164.4" y="356" width="3990" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-3158.4" y="394" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Noah (Patriarch)</text>
+</g>
+<g id="person-terah">
+<rect x="-426" y="322" width="861" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-420" y="360" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Terah (Patriarch)</text>
+</g>
+<g id="person-abraham">
+<rect x="120" y="390" width="735" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="126" y="428" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Abraham (Patriarch)</text>
+</g>
+<g id="person-sarah">
+<rect x="162" y="424" width="533" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="168" y="462" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Sarah (Patriarch)</text>
+</g>
+<g id="event-call-of-abraham">
+<circle cx="435" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="449" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Call of Abraham (covenant)</text>
+</g>
+<g id="event-ishmael-born">
+<circle cx="481.2" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="495.2" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Ishmael Born (patriarchs)</text>
+</g>
+<g id="person-ishmael">
+<rect x="481.2" y="322" width="575" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="487.2" y="360" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Ishmael (Patriarch)</text>
+</g>
+<g id="event-birth-of-isaac">
+<circle cx="540" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="554" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Birth of Isaac (covenant)</text>
+</g>
+<g id="person-isaac">
+<rect x="540" y="458" width="756" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="546" y="496" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Isaac (Patriarch)</text>
+</g>
+<g id="person-rebekah">
+<rect x="603" y="492" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="609" y="530" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Rebekah (Other)</text>
+</g>
+<g id="person-esau">
+<rect x="666" y="526" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="672" y="564" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Esau (Other)</text>
+</g>
+<g id="person-jacob">
+<rect x="792" y="424" width="617" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="798" y="462" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Jacob (Israel) (Patriarch)</text>
+</g>
+<g id="person-asher">
+<rect x="918" y="730" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="768" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Asher (Other)</text>
+</g>
+<g id="person-benjamin">
+<rect x="918" y="832" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="870" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Benjamin (Other)</text>
+</g>
+<g id="person-dan">
+<rect x="918" y="628" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="666" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Dan (Other)</text>
+</g>
+<g id="person-gad">
+<rect x="918" y="696" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="734" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Gad (Other)</text>
+</g>
+<g id="person-issachar">
+<rect x="918" y="764" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="802" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Issachar (Other)</text>
+</g>
+<g id="person-judah">
+<rect x="918" y="594" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="632" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Judah (Other)</text>
+</g>
+<g id="person-levi">
+<rect x="918" y="560" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="598" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Levi (Other)</text>
+</g>
+<g id="person-naphtali">
+<rect x="918" y="662" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="700" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Naphtali (Other)</text>
+</g>
+<g id="person-rachel">
+<rect x="918" y="356" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="394" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Rachel (Other)</text>
+</g>
+<g id="person-reuben">
+<rect x="918" y="390" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="428" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Reuben (Other)</text>
+</g>
+<g id="person-simeon">
+<rect x="918" y="492" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="530" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Simeon (Other)</text>
+</g>
+<g id="person-zebulun">
+<rect x="918" y="798" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="924" y="836" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Zebulun (Other)</text>
+</g>
+<g id="person-asenath">
+<rect x="1170" y="526" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1176" y="564" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Asenath (Other)</text>
+</g>
+<g id="person-joseph">
+<rect x="1170" y="322" width="462" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1176" y="360" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Joseph (Patriarch)</text>
+</g>
+<g id="event-twelve-tribes-of-israel">
+<circle cx="1174.2" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1188.2" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Twelve Tribes of Israel (patriarchs)</text>
+</g>
+<g id="event-josephs-exaltation-in-egypt">
+<circle cx="1241.4" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1255.4" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Joseph&apos;s Exaltation in Egypt (patriarchs)</text>
+</g>
+<g id="person-ephraim">
+<rect x="1296" y="390" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1302" y="428" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Ephraim (Other)</text>
+</g>
+<g id="person-manasseh">
+<rect x="1296" y="356" width="294" height="24" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+<text x="1302" y="394" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Manasseh (Other)</text>
+</g>
+<text x="20" y="984" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">Counts: events 5, people 25, books 1, total 31</text>
+</svg>

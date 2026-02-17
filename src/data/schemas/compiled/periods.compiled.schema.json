@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "periods.compiled.schema.json",
+  "title": "Periods Compiled Schema",
+  "description": "Schema for UI-ready compiled periods data",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "$ref": "common.compiled.schema.json#/definitions/id"
+      },
+      "type": {
+        "type": "string",
+        "const": "period"
+      },
+      "name": {
+        "type": "string"
+      },
+      "startYear": {
+        "type": "integer",
+        "description": "Period start year (BC as positive integer)"
+      },
+      "endYear": {
+        "type": "integer",
+        "description": "Period end year (BC as positive integer)"
+      },
+      "certainty": {
+        "type": "string",
+        "enum": ["exact", "approximate", "estimated"]
+      },
+      "categories": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "color": {
+        "type": "string"
+      },
+      "description": {
+        "type": "string"
+      }
+    },
+    "required": ["id", "type", "name", "startYear", "endYear", "certainty", "categories"],
+    "additionalProperties": false
+  }
+}

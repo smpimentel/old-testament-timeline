@@ -1,0 +1,171 @@
+<mxfile host="Electron" modified="2026-02-11T09:15:00.000Z" agent="Codex" version="29.3.0" compressed="false" type="device">
+  <diagram id="components" name="01 Components &amp; Styles">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="c-bg" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#F7F1E4;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="0" y="0" width="1800" height="1200" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c-title" value="Old Testament Timeline - Components + Styles" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Cormorant Garamond;fontSize=34;fontStyle=1;fontColor=#2D241C;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="980" height="44" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c-sub" value="Draw.io board for visual planning. Use with Figma SVG bundle." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Source Sans 3;fontSize=14;fontColor=#6F6254;" vertex="1" parent="1">
+          <mxGeometry x="40" y="66" width="760" height="26" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c-panel-nodes" value="Node Shapes" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;align=left;verticalAlign=top;spacing=10;fontFamily=Source Sans 3;fontStyle=1;fontSize=16;fontColor=#2D241C;" vertex="1" parent="1">
+          <mxGeometry x="40" y="120" width="520" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-node-person" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="72" y="186" width="132" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-node-book" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C9D6E6;strokeColor=#2D241C;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="220" y="186" width="132" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-node-event" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6C7C0;strokeColor=#2D241C;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="82" y="244" width="24" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-node-label" value="Person / Book / Event" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontFamily=Source Sans 3;fontSize=12;fontColor=#6F6254;" vertex="1" parent="1">
+          <mxGeometry x="72" y="286" width="240" height="20" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c-panel-chip" value="Theme Chips" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;align=left;verticalAlign=top;spacing=10;fontFamily=Source Sans 3;fontStyle=1;fontSize=16;fontColor=#2D241C;" vertex="1" parent="1">
+          <mxGeometry x="580" y="120" width="560" height="240" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-chip-cov" value="Covenant" style="shape=rectangle;rounded=1;arcSize=100;whiteSpace=wrap;html=1;fillColor=#F4D19B;strokeColor=#2D241C;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="612" y="182" width="110" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-chip-king" value="Kingship" style="shape=rectangle;rounded=1;arcSize=100;whiteSpace=wrap;html=1;fillColor=#D4B5D4;strokeColor=#2D241C;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="734" y="182" width="110" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-chip-land" value="Land" style="shape=rectangle;rounded=1;arcSize=100;whiteSpace=wrap;html=1;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="856" y="182" width="80" height="32" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-chip-off" value="Inactive" style="shape=rectangle;rounded=1;arcSize=100;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#C7B8A2;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=12;fontColor=#6F6254;" vertex="1" parent="1">
+          <mxGeometry x="948" y="182" width="90" height="32" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c-panel-rules" value="Layout Rules" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;align=left;verticalAlign=top;spacing=10;fontFamily=Source Sans 3;fontStyle=1;fontSize=16;fontColor=#2D241C;" vertex="1" parent="1">
+          <mxGeometry x="40" y="390" width="1100" height="250" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-rules-text" value="- Domain: 4004 to 400 BC&#xa;- Track spacing: headerOffset 100, trackGap 48, laneGap 8&#xa;- Lane counts derived from entity swimlane maxima&#xa;- Period labels: up to 4 stacked lanes, overflow hidden&#xa;- Node labels: enabled at zoom &gt;= 1.5, hide lower-priority overlaps" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontFamily=Source Sans 3;fontSize=13;fontColor=#2D241C;" vertex="1" parent="1">
+          <mxGeometry x="72" y="442" width="1040" height="190" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="c-panel-colors" value="Color Tokens" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;align=left;verticalAlign=top;spacing=10;fontFamily=Source Sans 3;fontStyle=1;fontSize=16;fontColor=#2D241C;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="120" width="600" height="520" as="geometry"/>
+        </mxCell>
+        <mxCell id="c-swatch-1" value="#F4D19B" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#F4D19B;strokeColor=#2D241C;fontFamily=IBM Plex Mono;fontSize=10;verticalAlign=bottom;spacingBottom=4;" vertex="1" parent="1"><mxGeometry x="1190" y="178" width="90" height="52" as="geometry"/></mxCell>
+        <mxCell id="c-swatch-2" value="#D4B5D4" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#D4B5D4;strokeColor=#2D241C;fontFamily=IBM Plex Mono;fontSize=10;verticalAlign=bottom;spacingBottom=4;" vertex="1" parent="1"><mxGeometry x="1292" y="178" width="90" height="52" as="geometry"/></mxCell>
+        <mxCell id="c-swatch-3" value="#C8D4B8" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#C8D4B8;strokeColor=#2D241C;fontFamily=IBM Plex Mono;fontSize=10;verticalAlign=bottom;spacingBottom=4;" vertex="1" parent="1"><mxGeometry x="1394" y="178" width="90" height="52" as="geometry"/></mxCell>
+        <mxCell id="c-swatch-4" value="#A8D5E2" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#A8D5E2;strokeColor=#2D241C;fontFamily=IBM Plex Mono;fontSize=10;verticalAlign=bottom;spacingBottom=4;" vertex="1" parent="1"><mxGeometry x="1496" y="178" width="90" height="52" as="geometry"/></mxCell>
+        <mxCell id="c-swatch-5" value="#B22222" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#B22222;strokeColor=#2D241C;fontFamily=IBM Plex Mono;fontSize=10;fontColor=#FFFFFF;verticalAlign=bottom;spacingBottom=4;" vertex="1" parent="1"><mxGeometry x="1598" y="178" width="90" height="52" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="desktop100" name="10 Desktop Zoom 100%">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="d1-bg" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#F7F1E4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="0" y="0" width="1800" height="1200" as="geometry"/></mxCell>
+        <mxCell id="d1-title" value="Desktop Timeline - Zoom 100%" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontFamily=Cormorant Garamond;fontSize=30;fontStyle=1;fontColor=#2D241C;" vertex="1" parent="1"><mxGeometry x="40" y="20" width="600" height="44" as="geometry"/></mxCell>
+
+        <mxCell id="d1-toolbar" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;" vertex="1" parent="1"><mxGeometry x="20" y="80" width="1760" height="94" as="geometry"/></mxCell>
+        <mxCell id="d1-content" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;" vertex="1" parent="1"><mxGeometry x="20" y="190" width="1760" height="990" as="geometry"/></mxCell>
+
+        <mxCell id="d1-period-1" value="Primeval History" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#8B451322;strokeColor=#8B4513;align=left;verticalAlign=top;spacing=6;fontFamily=IBM Plex Mono;fontSize=11;fontStyle=1;fontColor=#6F6254;" vertex="1" parent="1"><mxGeometry x="40" y="210" width="340" height="88" as="geometry"/></mxCell>
+        <mxCell id="d1-period-2" value="Patriarchal Period" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#DAA52022;strokeColor=#DAA520;align=left;verticalAlign=top;spacing=6;fontFamily=IBM Plex Mono;fontSize=11;fontStyle=1;fontColor=#6F6254;" vertex="1" parent="1"><mxGeometry x="320" y="210" width="380" height="88" as="geometry"/></mxCell>
+        <mxCell id="d1-period-3" value="Egyptian Sojourn" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#CD853F22;strokeColor=#CD853F;align=left;verticalAlign=top;spacing=6;fontFamily=IBM Plex Mono;fontSize=11;fontStyle=1;fontColor=#6F6254;" vertex="1" parent="1"><mxGeometry x="610" y="210" width="300" height="88" as="geometry"/></mxCell>
+
+        <mxCell id="d1-events-label" value="EVENTS" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;fontFamily=Source Sans 3;fontSize=11;fontStyle=1;fontColor=#6F6254;" vertex="1" parent="1"><mxGeometry x="34" y="328" width="86" height="24" as="geometry"/></mxCell>
+        <mxCell id="d1-people-label" value="PEOPLE" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;fontFamily=Source Sans 3;fontSize=11;fontStyle=1;fontColor=#6F6254;" vertex="1" parent="1"><mxGeometry x="34" y="510" width="86" height="24" as="geometry"/></mxCell>
+        <mxCell id="d1-books-label" value="BOOKS" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;fontFamily=Source Sans 3;fontSize=11;fontStyle=1;fontColor=#6F6254;" vertex="1" parent="1"><mxGeometry x="34" y="840" width="86" height="24" as="geometry"/></mxCell>
+
+        <mxCell id="d1-event-a" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6C7C0;strokeColor=#2D241C;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="780" y="362" width="22" height="22" as="geometry"/></mxCell>
+        <mxCell id="d1-event-b" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6C7C0;strokeColor=#F4D19B;strokeWidth=2.5;" vertex="1" parent="1"><mxGeometry x="876" y="362" width="22" height="22" as="geometry"/></mxCell>
+        <mxCell id="d1-person-a" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="730" y="560" width="92" height="26" as="geometry"/></mxCell>
+        <mxCell id="d1-person-b" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C8D4B8;strokeColor=#F4D19B;strokeWidth=2.5;" vertex="1" parent="1"><mxGeometry x="812" y="598" width="98" height="26" as="geometry"/></mxCell>
+        <mxCell id="d1-book-a" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C9D6E6;strokeColor=#2D241C;strokeWidth=1.5;" vertex="1" parent="1"><mxGeometry x="810" y="892" width="140" height="22" as="geometry"/></mxCell>
+
+        <mxCell id="d1-note" value="Sparse labels at 100%; chips can dim non-matching entities." style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;fontFamily=Source Sans 3;fontSize=12;fontColor=#6F6254;align=left;spacing=8;" vertex="1" parent="1"><mxGeometry x="1500" y="1080" width="260" height="70" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="desktop150" name="11 Desktop Zoom 150%">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="d2-bg" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#F7F1E4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="0" y="0" width="1800" height="1200" as="geometry"/></mxCell>
+        <mxCell id="d2-title" value="Desktop Timeline - Zoom 150%" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontFamily=Cormorant Garamond;fontSize=30;fontStyle=1;fontColor=#2D241C;" vertex="1" parent="1"><mxGeometry x="40" y="20" width="620" height="44" as="geometry"/></mxCell>
+
+        <mxCell id="d2-frame" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;" vertex="1" parent="1"><mxGeometry x="20" y="90" width="1760" height="1090" as="geometry"/></mxCell>
+
+        <mxCell id="d2-event-main" value="Exodus (priority 1)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6C7C0;strokeColor=#F4D19B;strokeWidth=2.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;verticalAlign=middle;align=left;spacingLeft=28;" vertex="1" parent="1"><mxGeometry x="760" y="348" width="240" height="30" as="geometry"/></mxCell>
+        <mxCell id="d2-event-hide" value="Passover (priority 3, hidden label)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6C7C0;fillOpacity=45;strokeColor=#2D241C;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=12;fontColor=#6F6254;verticalAlign=middle;align=left;spacingLeft=28;" vertex="1" parent="1"><mxGeometry x="772" y="384" width="320" height="30" as="geometry"/></mxCell>
+
+        <mxCell id="d2-person-1" value="Moses" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="720" y="548" width="92" height="28" as="geometry"/></mxCell>
+        <mxCell id="d2-person-2" value="Joshua" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C8D4B8;strokeColor=#F4D19B;strokeWidth=2.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="804" y="584" width="96" height="28" as="geometry"/></mxCell>
+        <mxCell id="d2-person-3" value="Caleb" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C8D4B8;strokeColor=#2D241C;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="892" y="620" width="96" height="28" as="geometry"/></mxCell>
+
+        <mxCell id="d2-rule-box" value="Collision Rules&#xa;- Labels enabled at zoom &gt;= 1.5&#xa;- Compare by track + swimlane&#xa;- Keep priority 1-2; suppress 3-4 in overlap&#xa;- Deterministic order: priority, x, id" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;align=left;verticalAlign=top;spacing=10;fontFamily=Source Sans 3;fontSize=13;fontColor=#2D241C;" vertex="1" parent="1"><mxGeometry x="1320" y="860" width="430" height="230" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="desktop200rail" name="12 Desktop Zoom 200% + Rail">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="d3-bg" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#F7F1E4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="0" y="0" width="1800" height="1200" as="geometry"/></mxCell>
+        <mxCell id="d3-title" value="Desktop Timeline - Zoom 200% (Right Rail Open)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontFamily=Cormorant Garamond;fontSize=30;fontStyle=1;fontColor=#2D241C;" vertex="1" parent="1"><mxGeometry x="40" y="20" width="860" height="44" as="geometry"/></mxCell>
+
+        <mxCell id="d3-canvas" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;" vertex="1" parent="1"><mxGeometry x="20" y="90" width="1360" height="1090" as="geometry"/></mxCell>
+        <mxCell id="d3-rail" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;" vertex="1" parent="1"><mxGeometry x="1400" y="90" width="380" height="1090" as="geometry"/></mxCell>
+
+        <mxCell id="d3-focus-node" value="Exodus from Egypt" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6C7C0;strokeColor=#228B22;strokeWidth=2.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;verticalAlign=middle;align=left;spacingLeft=30;" vertex="1" parent="1"><mxGeometry x="700" y="338" width="260" height="34" as="geometry"/></mxCell>
+        <mxCell id="d3-person" value="Moses" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C8D4B8;strokeColor=#F4D19B;strokeWidth=2.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="650" y="538" width="106" height="30" as="geometry"/></mxCell>
+        <mxCell id="d3-book" value="Deuteronomy" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C9D6E6;strokeColor=#2D241C;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="806" y="876" width="146" height="24" as="geometry"/></mxCell>
+
+        <mxCell id="d3-rail-type" value="EVENT" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;fontColor=#6F6254;" vertex="1" parent="1"><mxGeometry x="1430" y="124" width="120" height="20" as="geometry"/></mxCell>
+        <mxCell id="d3-rail-title" value="Exodus from Egypt" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontFamily=Cormorant Garamond;fontSize=32;fontStyle=1;fontColor=#2D241C;" vertex="1" parent="1"><mxGeometry x="1430" y="154" width="300" height="40" as="geometry"/></mxCell>
+        <mxCell id="d3-chip-1" value="Covenant" style="shape=rectangle;rounded=1;arcSize=100;whiteSpace=wrap;html=1;fillColor=#F4D19B;strokeColor=#2D241C;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1430" y="216" width="100" height="30" as="geometry"/></mxCell>
+        <mxCell id="d3-chip-2" value="Deliverance" style="shape=rectangle;rounded=1;arcSize=100;whiteSpace=wrap;html=1;fillColor=#228B2222;strokeColor=#228B22;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="1538" y="216" width="118" height="30" as="geometry"/></mxCell>
+        <mxCell id="d3-summary" value="God delivered Israel from Egypt through plagues, Passover, and the Red Sea crossing." style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontFamily=Source Sans 3;fontSize=13;fontColor=#2D241C;" vertex="1" parent="1"><mxGeometry x="1430" y="268" width="320" height="90" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+
+  <diagram id="mobile100" name="20 Mobile Zoom 100%">
+    <mxGraphModel dx="900" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="520" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <mxCell id="m-bg" value="" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#F7F1E4;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="0" y="0" width="520" height="1100" as="geometry"/></mxCell>
+        <mxCell id="m-title" value="Mobile Timeline - 100%" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontFamily=Cormorant Garamond;fontSize=24;fontStyle=1;fontColor=#2D241C;" vertex="1" parent="1"><mxGeometry x="18" y="18" width="320" height="34" as="geometry"/></mxCell>
+
+        <mxCell id="m-toolbar" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;" vertex="1" parent="1"><mxGeometry x="10" y="62" width="500" height="148" as="geometry"/></mxCell>
+        <mxCell id="m-canvas" value="" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;" vertex="1" parent="1"><mxGeometry x="10" y="224" width="500" height="860" as="geometry"/></mxCell>
+
+        <mxCell id="m-period" value="Primeval History" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#8B451322;strokeColor=#8B4513;align=left;verticalAlign=top;spacing=5;fontFamily=IBM Plex Mono;fontSize=10;fontStyle=1;fontColor=#6F6254;" vertex="1" parent="1"><mxGeometry x="20" y="238" width="250" height="78" as="geometry"/></mxCell>
+        <mxCell id="m-period2" value="Patriarchal Period" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#DAA52022;strokeColor=#DAA520;align=left;verticalAlign=top;spacing=5;fontFamily=IBM Plex Mono;fontSize=10;fontStyle=1;fontColor=#6F6254;" vertex="1" parent="1"><mxGeometry x="130" y="238" width="280" height="78" as="geometry"/></mxCell>
+
+        <mxCell id="m-event" value="Exodus" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E6C7C0;strokeColor=#228B22;strokeWidth=2;fontFamily=Source Sans 3;fontSize=12;fontStyle=1;verticalAlign=middle;align=left;spacingLeft=26;" vertex="1" parent="1"><mxGeometry x="224" y="362" width="130" height="28" as="geometry"/></mxCell>
+        <mxCell id="m-person" value="Moses" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C8D4B8;strokeColor=#F4D19B;strokeWidth=2;fontFamily=Source Sans 3;fontSize=11;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="210" y="504" width="90" height="26" as="geometry"/></mxCell>
+        <mxCell id="m-book" value="Deuteronomy" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#C9D6E6;strokeColor=#2D241C;strokeWidth=1.5;fontFamily=Source Sans 3;fontSize=11;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="220" y="662" width="130" height="22" as="geometry"/></mxCell>
+
+        <mxCell id="m-overlay-note" value="Tap node -&gt; open right rail as full overlay on mobile" style="shape=rectangle;rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDF7;strokeColor=#C7B8A2;align=left;verticalAlign=middle;spacing=8;fontFamily=Source Sans 3;fontSize=12;fontColor=#6F6254;" vertex="1" parent="1"><mxGeometry x="24" y="930" width="470" height="86" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

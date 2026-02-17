@@ -1,0 +1,62 @@
+[
+  {
+    "id": "Covenant",
+    "color": "#F4D19B",
+    "description": "God's covenant promises and their fulfillment — from Abraham through Sinai."
+  },
+  {
+    "id": "Kingship",
+    "color": "#D4B5D4",
+    "description": "The rise and fall of the monarchy"
+  },
+  {
+    "id": "Land",
+    "color": "#C8D4B8",
+    "description": "The promise and possession of the Holy Land"
+  },
+  {
+    "id": "Messiah",
+    "color": "#A8D5E2",
+    "description": "Prophecies and types pointing to Christ"
+  },
+  {
+    "id": "Judgment",
+    "color": "#B22222",
+    "description": "God's righteous judgment on sin — the Flood, Babel, the Fall of Israel and Judah."
+  },
+  {
+    "id": "Deliverance",
+    "color": "#228B22",
+    "description": "God rescuing His people — the Exodus, the Judges, the Return from Exile."
+  },
+  {
+    "id": "Restoration",
+    "color": "#2E8B57",
+    "description": "God restoring His people and worship — the Return, the Second Temple, Nehemiah's walls."
+  },
+  {
+    "id": "Origins",
+    "color": "#8B4513",
+    "description": "The beginnings — Creation, humanity, sin, and the nations."
+  },
+  {
+    "id": "Patriarchs",
+    "color": "#DAA520",
+    "description": "The founding family line — Abraham, Isaac, Jacob, and the twelve tribes."
+  },
+  {
+    "id": "Conquest",
+    "color": "#556B2F",
+    "description": "Israel's entry into and possession of the Promised Land."
+  },
+  {
+    "id": "Monarchy",
+    "color": "#9932CC",
+    "description": "The rise, reign, and division of Israel's kings."
+  },
+  {
+    "id": "Temple",
+    "color": "#CD853F",
+    "description": "The construction, destruction, and rebuilding of God's dwelling place among His people."
+  }
+]

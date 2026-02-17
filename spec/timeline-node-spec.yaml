@@ -1,0 +1,347 @@
+version: 1
+name: timeline-node-spec
+description: >-
+  Structured, editable specification for the timeline node UI and interaction model.
+  This is intended to be the handoff contract for UI refactors and behavior changes.
+
+project_root: /Users/Stephen1/Desktop/gitprojects/old-testament-timline
+
+sources:
+  app:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/App.tsx
+  node_component:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/components/timeline-nodes.tsx
+  hover_tooltip:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/components/hover-tooltip.tsx
+  node_config:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/config/timeline-node-config.ts
+  data_model:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/data/timeline-data.ts
+  tokens:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/styles/theme.css
+  selection_hook:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/hooks/useEntitySelection.ts
+  viewport_hook:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/hooks/useViewport.ts
+
+entity_types:
+  - person
+  - event
+  - book
+
+node_structure:
+  wrapper_button:
+    purpose: Hit target, positioning container, keyboard entry point.
+    selector: button[data-timeline-node]
+    positioning:
+      mode: absolute
+      left: x
+      top: adjustedY
+      width: nodeWidth
+      height: nodeHeight
+    classes:
+      - absolute
+      - cursor-pointer
+      - transition-all
+      - group
+      - focus:outline-none
+      - focus:ring-2
+      - focus:ring-blue-500
+    inline_styles:
+      background: none
+      border: none
+      padding: 0
+      pointerEvents: auto
+      zIndex:
+        breadcrumb: 20
+        highlighted: 15
+        default: 10
+      transform:
+        breadcrumb: scale(1.05)
+        default: scale(1)
+    accessibility:
+      aria_label_format: "{entity.name}, {entity.type}, {yearRange}"
+      keyboard_activation_keys:
+        - Enter
+        - Space
+
+  main_shape:
+    purpose: Primary visual body of node.
+    element: child div w-full h-full
+    styles:
+      background: dynamic_by_entity
+      border: dynamic_by_state
+      borderRadius:
+        event_point: "50%"
+        other: "var(--radius-sm)"
+      boxShadow:
+        highlighted_or_breadcrumb: "0 2px 8px rgba(45, 36, 28, 0.15)"
+        default: "0 1px 3px rgba(45, 36, 28, 0.1)"
+
+  title_label:
+    purpose: Node title text shown below shape at configured zoom tiers.
+    render_condition: showLabel == true
+    positioning:
+      mode: absolute
+      left: 0
+      top: nodeHeight + 4
+    typography:
+      fontSize:
+        nodeHeight_lt_16: 11px
+        otherwise: var(--type-label-xs-size)
+      fontWeight: 600
+      color: var(--color-base-text-primary)
+      fontFamily: inherited_body_font
+    overflow_behavior:
+      whiteSpace: nowrap
+      overflow: hidden
+      textOverflow: ellipsis
+      maxWidth:
+        event_point: none
+        span: width
+
+  role_badge:
+    purpose: Person role marker (king, prophet, patriarch, etc.).
+    render_condition: entity.type == person AND entity.role exists AND showBadges == true
+    anchor:
+      position: absolute
+      top: -1
+      left: -1
+    content:
+      text: first_letter_of_role_uppercase
+      title_attr: full_role_name_capitalized
+    style:
+      shape: circle
+      fontFamily: var(--font-mono)
+      textTransform: uppercase
+      fontWeight: 600
+      border: "1.5px solid var(--color-base-text-primary)"
+      size:
+        small: 20x20
+        medium: 24x24
+
+  breadcrumb_badge:
+    purpose: Path sequence marker.
+    render_condition: isInBreadcrumb AND breadcrumbNumber exists AND showBadges == true
+    anchor:
+      position: absolute
+      top: -2
+      right: -2
+    style:
+      size: 20x20
+      background: "#F4D19B"
+      border: "2px solid var(--color-base-text-primary)"
+      fontFamily: var(--font-mono)
+      fontSize: 11px
+      fontWeight: 700
+
+  date_badge:
+    purpose: Compact date marker shown on node hover at badge-enabled zoom tiers.
+    render_condition: showBadges == true
+    hover_behavior: parent_group_hover_fades_in
+    positioning:
+      mode: absolute
+      left: 0
+      bottom: nodeHeight + 4
+    formatting:
+      exact: "YEAR BC or START-END BC"
+      approximate: "c. YEAR BC or c. START-END BC"
+    style:
+      background: var(--color-base-surface-elevated)
+      border:
+        exact: "1.5px solid var(--color-base-text-primary)"
+        approximate: "1.5px dashed var(--color-base-text-secondary)"
+      fontFamily: var(--font-mono)
+      fontSize: 10px
+      fontWeight: 500
+
+visual_state_model:
+  base:
+    opacity: 1
+    borderColor: var(--color-base-text-primary)
+    borderWidth: 1.5px
+  dimmed:
+    condition: isDimmed == true
+    opacity: 0.25
+  highlighted:
+    condition: isHighlighted == true
+    borderWidth: 2.5px
+    borderColor: theme_highlight_color_from_first_theme
+    opacity: 1
+  breadcrumb:
+    condition: isInBreadcrumb == true
+    borderWidth: 3px
+    borderColor: breadcrumbAccentColor
+    opacity: 1
+    precedence: highest
+
+color_mapping:
+  person_role_colors:
+    king: "#F5D99F"
+    prophet: "#C8B8D4"
+    judge: "#B8C4A8"
+    priest: "#D4C5E0"
+    patriarch: "#C8D4B8"
+    warrior: "#D9B5A0"
+    scribe: "#E6DCC8"
+    other: "#D4D9DE"
+  event_category_colors:
+    war: "#E6A8A8"
+    treaty: "#E0E6E8"
+    discovery: "#B8D9E6"
+    construction: "#E6D4B8"
+    festival: "#F0C8D4"
+    succession: "#CFB8D4"
+    disaster: "#C8C4BC"
+    renaissance: "#F4E0C8"
+    event: "#D4D9DE"
+  book_genre_colors:
+    political: "#A8C4E0"
+    cultural: "#F4D4C8"
+    religious: "#D4C8E0"
+    economic: "#E6D4A8"
+    military: "#D9B8A8"
+    scientific: "#B8DDE0"
+    agricultural: "#C8D9B8"
+    maritime: "#B8CFD9"
+  theme_highlight_colors:
+    Covenant: "#F4D19B"
+    Kingship: "#D4B5D4"
+    Land: "#C8D4B8"
+    Messiah: "#A8D5E2"
+  breadcrumb_accent_color: "#F4D19B"
+
+zoom_metrics:
+  source: /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/config/timeline-node-config.ts
+  person:
+    - { maxZoomExclusive: 0.75, height: 4, showLabel: false, showBadges: false }
+    - { maxZoomExclusive: 1.25, height: 8, showLabel: false, showBadges: false }
+    - { maxZoomExclusive: 1.5, height: 16, showLabel: false, showBadges: false }
+    - { maxZoomExclusive: 1.75, height: 16, showLabel: true, showBadges: false }
+    - { maxZoomExclusive: Infinity, height: 24, showLabel: true, showBadges: true }
+  event:
+    - { maxZoomExclusive: 0.75, height: 6, showLabel: false, showBadges: false }
+    - { maxZoomExclusive: 1.25, height: 10, showLabel: false, showBadges: false }
+    - { maxZoomExclusive: 1.5, height: 16, showLabel: false, showBadges: false }
+    - { maxZoomExclusive: 1.75, height: 16, showLabel: true, showBadges: false }
+    - { maxZoomExclusive: Infinity, height: 20, showLabel: true, showBadges: true }
+  book:
+    - { maxZoomExclusive: 0.75, height: 3, showLabel: false, showBadges: false }
+    - { maxZoomExclusive: 1.25, height: 6, showLabel: false, showBadges: false }
+    - { maxZoomExclusive: 1.5, height: 12, showLabel: false, showBadges: false }
+    - { maxZoomExclusive: 1.75, height: 12, showLabel: true, showBadges: false }
+    - { maxZoomExclusive: Infinity, height: 18, showLabel: true, showBadges: true }
+
+positioning_model:
+  x_axis:
+    formula: x = yearToX(entity.startYear)
+    note: event spans use width from startYear-endYear; point events default to compact width then become circles.
+  y_axis:
+    formula: adjustedY = trackBaseY(entity.type) + (entity.swimlane * laneStride)
+    lane_stride_source: dynamic_layout_engine
+  current_app_wiring_status:
+    note: >-
+      TimelineNode now accepts laneStride prop, but verify App passes it from layout.
+      If not, wire computeTrackLayout output into node props and track anchors.
+
+hover_and_selection:
+  node_hover:
+    trigger: onMouseEnter from node button
+    state_owner: useEntitySelection hook
+    state_fields:
+      - hoveredEntity
+      - hoverPosition
+  node_leave:
+    trigger: onMouseLeave
+    action: clear hoveredEntity
+  node_click:
+    action: select entity and open right rail
+    path_mode: optionally appends breadcrumb
+  tooltip_visibility:
+    condition: hoveredEntity exists AND selectedEntity is null
+    delay_ms: 300
+
+tooltip_spec:
+  source: /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/components/hover-tooltip.tsx
+  container:
+    position: fixed
+    follows_cursor: true
+    offset: { x: 16, y: 16 }
+    maxWidth: 320px
+    pointerEvents: none
+    zIndex: 50
+    motion:
+      initial: { opacity: 0, y: -4 }
+      animate: { opacity: 1, y: 0 }
+      exit: { opacity: 0 }
+      duration: 0.15
+  title:
+    fontFamily: Cormorant Garamond, serif
+    fontSize: 18px
+    fontWeight: 700
+    color: var(--color-base-text-primary)
+  type_badge:
+    shown_for:
+      person: role
+      event: category
+      book: Book
+  date_line:
+    fontFamily: IBM Plex Mono, monospace
+    shows_approx_prefix: true
+  description:
+    fontFamily: Source Sans 3, sans-serif
+    fontSize: 14px
+    lineHeight: 1.5
+
+accessibility:
+  node_button:
+    semantic_role: button
+    keyboard_activation:
+      - Enter
+      - Space
+  focus_visual:
+    ring: "focus:ring-2 focus:ring-blue-500"
+  drag_guard:
+    note: >-
+      Canvas pan mouse down is ignored when event target is inside [data-timeline-node],
+      preventing accidental drag on node click.
+
+dependencies:
+  fonts_tokens:
+    display_font: "var(--font-display) = Cormorant Garamond"
+    body_font: "var(--font-body) = Source Sans 3"
+    mono_font: "var(--font-mono) = IBM Plex Mono"
+    type_scale_token_used_by_nodes:
+      - var(--type-label-xs-size)
+      - var(--radius-sm)
+  data_fields_used:
+    - id
+    - type
+    - name
+    - startYear
+    - endYear
+    - certainty
+    - role
+    - category
+    - genre
+    - themes
+    - swimlane
+
+agent_edit_rules:
+  do_edit_here_for_visual_scaling:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/config/timeline-node-config.ts
+  do_edit_here_for_layout_spacing:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/lib/timeline-track-layout.ts
+  avoid_hardcoding_in:
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/components/timeline-nodes.tsx
+    - /Users/Stephen1/Desktop/gitprojects/old-testament-timline/src/App.tsx
+  invariants:
+    - lane_spacing_must_not_depend_on_live_zoomed_node_height
+    - track_positions_must_be_layout_driven_not_magic_numbers
+    - node_hover_tooltip_must_not_show_when_right_rail_open
+    - keyboard_activation_must_remain_enter_and_space
+
+verification_checklist:
+  - npm run lint
+  - npm run test:run
+  - npm run build

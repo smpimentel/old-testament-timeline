@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "people.raw.schema.json",
+  "title": "People Raw Schema",
+  "description": "Schema for raw people data as authored",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "$ref": "common.raw.schema.json#/definitions/id"
+      },
+      "name": {
+        "type": "string",
+        "description": "Display name"
+      },
+      "birthYear": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Birth year (positive integer)"
+      },
+      "deathYear": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Death year (positive integer)"
+      },
+      "era": {
+        "$ref": "common.raw.schema.json#/definitions/era"
+      },
+      "approximate": {
+        "type": "boolean",
+        "default": false,
+        "description": "Whether dates are approximate"
+      },
+      "role": {
+        "type": "string",
+        "enum": ["King", "Prophet", "Judge", "Patriarch", "Priest", "Warrior", "Scribe", "Other"]
+      },
+      "priority": {
+        "$ref": "common.raw.schema.json#/definitions/priority"
+      },
+      "track": {
+        "type": "string",
+        "const": "people"
+      },
+      "description": {
+        "type": "string"
+      },
+      "bio": {
+        "type": "string"
+      },
+      "scriptureRefs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Scripture references as strings"
+      },
+      "relatedEvents": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "IDs of related events"
+      },
+      "relatedBooks": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "IDs of related books"
+      },
+      "familyTree": {
+        "type": "object",
+        "properties": {
+          "father": {
+            "type": ["string", "null"]
+          },
+          "mother": {
+            "type": ["string", "null"]
+          },
+          "spouse": {
+            "type": ["string", "null"]
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "required": ["id", "name", "role", "priority", "track"],
+    "additionalProperties": false
+  }
+}

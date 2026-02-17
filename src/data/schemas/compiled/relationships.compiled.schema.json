@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "relationships.compiled.schema.json",
+  "title": "Relationships Compiled Schema",
+  "description": "Schema for normalized relationship data linking entities",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {
+        "$ref": "common.compiled.schema.json#/definitions/id"
+      },
+      "sourceId": {
+        "type": "string"
+      },
+      "targetId": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "family-parent",
+          "family-child",
+          "family-spouse",
+          "family-sibling",
+          "event-participant",
+          "event-witness",
+          "prophecy-speaks",
+          "prophecy-fulfills",
+          "book-author",
+          "book-subject",
+          "theme-associated"
+        ]
+      },
+      "confidence": {
+        "type": "string",
+        "enum": ["high", "medium", "low"]
+      },
+      "scriptureRef": {
+        "type": "string"
+      },
+      "notes": {
+        "type": "string"
+      }
+    },
+    "required": ["id", "sourceId", "targetId", "type"],
+    "additionalProperties": false
+  }
+}

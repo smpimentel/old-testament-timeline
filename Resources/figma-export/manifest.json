@@ -1,0 +1,16 @@
+{
+  "name": "Old Testament Timeline - Figma Import Bundle",
+  "version": "1.0.0",
+  "createdAt": "2026-02-11",
+  "files": [
+    "01-components-and-styles.svg",
+    "10-timeline-desktop-zoom-100.svg",
+    "11-timeline-desktop-zoom-150.svg",
+    "12-timeline-desktop-zoom-200.svg",
+    "20-timeline-mobile-zoom-100.svg",
+    "tokens.json",
+    "layout-rules.json",
+    "tokens.csv",
+    "README.md"
+  ]
+}

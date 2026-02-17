@@ -1,0 +1,60 @@
+<svg width="1728" height="1080" viewBox="0 0 1728 1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1728" height="1080" fill="#F7F1E4"/>
+  <text x="28" y="38" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#2D241C">Desktop Timeline - Zoom 150%</text>
+  <text x="28" y="62" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">Medium detail: labels enabled with collision suppression in dense years</text>
+
+  <rect x="16" y="80" width="1696" height="88" rx="10" fill="#FFFDF7" stroke="#C7B8A2"/>
+  <rect x="38" y="108" width="280" height="34" rx="8" fill="#F7F1E4" stroke="#C7B8A2"/>
+  <text x="52" y="129" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">Search people, events, books</text>
+  <rect x="340" y="108" width="36" height="34" rx="8" fill="#FFFDF7" stroke="#C7B8A2"/><text x="354" y="129" font-family="IBM Plex Mono, monospace" font-size="12" fill="#2D241C">-</text>
+  <rect x="382" y="108" width="64" height="34" rx="8" fill="#FFFDF7" stroke="#C7B8A2"/><text x="399" y="129" font-family="IBM Plex Mono, monospace" font-size="12" fill="#2D241C">150%</text>
+  <rect x="452" y="108" width="36" height="34" rx="8" fill="#FFFDF7" stroke="#C7B8A2"/><text x="466" y="129" font-family="IBM Plex Mono, monospace" font-size="12" fill="#2D241C">+</text>
+  <rect x="530" y="108" width="92" height="30" rx="15" fill="#F4D19B" stroke="#2D241C" stroke-width="1.5"/><text x="548" y="127" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Covenant</text>
+  <rect x="630" y="108" width="110" height="30" rx="15" fill="#228B22" fill-opacity="0.2" stroke="#228B22" stroke-width="1.5"/><text x="648" y="127" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Deliverance</text>
+
+  <rect x="16" y="180" width="1696" height="872" rx="12" fill="#FFFDF7" stroke="#C7B8A2"/>
+
+  <rect x="36" y="202" width="300" height="88" fill="#8B451318" stroke="#8B451355"/>
+  <text x="52" y="224" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">PRIMEVAL HISTORY</text>
+  <rect x="270" y="202" width="340" height="88" fill="#DAA52018" stroke="#DAA52055"/>
+  <text x="286" y="242" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">PATRIARCHAL PERIOD</text>
+  <rect x="520" y="202" width="280" height="88" fill="#CD853F18" stroke="#CD853F55"/>
+  <text x="536" y="260" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">EGYPTIAN SOJOURN</text>
+  <rect x="716" y="202" width="210" height="88" fill="#D2B48C18" stroke="#D2B48C55"/>
+  <text x="732" y="278" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">WILDERNESS WANDERINGS</text>
+
+  <line x1="36" y1="470" x2="1696" y2="470" stroke="#E3D7C4"/>
+  <line x1="36" y1="786" x2="1696" y2="786" stroke="#E3D7C4"/>
+
+  <rect x="28" y="320" width="84" height="24" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/><text x="46" y="336" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">EVENTS</text>
+  <rect x="28" y="494" width="84" height="24" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/><text x="48" y="510" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">PEOPLE</text>
+  <rect x="28" y="810" width="84" height="24" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/><text x="52" y="826" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">BOOKS</text>
+
+  <circle cx="786" cy="354" r="12" fill="#E6C7C0" stroke="#F4D19B" stroke-width="2.5"/>
+  <text x="804" y="359" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Exodus (1446)</text>
+  <circle cx="798" cy="390" r="12" fill="#E6C7C0" fill-opacity="0.45" stroke="#2D241C" stroke-width="1.5"/>
+  <text x="816" y="395" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Passover (hidden at runtime)</text>
+  <circle cx="910" cy="354" r="12" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+  <text x="928" y="359" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Jordan Crossing (1406)</text>
+
+  <rect x="706" y="540" width="86" height="26" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+  <text x="718" y="558" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Moses</text>
+  <rect x="782" y="574" width="88" height="26" rx="6" fill="#C8D4B8" stroke="#F4D19B" stroke-width="2.5"/>
+  <text x="796" y="592" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Joshua</text>
+  <rect x="864" y="608" width="96" height="26" rx="6" fill="#C8D4B8" stroke="#2D241C" stroke-width="1.5"/>
+  <text x="878" y="626" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Caleb</text>
+  <rect x="948" y="642" width="102" height="26" rx="6" fill="#C8D4B8" fill-opacity="0.3" stroke="#2D241C" stroke-width="1.5"/>
+  <text x="964" y="660" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Low priority hidden</text>
+
+  <rect x="764" y="846" width="134" height="22" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+  <text x="774" y="861" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Deuteronomy</text>
+  <rect x="890" y="880" width="118" height="22" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+  <text x="900" y="895" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Joshua</text>
+
+  <rect x="1322" y="882" width="364" height="156" rx="10" fill="#FFFDF7" stroke="#C7B8A2"/>
+  <text x="1342" y="914" font-family="Source Sans 3, sans-serif" font-size="14" font-weight="700" fill="#2D241C">Collision Rules Preview</text>
+  <text x="1342" y="940" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">- Labels show at zoom >= 1.5</text>
+  <text x="1342" y="960" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">- Compare entities in same track + swimlane</text>
+  <text x="1342" y="980" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">- Keep highest priority, hide the rest</text>
+  <text x="1342" y="1000" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">- Keep behavior deterministic by X then ID</text>
+</svg>

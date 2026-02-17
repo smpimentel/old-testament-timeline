@@ -1,0 +1,456 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7388" height="1012" viewBox="0 0 7388 1012" font-family="Inter, system-ui, sans-serif">
+<rect width="7388" height="1012" fill="#FAF6F0" />
+<text x="120" y="30" font-size="20" font-weight="700" fill="#3D3929">Old Testament Timeline — Figma Editable Board</text>
+<g id="period-primeval-history">
+  <rect x="120" y="40" width="3676" height="90" fill="#8B4513" opacity="0.2" stroke="#8B4513" stroke-opacity="0.5" />
+  <text x="128" y="56" font-size="10" font-weight="700" fill="#8B4513" text-transform="uppercase" letter-spacing="0.5">PRIMEVAL HISTORY</text>
+  <text x="128" y="70" font-size="9" fill="#666">4004–2166 BC</text>
+  <line x1="120" y1="130" x2="120" y2="972" stroke="#8B4513" stroke-opacity="0.1" stroke-dasharray="4 4" />
+</g>
+<g id="period-patriarchal-period">
+  <rect x="3796" y="40" width="720" height="90" fill="#DAA520" opacity="0.2" stroke="#DAA520" stroke-opacity="0.5" />
+  <text x="3804" y="56" font-size="10" font-weight="700" fill="#DAA520" text-transform="uppercase" letter-spacing="0.5">PATRIARCHAL PERIOD</text>
+  <text x="3804" y="70" font-size="9" fill="#666">2166–1806 BC</text>
+  <line x1="3796" y1="130" x2="3796" y2="972" stroke="#DAA520" stroke-opacity="0.1" stroke-dasharray="4 4" />
+</g>
+<g id="period-egyptian-sojourn">
+  <rect x="4376" y="40" width="860" height="90" fill="#CD853F" opacity="0.2" stroke="#CD853F" stroke-opacity="0.5" />
+  <text x="4384" y="56" font-size="10" font-weight="700" fill="#CD853F" text-transform="uppercase" letter-spacing="0.5">EGYPTIAN SOJOURN</text>
+  <text x="4384" y="70" font-size="9" fill="#666">1876–1446 BC</text>
+  <line x1="4376" y1="130" x2="4376" y2="972" stroke="#CD853F" stroke-opacity="0.1" stroke-dasharray="4 4" />
+</g>
+<g id="period-wilderness-wanderings">
+  <rect x="5236" y="40" width="80" height="90" fill="#D2B48C" opacity="0.2" stroke="#D2B48C" stroke-opacity="0.5" />
+  <text x="5244" y="56" font-size="10" font-weight="700" fill="#D2B48C" text-transform="uppercase" letter-spacing="0.5">WILDERNESS WANDERINGS</text>
+  <text x="5244" y="70" font-size="9" fill="#666">1446–1406 BC</text>
+  <line x1="5236" y1="130" x2="5236" y2="972" stroke="#D2B48C" stroke-opacity="0.1" stroke-dasharray="4 4" />
+</g>
+<g id="period-conquest-and-settlement">
+  <rect x="5316" y="40" width="32" height="90" fill="#228B22" opacity="0.2" stroke="#228B22" stroke-opacity="0.5" />
+  <text x="5324" y="56" font-size="10" font-weight="700" fill="#228B22" text-transform="uppercase" letter-spacing="0.5">CONQUEST AND SETTLEMENT</text>
+  <text x="5324" y="70" font-size="9" fill="#666">1406–1390 BC</text>
+  <line x1="5316" y1="130" x2="5316" y2="972" stroke="#228B22" stroke-opacity="0.1" stroke-dasharray="4 4" />
+</g>
+<g id="period-judges">
+  <rect x="5316" y="40" width="712" height="90" fill="#C8E6C9" opacity="0.2" stroke="#C8E6C9" stroke-opacity="0.5" />
+  <text x="5324" y="56" font-size="10" font-weight="700" fill="#C8E6C9" text-transform="uppercase" letter-spacing="0.5">ERA OF THE JUDGES</text>
+  <text x="5324" y="70" font-size="9" fill="#666">1406–1050 BC</text>
+  <line x1="5316" y1="130" x2="5316" y2="972" stroke="#C8E6C9" stroke-opacity="0.1" stroke-dasharray="4 4" />
+</g>
+<g id="period-united-monarchy">
+  <rect x="6028" y="40" width="238" height="90" fill="#4169E1" opacity="0.2" stroke="#4169E1" stroke-opacity="0.5" />
+  <text x="6036" y="56" font-size="10" font-weight="700" fill="#4169E1" text-transform="uppercase" letter-spacing="0.5">UNITED MONARCHY</text>
+  <text x="6036" y="70" font-size="9" fill="#666">1050–931 BC</text>
+  <line x1="6028" y1="130" x2="6028" y2="972" stroke="#4169E1" stroke-opacity="0.1" stroke-dasharray="4 4" />
+</g>
+<g id="period-divided-kingdom">
+  <rect x="6268" y="40" width="688" height="90" fill="#E1BEE7" opacity="0.2" stroke="#E1BEE7" stroke-opacity="0.5" />
+  <text x="6276" y="56" font-size="10" font-weight="700" fill="#E1BEE7" text-transform="uppercase" letter-spacing="0.5">KINGDOM DIVIDES</text>
+  <text x="6276" y="70" font-size="9" fill="#666">930–586 BC</text>
+  <line x1="6268" y1="130" x2="6268" y2="972" stroke="#E1BEE7" stroke-opacity="0.1" stroke-dasharray="4 4" />
+</g>
+<g id="period-babylonian-exile">
+  <rect x="6956" y="40" width="96" height="90" fill="#2F4F4F" opacity="0.2" stroke="#2F4F4F" stroke-opacity="0.5" />
+  <text x="6964" y="56" font-size="10" font-weight="700" fill="#2F4F4F" text-transform="uppercase" letter-spacing="0.5">BABYLONIAN EXILE</text>
+  <text x="6964" y="70" font-size="9" fill="#666">586–538 BC</text>
+  <line x1="6956" y1="130" x2="6956" y2="972" stroke="#2F4F4F" stroke-opacity="0.1" stroke-dasharray="4 4" />
+</g>
+<g id="period-restoration-period">
+  <rect x="7052" y="40" width="276" height="90" fill="#2E8B57" opacity="0.2" stroke="#2E8B57" stroke-opacity="0.5" />
+  <text x="7060" y="56" font-size="10" font-weight="700" fill="#2E8B57" text-transform="uppercase" letter-spacing="0.5">RESTORATION PERIOD</text>
+  <text x="7060" y="70" font-size="9" fill="#666">538–400 BC</text>
+  <line x1="7052" y1="130" x2="7052" y2="972" stroke="#2E8B57" stroke-opacity="0.1" stroke-dasharray="4 4" />
+</g>
+<line x1="120" y1="130" x2="120" y2="972" stroke="#C4B99A" stroke-opacity="0.4" />
+<text x="120" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">4004 BC</text>
+<line x1="520" y1="130" x2="520" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="520" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">3804 BC</text>
+<line x1="920" y1="130" x2="920" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="920" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">3604 BC</text>
+<line x1="1320" y1="130" x2="1320" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="1320" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">3404 BC</text>
+<line x1="1720" y1="130" x2="1720" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="1720" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">3204 BC</text>
+<line x1="2120" y1="130" x2="2120" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="2120" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">3004 BC</text>
+<line x1="2520" y1="130" x2="2520" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="2520" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">2804 BC</text>
+<line x1="2920" y1="130" x2="2920" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="2920" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">2604 BC</text>
+<line x1="3320" y1="130" x2="3320" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="3320" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">2404 BC</text>
+<line x1="3720" y1="130" x2="3720" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="3720" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">2204 BC</text>
+<line x1="4120" y1="130" x2="4120" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="4120" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">2004 BC</text>
+<line x1="4520" y1="130" x2="4520" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="4520" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">1804 BC</text>
+<line x1="4920" y1="130" x2="4920" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="4920" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">1604 BC</text>
+<line x1="5320" y1="130" x2="5320" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="5320" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">1404 BC</text>
+<line x1="5720" y1="130" x2="5720" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="5720" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">1204 BC</text>
+<line x1="6120" y1="130" x2="6120" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="6120" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">1004 BC</text>
+<line x1="6520" y1="130" x2="6520" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="6520" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">804 BC</text>
+<line x1="6920" y1="130" x2="6920" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="6920" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">604 BC</text>
+<line x1="7320" y1="130" x2="7320" y2="972" stroke="#C4B99A" stroke-opacity="0.15" />
+<text x="7320" y="126" font-size="9" fill="#999" text-anchor="middle" font-family="monospace">404 BC</text>
+<rect x="10" y="146" width="80" height="24" rx="4" fill="#E8E0D4" />
+<text x="50" y="162" font-size="11" font-weight="700" fill="#6B5D3E" text-anchor="middle">EVENTS</text>
+<line x1="120" y1="130" x2="7368" y2="130" stroke="#C4B99A" stroke-opacity="0.3" />
+<rect x="10" y="478" width="80" height="24" rx="4" fill="#E8E0D4" />
+<text x="50" y="494" font-size="11" font-weight="700" fill="#6B5D3E" text-anchor="middle">PEOPLE</text>
+<line x1="120" y1="234" x2="7368" y2="234" stroke="#C4B99A" stroke-opacity="0.3" />
+<rect x="10" y="847" width="80" height="24" rx="4" fill="#E8E0D4" />
+<text x="50" y="863" font-size="11" font-weight="700" fill="#6B5D3E" text-anchor="middle">BOOKS</text>
+<line x1="120" y1="794" x2="7368" y2="794" stroke="#C4B99A" stroke-opacity="0.3" />
+<line x1="120" y1="924" x2="7368" y2="924" stroke="#C4B99A" stroke-opacity="0.3" />
+<g id="event-flood" data-type="event" data-id="flood" data-year="2348" data-swimlane="0" data-priority="1">
+  <circle cx="3442" cy="140" r="10" fill="#E6A8A8" stroke="#6B5D3E" stroke-width="1" />
+  <text x="3458" y="144" font-size="11" fill="#3D3929">The Great Flood (judgment)</text>
+</g>
+<g id="event-call-of-abraham" data-type="event" data-id="call-of-abraham" data-year="2091" data-swimlane="0" data-priority="1">
+  <circle cx="3956" cy="140" r="10" fill="#F4D19B" stroke="#6B5D3E" stroke-width="1" />
+  <text x="3972" y="144" font-size="11" fill="#3D3929">The Call of Abraham (covenant)</text>
+</g>
+<g id="event-exodus" data-type="event" data-id="exodus" data-year="1446" data-swimlane="0" data-priority="1">
+  <circle cx="5246" cy="140" r="10" fill="#B8D9E6" stroke="#6B5D3E" stroke-width="1" />
+  <text x="5262" y="144" font-size="11" fill="#3D3929">Exodus from Egypt (deliverance)</text>
+</g>
+<g id="event-temple-built" data-type="event" data-id="temple-built" data-year="966" data-swimlane="0" data-priority="1">
+  <circle cx="6206" cy="140" r="10" fill="#E6D4B8" stroke="#6B5D3E" stroke-width="1" />
+  <text x="6222" y="144" font-size="11" fill="#3D3929">Construction of the First Temple (temple)</text>
+</g>
+<g id="event-creation" data-type="event" data-id="creation" data-year="4004" data-swimlane="0" data-priority="1">
+  <circle cx="130" cy="140" r="10" fill="#D9C4A8" stroke="#6B5D3E" stroke-width="1" />
+  <text x="146" y="144" font-size="11" fill="#3D3929">Creation (origins)</text>
+</g>
+<g id="event-the-fall" data-type="event" data-id="the-fall" data-year="4004" data-swimlane="1" data-priority="1">
+  <circle cx="130" cy="168" r="10" fill="#D9C4A8" stroke="#6B5D3E" stroke-width="1" />
+  <text x="146" y="172" font-size="11" fill="#3D3929">The Fall (origins)</text>
+</g>
+<g id="event-tower-of-babel" data-type="event" data-id="tower-of-babel" data-year="2242" data-swimlane="0" data-priority="2">
+  <circle cx="3654" cy="140" r="10" fill="#E6A8A8" stroke="#6B5D3E" stroke-width="1" />
+  <text x="3670" y="144" font-size="11" fill="#3D3929">The Dispersion of Nations (Tower of Babel) (judgment)</text>
+</g>
+<g id="event-ishmael-born" data-type="event" data-id="ishmael-born" data-year="2080" data-swimlane="0" data-priority="3">
+  <circle cx="3978" cy="140" r="10" fill="#F4D19B" stroke="#6B5D3E" stroke-width="1" />
+  <text x="3994" y="144" font-size="11" fill="#3D3929">Ishmael Born (patriarchs)</text>
+</g>
+<g id="event-birth-of-isaac" data-type="event" data-id="birth-of-isaac" data-year="2066" data-swimlane="0" data-priority="2">
+  <circle cx="4006" cy="140" r="10" fill="#F4D19B" stroke="#6B5D3E" stroke-width="1" />
+  <text x="4022" y="144" font-size="11" fill="#3D3929">The Birth of Isaac (covenant)</text>
+</g>
+<g id="event-twelve-tribes-of-israel" data-type="event" data-id="twelve-tribes-of-israel" data-year="1915" data-swimlane="0" data-priority="2">
+  <circle cx="4308" cy="140" r="10" fill="#F4D19B" stroke="#6B5D3E" stroke-width="1" />
+  <text x="4324" y="144" font-size="11" fill="#3D3929">The Twelve Tribes of Israel (patriarchs)</text>
+</g>
+<g id="event-josephs-exaltation-in-egypt" data-type="event" data-id="josephs-exaltation-in-egypt" data-year="1899" data-swimlane="0" data-priority="2">
+  <circle cx="4340" cy="140" r="10" fill="#F4D19B" stroke="#6B5D3E" stroke-width="1" />
+  <text x="4356" y="144" font-size="11" fill="#3D3929">Joseph's Exaltation in Egypt (patriarchs)</text>
+</g>
+<g id="event-mosaic-covenant" data-type="event" data-id="mosaic-covenant" data-year="1446" data-swimlane="1" data-priority="1">
+  <circle cx="5246" cy="168" r="10" fill="#F4D19B" stroke="#6B5D3E" stroke-width="1" />
+  <text x="5262" y="172" font-size="11" fill="#3D3929">The Mosaic Covenant (covenant)</text>
+</g>
+<g id="event-conquest-of-canaan" data-type="event" data-id="conquest-of-canaan" data-year="1406" data-swimlane="0" data-priority="1">
+  <circle cx="5326" cy="140" r="10" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="1" />
+  <text x="5342" y="144" font-size="11" fill="#3D3929">The Conquest of Canaan (conquest)</text>
+</g>
+<g id="event-division-of-the-land" data-type="event" data-id="division-of-the-land" data-year="1400" data-swimlane="0" data-priority="3">
+  <circle cx="5338" cy="140" r="10" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="1" />
+  <text x="5354" y="144" font-size="11" fill="#3D3929">Division of the Land (conquest)</text>
+</g>
+<g id="event-selection-of-king-saul" data-type="event" data-id="selection-of-king-saul" data-year="1050" data-swimlane="0" data-priority="2">
+  <circle cx="6038" cy="140" r="10" fill="#CFB8D4" stroke="#6B5D3E" stroke-width="1" />
+  <text x="6054" y="144" font-size="11" fill="#3D3929">The Selection of King Saul (monarchy)</text>
+</g>
+<g id="event-reign-of-king-david" data-type="event" data-id="reign-of-king-david" data-year="1010" data-swimlane="0" data-priority="1">
+  <circle cx="6118" cy="140" r="10" fill="#CFB8D4" stroke="#6B5D3E" stroke-width="1" />
+  <text x="6134" y="144" font-size="11" fill="#3D3929">The Reign of King David (monarchy)</text>
+</g>
+<g id="event-division-of-the-kingdom" data-type="event" data-id="division-of-the-kingdom" data-year="931" data-swimlane="0" data-priority="1">
+  <circle cx="6276" cy="140" r="10" fill="#CFB8D4" stroke="#6B5D3E" stroke-width="1" />
+  <text x="6292" y="144" font-size="11" fill="#3D3929">The Division of the Kingdom (monarchy)</text>
+</g>
+<g id="event-fall-of-northern-kingdom" data-type="event" data-id="fall-of-northern-kingdom" data-year="721" data-swimlane="0" data-priority="1">
+  <circle cx="6696" cy="140" r="10" fill="#E6A8A8" stroke="#6B5D3E" stroke-width="1" />
+  <text x="6712" y="144" font-size="11" fill="#3D3929">The Fall of the Northern Kingdom (judgment)</text>
+</g>
+<g id="event-destruction-of-jerusalem" data-type="event" data-id="destruction-of-jerusalem" data-year="586" data-swimlane="0" data-priority="1">
+  <circle cx="6966" cy="140" r="10" fill="#E6A8A8" stroke="#6B5D3E" stroke-width="1" />
+  <text x="6982" y="144" font-size="11" fill="#3D3929">Destruction of Jerusalem and Babylonian Captivity (judgment)</text>
+</g>
+<g id="event-return-from-exile" data-type="event" data-id="return-from-exile" data-year="538" data-swimlane="0" data-priority="1">
+  <circle cx="7062" cy="140" r="10" fill="#C8E6C9" stroke="#6B5D3E" stroke-width="1" />
+  <text x="7078" y="144" font-size="11" fill="#3D3929">The Return from Exile (restoration)</text>
+</g>
+<g id="event-dedication-of-second-temple" data-type="event" data-id="dedication-of-second-temple" data-year="515" data-swimlane="0" data-priority="1">
+  <circle cx="7108" cy="140" r="10" fill="#E6D4B8" stroke="#6B5D3E" stroke-width="1" />
+  <text x="7124" y="144" font-size="11" fill="#3D3929">The Dedication of the Second Temple (temple)</text>
+</g>
+<g id="event-rebuilding-jerusalems-walls" data-type="event" data-id="rebuilding-jerusalems-walls" data-year="444" data-swimlane="0" data-priority="2">
+  <circle cx="7250" cy="140" r="10" fill="#C8E6C9" stroke="#6B5D3E" stroke-width="1" />
+  <text x="7266" y="144" font-size="11" fill="#3D3929">The Rebuilding of Jerusalem's Walls (restoration)</text>
+</g>
+<g id="person-terah" data-type="person" data-id="terah" data-start="2296" data-end="2091" data-swimlane="0" data-priority="3">
+  <rect x="3536" y="234" width="410" height="24" rx="4" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="3540" y="250" font-size="10" fill="#3D3929">Terah (Patriarch)</text>
+</g>
+<g id="person-sarah" data-type="person" data-id="sarah" data-start="2156" data-end="2029" data-swimlane="3" data-priority="2">
+  <rect x="3816" y="330" width="254" height="24" rx="4" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="3820" y="346" font-size="10" fill="#3D3929">Sarah (Patriarch)</text>
+</g>
+<g id="person-isaac" data-type="person" data-id="isaac" data-start="2066" data-end="1886" data-swimlane="4" data-priority="1">
+  <rect x="3996" y="362" width="360" height="24" rx="4" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4000" y="378" font-size="10" fill="#3D3929">Isaac (Patriarch)</text>
+</g>
+<g id="person-ishmael" data-type="person" data-id="ishmael" data-start="2080" data-end="1943" data-swimlane="0" data-priority="3">
+  <rect x="3968" y="234" width="274" height="24" rx="4" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="3972" y="250" font-size="10" fill="#3D3929">Ishmael (Patriarch)</text>
+</g>
+<g id="person-amram" data-type="person" data-id="amram" data-start="1600" data-end="1463" data-swimlane="0" data-priority="3">
+  <rect x="4928" y="234" width="274" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4932" y="250" font-size="10" fill="#3D3929">Amram (Other)</text>
+</g>
+<g id="person-jochebed" data-type="person" data-id="jochebed" data-start="1595" data-end="1460" data-swimlane="1" data-priority="3">
+  <rect x="4938" y="266" width="270" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4942" y="282" font-size="10" fill="#3D3929">Jochebed (Other)</text>
+</g>
+<g id="person-zipporah" data-type="person" data-id="zipporah" data-start="1510" data-end="1400" data-swimlane="4" data-priority="3">
+  <rect x="5108" y="362" width="220" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5112" y="378" font-size="10" fill="#3D3929">Zipporah (Other)</text>
+</g>
+<g id="person-gershom" data-type="person" data-id="gershom" data-start="1485" data-end="1400" data-swimlane="5" data-priority="4">
+  <rect x="5158" y="394" width="170" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5162" y="410" font-size="10" fill="#3D3929">Gershom (Other)</text>
+</g>
+<g id="person-eliezer" data-type="person" data-id="eliezer" data-start="1480" data-end="1395" data-swimlane="7" data-priority="4">
+  <rect x="5168" y="458" width="170" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5172" y="474" font-size="10" fill="#3D3929">Eliezer (Other)</text>
+</g>
+<g id="person-jesse" data-type="person" data-id="jesse" data-start="1080" data-end="1000" data-swimlane="3" data-priority="3">
+  <rect x="5968" y="330" width="160" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5972" y="346" font-size="10" fill="#3D3929">Jesse (Other)</text>
+</g>
+<g id="person-bathsheba" data-type="person" data-id="bathsheba" data-start="1025" data-end="950" data-swimlane="1" data-priority="3">
+  <rect x="6078" y="266" width="150" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="6082" y="282" font-size="10" fill="#3D3929">Bathsheba (Other)</text>
+</g>
+<g id="person-solomon" data-type="person" data-id="solomon" data-start="990" data-end="931" data-swimlane="3" data-priority="2">
+  <rect x="6148" y="330" width="118" height="24" rx="4" fill="#F5D99F" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="6152" y="346" font-size="10" fill="#3D3929">Solomon (King)</text>
+</g>
+<g id="person-absalom" data-type="person" data-id="absalom" data-start="1010" data-end="980" data-swimlane="2" data-priority="3">
+  <rect x="6108" y="298" width="60" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="6112" y="314" font-size="10" fill="#3D3929">Absalom (Other)</text>
+</g>
+<g id="person-abraham" data-type="person" data-id="abraham" data-start="2166" data-end="1991" data-swimlane="2" data-priority="1">
+  <rect x="3796" y="298" width="350" height="24" rx="4" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="3800" y="314" font-size="10" fill="#3D3929">Abraham (Patriarch)</text>
+</g>
+<g id="person-moses" data-type="person" data-id="moses" data-start="1526" data-end="1406" data-swimlane="2" data-priority="1">
+  <rect x="5076" y="298" width="240" height="24" rx="4" fill="#C8B8D4" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5080" y="314" font-size="10" fill="#3D3929">Moses (Prophet)</text>
+</g>
+<g id="person-david" data-type="person" data-id="david" data-start="1040" data-end="970" data-swimlane="0" data-priority="1">
+  <rect x="6048" y="234" width="140" height="24" rx="4" fill="#F5D99F" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="6052" y="250" font-size="10" fill="#3D3929">David (King)</text>
+</g>
+<g id="person-adam" data-type="person" data-id="adam" data-start="4004" data-end="3074" data-swimlane="0" data-priority="1">
+  <rect x="120" y="234" width="1860" height="24" rx="4" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="124" y="250" font-size="10" fill="#3D3929">Adam (Patriarch)</text>
+</g>
+<g id="person-eve" data-type="person" data-id="eve" data-start="4004" data-end="3074" data-swimlane="1" data-priority="2">
+  <rect x="120" y="266" width="1860" height="24" rx="4" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="124" y="282" font-size="10" fill="#3D3929">Eve (Patriarch)</text>
+</g>
+<g id="person-noah" data-type="person" data-id="noah" data-start="2948" data-end="1998" data-swimlane="1" data-priority="1">
+  <rect x="2232" y="266" width="1900" height="24" rx="4" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="2236" y="282" font-size="10" fill="#3D3929">Noah (Patriarch)</text>
+</g>
+<g id="person-jacob" data-type="person" data-id="jacob" data-start="2006" data-end="1859" data-swimlane="3" data-priority="1">
+  <rect x="4116" y="330" width="294" height="24" rx="4" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4120" y="346" font-size="10" fill="#3D3929">Jacob (Israel) (Patriarch)</text>
+</g>
+<g id="person-joseph" data-type="person" data-id="joseph" data-start="1916" data-end="1806" data-swimlane="0" data-priority="1">
+  <rect x="4296" y="234" width="220" height="24" rx="4" fill="#C8D4B8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4300" y="250" font-size="10" fill="#3D3929">Joseph (Patriarch)</text>
+</g>
+<g id="person-joshua" data-type="person" data-id="joshua" data-start="1485" data-end="1375" data-swimlane="6" data-priority="1">
+  <rect x="5158" y="426" width="220" height="24" rx="4" fill="#D9B5A0" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5162" y="442" font-size="10" fill="#3D3929">Joshua (Warrior)</text>
+</g>
+<g id="person-samuel" data-type="person" data-id="samuel" data-start="1100" data-end="1015" data-swimlane="2" data-priority="1">
+  <rect x="5928" y="298" width="170" height="24" rx="4" fill="#C8B8D4" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5932" y="314" font-size="10" fill="#3D3929">Samuel (Prophet)</text>
+</g>
+<g id="person-cain" data-type="person" data-id="cain" data-start="3974" data-end="3904" data-swimlane="2" data-priority="4">
+  <rect x="180" y="298" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="184" y="314" font-size="10" fill="#3D3929">Cain (Other)</text>
+</g>
+<g id="person-abel" data-type="person" data-id="abel" data-start="3974" data-end="3904" data-swimlane="3" data-priority="4">
+  <rect x="180" y="330" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="184" y="346" font-size="10" fill="#3D3929">Abel (Other)</text>
+</g>
+<g id="person-seth" data-type="person" data-id="seth" data-start="3974" data-end="3904" data-swimlane="4" data-priority="4">
+  <rect x="180" y="362" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="184" y="378" font-size="10" fill="#3D3929">Seth (Other)</text>
+</g>
+<g id="person-lamech" data-type="person" data-id="lamech" data-start="2978" data-end="2908" data-swimlane="0" data-priority="4">
+  <rect x="2172" y="234" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="2176" y="250" font-size="10" fill="#3D3929">Lamech (Other)</text>
+</g>
+<g id="person-shem" data-type="person" data-id="shem" data-start="2918" data-end="2848" data-swimlane="2" data-priority="4">
+  <rect x="2292" y="298" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="2296" y="314" font-size="10" fill="#3D3929">Shem (Other)</text>
+</g>
+<g id="person-ham" data-type="person" data-id="ham" data-start="2918" data-end="2848" data-swimlane="3" data-priority="4">
+  <rect x="2292" y="330" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="2296" y="346" font-size="10" fill="#3D3929">Ham (Other)</text>
+</g>
+<g id="person-japheth" data-type="person" data-id="japheth" data-start="2918" data-end="2848" data-swimlane="4" data-priority="4">
+  <rect x="2292" y="362" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="2296" y="378" font-size="10" fill="#3D3929">Japheth (Other)</text>
+</g>
+<g id="person-rebekah" data-type="person" data-id="rebekah" data-start="2051" data-end="1981" data-swimlane="5" data-priority="4">
+  <rect x="4026" y="394" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4030" y="410" font-size="10" fill="#3D3929">Rebekah (Other)</text>
+</g>
+<g id="person-esau" data-type="person" data-id="esau" data-start="2036" data-end="1966" data-swimlane="6" data-priority="4">
+  <rect x="4056" y="426" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4060" y="442" font-size="10" fill="#3D3929">Esau (Other)</text>
+</g>
+<g id="person-rachel" data-type="person" data-id="rachel" data-start="1976" data-end="1906" data-swimlane="1" data-priority="4">
+  <rect x="4176" y="266" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="282" font-size="10" fill="#3D3929">Rachel (Other)</text>
+</g>
+<g id="person-reuben" data-type="person" data-id="reuben" data-start="1976" data-end="1906" data-swimlane="2" data-priority="4">
+  <rect x="4176" y="298" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="314" font-size="10" fill="#3D3929">Reuben (Other)</text>
+</g>
+<g id="person-simeon" data-type="person" data-id="simeon" data-start="1976" data-end="1906" data-swimlane="5" data-priority="4">
+  <rect x="4176" y="394" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="410" font-size="10" fill="#3D3929">Simeon (Other)</text>
+</g>
+<g id="person-levi" data-type="person" data-id="levi" data-start="1976" data-end="1906" data-swimlane="7" data-priority="4">
+  <rect x="4176" y="458" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="474" font-size="10" fill="#3D3929">Levi (Other)</text>
+</g>
+<g id="person-judah" data-type="person" data-id="judah" data-start="1976" data-end="1906" data-swimlane="8" data-priority="4">
+  <rect x="4176" y="490" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="506" font-size="10" fill="#3D3929">Judah (Other)</text>
+</g>
+<g id="person-dan" data-type="person" data-id="dan" data-start="1976" data-end="1906" data-swimlane="9" data-priority="4">
+  <rect x="4176" y="522" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="538" font-size="10" fill="#3D3929">Dan (Other)</text>
+</g>
+<g id="person-naphtali" data-type="person" data-id="naphtali" data-start="1976" data-end="1906" data-swimlane="10" data-priority="4">
+  <rect x="4176" y="554" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="570" font-size="10" fill="#3D3929">Naphtali (Other)</text>
+</g>
+<g id="person-gad" data-type="person" data-id="gad" data-start="1976" data-end="1906" data-swimlane="11" data-priority="4">
+  <rect x="4176" y="586" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="602" font-size="10" fill="#3D3929">Gad (Other)</text>
+</g>
+<g id="person-asher" data-type="person" data-id="asher" data-start="1976" data-end="1906" data-swimlane="12" data-priority="4">
+  <rect x="4176" y="618" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="634" font-size="10" fill="#3D3929">Asher (Other)</text>
+</g>
+<g id="person-issachar" data-type="person" data-id="issachar" data-start="1976" data-end="1906" data-swimlane="13" data-priority="4">
+  <rect x="4176" y="650" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="666" font-size="10" fill="#3D3929">Issachar (Other)</text>
+</g>
+<g id="person-zebulun" data-type="person" data-id="zebulun" data-start="1976" data-end="1906" data-swimlane="14" data-priority="4">
+  <rect x="4176" y="682" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="698" font-size="10" fill="#3D3929">Zebulun (Other)</text>
+</g>
+<g id="person-benjamin" data-type="person" data-id="benjamin" data-start="1976" data-end="1906" data-swimlane="15" data-priority="4">
+  <rect x="4176" y="714" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4180" y="730" font-size="10" fill="#3D3929">Benjamin (Other)</text>
+</g>
+<g id="person-asenath" data-type="person" data-id="asenath" data-start="1916" data-end="1846" data-swimlane="6" data-priority="4">
+  <rect x="4296" y="426" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4300" y="442" font-size="10" fill="#3D3929">Asenath (Other)</text>
+</g>
+<g id="person-manasseh" data-type="person" data-id="manasseh" data-start="1886" data-end="1816" data-swimlane="1" data-priority="4">
+  <rect x="4356" y="266" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4360" y="282" font-size="10" fill="#3D3929">Manasseh (Other)</text>
+</g>
+<g id="person-ephraim" data-type="person" data-id="ephraim" data-start="1886" data-end="1816" data-swimlane="2" data-priority="4">
+  <rect x="4356" y="298" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="4360" y="314" font-size="10" fill="#3D3929">Ephraim (Other)</text>
+</g>
+<g id="person-nun" data-type="person" data-id="nun" data-start="1515" data-end="1445" data-swimlane="3" data-priority="4">
+  <rect x="5098" y="330" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5102" y="346" font-size="10" fill="#3D3929">Nun (Other)</text>
+</g>
+<g id="person-elkanah" data-type="person" data-id="elkanah" data-start="1130" data-end="1060" data-swimlane="0" data-priority="4">
+  <rect x="5868" y="234" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5872" y="250" font-size="10" fill="#3D3929">Elkanah (Other)</text>
+</g>
+<g id="person-hannah" data-type="person" data-id="hannah" data-start="1130" data-end="1060" data-swimlane="1" data-priority="4">
+  <rect x="5868" y="266" width="140" height="24" rx="4" fill="#D4D9DE" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5872" y="282" font-size="10" fill="#3D3929">Hannah (Other)</text>
+</g>
+<g id="book-genesis" data-type="book" data-id="genesis" data-start="4000" data-end="1805" data-swimlane="0" data-priority="1">
+  <rect x="128" y="794" width="4390" height="18" rx="3" fill="#E6D4A8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="132" y="807" font-size="9" fill="#3D3929">Genesis (Pentateuch)</text>
+</g>
+<g id="book-exodus-book" data-type="book" data-id="exodus-book" data-start="1446" data-end="1406" data-swimlane="0" data-priority="1">
+  <rect x="5236" y="794" width="80" height="18" rx="3" fill="#E6D4A8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5240" y="807" font-size="9" fill="#3D3929">Exodus (Pentateuch)</text>
+</g>
+<g id="book-psalms" data-type="book" data-id="psalms" data-start="1000" data-end="400" data-swimlane="0" data-priority="1">
+  <rect x="6128" y="794" width="1200" height="18" rx="3" fill="#D4C8E0" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="6132" y="807" font-size="9" fill="#3D3929">Psalms (Poetry)</text>
+</g>
+<g id="book-leviticus" data-type="book" data-id="leviticus" data-start="1446" data-end="1406" data-swimlane="1" data-priority="2">
+  <rect x="5236" y="820" width="80" height="18" rx="3" fill="#E6D4A8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5240" y="833" font-size="9" fill="#3D3929">Leviticus (Pentateuch)</text>
+</g>
+<g id="book-numbers" data-type="book" data-id="numbers" data-start="1446" data-end="1406" data-swimlane="2" data-priority="2">
+  <rect x="5236" y="846" width="80" height="18" rx="3" fill="#E6D4A8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5240" y="859" font-size="9" fill="#3D3929">Numbers (Pentateuch)</text>
+</g>
+<g id="book-deuteronomy" data-type="book" data-id="deuteronomy" data-start="1406" data-end="1406" data-swimlane="3" data-priority="2">
+  <rect x="5316" y="872" width="20" height="18" rx="3" fill="#E6D4A8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5320" y="885" font-size="9" fill="#3D3929">Deuteronomy (Pentateuch)</text>
+</g>
+<g id="book-joshua" data-type="book" data-id="joshua" data-start="1406" data-end="1375" data-swimlane="4" data-priority="2">
+  <rect x="5316" y="898" width="62" height="18" rx="3" fill="#A8C4E0" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5320" y="911" font-size="9" fill="#3D3929">Joshua (History)</text>
+</g>
+<g id="book-1-samuel" data-type="book" data-id="1-samuel" data-start="1100" data-end="1010" data-swimlane="0" data-priority="2">
+  <rect x="5928" y="794" width="180" height="18" rx="3" fill="#A8C4E0" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="5932" y="807" font-size="9" fill="#3D3929">1 Samuel (History)</text>
+</g>
+<g id="book-2-samuel" data-type="book" data-id="2-samuel" data-start="1010" data-end="970" data-swimlane="1" data-priority="2">
+  <rect x="6108" y="820" width="80" height="18" rx="3" fill="#A8C4E0" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="6112" y="833" font-size="9" fill="#3D3929">2 Samuel (History)</text>
+</g>
+<g id="book-1-kings" data-type="book" data-id="1-kings" data-start="970" data-end="853" data-swimlane="2" data-priority="2">
+  <rect x="6188" y="846" width="234" height="18" rx="3" fill="#A8C4E0" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="6192" y="859" font-size="9" fill="#3D3929">1 Kings (History)</text>
+</g>
+<g id="book-2-kings" data-type="book" data-id="2-kings" data-start="853" data-end="586" data-swimlane="1" data-priority="2">
+  <rect x="6422" y="820" width="534" height="18" rx="3" fill="#A8C4E0" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="6426" y="833" font-size="9" fill="#3D3929">2 Kings (History)</text>
+</g>
+<g id="book-jeremiah" data-type="book" data-id="jeremiah" data-start="627" data-end="580" data-swimlane="2" data-priority="2">
+  <rect x="6874" y="846" width="94" height="18" rx="3" fill="#D9C4A8" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="6878" y="859" font-size="9" fill="#3D3929">Jeremiah (Major Prophets)</text>
+</g>
+<g id="book-ezra" data-type="book" data-id="ezra" data-start="538" data-end="457" data-swimlane="1" data-priority="2">
+  <rect x="7052" y="820" width="162" height="18" rx="3" fill="#A8C4E0" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="7056" y="833" font-size="9" fill="#3D3929">Ezra (History)</text>
+</g>
+<g id="book-nehemiah" data-type="book" data-id="nehemiah" data-start="445" data-end="430" data-swimlane="1" data-priority="2">
+  <rect x="7238" y="820" width="30" height="18" rx="3" fill="#A8C4E0" stroke="#6B5D3E" stroke-width="0.5" />
+  <text x="7242" y="833" font-size="9" fill="#3D3929">Nehemiah (History)</text>
+</g>
+</svg>

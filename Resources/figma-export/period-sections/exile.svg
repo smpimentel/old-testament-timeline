@@ -1,0 +1,50 @@
+<svg width="402" height="544" viewBox="0 0 402 544" xmlns="http://www.w3.org/2000/svg">
+<rect width="402" height="544" fill="#F7F1E4"/>
+<text x="20" y="34" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#2D241C">Exile</text>
+<text x="20" y="58" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">586-538 BC - Babylonian captivity</text>
+<text x="20" y="78" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Nodes included by start year in this period. Move nodes in Figma, then share updated coordinates.</text>
+<rect x="10" y="100" width="382" height="426" rx="10" fill="#FFFDF7" stroke="#C7B8A2"/>
+<rect x="120" y="116" width="202" height="84" fill="#BDBDBD44" stroke="#BDBDBD"/>
+<text x="132" y="142" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">EXILE</text>
+<line x1="313.20000000000005" y1="200" x2="313.20000000000005" y2="518" stroke="#C7B8A2" stroke-width="1"/>
+<text x="293.20000000000005" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">540</text>
+<line x1="229.2" y1="200" x2="229.2" y2="518" stroke="#C7B8A2" stroke-width="1"/>
+<text x="209.2" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">560</text>
+<line x1="145.2" y1="200" x2="145.2" y2="518" stroke="#C7B8A2" stroke-width="1"/>
+<text x="125.19999999999999" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">580</text>
+<line x1="271.20000000000005" y1="200" x2="271.20000000000005" y2="518" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="187.2" y1="200" x2="187.2" y2="518" stroke="#E3D7C4" stroke-width="1"/>
+<rect x="20" y="218" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="233" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">EVENTS</text>
+<rect x="20" y="292" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="307" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">PEOPLE</text>
+<rect x="20" y="370" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="41" y="385" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">BOOKS</text>
+<line x1="120" y1="270" x2="322" y2="270" stroke="#E3D7C4"/>
+<line x1="120" y1="348" x2="322" y2="348" stroke="#E3D7C4"/>
+<g id="book-psalms">
+<rect x="-1618.8000000000002" y="400" width="2520" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-1612.8000000000002" y="432" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Psalms (Poetry)</text>
+</g>
+<g id="book-2-kings">
+<rect x="-1001.4000000000001" y="428" width="1121" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-995.4000000000001" y="460" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">2 Kings (History)</text>
+</g>
+<g id="book-jeremiah">
+<rect x="-52.20000000000002" y="456" width="197" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-46.20000000000002" y="488" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Jeremiah (Major Prophets)</text>
+</g>
+<g id="event-destruction-of-jerusalem">
+<circle cx="120" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="134" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Destruction of Jerusalem and Babylonian Captivity (judgment)</text>
+</g>
+<g id="event-return-from-exile">
+<circle cx="321.6" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="335.6" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Return from Exile (restoration)</text>
+</g>
+<g id="book-ezra">
+<rect x="321.6" y="428" width="340" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="327.6" y="460" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Ezra (History)</text>
+</g>
+<text x="20" y="530" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">Counts: events 2, people 0, books 4, total 6</text>
+</svg>

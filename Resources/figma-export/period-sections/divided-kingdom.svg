@@ -1,0 +1,53 @@
+<svg width="1026" height="544" viewBox="0 0 1026 544" xmlns="http://www.w3.org/2000/svg">
+<rect width="1026" height="544" fill="#F7F1E4"/>
+<text x="20" y="34" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" fill="#2D241C">Kingdom Divides</text>
+<text x="20" y="58" font-family="Source Sans 3, sans-serif" font-size="13" fill="#6F6254">930-586 BC - Kingdom split into Israel (north) and Judah (south)</text>
+<text x="20" y="78" font-family="Source Sans 3, sans-serif" font-size="12" fill="#6F6254">Nodes included by start year in this period. Move nodes in Figma, then share updated coordinates.</text>
+<rect x="10" y="100" width="1006" height="426" rx="10" fill="#FFFDF7" stroke="#C7B8A2"/>
+<rect x="120" y="116" width="826" height="84" fill="#E1BEE744" stroke="#E1BEE7"/>
+<text x="132" y="142" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#6F6254">DIVIDED-KINGDOM</text>
+<line x1="912" y1="200" x2="912" y2="518" stroke="#C7B8A2" stroke-width="1"/>
+<text x="892" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">600</text>
+<line x1="672" y1="200" x2="672" y2="518" stroke="#C7B8A2" stroke-width="1"/>
+<text x="652" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">700</text>
+<line x1="432" y1="200" x2="432" y2="518" stroke="#C7B8A2" stroke-width="1"/>
+<text x="412" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">800</text>
+<line x1="192" y1="200" x2="192" y2="518" stroke="#C7B8A2" stroke-width="1"/>
+<text x="172" y="194" font-family="IBM Plex Mono, monospace" font-size="10" fill="#6F6254">900</text>
+<line x1="792" y1="200" x2="792" y2="518" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="552" y1="200" x2="552" y2="518" stroke="#E3D7C4" stroke-width="1"/>
+<line x1="312" y1="200" x2="312" y2="518" stroke="#E3D7C4" stroke-width="1"/>
+<rect x="20" y="218" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="233" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">EVENTS</text>
+<rect x="20" y="292" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="36" y="307" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">PEOPLE</text>
+<rect x="20" y="370" width="74" height="22" rx="6" fill="#FFFDF7" stroke="#C7B8A2"/>
+<text x="41" y="385" font-family="Source Sans 3, sans-serif" font-size="11" font-weight="700" fill="#6F6254">BOOKS</text>
+<line x1="120" y1="270" x2="946" y2="270" stroke="#E3D7C4"/>
+<line x1="120" y1="348" x2="946" y2="348" stroke="#E3D7C4"/>
+<g id="book-psalms">
+<rect x="-48" y="400" width="1440" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="-42" y="432" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Psalms (Poetry)</text>
+</g>
+<g id="book-1-kings">
+<rect x="24" y="456" width="281" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="30" y="488" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">1 Kings (History)</text>
+</g>
+<g id="book-2-kings">
+<rect x="304.79999999999995" y="428" width="641" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="310.79999999999995" y="460" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">2 Kings (History)</text>
+</g>
+<g id="event-fall-of-northern-kingdom">
+<circle cx="621.5999999999999" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="635.5999999999999" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">The Fall of the Northern Kingdom (judgment)</text>
+</g>
+<g id="book-jeremiah">
+<rect x="847.1999999999999" y="456" width="113" height="18" rx="6" fill="#C9D6E6" stroke="#2D241C" stroke-width="1.5"/>
+<text x="853.1999999999999" y="488" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Jeremiah (Major Prophets)</text>
+</g>
+<g id="event-destruction-of-jerusalem">
+<circle cx="945.6" cy="258" r="10" fill="#E6C7C0" stroke="#2D241C" stroke-width="1.5"/>
+<text x="959.6" y="262" font-family="Source Sans 3, sans-serif" font-size="12" font-weight="600" fill="#2D241C">Destruction of Jerusalem and Babylonian Captivity (judgment)</text>
+</g>
+<text x="20" y="530" font-family="IBM Plex Mono, monospace" font-size="11" fill="#6F6254">Counts: events 2, people 0, books 4, total 6</text>
+</svg>

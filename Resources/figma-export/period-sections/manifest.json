@@ -1,0 +1,155 @@
+[
+  {
+    "id": "dates-unknown",
+    "name": "Dates Unknown",
+    "startYear": 4000,
+    "endYear": 2500,
+    "color": "#E0E0E0",
+    "description": "Creation, Fall, Flood, Tower of Babel",
+    "filename": "dates-unknown.svg",
+    "counts": {
+      "event": 2,
+      "person": 10,
+      "book": 1
+    },
+    "total": 13,
+    "width": 2900,
+    "height": 654
+  },
+  {
+    "id": "patriarchs",
+    "name": "Time of the Patriarchs",
+    "startYear": 2166,
+    "endYear": 1876,
+    "color": "#FFF9C4",
+    "description": "Abraham, Isaac, Jacob",
+    "filename": "patriarchs.svg",
+    "counts": {
+      "event": 5,
+      "person": 25,
+      "book": 1
+    },
+    "total": 31,
+    "width": 1418,
+    "height": 998
+  },
+  {
+    "id": "egypt",
+    "name": "Israel in Egypt",
+    "startYear": 1876,
+    "endYear": 1446,
+    "color": "#FFCCBC",
+    "description": "Israel enslaved in Egypt",
+    "filename": "egypt.svg",
+    "counts": {
+      "event": 2,
+      "person": 13,
+      "book": 4
+    },
+    "total": 19,
+    "width": 1232,
+    "height": 812
+  },
+  {
+    "id": "wandering",
+    "name": "Wandering",
+    "startYear": 1446,
+    "endYear": 1406,
+    "color": "#D7CCC8",
+    "description": "Wilderness journey to Promised Land",
+    "filename": "wandering.svg",
+    "counts": {
+      "event": 3,
+      "person": 6,
+      "book": 5
+    },
+    "total": 14,
+    "width": 368,
+    "height": 868
+  },
+  {
+    "id": "judges",
+    "name": "Era of the Judges",
+    "startYear": 1406,
+    "endYear": 1050,
+    "color": "#C8E6C9",
+    "description": "Israel repeatedly fell into idolatry, oppression, repentance, and deliverance through judges.",
+    "filename": "judges.svg",
+    "counts": {
+      "event": 3,
+      "person": 9,
+      "book": 6
+    },
+    "total": 18,
+    "width": 1054,
+    "height": 838
+  },
+  {
+    "id": "united-kingdom",
+    "name": "The Kings / United Kingdom",
+    "startYear": 1050,
+    "endYear": 930,
+    "color": "#BBDEFB",
+    "description": "Saul, David, Solomon united Israel",
+    "filename": "united-kingdom.svg",
+    "counts": {
+      "event": 4,
+      "person": 6,
+      "book": 4
+    },
+    "total": 14,
+    "width": 704,
+    "height": 646
+  },
+  {
+    "id": "divided-kingdom",
+    "name": "Kingdom Divides",
+    "startYear": 930,
+    "endYear": 586,
+    "color": "#E1BEE7",
+    "description": "Kingdom split into Israel (north) and Judah (south)",
+    "filename": "divided-kingdom.svg",
+    "counts": {
+      "event": 2,
+      "person": 0,
+      "book": 4
+    },
+    "total": 6,
+    "width": 1026,
+    "height": 544
+  },
+  {
+    "id": "exile",
+    "name": "Exile",
+    "startYear": 586,
+    "endYear": 538,
+    "color": "#BDBDBD",
+    "description": "Babylonian captivity",
+    "filename": "exile.svg",
+    "counts": {
+      "event": 2,
+      "person": 0,
+      "book": 4
+    },
+    "total": 6,
+    "width": 402,
+    "height": 544
+  },
+  {
+    "id": "restoration",
+    "name": "The Restoration",
+    "startYear": 538,
+    "endYear": 400,
+    "color": "#B2DFDB",
+    "description": "Return from exile, temple rebuilt",
+    "filename": "restoration.svg",
+    "counts": {
+      "event": 3,
+      "person": 0,
+      "book": 3
+    },
+    "total": 6,
+    "width": 780,
+    "height": 516
+  }
+]
