@@ -12,6 +12,7 @@ interface MinimapProps {
   onViewportChange: (x: number) => void;
   zoomLevel: number;
   pixelsPerYear: number;
+  startYear: number;
 }
 
 export function Minimap({
@@ -22,6 +23,7 @@ export function Minimap({
   onViewportChange,
   zoomLevel,
   pixelsPerYear,
+  startYear,
 }: MinimapProps) {
   const isMobile = useIsMobile();
   const [isCollapsed, setIsCollapsed] = useState(isMobile);
@@ -56,7 +58,7 @@ export function Minimap({
   
   // Helper to convert year to X position (matches main timeline)
   const yearToX = (year: number) => {
-    return (4000 - year) * pixelsPerYear;
+    return (startYear - year) * pixelsPerYear;
   };
 
   // Collapsed toggle button for mobile

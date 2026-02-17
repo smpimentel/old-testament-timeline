@@ -10,6 +10,11 @@ export const MIN_ZOOM = 0.25;
 export const MAX_ZOOM = 3;
 export const DRAG_THRESHOLD = 5;
 
+export function computeFitView(timelineWidth: number, viewportWidth: number) {
+  const zoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, viewportWidth / timelineWidth));
+  return { zoom, panX: 0 };
+}
+
 interface UseViewportOptions {
   selectedEntityOpen: boolean;
   railWidth: number;
@@ -17,9 +22,9 @@ interface UseViewportOptions {
 
 export function useViewport({ selectedEntityOpen, railWidth }: UseViewportOptions) {
   // Canvas/Viewport State
-  const [panX, setPanX] = useState(-4000);
+  const [panX, setPanX] = useState(() => computeFitView(TIMELINE_WIDTH, typeof window !== 'undefined' ? window.innerWidth : 1200).panX);
   const [panY, setPanY] = useState(0);
-  const [zoomLevel, setZoomLevel] = useState(1);
+  const [zoomLevel, setZoomLevel] = useState(() => computeFitView(TIMELINE_WIDTH, typeof window !== 'undefined' ? window.innerWidth : 1200).zoom);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [lastPan, setLastPan] = useState({ x: 0, y: 0 });
@@ -67,10 +72,11 @@ export function useViewport({ selectedEntityOpen, railWidth }: UseViewportOption
   }, [zoomLevel, panX, panY]);
 
   const handleFitView = useCallback(() => {
-    setZoomLevel(1);
-    setPanX(-4000);
+    const { zoom, panX: fitPanX } = computeFitView(TIMELINE_WIDTH, viewportWidth);
+    setZoomLevel(zoom);
+    setPanX(fitPanX);
     setPanY(0);
-  }, []);
+  }, [viewportWidth]);
 
   // Pan to specific year (for navigation)
   const panToYear = useCallback((year: number, offsetFromLeft = 120) => {

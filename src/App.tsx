@@ -9,6 +9,7 @@ import { computeTrackLayout, createConfigFromEntities } from './lib/timeline-tra
 import { computeNodeLabelVisibility, computePeriodLabelLayout } from './lib/timeline-label-layout';
 import { SideNavigator, SIDEBAR_WIDTH_OPEN, SIDEBAR_WIDTH_CLOSED } from './components/side-navigator';
 import { TimelineNode, TimeGrid, PeriodBand } from './components/timeline-nodes';
+import { KingdomBackground } from './components/kingdom-background';
 import { RightRail } from './components/right-rail';
 import { Minimap } from './components/minimap';
 import { HoverTooltip } from './components/hover-tooltip';
@@ -29,6 +30,17 @@ import {
 
 // Compute dynamic track layout
 const trackLayout = computeTrackLayout(createConfigFromEntities(timelineData));
+const PERIOD_SECTION_HEIGHT = 170;
+const MAIN_SECTION_TOP = PERIOD_SECTION_HEIGHT;
+const MAIN_SECTION_PADDING_TOP = 48;
+const EVENT_PEOPLE_GAP = 28;
+const MAIN_SECTION_PADDING_BOTTOM = 36;
+const MIN_MAIN_SECTION_HEIGHT = 420;
+const BOOKS_SECTION_GAP = 24;
+const BOOKS_SECTION_PADDING_TOP = 20;
+const BOOKS_SECTION_PADDING_BOTTOM = 24;
+const UNKNOWN_VISUAL_START_YEAR = 2660;
+const UNKNOWN_VISUAL_END_YEAR = 2100;
 
 function App() {
   // UI State
@@ -140,12 +152,79 @@ function App() {
   };
 
   const periodBands = useMemo(() => {
+    const unknownStartX = yearToX(UNKNOWN_VISUAL_START_YEAR);
+    const unknownEndX = yearToX(UNKNOWN_VISUAL_END_YEAR);
+    const unknownVisualWidth = Math.max(0, unknownEndX - unknownStartX);
+
     return periods.map((period) => ({
       period,
-      x: yearToX(period.startYear),
-      width: (period.startYear - period.endYear) * pixelsPerYear,
+      x: period.id === 'dates-unknown' ? unknownStartX : yearToX(period.startYear),
+      width: period.id === 'dates-unknown'
+        ? unknownVisualWidth
+        : (period.startYear - period.endYear) * pixelsPerYear,
     }));
   }, [yearToX, pixelsPerYear]);
+
+  const unknownVisualBand = useMemo(() => {
+    const startX = yearToX(UNKNOWN_VISUAL_START_YEAR);
+    const endX = yearToX(UNKNOWN_VISUAL_END_YEAR);
+    return {
+      startX,
+      width: Math.max(0, endX - startX),
+    };
+  }, [yearToX]);
+
+  const unknownEntityXById = useMemo(() => {
+    const unknownEntities = timelineData
+      .filter((entity) => entity.type !== 'book' && entity.startYear > UNKNOWN_VISUAL_END_YEAR)
+      .sort((a, b) => {
+        if (a.startYear !== b.startYear) return b.startYear - a.startYear;
+        const typeOrder = { event: 0, person: 1, book: 2 } as const;
+        if (typeOrder[a.type] !== typeOrder[b.type]) {
+          return typeOrder[a.type] - typeOrder[b.type];
+        }
+        return a.id.localeCompare(b.id);
+      });
+
+    const map = new Map<string, number>();
+    const inset = 28;
+    const minX = unknownVisualBand.startX + inset;
+    const maxX = unknownVisualBand.startX + Math.max(inset, unknownVisualBand.width - inset);
+    const span = Math.max(0, maxX - minX);
+    const divisor = Math.max(1, unknownEntities.length - 1);
+
+    unknownEntities.forEach((entity, index) => {
+      const ratio = unknownEntities.length === 1 ? 0.5 : index / divisor;
+      map.set(entity.id, minX + (ratio * span));
+    });
+
+    return map;
+  }, [unknownVisualBand.startX, unknownVisualBand.width]);
+
+  const sectionLayout = useMemo(() => {
+    const eventsBaseY = MAIN_SECTION_TOP + MAIN_SECTION_PADDING_TOP;
+    const peopleBaseY = eventsBaseY + trackLayout.events.bandHeight + EVENT_PEOPLE_GAP;
+    const mainContentBottom = peopleBaseY + trackLayout.people.bandHeight + MAIN_SECTION_PADDING_BOTTOM;
+    const mainSectionHeight = Math.max(MIN_MAIN_SECTION_HEIGHT, mainContentBottom - MAIN_SECTION_TOP);
+    const booksSectionTop = MAIN_SECTION_TOP + mainSectionHeight + BOOKS_SECTION_GAP;
+    const booksBaseY = booksSectionTop + BOOKS_SECTION_PADDING_TOP;
+    const booksSectionHeight = trackLayout.books.bandHeight + BOOKS_SECTION_PADDING_TOP + BOOKS_SECTION_PADDING_BOTTOM;
+    const foundationHeight = booksSectionTop + booksSectionHeight;
+
+    return {
+      periodSectionHeight: PERIOD_SECTION_HEIGHT,
+      mainSectionTop: MAIN_SECTION_TOP,
+      mainSectionHeight,
+      booksSectionTop,
+      booksSectionHeight,
+      foundationHeight,
+      tracks: {
+        events: { ...trackLayout.events, baseY: eventsBaseY },
+        people: { ...trackLayout.people, baseY: peopleBaseY },
+        books: { ...trackLayout.books, baseY: booksBaseY },
+      },
+    };
+  }, []);
 
   const periodLabelLayout = useMemo(() => {
     return computePeriodLabelLayout(
@@ -160,18 +239,28 @@ function App() {
 
   const nodePlacements = useMemo(() => {
     return filteredEntities.map((entity) => {
-      const x = yearToX(entity.startYear);
+      const isUnknownEraEntity = entity.startYear > UNKNOWN_VISUAL_END_YEAR;
+      const shouldCompressUnknownX = entity.type !== 'book' && isUnknownEraEntity;
+      const x = shouldCompressUnknownX
+        ? (unknownEntityXById.get(entity.id) ?? yearToX(entity.startYear))
+        : yearToX(entity.startYear);
       const width = entity.endYear
         ? (entity.startYear - entity.endYear) * pixelsPerYear
         : 32;
 
-      let trackBand = trackLayout.events;
-      if (entity.type === 'person') trackBand = trackLayout.people;
-      else if (entity.type === 'book') trackBand = trackLayout.books;
+      let trackBand = sectionLayout.tracks.events;
+      if (entity.type === 'person') trackBand = sectionLayout.tracks.people;
+      else if (entity.type === 'book') trackBand = sectionLayout.tracks.books;
 
-      return { entity, x, width, trackBand };
+      return {
+        entity,
+        x,
+        width,
+        trackBand,
+        forcePointNode: entity.type === 'person' && isUnknownEraEntity,
+      };
     });
-  }, [filteredEntities, yearToX, pixelsPerYear]);
+  }, [filteredEntities, yearToX, pixelsPerYear, sectionLayout, unknownEntityXById]);
 
   const nodeLabelVisibility = useMemo(() => {
     return computeNodeLabelVisibility(
@@ -189,7 +278,7 @@ function App() {
   }, [nodePlacements, zoomLevel]);
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-[#FDFBF7]">
+    <div className="h-screen w-screen overflow-hidden" style={{ background: '#F5EDD6' }}>
       {/* Side Navigator */}
       <SideNavigator
         searchQuery={searchQuery}
@@ -215,10 +304,7 @@ function App() {
           top: 0,
           left: sidebarWidth,
           transition: 'left var(--motion-expressive) var(--motion-easing)',
-          background: 'var(--color-base-parchment)',
-          backgroundImage: `
-            url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232D241C' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
-          `,
+          background: '#F5EDD6',
           right: selectedEntity ? `${railWidth}px` : '0',
         }}
         {...canvasEventHandlers}
@@ -227,13 +313,49 @@ function App() {
           style={{
             position: 'relative',
             width: TIMELINE_WIDTH,
-            height: trackLayout.totalHeight,
+            height: sectionLayout.foundationHeight,
             transform: `translate(${panX}px, ${panY}px) scale(${zoomLevel})`,
             transformOrigin: '0 0',
             transition: isDragging ? 'none' : 'transform 0.2s ease-out',
           }}
         >
-          {/* Period Bands */}
+          {/* Section boundaries */}
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              left: 0,
+              top: sectionLayout.mainSectionTop,
+              width: TIMELINE_WIDTH,
+              height: 1,
+              background: '#D8CBB7',
+            }}
+          />
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              left: 0,
+              top: sectionLayout.booksSectionTop,
+              width: TIMELINE_WIDTH,
+              height: sectionLayout.booksSectionHeight,
+              background: 'rgba(255, 253, 247, 0.38)',
+              borderTop: '1px solid #D8CBB7',
+            }}
+          />
+
+          {/* Unknown era (intentionally not-to-scale visual span) */}
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              left: unknownVisualBand.startX,
+              top: sectionLayout.mainSectionTop,
+              width: unknownVisualBand.width,
+              height: sectionLayout.mainSectionHeight,
+              background: 'rgba(245, 237, 214, 0.34)',
+              borderRight: '1px solid rgba(111, 98, 84, 0.18)',
+            }}
+          />
+
+          {/* Period Bands (behind kingdom shapes) */}
           {periodBands.map(({ period, x, width }) => {
             const labelPlacement = periodLabelLayout[period.id];
             return (
@@ -242,18 +364,29 @@ function App() {
                 period={period}
                 x={x}
                 width={width}
+                totalHeight={sectionLayout.periodSectionHeight}
                 labelLane={labelPlacement?.lane}
                 hideLabel={labelPlacement?.hidden}
               />
             );
           })}
 
+          {/* Kingdom Background Shape (on top of period bands) */}
+          <KingdomBackground
+            yearToX={yearToX}
+            pixelsPerYear={pixelsPerYear}
+            trackHeight={sectionLayout.mainSectionHeight}
+            topOffset={sectionLayout.mainSectionTop}
+          />
+
           {/* Time Grid */}
           <TimeGrid
             startYear={START_YEAR}
             endYear={END_YEAR}
             pixelsPerYear={pixelsPerYear}
-            height={trackLayout.totalHeight}
+            height={sectionLayout.foundationHeight}
+            axisY={sectionLayout.mainSectionTop + 2}
+            unscaledUntilYear={UNKNOWN_VISUAL_END_YEAR}
           />
 
           {/* Track Labels */}
@@ -262,17 +395,18 @@ function App() {
             <div
               className="absolute px-3 py-1.5 rounded-md shadow-sm"
               style={{
-                top: trackLayout.events.baseY,
+                top: sectionLayout.tracks.events.baseY - 28,
                 background: 'var(--color-base-surface-elevated)',
-                border: '1px solid var(--color-base-grid-major)',
+                border: '1px solid #E3D7C4',
               }}
             >
               <div
                 className="text-xs uppercase tracking-wide"
                 style={{
-                  color: 'var(--color-base-text-secondary)',
+                  color: '#6F6254',
                   fontSize: 'var(--type-label-xs-size)',
                   fontWeight: 600,
+                  fontFamily: 'var(--font-timeline)',
                 }}
               >
                 Events
@@ -282,17 +416,18 @@ function App() {
             <div
               className="absolute px-3 py-1.5 rounded-md shadow-sm"
               style={{
-                top: trackLayout.people.baseY,
+                top: sectionLayout.tracks.people.baseY - 28,
                 background: 'var(--color-base-surface-elevated)',
-                border: '1px solid var(--color-base-grid-major)',
+                border: '1px solid #E3D7C4',
               }}
             >
               <div
                 className="text-xs uppercase tracking-wide"
                 style={{
-                  color: 'var(--color-base-text-secondary)',
+                  color: '#6F6254',
                   fontSize: 'var(--type-label-xs-size)',
                   fontWeight: 600,
+                  fontFamily: 'var(--font-timeline)',
                 }}
               >
                 People
@@ -302,17 +437,18 @@ function App() {
             <div
               className="absolute px-3 py-1.5 rounded-md shadow-sm"
               style={{
-                top: trackLayout.books.baseY,
+                top: sectionLayout.tracks.books.baseY - 28,
                 background: 'var(--color-base-surface-elevated)',
-                border: '1px solid var(--color-base-grid-major)',
+                border: '1px solid #E3D7C4',
               }}
             >
               <div
                 className="text-xs uppercase tracking-wide"
                 style={{
-                  color: 'var(--color-base-text-secondary)',
+                  color: '#6F6254',
                   fontSize: 'var(--type-label-xs-size)',
                   fontWeight: 600,
+                  fontFamily: 'var(--font-timeline)',
                 }}
               >
                 Books
@@ -327,14 +463,22 @@ function App() {
                 const nextEntity = breadcrumbEntities[idx + 1];
                 if (!entity || !nextEntity) return null;
 
-                const startX = yearToX(entity.startYear);
-                const endX = yearToX(nextEntity.startYear);
+                const getEntityX = (item: TimelineEntity) => {
+                  const inUnknownZone = item.type !== 'book' && item.startYear > UNKNOWN_VISUAL_END_YEAR;
+                  if (inUnknownZone) {
+                    return unknownEntityXById.get(item.id) ?? yearToX(item.startYear);
+                  }
+                  return yearToX(item.startYear);
+                };
+
+                const startX = getEntityX(entity);
+                const endX = getEntityX(nextEntity);
 
                 // Compute Y from track layout: baseY + (swimlane * laneStride) + node center
                 const getEntityCenterY = (e: TimelineEntity) => {
-                  let track = trackLayout.events;
-                  if (e.type === 'person') track = trackLayout.people;
-                  else if (e.type === 'book') track = trackLayout.books;
+                  let track = sectionLayout.tracks.events;
+                  if (e.type === 'person') track = sectionLayout.tracks.people;
+                  else if (e.type === 'book') track = sectionLayout.tracks.books;
                   const swimlane = e.swimlane ?? 0;
                   return track.baseY + (swimlane * track.laneStride) + (track.laneStride / 2);
                 };
@@ -358,7 +502,7 @@ function App() {
           )}
 
           {/* Timeline Nodes */}
-          {nodePlacements.map(({ entity, x, width, trackBand }) => {
+          {nodePlacements.map(({ entity, x, width, trackBand, forcePointNode }) => {
             const isHighlighted = activeThemes.length > 0 &&
               entity.themes?.some(t => activeThemes.includes(t));
             const isDimmed = activeThemes.length > 0 && !isHighlighted;
@@ -380,6 +524,7 @@ function App() {
                 isInBreadcrumb={isInBreadcrumb}
                 breadcrumbNumber={breadcrumbNumber}
                 labelVisible={nodeLabelVisibility[entity.id]}
+                forcePointNode={forcePointNode}
                 onClick={() => handleEntityClick(entity)}
                 onMouseEnter={(e) => handleEntityHover(entity, e)}
                 onMouseLeave={handleEntityLeave}
@@ -421,6 +566,7 @@ function App() {
         onViewportChange={(x) => setPanX(-x)}
         zoomLevel={zoomLevel}
         pixelsPerYear={pixelsPerYear}
+        startYear={START_YEAR}
       />
 
       {/* Welcome Overlay */}
