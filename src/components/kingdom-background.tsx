@@ -18,15 +18,20 @@ const FIGMA_EXILE_VIEWBOX_X = 8300;
 export function KingdomBackground({ yearToX, pixelsPerYear, topOffset }: KingdomBackgroundProps) {
   const scaleX = pixelsPerYear / FIGMA_BASE_PX_PER_YEAR;
   const exileX = yearToX(EXILE_ANCHOR_YEAR);
-  const left = exileX - (FIGMA_EXILE_VIEWBOX_X * scaleX);
+  const rawLeft = exileX - (FIGMA_EXILE_VIEWBOX_X * scaleX);
+
+  // Clip SVG so it doesn't extend before x=0 (creation)
+  const clipVB = rawLeft < 0 ? Math.ceil(-rawLeft / scaleX) : 0;
+  const adjustedLeft = rawLeft + clipVB * scaleX;
+  const adjustedVBWidth = FIGMA_VIEWBOX_WIDTH - clipVB;
 
   return (
     <svg
       className="absolute pointer-events-none"
-      style={{ top: topOffset, left }}
-      width={FIGMA_VIEWBOX_WIDTH * scaleX}
+      style={{ top: topOffset, left: adjustedLeft }}
+      width={adjustedVBWidth * scaleX}
       height={FIGMA_VIEWBOX_HEIGHT}
-      viewBox="0 0 9072 816"
+      viewBox={`${clipVB} 0 ${adjustedVBWidth} 816`}
       preserveAspectRatio="none"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -133,7 +133,7 @@ function App() {
           const breadcrumbNumber = getBreadcrumbNumber(entity.id);
           return (
             <TimelineNode
-              key={entity.id} entity={entity} x={x} y={trackBand.baseY} width={width}
+              key={`${entity.type}-${entity.id}`} entity={entity} x={x} y={trackBand.baseY} width={width}
               height={trackBand.laneStride} laneStride={trackBand.laneStride} zoomLevel={zoomLevel}
               isHighlighted={isHighlighted || false} isDimmed={isDimmed}
               isInBreadcrumb={breadcrumbNumber !== undefined} breadcrumbNumber={breadcrumbNumber}
