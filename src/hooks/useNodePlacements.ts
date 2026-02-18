@@ -88,6 +88,7 @@ export function useNodePlacements({
         width,
         name: entity.name,
         priority: entity.priority,
+        kingdom: entity.kingdom,
       })),
       zoomLevel,
     );

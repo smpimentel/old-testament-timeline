@@ -26,6 +26,7 @@ export interface NodeLabelInput {
   width: number;
   name: string;
   priority: number;
+  kingdom?: string;
 }
 
 function estimateLabelWidth(label: string, maxWidth: number): number {
@@ -91,7 +92,7 @@ export function computeNodeLabelVisibility(
       continue;
     }
 
-    const laneKey = `${node.type}:${node.swimlane}`;
+    const laneKey = `${node.type}:${node.kingdom ?? ''}:${node.swimlane}`;
     const labelWidthEstimate = estimateLabelWidth(node.name, MAX_NODE_LABEL_WIDTH);
     const isPointNode = node.width <= 32;
     const labelWidth = isPointNode
