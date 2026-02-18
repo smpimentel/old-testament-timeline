@@ -31,9 +31,9 @@ describe('timeline-data integrity', () => {
       ...periods.map((period) => period.endYear),
     );
 
+    // START_YEAR = ERA_START (4004 BC) for dual-scale; covers all entity years
     expect(maxStartYear).toBeLessThanOrEqual(START_YEAR);
     expect(minEndYear).toBeGreaterThanOrEqual(END_YEAR);
-    expect(START_YEAR).toBe(timelineDomain.startYear);
     expect(END_YEAR).toBe(timelineDomain.endYear);
   });
 

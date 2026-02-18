@@ -21,8 +21,8 @@ import {
 } from './hooks';
 
 const trackLayout = computeTrackLayout(createConfigFromEntities(timelineData));
-const UNKNOWN_VISUAL_START_YEAR = 2660;
-const UNKNOWN_VISUAL_END_YEAR = 2100;
+const UNKNOWN_VISUAL_START_YEAR = 4004;
+const UNKNOWN_VISUAL_END_YEAR = 2300;
 
 // Section layout computed once from module-level constants ([] deps)
 const PERIOD_H = 170;

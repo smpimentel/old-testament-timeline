@@ -1,11 +1,12 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { timelineDomain } from '../data/timeline-data';
+import { yearToX as scaleYearToX, ERA_START, LINEAR_PX_PER_YEAR } from '../lib/scale';
 
 // Timeline constants
-export const START_YEAR = timelineDomain.startYear;
+export const START_YEAR = ERA_START;
 export const END_YEAR = timelineDomain.endYear;
-export const BASE_PIXELS_PER_YEAR = 4;
-export const TIMELINE_WIDTH = (START_YEAR - END_YEAR) * BASE_PIXELS_PER_YEAR;
+export const BASE_PIXELS_PER_YEAR = LINEAR_PX_PER_YEAR;
+export const TIMELINE_WIDTH = scaleYearToX(END_YEAR);
 export const MIN_ZOOM = 0.25;
 export const MAX_ZOOM = 3;
 export const DRAG_THRESHOLD = 5;
@@ -39,10 +40,10 @@ export function useViewport({ selectedEntityOpen, railWidth }: UseViewportOption
   const pixelsPerYear = BASE_PIXELS_PER_YEAR;
   const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
 
-  // Convert year to X position (fixed world coordinates)
+  // Convert year to X position (dual-scale world coordinates)
   const yearToX = useCallback((year: number) => {
-    return (START_YEAR - year) * pixelsPerYear;
-  }, [pixelsPerYear]);
+    return scaleYearToX(year);
+  }, []);
 
   // Zoom handlers with focal point calculation
   const handleZoomIn = useCallback(() => {
