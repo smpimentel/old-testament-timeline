@@ -15,8 +15,8 @@ export interface TrackLayoutConfig {
     person: number;
     book: number;
   };
-  /** Gap between swimlanes within a track */
-  laneGap: number;
+  /** Gap between swimlanes within a track, per entity type */
+  laneGap: { event: number; person: number; book: number };
   /** Gap between track bands */
   trackGap: number;
   /** Header offset from top (for period bands) */
@@ -51,17 +51,17 @@ export interface TrackLayout {
 
 export const DEFAULT_TRACK_CONFIG: TrackLayoutConfig = {
   maxNodeHeight: {
-    event: 24,   // max event node height at zoom >= 2.5
-    person: 28,  // max person node height (24 + role badge overhang)
-    book: 22,    // max book node height at zoom >= 2.5
+    event: 20,
+    person: 20,
+    book: 40,
   },
-  laneGap: 8,
+  laneGap: { event: 8, person: 8, book: 20 },
   trackGap: 48,
-  headerOffset: 100, // space for period bands + grid labels
+  headerOffset: 120,
   laneCount: {
     event: 4,
     person: 6,
-    book: 3,
+    book: 6,
   },
 };
 
@@ -76,10 +76,10 @@ export function computeTrackLayout(
 ): TrackLayout {
   const { maxNodeHeight, laneGap, trackGap, headerOffset, laneCount } = config;
 
-  // Lane stride = max node height + gap between lanes
-  const eventLaneStride = maxNodeHeight.event + laneGap;
-  const personLaneStride = maxNodeHeight.person + laneGap;
-  const bookLaneStride = maxNodeHeight.book + laneGap;
+  // Lane stride = max node height + gap between lanes (per type)
+  const eventLaneStride = maxNodeHeight.event + laneGap.event;
+  const personLaneStride = maxNodeHeight.person + laneGap.person;
+  const bookLaneStride = maxNodeHeight.book + laneGap.book;
 
   // Band heights = stride * lane count
   const eventBandHeight = eventLaneStride * laneCount.event;

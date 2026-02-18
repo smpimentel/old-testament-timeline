@@ -4,7 +4,6 @@ export {
   END_YEAR,
   BASE_PIXELS_PER_YEAR,
   TIMELINE_WIDTH,
-  TIMELINE_HEIGHT,
   MIN_ZOOM,
   MAX_ZOOM,
   DRAG_THRESHOLD,
@@ -23,3 +22,6 @@ export {
   type UseModalA11yOptions,
   type UseModalA11yReturn,
 } from './useModalA11y';
+
+export { useNodePlacements, type NodePlacement } from './useNodePlacements';
+export { useUnknownEra } from './useUnknownEra';

@@ -2,9 +2,9 @@
   {
     "id": "dates-unknown",
     "type": "period",
-    "name": "Dates Unknown",
-    "startYear": 4000,
-    "endYear": 2500,
+    "name": "Unknown",
+    "startYear": 4004,
+    "endYear": 2166,
     "certainty": "approximate",
     "categories": [
       "period"
@@ -15,7 +15,7 @@
   {
     "id": "patriarchs",
     "type": "period",
-    "name": "Time of the Patriarchs",
+    "name": "Patriarch",
     "startYear": 2166,
     "endYear": 1876,
     "certainty": "approximate",
@@ -28,7 +28,7 @@
   {
     "id": "egypt",
     "type": "period",
-    "name": "Israel in Egypt",
+    "name": "Sojourn",
     "startYear": 1876,
     "endYear": 1446,
     "certainty": "approximate",
@@ -54,7 +54,7 @@
   {
     "id": "judges",
     "type": "period",
-    "name": "Era of the Judges",
+    "name": "Conquest/Judges",
     "startYear": 1406,
     "endYear": 1050,
     "certainty": "approximate",
@@ -62,12 +62,12 @@
       "period"
     ],
     "color": "#C8E6C9",
-    "description": "Israel repeatedly fell into idolatry, oppression, repentance, and deliverance through judges (military leaders/prophets). This cycle lasted about 350 years."
+    "description": "Conquest of Canaan followed by the era of the judges."
   },
   {
     "id": "united-kingdom",
     "type": "period",
-    "name": "The Kings / United Kingdom",
+    "name": "United Monarchy",
     "startYear": 1050,
     "endYear": 930,
     "certainty": "approximate",
@@ -75,12 +75,12 @@
       "period"
     ],
     "color": "#BBDEFB",
-    "description": "Saul, David, Solomon united Israel"
+    "description": "Saul, David, and Solomon ruled a united Israel."
   },
   {
     "id": "divided-kingdom",
     "type": "period",
-    "name": "Kingdom Divides",
+    "name": "Divided Monarchy",
     "startYear": 930,
     "endYear": 586,
     "certainty": "approximate",
@@ -101,19 +101,19 @@
       "period"
     ],
     "color": "#BDBDBD",
-    "description": "Babylonian captivity"
+    "description": "Babylonian captivity following the fall of Jerusalem."
   },
   {
     "id": "restoration",
     "type": "period",
-    "name": "The Restoration",
+    "name": "Restoration",
     "startYear": 538,
     "endYear": 400,
     "certainty": "approximate",
     "categories": [
       "period"
     ],
-    "color": "#B2DFDB",
-    "description": "Return from exile, temple rebuilt"
+    "color": "#B0BEC5",
+    "description": "Return from exile and rebuilding of temple and covenant life."
   }
 ]

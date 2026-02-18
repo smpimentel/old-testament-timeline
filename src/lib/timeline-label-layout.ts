@@ -7,8 +7,6 @@ const MAX_PERIOD_LABEL_WIDTH = 220;
 const MAX_NODE_LABEL_WIDTH = 200;
 const LABEL_GAP = 8;
 const PERIOD_LABEL_INSET = 4;
-const MAX_PERIOD_LABEL_LANES = 4;
-
 export interface PeriodLabelInput {
   id: string;
   x: number;
@@ -18,7 +16,6 @@ export interface PeriodLabelInput {
 
 export interface PeriodLabelPlacement {
   lane: number;
-  hidden: boolean;
 }
 
 export interface NodeLabelInput {
@@ -29,6 +26,7 @@ export interface NodeLabelInput {
   width: number;
   name: string;
   priority: number;
+  kingdom?: string;
 }
 
 function estimateLabelWidth(label: string, maxWidth: number): number {
@@ -61,19 +59,14 @@ export function computePeriodLabelLayout(periods: PeriodLabelInput[]): Record<st
 
     let laneIndex = laneEnds.findIndex((laneEnd) => labelStart >= laneEnd + LABEL_GAP);
 
-    if (laneIndex === -1 && laneEnds.length < MAX_PERIOD_LABEL_LANES) {
+    if (laneIndex === -1) {
       laneIndex = laneEnds.length;
       laneEnds.push(labelEnd);
-    } else if (laneIndex !== -1) {
+    } else {
       laneEnds[laneIndex] = labelEnd;
     }
 
-    if (laneIndex === -1) {
-      placements[period.id] = { lane: 0, hidden: true };
-      continue;
-    }
-
-    placements[period.id] = { lane: laneIndex, hidden: false };
+    placements[period.id] = { lane: laneIndex };
   }
 
   return placements;
@@ -99,7 +92,7 @@ export function computeNodeLabelVisibility(
       continue;
     }
 
-    const laneKey = `${node.type}:${node.swimlane}`;
+    const laneKey = `${node.type}:${node.kingdom ?? ''}:${node.swimlane}`;
     const labelWidthEstimate = estimateLabelWidth(node.name, MAX_NODE_LABEL_WIDTH);
     const isPointNode = node.width <= 32;
     const labelWidth = isPointNode

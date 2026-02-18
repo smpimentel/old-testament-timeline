@@ -6,6 +6,7 @@ import {
   themeTags,
   timelineData,
   timelineDomain,
+  kingdomLanes,
   normalizeEventCategory,
 } from './timeline-data';
 import { END_YEAR, START_YEAR } from '../hooks/useViewport';
@@ -31,17 +32,17 @@ describe('timeline-data integrity', () => {
       ...periods.map((period) => period.endYear),
     );
 
+    // START_YEAR = ERA_START (4004 BC) for dual-scale; covers all entity years
     expect(maxStartYear).toBeLessThanOrEqual(START_YEAR);
     expect(minEndYear).toBeGreaterThanOrEqual(END_YEAR);
-    expect(START_YEAR).toBe(timelineDomain.startYear);
     expect(END_YEAR).toBe(timelineDomain.endYear);
   });
 
   it('emits one period per date range after canonicalization', () => {
     const rangeKeys = periods.map((period) => `${period.startYear}-${period.endYear}`);
     expect(new Set(rangeKeys).size).toBe(periods.length);
-    expect(periods.some((period) => period.name === 'Israel in Egypt')).toBe(false);
-    expect(periods.some((period) => period.name === 'Wandering')).toBe(false);
+    expect(periods.some((period) => period.name === 'Sojourn')).toBe(true);
+    expect(periods.some((period) => period.name === 'Conquest/Judges')).toBe(true);
   });
 
   it('attaches normalized themes to entities from the configured theme list', () => {
@@ -55,6 +56,15 @@ describe('timeline-data integrity', () => {
         expect(themeTags).toContain(theme);
       }
     }
+  });
+
+  it('timelineDomain includes asymmetric padding', () => {
+    expect(timelineDomain.startYear).toBeGreaterThan(4004);
+    expect(timelineDomain.endYear).toBeLessThan(400);
+  });
+
+  it('themeTags includes all themes from themes.json', () => {
+    expect(themeTags.length).toBeGreaterThanOrEqual(12);
   });
 
   it('preserves semantic event categories from raw to compiled data', () => {
@@ -73,5 +83,37 @@ describe('timeline-data integrity', () => {
     }
 
     expect(compiledCategorySet.size).toBeGreaterThan(1);
+  });
+
+  it('kingdom field is valid when present', () => {
+    const kingdomEntities = timelineData.filter(e => e.kingdom);
+    expect(kingdomEntities.length).toBeGreaterThan(0);
+
+    for (const entity of kingdomEntities) {
+      expect(['Israel', 'Judah']).toContain(entity.kingdom);
+    }
+  });
+
+  it('kingdom entities have independent swimlanes per kingdom', () => {
+    const israelEntities = timelineData.filter(e => e.kingdom === 'Israel');
+    const judahEntities = timelineData.filter(e => e.kingdom === 'Judah');
+
+    // Israel entities get swimlanes starting at 0
+    for (const entity of israelEntities) {
+      expect(entity.swimlane).toBeGreaterThanOrEqual(0);
+      expect(entity.swimlane).toBeLessThan(kingdomLanes.northLaneCount);
+    }
+    // Judah entities get swimlanes starting at 0
+    for (const entity of judahEntities) {
+      expect(entity.swimlane).toBeGreaterThanOrEqual(0);
+      expect(entity.swimlane).toBeLessThan(kingdomLanes.southLaneCount);
+    }
+  });
+
+  it('has divided monarchy kings and prophets', () => {
+    const kings = timelineData.filter(e => e.role === 'king' && e.kingdom);
+    const prophets = timelineData.filter(e => e.role === 'prophet' && e.kingdom);
+    expect(kings.length).toBeGreaterThanOrEqual(11);
+    expect(prophets.length).toBeGreaterThanOrEqual(8);
   });
 });

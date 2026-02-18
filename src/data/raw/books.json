@@ -147,29 +147,6 @@
     "relatedEvents": []
   },
   {
-    "id": "joshua",
-    "name": "Joshua",
-    "startYear": 1406,
-    "endYear": 1375,
-    "era": "BC",
-    "category": "History",
-    "priority": 2,
-    "track": "books",
-    "description": "Israel crosses Jordan, conquers Canaan, and receives tribal allotments.",
-    "author": "Joshua (traditional)",
-    "dateRange": "1406-1375 BC",
-    "scriptureRefs": [
-      "Joshua 1:1"
-    ],
-    "relatedPeople": [
-      "joshua"
-    ],
-    "relatedEvents": [
-      "conquest-of-canaan",
-      "division-of-the-land"
-    ]
-  },
-  {
     "id": "1-samuel",
     "name": "1 Samuel",
     "startYear": 1100,

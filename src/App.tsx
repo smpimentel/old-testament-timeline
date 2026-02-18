@@ -1,433 +1,206 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
-import {
-  timelineData,
-  periods,
-  type TimelineEntity,
-} from './data/timeline-data';
+import { timelineData, periods, kingdomLanes, type TimelineEntity } from './data/timeline-data';
 import { computeTrackLayout, createConfigFromEntities } from './lib/timeline-track-layout';
-import { computeNodeLabelVisibility, computePeriodLabelLayout } from './lib/timeline-label-layout';
+import { PeriodSection } from './components/period-section';
+import { UnknownEraBand } from './components/unknown-era-band';
+import { RelationshipOverlay } from './components/relationship-overlay';
+import { TimelineCanvas } from './components/timeline-canvas';
+import { TrackLabels } from './components/track-labels';
 import { SideNavigator, SIDEBAR_WIDTH_OPEN, SIDEBAR_WIDTH_CLOSED } from './components/side-navigator';
-import { TimelineNode, TimeGrid, PeriodBand } from './components/timeline-nodes';
+import { TimelineNode, TimeGrid } from './components/timeline-nodes';
+import { KingdomBackground } from './components/kingdom-background';
+import { KingdomLaneDivider } from './components/kingdom-lane-divider';
 import { RightRail } from './components/right-rail';
-import { Minimap } from './components/minimap';
 import { HoverTooltip } from './components/hover-tooltip';
-import { RelationshipLine } from './components/relationship-lines';
 import { WelcomeOverlay } from './components/welcome-overlay';
 import {
-  useViewport,
-  useEntitySelection,
-  useEntityFilter,
-  usePathTracing,
-  useIsMobile,
-  START_YEAR,
-  END_YEAR,
-  TIMELINE_WIDTH,
+  useViewport, useEntitySelection, useEntityFilter, usePathTracing,
+  useIsMobile, useNodePlacements, useUnknownEra,
+  START_YEAR, END_YEAR, TIMELINE_WIDTH,
 } from './hooks';
 
-// Side navigator state managed in App
-
-// Compute dynamic track layout
 const trackLayout = computeTrackLayout(createConfigFromEntities(timelineData));
+const UNKNOWN_VISUAL_START_YEAR = 4004;
+const UNKNOWN_VISUAL_END_YEAR = 2300;
+
+// Section layout: anchored to SVG background rectangles
+const PERIOD_H = 170;
+const MAIN_TOP = PERIOD_H;
+const laneStride = trackLayout.events.laneStride; // 28px
+
+// Non-kingdom events at top
+const eventsBaseY = MAIN_TOP + 48;
+
+// Kingdom bands centered in SVG background rectangles
+// Blue rect (Israel): SVG y=0..390, center at SVG y=195
+const northBandHeight = kingdomLanes.northLaneCount * laneStride;
+const kingdomNorthBaseY = MAIN_TOP + 195 - northBandHeight / 2;
+
+// Gold rect (Judah): SVG y=410..800, center at SVG y=605
+const southBandHeight = kingdomLanes.southLaneCount * laneStride;
+const kingdomSouthBaseY = MAIN_TOP + 605 - southBandHeight / 2;
+
+// Non-kingdom people: Solomon (swimlane 2) centered at SVG y=400
+const peopleBaseY = MAIN_TOP + 400 - 2 * laneStride - laneStride / 2;
+
+const mainContentBottom = Math.max(
+  MAIN_TOP + 800,
+  kingdomSouthBaseY + southBandHeight,
+  peopleBaseY + trackLayout.people.bandHeight,
+) + 36;
+const mainSectionHeight = mainContentBottom - MAIN_TOP;
+const booksSectionTop = MAIN_TOP + mainSectionHeight + 24;
+const booksBaseY = booksSectionTop + 20;
+const booksSectionHeight = trackLayout.books.bandHeight + 20 + 24;
+const sectionLayout = {
+  periodSectionHeight: PERIOD_H,
+  mainSectionTop: MAIN_TOP,
+  mainSectionHeight,
+  booksSectionTop,
+  booksSectionHeight,
+  foundationHeight: booksSectionTop + booksSectionHeight,
+  tracks: {
+    events: { ...trackLayout.events, baseY: eventsBaseY },
+    people: { ...trackLayout.people, baseY: peopleBaseY },
+    books: { ...trackLayout.books, baseY: booksBaseY },
+    kingdomNorth: { baseY: kingdomNorthBaseY, laneStride },
+    kingdomSouth: { baseY: kingdomSouthBaseY, laneStride },
+  },
+};
 
 function App() {
-  // UI State
   const [showWelcome, setShowWelcome] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const isMobile = useIsMobile();
-  const railWidth = isMobile ? 0 : 360; // On mobile, rail overlays fully
+  const railWidth = isMobile ? 0 : 360;
   const sidebarWidth = isMobile ? 0 : (sidebarOpen ? SIDEBAR_WIDTH_OPEN : SIDEBAR_WIDTH_CLOSED);
 
-  // Path tracing hook
-  const {
-    pathMode,
-    breadcrumbs,
-    togglePathMode,
-    addBreadcrumb,
-    handleClearBreadcrumbs,
-    breadcrumbEntities,
-    getBreadcrumbNumber,
-  } = usePathTracing();
-
-  // Entity filter hook
-  const {
-    searchQuery,
-    setSearchQuery,
-    selectedPeriod,
-    setSelectedPeriod,
-    activeThemes,
-    handleThemeToggle,
-    filteredEntities,
-  } = useEntityFilter();
-
-  // Entity selection hook
-  const {
-    selectedEntity,
-    hoveredEntity,
-    hoverPosition,
-    handleEntityClick: baseHandleEntityClick,
-    handleEntityHover,
-    handleEntityLeave,
-    closeSelection,
-    setSelectedEntity,
-  } = useEntitySelection();
-
-  // Viewport hook
-  const {
-    panX,
-    panY,
-    zoomLevel,
-    isDragging,
-    canvasRef,
-    pixelsPerYear,
-    viewportWidth,
-    yearToX,
-    panToYear,
-    panToCenterOnYear,
-    setPanX,
-    canvasEventHandlers,
-  } = useViewport({ selectedEntityOpen: !!selectedEntity, railWidth });
+  const { pathMode, breadcrumbs, togglePathMode, addBreadcrumb, handleClearBreadcrumbs, breadcrumbEntities, getBreadcrumbNumber } = usePathTracing();
+  const { searchQuery, setSearchQuery, selectedPeriod, setSelectedPeriod, activeThemes, handleThemeToggle, filteredEntities } = useEntityFilter();
+  const { selectedEntity, hoveredEntity, hoverPosition, handleEntityClick: baseHandleEntityClick, handleEntityHover, handleEntityLeave, closeSelection, setSelectedEntity } = useEntitySelection();
+  const { panX, panY, zoomLevel, isDragging, canvasRef, pixelsPerYear, yearToX, panToCenterOnYear, fitYearRangeToView, canvasEventHandlers } = useViewport({ selectedEntityOpen: !!selectedEntity, railWidth });
 
   const handlePeriodSelect = (periodId: string) => {
     const period = periods.find(p => p.id === periodId);
     if (period) {
       setSelectedPeriod(periodId);
-      panToYear(period.startYear, 120);
+      fitYearRangeToView(period.startYear, period.endYear, sectionLayout.foundationHeight);
     }
   };
 
   const handleEntityClick = (entity: TimelineEntity) => {
-    if (pathMode) {
-      addBreadcrumb(entity.id);
-    }
+    if (pathMode) addBreadcrumb(entity.id);
     baseHandleEntityClick(entity);
   };
 
   const handleViewRelationship = (targetId: string) => {
     const entity = timelineData.find(e => e.id === targetId);
     if (!entity) return;
-
-    // Add current entity to breadcrumb path before navigating (if path mode on)
     if (pathMode) {
-      if (selectedEntity) {
-        addBreadcrumb(selectedEntity.id);
-      }
+      if (selectedEntity) addBreadcrumb(selectedEntity.id);
       addBreadcrumb(targetId);
     }
-
-    // Pan to new entity
     panToCenterOnYear(entity.startYear);
-
-    // Update selection
     setSelectedEntity(entity);
   };
 
   const handleSearchSubmit = () => {
     if (!searchQuery) return;
-
-    const entity = timelineData.find(e =>
-      e.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-
+    const entity = timelineData.find(e => e.name.toLowerCase().includes(searchQuery.toLowerCase()));
     if (entity) {
       panToCenterOnYear(entity.startYear);
-
-      // Auto-select entity after 300ms delay
-      setTimeout(() => {
-        setSelectedEntity(entity);
-      }, 300);
+      setTimeout(() => setSelectedEntity(entity), 300);
     }
   };
 
-  const periodBands = useMemo(() => {
-    return periods.map((period) => ({
-      period,
-      x: yearToX(period.startYear),
-      width: (period.startYear - period.endYear) * pixelsPerYear,
-    }));
-  }, [yearToX, pixelsPerYear]);
+  const { unknownVisualBand, unknownEntityXById } = useUnknownEra({
+    yearToX, unknownVisualStartYear: UNKNOWN_VISUAL_START_YEAR, unknownVisualEndYear: UNKNOWN_VISUAL_END_YEAR,
+  });
 
-  const periodLabelLayout = useMemo(() => {
-    return computePeriodLabelLayout(
-      periodBands.map(({ period, x, width }) => ({
-        id: period.id,
-        name: period.name,
-        x,
-        width,
-      })),
-    );
-  }, [periodBands]);
-
-  const nodePlacements = useMemo(() => {
-    return filteredEntities.map((entity) => {
-      const x = yearToX(entity.startYear);
-      const width = entity.endYear
-        ? (entity.startYear - entity.endYear) * pixelsPerYear
-        : 32;
-
-      let trackBand = trackLayout.events;
-      if (entity.type === 'person') trackBand = trackLayout.people;
-      else if (entity.type === 'book') trackBand = trackLayout.books;
-
-      return { entity, x, width, trackBand };
-    });
-  }, [filteredEntities, yearToX, pixelsPerYear]);
-
-  const nodeLabelVisibility = useMemo(() => {
-    return computeNodeLabelVisibility(
-      nodePlacements.map(({ entity, x, width }) => ({
-        id: entity.id,
-        type: entity.type,
-        swimlane: entity.swimlane ?? 0,
-        x,
-        width,
-        name: entity.name,
-        priority: entity.priority,
-      })),
-      zoomLevel,
-    );
-  }, [nodePlacements, zoomLevel]);
+  const { nodePlacements, nodeLabelVisibility } = useNodePlacements({
+    filteredEntities, yearToX, pixelsPerYear, tracks: sectionLayout.tracks,
+    unknownEntityXById, unknownVisualEndYear: UNKNOWN_VISUAL_END_YEAR, zoomLevel,
+  });
 
   return (
-    <div className="h-screen w-screen overflow-hidden bg-[#FDFBF7]">
-      {/* Side Navigator */}
+    <div className="h-screen w-screen overflow-hidden" style={{ background: '#F5EDD6' }}>
       <SideNavigator
-        searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
-        onSearchSubmit={handleSearchSubmit}
-        selectedPeriod={selectedPeriod}
-        onPeriodSelect={handlePeriodSelect}
-        activeThemes={activeThemes}
-        onThemeToggle={handleThemeToggle}
-        breadcrumbs={breadcrumbs}
-        onClearBreadcrumbs={handleClearBreadcrumbs}
-        pathMode={pathMode}
-        onPathModeToggle={togglePathMode}
-        isOpen={sidebarOpen}
-        onToggle={() => setSidebarOpen(prev => !prev)}
+        searchQuery={searchQuery} onSearchChange={setSearchQuery} onSearchSubmit={handleSearchSubmit}
+        selectedPeriod={selectedPeriod} onPeriodSelect={handlePeriodSelect}
+        activeThemes={activeThemes} onThemeToggle={handleThemeToggle}
+        breadcrumbs={breadcrumbs} onClearBreadcrumbs={handleClearBreadcrumbs}
+        pathMode={pathMode} onPathModeToggle={togglePathMode}
+        isOpen={sidebarOpen} onToggle={() => setSidebarOpen(prev => !prev)}
       />
 
-      {/* Main Timeline Canvas */}
-      <div
-        ref={canvasRef}
-        className="absolute inset-0 cursor-grab active:cursor-grabbing"
-        style={{
-          top: 0,
-          left: sidebarWidth,
-          transition: 'left var(--motion-expressive) var(--motion-easing)',
-          background: 'var(--color-base-parchment)',
-          backgroundImage: `
-            url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232D241C' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
-          `,
-          right: selectedEntity ? `${railWidth}px` : '0',
-        }}
-        {...canvasEventHandlers}
+      <TimelineCanvas
+        canvasRef={canvasRef} canvasEventHandlers={canvasEventHandlers}
+        panX={panX} panY={panY} zoomLevel={zoomLevel} isDragging={isDragging}
+        sidebarWidth={sidebarWidth} railWidth={railWidth}
+        selectedEntityOpen={!!selectedEntity} foundationHeight={sectionLayout.foundationHeight}
       >
+        <div className="absolute pointer-events-none" style={{ left: 0, top: sectionLayout.mainSectionTop, width: TIMELINE_WIDTH, height: 1, background: '#D8CBB7' }} />
+        <div className="absolute pointer-events-none" style={{ left: 0, top: sectionLayout.booksSectionTop, width: TIMELINE_WIDTH, height: sectionLayout.booksSectionHeight, background: 'rgba(255, 253, 247, 0.38)', borderTop: '1px solid #D8CBB7' }} />
+        <UnknownEraBand startX={unknownVisualBand.startX} width={unknownVisualBand.width} mainSectionTop={sectionLayout.mainSectionTop} mainSectionHeight={sectionLayout.mainSectionHeight} />
+        <PeriodSection yearToX={yearToX} pixelsPerYear={pixelsPerYear} totalHeight={sectionLayout.periodSectionHeight} unknownVisualStartYear={UNKNOWN_VISUAL_START_YEAR} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} />
+        <KingdomBackground yearToX={yearToX} topOffset={sectionLayout.mainSectionTop} />
+        <TimeGrid startYear={START_YEAR} endYear={END_YEAR} height={sectionLayout.foundationHeight} axisY={sectionLayout.mainSectionTop + 2} />
+        <TrackLabels tracks={sectionLayout.tracks} startX={unknownVisualBand.startX} />
+        <KingdomLaneDivider yearToX={yearToX} dividerY={MAIN_TOP + 400} />
+        <RelationshipOverlay breadcrumbEntities={breadcrumbEntities} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} unknownEntityXById={unknownEntityXById} yearToX={yearToX} tracks={sectionLayout.tracks} />
+        {/* Books coming soon overlay */}
         <div
+          className="absolute flex items-center justify-center pointer-events-none"
           style={{
-            position: 'relative',
+            left: 0,
+            top: sectionLayout.booksSectionTop,
             width: TIMELINE_WIDTH,
-            height: trackLayout.totalHeight,
-            transform: `translate(${panX}px, ${panY}px) scale(${zoomLevel})`,
-            transformOrigin: '0 0',
-            transition: isDragging ? 'none' : 'transform 0.2s ease-out',
+            height: sectionLayout.booksSectionHeight,
+            color: 'var(--color-base-text-secondary)',
+            fontSize: '14px',
+            fontFamily: 'var(--font-timeline)',
+            fontStyle: 'italic',
+            letterSpacing: '0.05em',
           }}
         >
-          {/* Period Bands */}
-          {periodBands.map(({ period, x, width }) => {
-            const labelPlacement = periodLabelLayout[period.id];
-            return (
-              <PeriodBand
-                key={period.id}
-                period={period}
-                x={x}
-                width={width}
-                labelLane={labelPlacement?.lane}
-                hideLabel={labelPlacement?.hidden}
-              />
-            );
-          })}
-
-          {/* Time Grid */}
-          <TimeGrid
-            startYear={START_YEAR}
-            endYear={END_YEAR}
-            pixelsPerYear={pixelsPerYear}
-            height={trackLayout.totalHeight}
-          />
-
-          {/* Track Labels */}
-          <div className="absolute left-4 pointer-events-none">
-            {/* Events Label */}
-            <div
-              className="absolute px-3 py-1.5 rounded-md shadow-sm"
-              style={{
-                top: trackLayout.events.baseY,
-                background: 'var(--color-base-surface-elevated)',
-                border: '1px solid var(--color-base-grid-major)',
-              }}
-            >
-              <div
-                className="text-xs uppercase tracking-wide"
-                style={{
-                  color: 'var(--color-base-text-secondary)',
-                  fontSize: 'var(--type-label-xs-size)',
-                  fontWeight: 600,
-                }}
-              >
-                Events
-              </div>
-            </div>
-            {/* People Label */}
-            <div
-              className="absolute px-3 py-1.5 rounded-md shadow-sm"
-              style={{
-                top: trackLayout.people.baseY,
-                background: 'var(--color-base-surface-elevated)',
-                border: '1px solid var(--color-base-grid-major)',
-              }}
-            >
-              <div
-                className="text-xs uppercase tracking-wide"
-                style={{
-                  color: 'var(--color-base-text-secondary)',
-                  fontSize: 'var(--type-label-xs-size)',
-                  fontWeight: 600,
-                }}
-              >
-                People
-              </div>
-            </div>
-            {/* Books Label */}
-            <div
-              className="absolute px-3 py-1.5 rounded-md shadow-sm"
-              style={{
-                top: trackLayout.books.baseY,
-                background: 'var(--color-base-surface-elevated)',
-                border: '1px solid var(--color-base-grid-major)',
-              }}
-            >
-              <div
-                className="text-xs uppercase tracking-wide"
-                style={{
-                  color: 'var(--color-base-text-secondary)',
-                  fontSize: 'var(--type-label-xs-size)',
-                  fontWeight: 600,
-                }}
-              >
-                Books
-              </div>
-            </div>
-          </div>
-
-          {/* Relationship Lines (breadcrumb path) */}
-          {breadcrumbEntities.length > 1 && (
-            <>
-              {breadcrumbEntities.slice(0, -1).map((entity, idx) => {
-                const nextEntity = breadcrumbEntities[idx + 1];
-                if (!entity || !nextEntity) return null;
-
-                const startX = yearToX(entity.startYear);
-                const endX = yearToX(nextEntity.startYear);
-
-                // Compute Y from track layout: baseY + (swimlane * laneStride) + node center
-                const getEntityCenterY = (e: TimelineEntity) => {
-                  let track = trackLayout.events;
-                  if (e.type === 'person') track = trackLayout.people;
-                  else if (e.type === 'book') track = trackLayout.books;
-                  const swimlane = e.swimlane ?? 0;
-                  return track.baseY + (swimlane * track.laneStride) + (track.laneStride / 2);
-                };
-
-                const startY = getEntityCenterY(entity);
-                const endY = getEntityCenterY(nextEntity);
-
-                return (
-                  <RelationshipLine
-                    key={`${entity.id}-${nextEntity.id}`}
-                    startX={startX}
-                    startY={startY}
-                    endX={endX}
-                    endY={endY}
-                    type="breadcrumb"
-                    isAnimated
-                  />
-                );
-              })}
-            </>
-          )}
-
-          {/* Timeline Nodes */}
-          {nodePlacements.map(({ entity, x, width, trackBand }) => {
-            const isHighlighted = activeThemes.length > 0 &&
-              entity.themes?.some(t => activeThemes.includes(t));
-            const isDimmed = activeThemes.length > 0 && !isHighlighted;
-            const breadcrumbNumber = getBreadcrumbNumber(entity.id);
-            const isInBreadcrumb = breadcrumbNumber !== undefined;
-
-            return (
-              <TimelineNode
-                key={entity.id}
-                entity={entity}
-                x={x}
-                y={trackBand.baseY}
-                width={width}
-                height={trackBand.laneStride}
-                laneStride={trackBand.laneStride}
-                zoomLevel={zoomLevel}
-                isHighlighted={isHighlighted || false}
-                isDimmed={isDimmed}
-                isInBreadcrumb={isInBreadcrumb}
-                breadcrumbNumber={breadcrumbNumber}
-                labelVisible={nodeLabelVisibility[entity.id]}
-                onClick={() => handleEntityClick(entity)}
-                onMouseEnter={(e) => handleEntityHover(entity, e)}
-                onMouseLeave={handleEntityLeave}
-              />
-            );
-          })}
+          Coming Soon
         </div>
-      </div>
+        {nodePlacements.filter(({ entity }) => entity.type !== 'book').map(({ entity, x, width, trackBand, forcePointNode }) => {
+          const isHighlighted = activeThemes.length > 0 && entity.themes?.some(t => activeThemes.includes(t));
+          const isDimmed = activeThemes.length > 0 && !isHighlighted;
+          const breadcrumbNumber = getBreadcrumbNumber(entity.id);
+          // Center "Division of the Kingdom" at Solomon's Y (SVG y=400)
+          const y = entity.id === 'division-of-the-kingdom'
+            ? MAIN_TOP + 400 - trackBand.laneStride / 2
+            : trackBand.baseY;
+          return (
+            <TimelineNode
+              key={`${entity.type}-${entity.id}`} entity={entity} x={x} y={y} width={width}
+              height={trackBand.laneStride} laneStride={trackBand.laneStride} zoomLevel={zoomLevel}
+              isHighlighted={isHighlighted || false} isDimmed={isDimmed}
+              isInBreadcrumb={breadcrumbNumber !== undefined} breadcrumbNumber={breadcrumbNumber}
+              labelVisible={nodeLabelVisibility[entity.id]} forcePointNode={forcePointNode}
+              onClick={() => handleEntityClick(entity)}
+              onMouseEnter={(e) => handleEntityHover(entity, e)}
+              onMouseLeave={handleEntityLeave}
+            />
+          );
+        })}
+      </TimelineCanvas>
 
-      {/* Hover Tooltip */}
       <AnimatePresence>
         {hoveredEntity && !selectedEntity && (
-          <HoverTooltip
-            entity={hoveredEntity}
-            x={hoverPosition.x}
-            y={hoverPosition.y}
-          />
+          <HoverTooltip entity={hoveredEntity} x={hoverPosition.x} y={hoverPosition.y} />
         )}
       </AnimatePresence>
-
-      {/* Right Rail */}
       <AnimatePresence>
         {selectedEntity && (
-          <RightRail
-            entity={selectedEntity}
-            onClose={closeSelection}
-            onViewRelationship={handleViewRelationship}
-            pathMode={pathMode}
-          />
+          <RightRail entity={selectedEntity} onClose={closeSelection} onViewRelationship={handleViewRelationship} pathMode={pathMode} />
         )}
       </AnimatePresence>
-
-      {/* Minimap */}
-      <Minimap
-        entities={timelineData}
-        viewportX={-panX}
-        viewportWidth={viewportWidth - (selectedEntity ? railWidth : 0)}
-        totalWidth={TIMELINE_WIDTH}
-        onViewportChange={(x) => setPanX(-x)}
-        zoomLevel={zoomLevel}
-        pixelsPerYear={pixelsPerYear}
-      />
-
-      {/* Welcome Overlay */}
       <AnimatePresence>
-        {showWelcome && (
-          <WelcomeOverlay onClose={() => setShowWelcome(false)} />
-        )}
+        {showWelcome && <WelcomeOverlay onClose={() => setShowWelcome(false)} />}
       </AnimatePresence>
     </div>
   );

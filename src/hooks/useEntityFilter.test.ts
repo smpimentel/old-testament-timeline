@@ -30,18 +30,15 @@ describe('useEntityFilter', () => {
     expect(result.current.activeThemes).not.toContain('Covenant');
   });
 
-  it('filters entities to theme matches when a theme is active', () => {
+  it('returns all entities when theme active (dim handled by App)', () => {
     const { result } = renderHook(() => useEntityFilter());
+    const totalCount = result.current.filteredEntities.length;
 
     act(() => {
       result.current.handleThemeToggle('Covenant');
     });
 
-    expect(result.current.filteredEntities.length).toBeGreaterThan(0);
-    expect(
-      result.current.filteredEntities.every((entity) =>
-        entity.themes?.includes('Covenant'),
-      ),
-    ).toBe(true);
+    expect(result.current.filteredEntities.length).toBe(totalCount);
+    expect(result.current.activeThemes).toContain('Covenant');
   });
 });

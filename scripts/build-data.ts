@@ -26,6 +26,7 @@ interface TimelineEntity {
     endYear?: number;
     certainty: Certainty;
     categories: string[];
+    themes?: string[];
     swimlane?: number;
     priority?: number;
     description?: string;
@@ -48,7 +49,9 @@ interface RawPerson {
     deathYear: number;
     approximate?: boolean;
     role: string;
+    kingdom?: string;
     priority: number;
+    themes?: string[];
     description?: string;
     bio?: string;
     scriptureRefs?: string[];
@@ -69,6 +72,8 @@ interface RawEvent {
     year: number;
     approximate?: boolean;
     priority: number;
+    kingdom?: string;
+    themes?: string[];
     description?: string;
     scriptureRefs?: string[];
     relatedPeople?: string[];
@@ -84,6 +89,7 @@ interface RawBook {
     endYear: number;
     category: string;
     priority: number;
+    themes?: string[];
     author?: string;
     description?: string;
     scriptureRefs?: string[];
@@ -131,10 +137,12 @@ function transformPerson(raw: RawPerson): TimelineEntity {
         endYear: raw.deathYear,
         certainty: raw.approximate ? 'approximate' : 'exact',
         categories: [raw.role],
+        themes: raw.themes || [],
         priority: raw.priority,
         description: raw.description,
         bio: raw.bio,
         scriptureRefs: raw.scriptureRefs,
+        ...(raw.kingdom && { kingdom: raw.kingdom }),
     };
 }
 
@@ -149,9 +157,11 @@ function transformEvent(raw: RawEvent): TimelineEntity {
         endYear: raw.year, // point event
         certainty: raw.approximate ? 'approximate' : 'exact',
         categories: [category],
+        themes: raw.themes || [],
         priority: raw.priority,
         description: raw.description,
         scriptureRefs: raw.scriptureRefs,
+        ...(raw.kingdom && { kingdom: raw.kingdom }),
     };
 }
 
@@ -164,6 +174,7 @@ function transformBook(raw: RawBook): TimelineEntity {
         endYear: raw.endYear,
         certainty: 'approximate', // books generally approximate
         categories: [raw.category],
+        themes: raw.themes || [],
         priority: raw.priority,
         author: raw.author,
         description: raw.description,
@@ -372,6 +383,27 @@ function extractRelationships(
 // Swimlane Assignment
 // ============================================================================
 
+function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
+    const sorted = group.sort((a, b) => b.startYear - a.startYear);
+    const lanes: Array<{ end: number }> = [];
+
+    for (const entity of sorted) {
+        const entityEnd = entity.endYear ?? entity.startYear;
+        let laneIndex = lanes.findIndex(lane => lane.end > entity.startYear);
+
+        if (laneIndex === -1) {
+            laneIndex = lanes.length;
+            lanes.push({ end: entityEnd });
+        } else {
+            lanes[laneIndex].end = Math.min(lanes[laneIndex].end, entityEnd);
+        }
+
+        entity.swimlane = laneIndex + offset;
+    }
+
+    return lanes.length;
+}
+
 function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
     const byType: Record<string, TimelineEntity[]> = {};
 
@@ -381,28 +413,45 @@ function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
     }
 
     for (const group of Object.values(byType)) {
-        // Sort by startYear descending (BC: larger = earlier)
-        const sorted = group.sort((a, b) => b.startYear - a.startYear);
-        const lanes: Array<{ end: number }> = [];
+        const northEntities = group.filter(e => e.kingdom === 'Israel');
+        const southEntities = group.filter(e => e.kingdom === 'Judah');
+        const otherEntities = group.filter(e => !e.kingdom);
 
-        for (const entity of sorted) {
-            const entityEnd = entity.endYear ?? entity.startYear;
-
-            // Find lane where end > startYear (lane freed before entity starts)
-            let laneIndex = lanes.findIndex(lane => lane.end > entity.startYear);
-
-            if (laneIndex === -1) {
-                laneIndex = lanes.length;
-                lanes.push({ end: entityEnd });
-            } else {
-                lanes[laneIndex].end = Math.min(lanes[laneIndex].end, entityEnd);
-            }
-
-            entity.swimlane = laneIndex;
-        }
+        // Assign non-kingdom entities first (lanes 0..N)
+        const otherLaneCount = assignLanesToGroup(otherEntities);
+        // North kingdom starts after other lanes
+        const northLaneCount = assignLanesToGroup(northEntities, otherLaneCount);
+        // South kingdom after north lanes
+        assignLanesToGroup(southEntities, otherLaneCount + northLaneCount);
     }
 
     return entities;
+}
+
+// ============================================================================
+// Validation
+// ============================================================================
+
+function validatePeriodIntegrity(periods: RawPeriod[]): void {
+    const ids = new Set<string>();
+    const sorted = [...periods].sort((a, b) => b.startYear - a.startYear);
+
+    for (const p of sorted) {
+        if (ids.has(p.id)) {
+            throw new Error(`Duplicate period ID: "${p.id}"`);
+        }
+        ids.add(p.id);
+    }
+
+    for (let i = 0; i < sorted.length - 1; i++) {
+        const a = sorted[i];
+        const b = sorted[i + 1];
+        if (a.endYear > b.startYear) {
+            throw new Error(
+                `Overlapping periods: "${a.id}" (${a.startYear}-${a.endYear}) overlaps "${b.id}" (${b.startYear}-${b.endYear})`
+            );
+        }
+    }
 }
 
 // ============================================================================
@@ -433,6 +482,9 @@ function build() {
     const rawThemes: RawTheme[] = JSON.parse(
         fs.readFileSync(path.join(RAW_DIR, 'themes.json'), 'utf-8')
     );
+
+    // Validate period integrity before transform
+    validatePeriodIntegrity(rawPeriods);
 
     // Transform
     const people = rawPeople.map(transformPerson);

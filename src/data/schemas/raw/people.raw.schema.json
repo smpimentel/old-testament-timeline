@@ -36,8 +36,18 @@
         "type": "string",
         "enum": ["King", "Prophet", "Judge", "Patriarch", "Priest", "Warrior", "Scribe", "Other"]
       },
+      "kingdom": {
+        "type": "string",
+        "enum": ["Israel", "Judah"],
+        "description": "Kingdom assignment for divided monarchy era"
+      },
       "priority": {
         "$ref": "common.raw.schema.json#/definitions/priority"
+      },
+      "themes": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Explicit theme tags for this person"
       },
       "track": {
         "type": "string",

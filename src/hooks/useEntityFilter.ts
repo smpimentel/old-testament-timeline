@@ -30,7 +30,6 @@ export function useEntityFilter(): UseEntityFilterReturn {
 
   const filteredEntities = useMemo(() => {
     return timelineData.filter(entity => {
-      // Search filter
       if (searchQuery) {
         const query = searchQuery.toLowerCase();
         if (!entity.name.toLowerCase().includes(query) &&
@@ -38,17 +37,9 @@ export function useEntityFilter(): UseEntityFilterReturn {
           return false;
         }
       }
-
-      // Theme filter
-      if (activeThemes.length > 0) {
-        if (!entity.themes || !entity.themes.some(t => activeThemes.includes(t))) {
-          return false;
-        }
-      }
-
       return true;
     });
-  }, [searchQuery, activeThemes]);
+  }, [searchQuery]);
 
   return {
     searchQuery,

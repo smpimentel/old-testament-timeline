@@ -1,44 +1,62 @@
 import { type TimelineEntity, type Period, roleColors, eventColors, genreColors } from '../data/timeline-data';
 import { getNodeMetrics, themeHighlightColors, breadcrumbAccentColor } from '../config/timeline-node-config';
+import { yearToX as scaleYearToX, LOG_BOUNDARY } from '../lib/scale';
 
 // ===== PERIOD BAND =====
 interface PeriodBandProps {
   period: Period;
   x: number;
   width: number;
+  totalHeight: number;
   labelLane?: number;
-  hideLabel?: boolean;
 }
 
-export function PeriodBand({ period, x, width, labelLane = 0, hideLabel = false }: PeriodBandProps) {
-  const labelTop = 4 + (labelLane * 18);
+export function PeriodBand({ period, x, width, totalHeight, labelLane = 0 }: PeriodBandProps) {
+  const labelTop = 8 + (labelLane * 30);
+  const showDate = width >= 140 && period.id !== 'dates-unknown';
+
   return (
     <div
-      className="absolute top-0 pointer-events-none transition-opacity"
+      className="absolute top-0 pointer-events-none"
       style={{
         left: x,
         width,
-        height: 88,
-        background: `linear-gradient(180deg, ${period.color}40 0%, ${period.color}10 100%)`,
-        borderRight: `1px solid ${period.color}80`,
+        height: totalHeight,
+        background: 'transparent',
+        borderRight: '1px solid rgba(111, 98, 84, 0.22)',
       }}
     >
-      {!hideLabel && (
+      <div
+        className="absolute left-4"
+        style={{ top: labelTop }}
+      >
         <div
-          className="absolute left-4 whitespace-nowrap overflow-hidden text-ellipsis"
+          className="whitespace-nowrap overflow-hidden text-ellipsis"
           style={{
-            top: labelTop,
-            maxWidth: Math.max(20, width - 8),
-            fontSize: 'var(--type-label-xs-size)',
+            maxWidth: Math.max(20, width - 10),
+            fontSize: '14px',
             fontWeight: 600,
-            color: 'var(--color-base-text-secondary)',
-            textTransform: 'uppercase',
-            letterSpacing: '0.05em',
+            fontFamily: 'var(--font-timeline)',
+            color: '#3A3F44',
           }}
         >
           {period.name}
         </div>
-      )}
+        {showDate && (
+          <div
+            className="whitespace-nowrap overflow-hidden text-ellipsis"
+            style={{
+              maxWidth: Math.max(20, width - 10),
+              fontSize: '11px',
+              fontWeight: 400,
+              fontFamily: 'var(--font-timeline)',
+              color: '#666666',
+            }}
+          >
+            {period.startYear}–{period.endYear} BC
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -47,28 +65,23 @@ export function PeriodBand({ period, x, width, labelLane = 0, hideLabel = false 
 interface TimeGridProps {
   startYear: number;
   endYear: number;
-  pixelsPerYear: number;
   height: number;
+  axisY?: number;
 }
 
-export function TimeGrid({ startYear, endYear, pixelsPerYear, height }: TimeGridProps) {
+export function TimeGrid({
+  startYear,
+  endYear,
+  height,
+  axisY: axisYOverride,
+}: TimeGridProps) {
   const gridLines = [];
-  
-  // Determine grid interval based on zoom
-  let majorInterval = 500;
-  let minorInterval = 100;
-  
-  if (pixelsPerYear >= 3) {
-    majorInterval = 100;
-    minorInterval = 20;
-  } else if (pixelsPerYear >= 1.5) {
-    majorInterval = 200;
-    minorInterval = 50;
-  }
+  const majorInterval = 100;
+  const minorInterval = 20;
 
-  // Major grid lines
+  // Major grid lines (100-year intervals)
   for (let year = Math.ceil(endYear / majorInterval) * majorInterval; year <= startYear; year += majorInterval) {
-    const x = (startYear - year) * pixelsPerYear;
+    const x = scaleYearToX(year);
     gridLines.push(
       <div
         key={`major-${year}`}
@@ -80,42 +93,85 @@ export function TimeGrid({ startYear, endYear, pixelsPerYear, height }: TimeGrid
           background: 'var(--color-base-grid-major)',
         }}
       >
-        <div
-          className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap font-mono"
-          style={{
-            fontSize: 'var(--type-label-xs-size)',
-            color: 'var(--color-base-text-secondary)',
-            fontWeight: 600,
-          }}
-        >
-          {year} BC
-        </div>
+        {year <= LOG_BOUNDARY && (
+          <div
+            className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap"
+            style={{
+              fontSize: 'var(--type-label-xs-size)',
+              color: 'var(--color-base-text-secondary)',
+              fontWeight: 400,
+              fontFamily: 'var(--font-timeline)',
+            }}
+          >
+            {year} BC
+          </div>
+        )}
       </div>
     );
   }
 
-  // Minor grid lines
-  if (pixelsPerYear >= 1) {
-    for (let year = Math.ceil(endYear / minorInterval) * minorInterval; year <= startYear; year += minorInterval) {
-      if (year % majorInterval !== 0) {
-        const x = (startYear - year) * pixelsPerYear;
-        gridLines.push(
-          <div
-            key={`minor-${year}`}
-            className="absolute top-0"
-            style={{
-              left: x,
-              height,
-              width: '1px',
-              background: 'var(--color-base-grid-minor)',
-            }}
-          />
-        );
-      }
+  // Minor grid lines (20-year intervals)
+  for (let year = Math.ceil(endYear / minorInterval) * minorInterval; year <= startYear; year += minorInterval) {
+    if (year % majorInterval !== 0) {
+      const x = scaleYearToX(year);
+      gridLines.push(
+        <div
+          key={`minor-${year}`}
+          className="absolute top-0"
+          style={{
+            left: x,
+            height,
+            width: '1px',
+            background: 'var(--color-base-grid-minor)',
+          }}
+        />
+      );
     }
   }
 
-  return <>{gridLines}</>;
+  // Timeline axis
+  const axisY = axisYOverride ?? Math.round(height / 2);
+  const totalWidth = scaleYearToX(endYear);
+  const axisTicks = [];
+
+  // Diamond ticks at 100-year intervals
+  for (let year = Math.ceil(endYear / 100) * 100; year <= startYear; year += 100) {
+    const x = scaleYearToX(year);
+    axisTicks.push(
+      <svg
+        key={`axis-tick-${year}`}
+        className="absolute"
+        style={{ left: x - 3, top: axisY - 3 }}
+        width="6"
+        height="6"
+      >
+        <polygon points="3,0 6,3 3,6 0,3" fill="#6F6254" />
+      </svg>
+    );
+  }
+
+  // Axis line
+  const axisLine = (
+    <div
+      key="axis-line"
+      className="absolute"
+      style={{
+        left: 0,
+        top: axisY - 1,
+        width: totalWidth,
+        height: '2px',
+        background: 'var(--color-base-grid-major)',
+      }}
+    />
+  );
+
+  return (
+    <>
+      {gridLines}
+      {axisLine}
+      {axisTicks}
+    </>
+  );
 }
 
 // ===== ROLE BADGE =====
@@ -124,7 +180,7 @@ interface RoleBadgeProps {
   size?: 'small' | 'medium';
 }
 
-function RoleBadge({ role, size = 'medium' }: RoleBadgeProps) {
+export function RoleBadge({ role, size = 'medium' }: RoleBadgeProps) {
   const color = roleColors[role as keyof typeof roleColors] || roleColors.other;
   const isSmall = size === 'small';
   
@@ -148,37 +204,6 @@ function RoleBadge({ role, size = 'medium' }: RoleBadgeProps) {
   );
 }
 
-// ===== DATE BADGE =====
-interface DateBadgeProps {
-  startYear: number;
-  endYear?: number;
-  certainty: TimelineEntity['certainty'];
-}
-
-function DateBadge({ startYear, endYear, certainty }: DateBadgeProps) {
-  const isApproximate = certainty === 'approximate';
-  const label = endYear 
-    ? `${isApproximate ? 'c. ' : ''}${startYear}-${endYear} BC`
-    : `${isApproximate ? 'c. ' : ''}${startYear} BC`;
-
-  return (
-    <div
-      className="px-2 py-0.5 rounded font-mono"
-      style={{
-        background: 'var(--color-base-surface-elevated)',
-        border: isApproximate 
-          ? '1.5px dashed var(--color-base-text-secondary)'
-          : '1.5px solid var(--color-base-text-primary)',
-        color: 'var(--color-base-text-primary)',
-        fontSize: '10px',
-        fontWeight: 500,
-        whiteSpace: 'nowrap',
-      }}
-    >
-      {label}
-    </div>
-  );
-}
 
 // ===== TIMELINE NODE =====
 interface TimelineNodeProps {
@@ -194,6 +219,7 @@ interface TimelineNodeProps {
   isInBreadcrumb: boolean;
   breadcrumbNumber?: number;
   labelVisible?: boolean;
+  forcePointNode?: boolean;
   onClick: () => void;
   onMouseEnter: (e: React.MouseEvent) => void;
   onMouseLeave: () => void;
@@ -212,6 +238,7 @@ export function TimelineNode({
   isInBreadcrumb,
   breadcrumbNumber,
   labelVisible,
+  forcePointNode = false,
   onClick,
   onMouseEnter,
   onMouseLeave,
@@ -219,7 +246,7 @@ export function TimelineNode({
   // Node sizing from centralized config (height prop kept for interface compat)
   void height;
   const metrics = getNodeMetrics(entity.type, zoomLevel);
-  const nodeHeight = metrics.height;
+  const nodeHeight = Math.max(metrics.minHeight, metrics.height);
   const showLabel = labelVisible !== undefined ? labelVisible : metrics.showLabel;
   const showBadges = metrics.showBadges;
 
@@ -227,8 +254,8 @@ export function TimelineNode({
   const swimlaneOffset = (entity.swimlane || 0) * laneStride;
   const adjustedY = y + swimlaneOffset;
 
-  // Get color based on type
-  let backgroundColor = '#D4D9DE';
+  // Get color based on type (default per entity type)
+  let backgroundColor = entity.type === 'person' ? 'var(--person-fill)' : '#D4D9DE';
   if (entity.type === 'person' && entity.role) {
     backgroundColor = roleColors[entity.role];
   } else if (entity.type === 'event' && entity.category) {
@@ -237,10 +264,10 @@ export function TimelineNode({
     backgroundColor = genreColors[entity.genre];
   }
 
-  // Highlight/dim logic
+  // Highlight/dim logic — per-type stroke colors
   let opacity = 1;
-  let borderColor = 'var(--color-base-text-primary)';
-  let borderWidth = '1.5px';
+  let borderColor = entity.type === 'person' ? 'var(--person-stroke)' : 'var(--stroke-event)';
+  let borderWidth = '1px';
   
   if (isDimmed) {
     opacity = 0.25;
@@ -260,9 +287,9 @@ export function TimelineNode({
     opacity = 1;
   }
 
-  // Event point vs span
-  const isEventPoint = entity.type === 'event' && !entity.endYear;
-  const nodeWidth = isEventPoint ? nodeHeight : width;
+  // Point node vs span (events are points; unknown-era people can be forced to points)
+  const isPointNode = forcePointNode || (entity.type === 'event' && !entity.endYear);
+  const nodeWidth = isPointNode ? nodeHeight : width;
 
   // Accessibility: year range label
   const yearRange = entity.endYear
@@ -307,10 +334,10 @@ export function TimelineNode({
         style={{
           background: backgroundColor,
           border: `${borderWidth} solid ${borderColor}`,
-          borderRadius: isEventPoint ? '50%' : 'var(--radius-sm)',
-          boxShadow: isInBreadcrumb || isHighlighted 
-            ? '0 2px 8px rgba(45, 36, 28, 0.15)' 
-            : '0 1px 3px rgba(45, 36, 28, 0.1)',
+          borderRadius: isPointNode ? '50%' : '5px',
+          boxShadow: isInBreadcrumb || isHighlighted
+            ? '0 2px 8px rgba(45, 36, 28, 0.15)'
+            : 'var(--shadow-standard)',
         }}
       />
 
@@ -333,41 +360,76 @@ export function TimelineNode({
         </div>
       )}
 
-      {/* Role badge for people */}
-      {entity.type === 'person' && entity.role && showBadges && (
-        <div className="absolute -top-1 -left-1">
-          <RoleBadge role={entity.role} size={nodeHeight < 20 ? 'small' : 'medium'} />
-        </div>
-      )}
-
       {/* Label */}
-      {showLabel && (
-        <div
-          className="absolute left-0 whitespace-nowrap pointer-events-none"
-          style={{
-            top: nodeHeight + 4,
-            fontSize: nodeHeight < 16 ? '11px' : 'var(--type-label-xs-size)',
-            fontWeight: 600,
-            color: 'var(--color-base-text-primary)',
-            maxWidth: isEventPoint ? 'none' : width,
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-          }}
-        >
-          {entity.name}
-        </div>
-      )}
+      {showLabel && (() => {
+        const isInsidePerson = entity.type === 'person' && nodeHeight >= 16;
+        const isInsideBook = entity.type === 'book' && nodeHeight >= 14;
+        const isInside = isInsidePerson || isInsideBook;
+        const isEvent = entity.type === 'event';
+        const usePointLabel = isEvent || forcePointNode;
 
-      {/* Date badge on hover for higher zoom */}
-      {showBadges && (
-        <div className="absolute left-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" style={{ bottom: nodeHeight + 4 }}>
-          <DateBadge
-            startYear={entity.startYear}
-            endYear={entity.endYear}
-            certainty={entity.certainty}
-          />
-        </div>
-      )}
+        if (usePointLabel) {
+          // Event labels: right of circle, vertically centered
+          return (
+            <div
+              className="absolute whitespace-nowrap pointer-events-none"
+              style={{
+                left: isPointNode ? nodeHeight + 6 : nodeWidth + 6,
+                top: '50%',
+                transform: 'translateY(-50%)',
+                fontSize: '11px',
+                fontWeight: 400,
+                fontFamily: 'var(--font-timeline)',
+                color: 'var(--text-label)',
+              }}
+            >
+              {entity.name}
+            </div>
+          );
+        }
+
+        if (isInside) {
+          // Inside bar labels
+          return (
+            <div
+              className="absolute whitespace-nowrap pointer-events-none overflow-hidden text-ellipsis"
+              style={{
+                left: 8,
+                top: '50%',
+                transform: 'translateY(-50%)',
+                maxWidth: nodeWidth - 16,
+                fontSize: isInsideBook ? '20px' : '14px',
+                fontWeight: 400,
+                fontFamily: 'var(--font-timeline-serif)',
+                color: isInsideBook ? 'var(--text-book)' : 'var(--text-dark)',
+                textShadow: 'var(--shadow-text)',
+              }}
+            >
+              {entity.name}
+            </div>
+          );
+        }
+
+        // Below bar labels (low zoom)
+        return (
+          <div
+            className="absolute left-0 whitespace-nowrap pointer-events-none"
+            style={{
+              top: nodeHeight + 4,
+              fontSize: '11px',
+              fontWeight: 400,
+              fontFamily: 'var(--font-timeline)',
+              color: 'var(--text-label)',
+              maxWidth: width,
+              overflow: 'hidden',
+              textOverflow: 'ellipsis',
+            }}
+          >
+            {entity.name}
+          </div>
+        );
+      })()}
+
     </button>
   );
 }

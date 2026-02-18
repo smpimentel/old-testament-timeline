@@ -297,7 +297,6 @@ export function WelcomeOverlay({ onClose }: WelcomeOverlayProps) {
                 <li>Use <strong>theme filters</strong> (Covenant, Kingship, Land, Messiah) to highlight connected entities</li>
                 <li>Try searching for <strong>"David"</strong>, <strong>"Moses"</strong>, or <strong>"Exodus"</strong> to jump to key moments</li>
                 <li>Toggle <strong>Path Mode ON</strong> and click through connections to build exploration paths</li>
-                <li>Use the <strong>minimap</strong> (bottom-right) for quick navigation across 3,600 years</li>
                 <li>Zoom in to reveal detailed entities with role badges and date certainty indicators</li>
               </ul>
             </div>

@@ -9,6 +9,9 @@
     "categories": [
       "judgment"
     ],
+    "themes": [
+      "Judgment"
+    ],
     "priority": 1,
     "description": "Because of widespread wickedness, God sent a global flood that destroyed all life except Noah's family and the animals on the ark. The flood lasted about one year.",
     "scriptureRefs": [
@@ -27,6 +30,9 @@
     "certainty": "approximate",
     "categories": [
       "covenant"
+    ],
+    "themes": [
+      "Covenant"
     ],
     "priority": 1,
     "description": "God called Abram to leave his homeland and go to a land He would show him. God promised to make Abram a great nation, bless him, and bless all nations through his offspring.",
@@ -47,6 +53,9 @@
     "categories": [
       "deliverance"
     ],
+    "themes": [
+      "Deliverance"
+    ],
     "priority": 1,
     "description": "God delivered Israel from slavery in Egypt through ten plagues and parted the Red Sea. Moses led approximately 2-3 million Israelites out under God's protection.",
     "scriptureRefs": [
@@ -65,6 +74,9 @@
     "certainty": "approximate",
     "categories": [
       "temple"
+    ],
+    "themes": [
+      "Temple"
     ],
     "priority": 1,
     "description": "King Solomon built the magnificent Temple in Jerusalem as a permanent dwelling place for God's presence among Israel. It took seven years to complete.",
@@ -85,6 +97,9 @@
     "categories": [
       "origins"
     ],
+    "themes": [
+      "Origins"
+    ],
     "priority": 1,
     "description": "God created the heavens, earth, and all living things in six days, resting on the seventh. He made humanity (Adam and Eve) in His own image to rule over creation.",
     "scriptureRefs": [
@@ -101,6 +116,9 @@
     "certainty": "approximate",
     "categories": [
       "origins"
+    ],
+    "themes": [
+      "Origins"
     ],
     "priority": 1,
     "description": "Tempted by the serpent, Adam and Eve disobeyed God by eating the forbidden fruit. This introduced sin, shame, death, and separation from God into the human race.",
@@ -119,6 +137,9 @@
     "categories": [
       "judgment"
     ],
+    "themes": [
+      "Judgment"
+    ],
     "priority": 2,
     "description": "Humanity built a tower to make a name for themselves and defy God. God confused their languages, causing them to scatter across the earth.",
     "scriptureRefs": [
@@ -135,6 +156,9 @@
     "certainty": "exact",
     "categories": [
       "patriarchs"
+    ],
+    "themes": [
+      "Patriarchs"
     ],
     "priority": 3,
     "description": "Abraham and Sarah, impatient for God's promise, had Abraham father a son through Hagar. Ishmael became the ancestor of many Arab peoples.",
@@ -153,6 +177,9 @@
     "categories": [
       "covenant"
     ],
+    "themes": [
+      "Covenant"
+    ],
     "priority": 2,
     "description": "Sarah miraculously gave birth to Isaac when Abraham was 100 and she was 90. Isaac was the child of promise through whom God's covenant would continue.",
     "scriptureRefs": [
@@ -169,6 +196,9 @@
     "certainty": "approximate",
     "categories": [
       "patriarchs"
+    ],
+    "themes": [
+      "Patriarchs"
     ],
     "priority": 2,
     "description": "The twelve sons of Jacob (Israel) by Leah, Rachel, Bilhah, and Zilpah became the ancestors of the twelve tribes of Israel.",
@@ -188,6 +218,9 @@
     "categories": [
       "patriarchs"
     ],
+    "themes": [
+      "Patriarchs"
+    ],
     "priority": 2,
     "description": "Sold into slavery by his brothers, Joseph rose to become second-in-command in Egypt. He saved Egypt and his family from famine through God-given wisdom.",
     "scriptureRefs": [
@@ -204,6 +237,9 @@
     "certainty": "approximate",
     "categories": [
       "covenant"
+    ],
+    "themes": [
+      "Covenant"
     ],
     "priority": 1,
     "description": "At Mount Sinai, God gave the Ten Commandments and the Law to Israel through Moses. Israel agreed to obey God as His chosen people and treasured possession.",
@@ -222,6 +258,10 @@
     "categories": [
       "conquest"
     ],
+    "themes": [
+      "Conquest",
+      "Land"
+    ],
     "priority": 1,
     "description": "Under Joshua's leadership, Israel conquered key cities and territories in Canaan. The land was divided among the twelve tribes.",
     "scriptureRefs": [
@@ -238,6 +278,10 @@
     "certainty": "approximate",
     "categories": [
       "conquest"
+    ],
+    "themes": [
+      "Conquest",
+      "Land"
     ],
     "priority": 3,
     "description": "Joshua divided the conquered land among the twelve tribes of Israel by lot. Special cities of refuge and Levitical cities were also designated.",
@@ -256,6 +300,10 @@
     "categories": [
       "monarchy"
     ],
+    "themes": [
+      "Monarchy",
+      "Kingship"
+    ],
     "priority": 2,
     "description": "The people demanded a king like other nations. God chose Saul as Israel's first king through the prophet Samuel.",
     "scriptureRefs": [
@@ -272,6 +320,10 @@
     "certainty": "approximate",
     "categories": [
       "monarchy"
+    ],
+    "themes": [
+      "Monarchy",
+      "Kingship"
     ],
     "priority": 1,
     "description": "David, a man after God's own heart, united Israel, defeated its enemies, and established Jerusalem as the capital. He brought the Ark to Jerusalem.",
@@ -291,6 +343,10 @@
     "categories": [
       "monarchy"
     ],
+    "themes": [
+      "Monarchy",
+      "Kingship"
+    ],
     "priority": 1,
     "description": "After Solomon's death, the kingdom split into the northern kingdom of Israel (10 tribes) and the southern kingdom of Judah (2 tribes) due to Rehoboam's harsh rule.",
     "scriptureRefs": [
@@ -301,18 +357,23 @@
   {
     "id": "fall-of-northern-kingdom",
     "type": "event",
-    "name": "The Fall of the Northern Kingdom",
+    "name": "Fall of the Northern Kingdom",
     "startYear": 721,
     "endYear": 721,
     "certainty": "exact",
     "categories": [
       "judgment"
     ],
-    "priority": 1,
-    "description": "Assyria conquered the northern kingdom of Israel, deported its people, and resettled the land with foreigners. This ended the northern kingdom.",
-    "scriptureRefs": [
-      "2 Kgs 17"
+    "themes": [
+      "Judgment"
     ],
+    "priority": 1,
+    "description": "After a three-year siege, Assyria captured Samaria and deported the Israelites. The northern kingdom ceased to exist as an independent nation.",
+    "scriptureRefs": [
+      "2 Kings 17:5-6",
+      "2 Kings 18:9-12"
+    ],
+    "kingdom": "Israel",
     "swimlane": 0
   },
   {
@@ -325,13 +386,17 @@
     "categories": [
       "judgment"
     ],
+    "themes": [
+      "Judgment"
+    ],
     "priority": 1,
     "description": "King Nebuchadnezzar destroyed Jerusalem and the Temple and deported most of Judah. This began the 70-year exile prophesied by Jeremiah. The third deportation of Israelites to foreign countries took place.",
     "scriptureRefs": [
       "2 Kgs 25",
       "Jer 52"
     ],
-    "swimlane": 0
+    "kingdom": "Judah",
+    "swimlane": 3
   },
   {
     "id": "return-from-exile",
@@ -343,12 +408,17 @@
     "categories": [
       "restoration"
     ],
+    "themes": [
+      "Restoration",
+      "Deliverance"
+    ],
     "priority": 1,
     "description": "Persian king Cyrus issued a decree allowing the Jews to return to Jerusalem and rebuild the Temple. About 50,000 returned under Zerubbabel.",
     "scriptureRefs": [
       "Ezra 1"
     ],
-    "swimlane": 0
+    "kingdom": "Judah",
+    "swimlane": 3
   },
   {
     "id": "dedication-of-second-temple",
@@ -360,12 +430,17 @@
     "categories": [
       "temple"
     ],
+    "themes": [
+      "Temple",
+      "Restoration"
+    ],
     "priority": 1,
     "description": "After returning from the Babylonian captivity, the Jewish people completed the reconstruction of the temple on March 12, 515 BC. Its dedication was a pivotal moment in preserving the nation's religious heritage and worship identity after 70 years of exile.",
     "scriptureRefs": [
       "Ezra 3-6"
     ],
-    "swimlane": 0
+    "kingdom": "Judah",
+    "swimlane": 3
   },
   {
     "id": "rebuilding-jerusalems-walls",
@@ -377,11 +452,147 @@
     "categories": [
       "restoration"
     ],
+    "themes": [
+      "Restoration"
+    ],
     "priority": 2,
     "description": "Nehemiah led the effort to restore the city's dilapidated walls to protect the inhabitants from external threats and prevent assimilation into surrounding cultures. Despite intense opposition, the project was remarkably completed in 52 days.",
     "scriptureRefs": [
       "Neh 7"
     ],
-    "swimlane": 0
+    "kingdom": "Judah",
+    "swimlane": 3
+  },
+  {
+    "id": "jeroboams-golden-calves",
+    "type": "event",
+    "name": "Jeroboam's Golden Calves",
+    "startYear": 930,
+    "endYear": 930,
+    "certainty": "exact",
+    "categories": [
+      "judgment"
+    ],
+    "themes": [
+      "Judgment",
+      "Monarchy"
+    ],
+    "priority": 2,
+    "description": "Jeroboam set up golden calves at Dan and Bethel to prevent his people from worshipping at the Jerusalem Temple, establishing rival worship centers.",
+    "scriptureRefs": [
+      "1 Kings 12:26-33"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 2
+  },
+  {
+    "id": "elijah-mount-carmel",
+    "type": "event",
+    "name": "Elijah at Mount Carmel",
+    "startYear": 850,
+    "endYear": 850,
+    "certainty": "approximate",
+    "categories": [
+      "deliverance"
+    ],
+    "themes": [
+      "Deliverance",
+      "Judgment"
+    ],
+    "priority": 2,
+    "description": "Elijah challenged 450 prophets of Baal on Mount Carmel. God sent fire from heaven to consume the sacrifice, proving He alone is God.",
+    "scriptureRefs": [
+      "1 Kings 18:16-46"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 2
+  },
+  {
+    "id": "hezekiahs-reform",
+    "type": "event",
+    "name": "Hezekiah's Reform",
+    "startYear": 715,
+    "endYear": 715,
+    "certainty": "approximate",
+    "categories": [
+      "restoration"
+    ],
+    "themes": [
+      "Restoration"
+    ],
+    "priority": 2,
+    "description": "Hezekiah reopened and cleansed the Temple, restored proper worship, and celebrated Passover. He also destroyed the bronze serpent Moses had made.",
+    "scriptureRefs": [
+      "2 Chronicles 29-31",
+      "2 Kings 18:1-8"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 3
+  },
+  {
+    "id": "josiahs-reform",
+    "type": "event",
+    "name": "Josiah's Reform",
+    "startYear": 622,
+    "endYear": 622,
+    "certainty": "exact",
+    "categories": [
+      "restoration"
+    ],
+    "themes": [
+      "Restoration",
+      "Covenant"
+    ],
+    "priority": 2,
+    "description": "During Temple repairs, the Book of the Law was discovered. Josiah led sweeping reforms, destroyed pagan shrines, and renewed the covenant with God.",
+    "scriptureRefs": [
+      "2 Kings 22-23",
+      "2 Chronicles 34-35"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 3
+  },
+  {
+    "id": "first-deportation-babylon",
+    "type": "event",
+    "name": "First Deportation to Babylon",
+    "startYear": 605,
+    "endYear": 605,
+    "certainty": "exact",
+    "categories": [
+      "judgment"
+    ],
+    "themes": [
+      "Judgment"
+    ],
+    "priority": 2,
+    "description": "Nebuchadnezzar defeated Egypt at Carchemish and took the first group of Judean exiles to Babylon, including Daniel and other young nobles.",
+    "scriptureRefs": [
+      "Daniel 1:1-6",
+      "2 Kings 24:1"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 3
+  },
+  {
+    "id": "second-deportation-babylon",
+    "type": "event",
+    "name": "Second Deportation to Babylon",
+    "startYear": 597,
+    "endYear": 597,
+    "certainty": "exact",
+    "categories": [
+      "judgment"
+    ],
+    "themes": [
+      "Judgment"
+    ],
+    "priority": 2,
+    "description": "After King Jehoiachin's rebellion, Nebuchadnezzar besieged Jerusalem, took the king captive, and deported 10,000 of Judah's leading citizens.",
+    "scriptureRefs": [
+      "2 Kings 24:10-16"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 3
   }
 ]

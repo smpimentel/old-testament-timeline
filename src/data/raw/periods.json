@@ -1,16 +1,16 @@
 [
   {
     "id": "dates-unknown",
-    "name": "Dates Unknown",
-    "startYear": 4000,
-    "endYear": 2500,
+    "name": "Unknown",
+    "startYear": 4004,
+    "endYear": 2166,
     "era": "BC",
     "color": "#E0E0E0",
     "description": "Creation, Fall, Flood, Tower of Babel"
   },
   {
     "id": "patriarchs",
-    "name": "Time of the Patriarchs",
+    "name": "Patriarch",
     "startYear": 2166,
     "endYear": 1876,
     "era": "BC",
@@ -19,7 +19,7 @@
   },
   {
     "id": "egypt",
-    "name": "Israel in Egypt",
+    "name": "Sojourn",
     "startYear": 1876,
     "endYear": 1446,
     "era": "BC",
@@ -37,25 +37,25 @@
   },
   {
     "id": "judges",
-    "name": "Era of the Judges",
+    "name": "Conquest/Judges",
     "startYear": 1406,
     "endYear": 1050,
     "era": "BC",
     "color": "#C8E6C9",
-    "description": "Israel repeatedly fell into idolatry, oppression, repentance, and deliverance through judges (military leaders/prophets). This cycle lasted about 350 years."
+    "description": "Conquest of Canaan followed by the era of the judges."
   },
   {
     "id": "united-kingdom",
-    "name": "The Kings / United Kingdom",
+    "name": "United Monarchy",
     "startYear": 1050,
     "endYear": 930,
     "era": "BC",
     "color": "#BBDEFB",
-    "description": "Saul, David, Solomon united Israel"
+    "description": "Saul, David, and Solomon ruled a united Israel."
   },
   {
     "id": "divided-kingdom",
-    "name": "Kingdom Divides",
+    "name": "Divided Monarchy",
     "startYear": 930,
     "endYear": 586,
     "era": "BC",
@@ -69,15 +69,15 @@
     "endYear": 538,
     "era": "BC",
     "color": "#BDBDBD",
-    "description": "Babylonian captivity"
+    "description": "Babylonian captivity following the fall of Jerusalem."
   },
   {
     "id": "restoration",
-    "name": "The Restoration",
+    "name": "Restoration",
     "startYear": 538,
     "endYear": 400,
     "era": "BC",
-    "color": "#B2DFDB",
-    "description": "Return from exile, temple rebuilt"
+    "color": "#B0BEC5",
+    "description": "Return from exile and rebuilding of temple and covenant life."
   }
 ]

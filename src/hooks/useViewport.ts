@@ -1,16 +1,20 @@
 import { useState, useRef, useEffect, useCallback } from 'react';
 import { timelineDomain } from '../data/timeline-data';
+import { yearToX as scaleYearToX, ERA_START, LINEAR_PX_PER_YEAR } from '../lib/scale';
 
 // Timeline constants
-export const START_YEAR = timelineDomain.startYear;
+export const START_YEAR = ERA_START;
 export const END_YEAR = timelineDomain.endYear;
-export const BASE_PIXELS_PER_YEAR = 2;
-export const TIMELINE_WIDTH = (START_YEAR - END_YEAR) * BASE_PIXELS_PER_YEAR;
-/** @deprecated Use trackLayout.totalHeight from computeTrackLayout() instead */
-export const TIMELINE_HEIGHT = 800;
-export const MIN_ZOOM = 0.5;
+export const BASE_PIXELS_PER_YEAR = LINEAR_PX_PER_YEAR;
+export const TIMELINE_WIDTH = scaleYearToX(END_YEAR);
+export const MIN_ZOOM = 0.25;
 export const MAX_ZOOM = 3;
 export const DRAG_THRESHOLD = 5;
+
+export function computeFitView(timelineWidth: number, viewportWidth: number) {
+  const zoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, viewportWidth / timelineWidth));
+  return { zoom, panX: 0 };
+}
 
 interface UseViewportOptions {
   selectedEntityOpen: boolean;
@@ -19,9 +23,9 @@ interface UseViewportOptions {
 
 export function useViewport({ selectedEntityOpen, railWidth }: UseViewportOptions) {
   // Canvas/Viewport State
-  const [panX, setPanX] = useState(-2000);
+  const [panX, setPanX] = useState(() => computeFitView(TIMELINE_WIDTH, typeof window !== 'undefined' ? window.innerWidth : 1200).panX);
   const [panY, setPanY] = useState(0);
-  const [zoomLevel, setZoomLevel] = useState(1);
+  const [zoomLevel, setZoomLevel] = useState(() => computeFitView(TIMELINE_WIDTH, typeof window !== 'undefined' ? window.innerWidth : 1200).zoom);
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
   const [lastPan, setLastPan] = useState({ x: 0, y: 0 });
@@ -36,10 +40,10 @@ export function useViewport({ selectedEntityOpen, railWidth }: UseViewportOption
   const pixelsPerYear = BASE_PIXELS_PER_YEAR;
   const viewportWidth = typeof window !== 'undefined' ? window.innerWidth : 1200;
 
-  // Convert year to X position (fixed world coordinates)
+  // Convert year to X position (dual-scale world coordinates)
   const yearToX = useCallback((year: number) => {
-    return (START_YEAR - year) * pixelsPerYear;
-  }, [pixelsPerYear]);
+    return scaleYearToX(year);
+  }, []);
 
   // Zoom handlers with focal point calculation
   const handleZoomIn = useCallback(() => {
@@ -69,24 +73,51 @@ export function useViewport({ selectedEntityOpen, railWidth }: UseViewportOption
   }, [zoomLevel, panX, panY]);
 
   const handleFitView = useCallback(() => {
-    setZoomLevel(1);
-    setPanX(-2000);
+    const { zoom, panX: fitPanX } = computeFitView(TIMELINE_WIDTH, viewportWidth);
+    setZoomLevel(zoom);
+    setPanX(fitPanX);
     setPanY(0);
-  }, []);
+  }, [viewportWidth]);
 
   // Pan to specific year (for navigation)
+  // Screen position = worldX * zoomLevel + panX
   const panToYear = useCallback((year: number, offsetFromLeft = 120) => {
     const targetX = yearToX(year);
-    setPanX((offsetFromLeft / zoomLevel) - targetX);
+    setPanX(offsetFromLeft - targetX * zoomLevel);
   }, [yearToX, zoomLevel]);
 
   // Pan to center on year (accounting for right rail)
   const panToCenterOnYear = useCallback((year: number) => {
     const targetX = yearToX(year);
     const adjustedViewportWidth = viewportWidth - (selectedEntityOpen ? railWidth : 0);
-    const worldViewportWidth = adjustedViewportWidth / zoomLevel;
-    setPanX(-(targetX - worldViewportWidth / 2));
+    setPanX(adjustedViewportWidth / 2 - targetX * zoomLevel);
   }, [yearToX, viewportWidth, selectedEntityOpen, railWidth, zoomLevel]);
+
+  // Fit a year range to the viewport — adjusts zoom and pan to show full width + height
+  const fitYearRangeToView = useCallback((startYear: number, endYear: number, contentHeight?: number) => {
+    const startX = yearToX(startYear);
+    const endX = yearToX(endYear);
+    const worldWidth = Math.abs(endX - startX);
+
+    const rect = canvasRef.current?.getBoundingClientRect();
+    const availableWidth = rect ? rect.width : viewportWidth;
+    const availableHeight = rect ? rect.height : window.innerHeight;
+
+    const pad = 60;
+    const hZoom = (availableWidth - pad * 2) / worldWidth;
+    const vZoom = contentHeight ? (availableHeight - pad * 2) / contentHeight : Infinity;
+    const newZoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, Math.min(hZoom, vZoom)));
+
+    const centerWorldX = (startX + endX) / 2;
+    setPanX(availableWidth / 2 - centerWorldX * newZoom);
+    // Center vertically if content height provided
+    if (contentHeight) {
+      setPanY((availableHeight - contentHeight * newZoom) / 2);
+    } else {
+      setPanY(0);
+    }
+    setZoomLevel(newZoom);
+  }, [yearToX, viewportWidth]);
 
   // Mouse handlers for panning (X and Y axis)
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
@@ -250,6 +281,7 @@ export function useViewport({ selectedEntityOpen, railWidth }: UseViewportOption
     // Navigation helpers
     panToYear,
     panToCenterOnYear,
+    fitYearRangeToView,
     setPanX,
 
     // Bundled event handlers

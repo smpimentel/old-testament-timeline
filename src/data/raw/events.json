@@ -19,7 +19,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Judgment"
+    "category": "Judgment",
+    "themes": ["Judgment"]
   },
   {
     "id": "call-of-abraham",
@@ -41,7 +42,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Covenant"
+    "category": "Covenant",
+    "themes": ["Covenant"]
   },
   {
     "id": "exodus",
@@ -63,7 +65,8 @@
     "relatedBooks": [
       "exodus-book"
     ],
-    "category": "Deliverance"
+    "category": "Deliverance",
+    "themes": ["Deliverance"]
   },
   {
     "id": "temple-built",
@@ -85,7 +88,8 @@
     "relatedBooks": [
       "1-kings"
     ],
-    "category": "Temple"
+    "category": "Temple",
+    "themes": ["Temple"]
   },
   {
     "id": "creation",
@@ -106,7 +110,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Origins"
+    "category": "Origins",
+    "themes": ["Origins"]
   },
   {
     "id": "the-fall",
@@ -127,7 +132,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Origins"
+    "category": "Origins",
+    "themes": ["Origins"]
   },
   {
     "id": "tower-of-babel",
@@ -145,7 +151,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Judgment"
+    "category": "Judgment",
+    "themes": ["Judgment"]
   },
   {
     "id": "ishmael-born",
@@ -165,7 +172,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Patriarchs"
+    "category": "Patriarchs",
+    "themes": ["Patriarchs"]
   },
   {
     "id": "birth-of-isaac",
@@ -186,7 +194,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Covenant"
+    "category": "Covenant",
+    "themes": ["Covenant"]
   },
   {
     "id": "twelve-tribes-of-israel",
@@ -207,7 +216,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Patriarchs"
+    "category": "Patriarchs",
+    "themes": ["Patriarchs"]
   },
   {
     "id": "josephs-exaltation-in-egypt",
@@ -228,7 +238,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Patriarchs"
+    "category": "Patriarchs",
+    "themes": ["Patriarchs"]
   },
   {
     "id": "mosaic-covenant",
@@ -248,7 +259,8 @@
     "relatedBooks": [
       "exodus-book"
     ],
-    "category": "Covenant"
+    "category": "Covenant",
+    "themes": ["Covenant"]
   },
   {
     "id": "conquest-of-canaan",
@@ -262,13 +274,10 @@
     "scriptureRefs": [
       "Josh 1-12"
     ],
-    "relatedPeople": [
-      "joshua"
-    ],
-    "relatedBooks": [
-      "joshua"
-    ],
-    "category": "Conquest"
+    "relatedPeople": [],
+    "relatedBooks": [],
+    "category": "Conquest",
+    "themes": ["Conquest", "Land"]
   },
   {
     "id": "division-of-the-land",
@@ -282,13 +291,10 @@
     "scriptureRefs": [
       "Josh 13-21"
     ],
-    "relatedPeople": [
-      "joshua"
-    ],
-    "relatedBooks": [
-      "joshua"
-    ],
-    "category": "Conquest"
+    "relatedPeople": [],
+    "relatedBooks": [],
+    "category": "Conquest",
+    "themes": ["Conquest", "Land"]
   },
   {
     "id": "selection-of-king-saul",
@@ -308,7 +314,8 @@
     "relatedBooks": [
       "1-samuel"
     ],
-    "category": "Monarchy"
+    "category": "Monarchy",
+    "themes": ["Monarchy", "Kingship"]
   },
   {
     "id": "reign-of-king-david",
@@ -328,7 +335,8 @@
       "2-samuel",
       "1-kings"
     ],
-    "category": "Monarchy"
+    "category": "Monarchy",
+    "themes": ["Monarchy", "Kingship"]
   },
   {
     "id": "division-of-the-kingdom",
@@ -346,25 +354,29 @@
     "relatedBooks": [
       "1-kings"
     ],
-    "category": "Monarchy"
+    "category": "Monarchy",
+    "themes": ["Monarchy", "Kingship"]
   },
   {
     "id": "fall-of-northern-kingdom",
-    "name": "The Fall of the Northern Kingdom",
+    "name": "Fall of the Northern Kingdom",
     "year": 721,
     "era": "BC",
     "approximate": false,
     "priority": 1,
+    "kingdom": "Israel",
     "track": "events",
-    "description": "Assyria conquered the northern kingdom of Israel, deported its people, and resettled the land with foreigners. This ended the northern kingdom.",
+    "description": "After a three-year siege, Assyria captured Samaria and deported the Israelites. The northern kingdom ceased to exist as an independent nation.",
     "scriptureRefs": [
-      "2 Kgs 17"
+      "2 Kings 17:5-6",
+      "2 Kings 18:9-12"
     ],
-    "relatedPeople": [],
+    "relatedPeople": ["hoshea"],
     "relatedBooks": [
       "2-kings"
     ],
-    "category": "Judgment"
+    "category": "Judgment",
+    "themes": ["Judgment"]
   },
   {
     "id": "destruction-of-jerusalem",
@@ -373,6 +385,7 @@
     "era": "BC",
     "approximate": false,
     "priority": 1,
+    "kingdom": "Judah",
     "track": "events",
     "description": "King Nebuchadnezzar destroyed Jerusalem and the Temple and deported most of Judah. This began the 70-year exile prophesied by Jeremiah. The third deportation of Israelites to foreign countries took place.",
     "scriptureRefs": [
@@ -384,7 +397,8 @@
       "2-kings",
       "jeremiah"
     ],
-    "category": "Judgment"
+    "category": "Judgment",
+    "themes": ["Judgment"]
   },
   {
     "id": "return-from-exile",
@@ -393,6 +407,7 @@
     "era": "BC",
     "approximate": false,
     "priority": 1,
+    "kingdom": "Judah",
     "track": "events",
     "description": "Persian king Cyrus issued a decree allowing the Jews to return to Jerusalem and rebuild the Temple. About 50,000 returned under Zerubbabel.",
     "scriptureRefs": [
@@ -402,7 +417,8 @@
     "relatedBooks": [
       "ezra"
     ],
-    "category": "Restoration"
+    "category": "Restoration",
+    "themes": ["Restoration", "Deliverance"]
   },
   {
     "id": "dedication-of-second-temple",
@@ -411,6 +427,7 @@
     "era": "BC",
     "approximate": false,
     "priority": 1,
+    "kingdom": "Judah",
     "track": "events",
     "description": "After returning from the Babylonian captivity, the Jewish people completed the reconstruction of the temple on March 12, 515 BC. Its dedication was a pivotal moment in preserving the nation's religious heritage and worship identity after 70 years of exile.",
     "scriptureRefs": [
@@ -420,7 +437,8 @@
     "relatedBooks": [
       "ezra"
     ],
-    "category": "Temple"
+    "category": "Temple",
+    "themes": ["Temple", "Restoration"]
   },
   {
     "id": "rebuilding-jerusalems-walls",
@@ -429,6 +447,7 @@
     "era": "BC",
     "approximate": false,
     "priority": 2,
+    "kingdom": "Judah",
     "track": "events",
     "description": "Nehemiah led the effort to restore the city's dilapidated walls to protect the inhabitants from external threats and prevent assimilation into surrounding cultures. Despite intense opposition, the project was remarkably completed in 52 days.",
     "scriptureRefs": [
@@ -438,6 +457,103 @@
     "relatedBooks": [
       "nehemiah"
     ],
-    "category": "Restoration"
+    "category": "Restoration",
+    "themes": ["Restoration"]
+  },
+  {
+    "id": "jeroboams-golden-calves",
+    "name": "Jeroboam's Golden Calves",
+    "year": 930,
+    "era": "BC",
+    "approximate": false,
+    "priority": 2,
+    "kingdom": "Israel",
+    "track": "events",
+    "description": "Jeroboam set up golden calves at Dan and Bethel to prevent his people from worshipping at the Jerusalem Temple, establishing rival worship centers.",
+    "scriptureRefs": ["1 Kings 12:26-33"],
+    "relatedPeople": ["jeroboam-i"],
+    "relatedBooks": ["1-kings"],
+    "category": "Judgment",
+    "themes": ["Judgment", "Monarchy"]
+  },
+  {
+    "id": "elijah-mount-carmel",
+    "name": "Elijah at Mount Carmel",
+    "year": 850,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "kingdom": "Israel",
+    "track": "events",
+    "description": "Elijah challenged 450 prophets of Baal on Mount Carmel. God sent fire from heaven to consume the sacrifice, proving He alone is God.",
+    "scriptureRefs": ["1 Kings 18:16-46"],
+    "relatedPeople": ["elijah", "ahab"],
+    "relatedBooks": ["1-kings"],
+    "category": "Deliverance",
+    "themes": ["Deliverance", "Judgment"]
+  },
+  {
+    "id": "hezekiahs-reform",
+    "name": "Hezekiah's Reform",
+    "year": 715,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "kingdom": "Judah",
+    "track": "events",
+    "description": "Hezekiah reopened and cleansed the Temple, restored proper worship, and celebrated Passover. He also destroyed the bronze serpent Moses had made.",
+    "scriptureRefs": ["2 Chronicles 29-31", "2 Kings 18:1-8"],
+    "relatedPeople": ["hezekiah"],
+    "relatedBooks": ["2-kings"],
+    "category": "Restoration",
+    "themes": ["Restoration"]
+  },
+  {
+    "id": "josiahs-reform",
+    "name": "Josiah's Reform",
+    "year": 622,
+    "era": "BC",
+    "approximate": false,
+    "priority": 2,
+    "kingdom": "Judah",
+    "track": "events",
+    "description": "During Temple repairs, the Book of the Law was discovered. Josiah led sweeping reforms, destroyed pagan shrines, and renewed the covenant with God.",
+    "scriptureRefs": ["2 Kings 22-23", "2 Chronicles 34-35"],
+    "relatedPeople": ["josiah"],
+    "relatedBooks": ["2-kings"],
+    "category": "Restoration",
+    "themes": ["Restoration", "Covenant"]
+  },
+  {
+    "id": "first-deportation-babylon",
+    "name": "First Deportation to Babylon",
+    "year": 605,
+    "era": "BC",
+    "approximate": false,
+    "priority": 2,
+    "kingdom": "Judah",
+    "track": "events",
+    "description": "Nebuchadnezzar defeated Egypt at Carchemish and took the first group of Judean exiles to Babylon, including Daniel and other young nobles.",
+    "scriptureRefs": ["Daniel 1:1-6", "2 Kings 24:1"],
+    "relatedPeople": [],
+    "relatedBooks": ["2-kings"],
+    "category": "Judgment",
+    "themes": ["Judgment"]
+  },
+  {
+    "id": "second-deportation-babylon",
+    "name": "Second Deportation to Babylon",
+    "year": 597,
+    "era": "BC",
+    "approximate": false,
+    "priority": 2,
+    "kingdom": "Judah",
+    "track": "events",
+    "description": "After King Jehoiachin's rebellion, Nebuchadnezzar besieged Jerusalem, took the king captive, and deported 10,000 of Judah's leading citizens.",
+    "scriptureRefs": ["2 Kings 24:10-16"],
+    "relatedPeople": [],
+    "relatedBooks": ["2-kings"],
+    "category": "Judgment",
+    "themes": ["Judgment"]
   }
 ]

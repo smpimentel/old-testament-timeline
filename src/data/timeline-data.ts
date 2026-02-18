@@ -11,7 +11,7 @@ import relationshipsData from './compiled/relationships.json';
 // ===== TYPES =====
 export type EntityType = 'person' | 'event' | 'book';
 export type PersonRole = 'king' | 'prophet' | 'judge' | 'priest' | 'patriarch' | 'warrior' | 'scribe' | 'other';
-export type BookGenre = 'political' | 'cultural' | 'religious' | 'economic' | 'military' | 'scientific' | 'agricultural' | 'maritime';
+export type BookGenre = 'pentateuch' | 'historical' | 'prophets';
 export type DateCertainty = 'exact' | 'approximate' | 'estimated';
 
 export const THEME_TAGS = [
@@ -24,6 +24,9 @@ export const THEME_TAGS = [
   'Restoration',
   'Origins',
   'Temple',
+  'Patriarchs',
+  'Conquest',
+  'Monarchy',
 ] as const;
 
 export type ThemeTag = (typeof THEME_TAGS)[number];
@@ -43,6 +46,8 @@ export const EVENT_CATEGORIES = [
 
 export type EventCategory = (typeof EVENT_CATEGORIES)[number];
 
+export type Kingdom = 'Israel' | 'Judah';
+
 export interface TimelineEntity {
   id: string;
   type: EntityType;
@@ -56,6 +61,7 @@ export interface TimelineEntity {
   role?: PersonRole;
   category?: EventCategory;
   genre?: BookGenre;
+  kingdom?: Kingdom;
   relationships?: string[];
   scripture?: string;
   notes?: string;
@@ -121,36 +127,11 @@ interface ThemeLike {
   description?: string;
 }
 
-const themeOrder = new Map<ThemeTag, number>(
-  THEME_TAGS.map((tag, index) => [tag, index]),
-);
-
 const eventCategorySet = new Set<string>(EVENT_CATEGORIES);
 
-const themeAliasMap: Record<string, ThemeTag> = {
-  covenant: 'Covenant',
-  kingship: 'Kingship',
-  king: 'Kingship',
-  kings: 'Kingship',
-  land: 'Land',
-  messiah: 'Messiah',
-  judgment: 'Judgment',
-  deliverance: 'Deliverance',
-  restoration: 'Restoration',
-  origins: 'Origins',
-  origin: 'Origins',
-  temple: 'Temple',
-  pentateuch: 'Covenant',
-  history: 'Land',
-  poetry: 'Messiah',
-  wisdom: 'Messiah',
-  'major-prophets': 'Judgment',
-  'minor-prophets': 'Judgment',
-  prophet: 'Covenant',
-  priest: 'Covenant',
-  judge: 'Deliverance',
-  scribe: 'Restoration',
-};
+const themeTagLookup = new Map<string, ThemeTag>(
+  THEME_TAGS.map(t => [normalizeToken(t), t])
+);
 
 // ===== THEME COLOR MAPPING =====
 const defaultThemeColors: Record<ThemeTag, string> = {
@@ -163,6 +144,9 @@ const defaultThemeColors: Record<ThemeTag, string> = {
   Restoration: '#2E8B57',
   Origins: '#8B4513',
   Temple: '#CD853F',
+  Patriarchs: '#DAA520',
+  Conquest: '#556B2F',
+  Monarchy: '#9932CC',
 };
 
 function buildThemeColors(themeList: Theme[]): Record<ThemeTag, string> {
@@ -204,25 +188,20 @@ export const eventColors: Record<EventCategory, string> = {
   judgment: '#E6A8A8',
   covenant: '#F4D19B',
   deliverance: '#B8D9E6',
-  temple: '#E6D4B8',
-  origins: '#C8C4BC',
-  patriarchs: '#F4E0C8',
-  conquest: '#D9B8A8',
-  monarchy: '#CFB8D4',
-  restoration: '#C8E6C9',
-  event: '#D4D9DE',
+  temple: '#D9C4A8',
+  origins: '#D9C4A8',
+  patriarchs: '#F4D19B',
+  conquest: '#C8D4B8',
+  monarchy: '#F4D19B',
+  restoration: '#C8D4B8',
+  event: '#D9C4A8',
 };
 
 // ===== BOOK GENRE COLOR MAPPING =====
 export const genreColors: Record<BookGenre, string> = {
-  political: '#A8C4E0',
-  cultural: '#F4D4C8',
-  religious: '#D4C8E0',
-  economic: '#E6D4A8',
-  military: '#D9B8A8',
-  scientific: '#B8DDE0',
-  agricultural: '#C8D9B8',
-  maritime: '#B8CFD9',
+  pentateuch: '#A07070',
+  historical: '#8E8568',
+  prophets: '#7B7EA8',
 };
 
 function normalizeToken(value: string): string {
@@ -240,47 +219,7 @@ export function normalizeEventCategory(rawCategory?: string): EventCategory {
 
 export function normalizeThemeTag(rawTag?: string): ThemeTag | undefined {
   if (!rawTag) return undefined;
-  return themeAliasMap[normalizeToken(rawTag)];
-}
-
-function dedupeAndSortThemes(themeCandidates: Array<ThemeTag | undefined>): ThemeTag[] | undefined {
-  const uniqueThemes = new Set<ThemeTag>();
-
-  for (const theme of themeCandidates) {
-    if (theme) {
-      uniqueThemes.add(theme);
-    }
-  }
-
-  if (uniqueThemes.size === 0) {
-    return undefined;
-  }
-
-  return [...uniqueThemes].sort((a, b) => {
-    return (themeOrder.get(a) ?? Number.MAX_SAFE_INTEGER)
-      - (themeOrder.get(b) ?? Number.MAX_SAFE_INTEGER);
-  });
-}
-
-function inferThemesFromCategories(categories: string[] | undefined): ThemeTag[] | undefined {
-  if (!categories || categories.length === 0) {
-    return undefined;
-  }
-
-  return dedupeAndSortThemes(
-    categories.map((category) => normalizeThemeTag(category)),
-  );
-}
-
-function mergeThemes(...themeGroups: Array<ThemeTag[] | undefined>): ThemeTag[] | undefined {
-  const merged: Array<ThemeTag | undefined> = [];
-
-  for (const group of themeGroups) {
-    if (!group) continue;
-    merged.push(...group);
-  }
-
-  return dedupeAndSortThemes(merged);
+  return themeTagLookup.get(normalizeToken(rawTag));
 }
 
 function selectCanonicalPeriod(
@@ -317,16 +256,16 @@ function mapPersonCategory(categories: string[]): PersonRole {
 }
 
 function mapBookCategory(categories: string[]): BookGenre {
-  const cat = categories[0]?.toLowerCase() || 'religious';
+  const cat = categories[0]?.toLowerCase() || 'historical';
   const genreMap: Record<string, BookGenre> = {
-    pentateuch: 'religious',
-    history: 'political',
-    poetry: 'cultural',
-    'major prophets': 'religious',
-    'minor prophets': 'religious',
-    wisdom: 'cultural',
+    pentateuch: 'pentateuch',
+    history: 'historical',
+    poetry: 'prophets',
+    'major prophets': 'prophets',
+    'minor prophets': 'prophets',
+    wisdom: 'prophets',
   };
-  return genreMap[cat] || 'religious';
+  return genreMap[cat] || 'historical';
 }
 
 // ===== BUILD RELATIONSHIPS MAP =====
@@ -345,6 +284,8 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
   return data.map((p: (typeof peopleData)[number]) => {
     const categories = p.categories || [];
     const role = mapPersonCategory(categories);
+    const raw = p as Record<string, unknown>;
+    const kingdom = raw.kingdom as Kingdom | undefined;
 
     return {
       id: p.id,
@@ -356,10 +297,8 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
       priority: (p.priority || 2) as 1 | 2 | 3 | 4,
       description: p.description || p.bio || '',
       role,
-      themes: mergeThemes(
-        inferThemesFromCategories(categories),
-        inferThemesFromCategories([role]),
-      ),
+      themes: (p.themes as ThemeTag[]) || undefined,
+      kingdom,
       relationships: relationshipMap.get(p.id),
       scripture: p.scriptureRefs?.join(', '),
       notes: p.bio,
@@ -371,6 +310,8 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
 function transformEvents(data: typeof eventsData): TimelineEntity[] {
   return data.map((e: (typeof eventsData)[number]) => {
     const category = normalizeEventCategory(e.categories?.[0]);
+    const raw = e as Record<string, unknown>;
+    const kingdom = raw.kingdom as Kingdom | undefined;
 
     return {
       id: e.id,
@@ -382,10 +323,8 @@ function transformEvents(data: typeof eventsData): TimelineEntity[] {
       priority: (e.priority || 2) as 1 | 2 | 3 | 4,
       description: e.description || '',
       category,
-      themes: mergeThemes(
-        inferThemesFromCategories(e.categories),
-        inferThemesFromCategories([category]),
-      ),
+      themes: (e.themes as ThemeTag[]) || undefined,
+      kingdom,
       relationships: relationshipMap.get(e.id),
       scripture: e.scriptureRefs?.join(', '),
       swimlane: e.swimlane || 0,
@@ -407,7 +346,7 @@ function transformBooks(data: typeof booksData): TimelineEntity[] {
       priority: (b.priority || 2) as 1 | 2 | 3 | 4,
       description: b.description || '',
       genre: mapBookCategory(categories),
-      themes: inferThemesFromCategories(categories),
+      themes: (b.themes as ThemeTag[]) || undefined,
       relationships: relationshipMap.get(b.id),
       scripture: b.scriptureRefs?.join(', '),
       notes: `Author: ${b.author || 'Unknown'}`,
@@ -477,31 +416,49 @@ function transformThemes(data: typeof themesData): Theme[] {
 }
 
 // ===== SWIMLANE COLLISION DETECTION =====
+// Padding (in years) to prevent visual overlap from labels/markers.
+// Gap after placing an entity before next can share the lane.
+// Point events need wider gap for labels (~150px at 4px/yr ≈ 40yr).
+const LANE_GAP_SPAN = 10;
+const LANE_GAP_POINT = 40;
+
+function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
+  const sorted = group.sort((a, b) => b.startYear - a.startYear);
+  const lanes: Array<{ end: number }> = [];
+
+  sorted.forEach((entity) => {
+    const end = entity.endYear || entity.startYear;
+    const isPoint = !entity.endYear;
+    const gap = isPoint ? LANE_GAP_POINT : LANE_GAP_SPAN;
+    let laneIndex = lanes.findIndex((lane) => lane.end > entity.startYear);
+
+    if (laneIndex === -1) {
+      laneIndex = lanes.length;
+      lanes.push({ end: end - gap });
+    } else {
+      lanes[laneIndex].end = Math.min(lanes[laneIndex].end, end - gap);
+    }
+
+    entity.swimlane = laneIndex + offset;
+  });
+
+  return lanes.length;
+}
+
 export function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
-  const byType = {
-    person: entities.filter((e) => e.type === 'person'),
-    event: entities.filter((e) => e.type === 'event'),
+  // Non-kingdom entities: assign by type (separate tracks)
+  const nonKingdomByType = {
+    person: entities.filter((e) => e.type === 'person' && !e.kingdom),
+    event: entities.filter((e) => e.type === 'event' && !e.kingdom),
     book: entities.filter((e) => e.type === 'book'),
   };
+  Object.values(nonKingdomByType).forEach((group) => assignLanesToGroup(group));
 
-  Object.values(byType).forEach((group) => {
-    const sorted = group.sort((a, b) => b.startYear - a.startYear);
-    const lanes: Array<{ end: number }> = [];
-
-    sorted.forEach((entity) => {
-      const end = entity.endYear || entity.startYear;
-      let laneIndex = lanes.findIndex((lane) => lane.end > entity.startYear);
-
-      if (laneIndex === -1) {
-        laneIndex = lanes.length;
-        lanes.push({ end });
-      } else {
-        lanes[laneIndex].end = Math.min(lanes[laneIndex].end, end);
-      }
-
-      entity.swimlane = laneIndex;
-    });
-  });
+  // Kingdom entities: assign by kingdom across types (events+people share lanes)
+  const israelEntities = entities.filter(e => e.kingdom === 'Israel');
+  const judahEntities = entities.filter(e => e.kingdom === 'Judah');
+  assignLanesToGroup(israelEntities);
+  assignLanesToGroup(judahEntities);
 
   return entities;
 }
@@ -514,6 +471,8 @@ export interface TimelineDomain {
 export function computeTimelineDomain(
   entities: TimelineEntity[],
   periodList: Period[],
+  earlyPadding = 100,
+  latePadding = 50,
 ): TimelineDomain {
   const startYearCandidates = [
     ...entities.map((entity) => entity.startYear),
@@ -526,8 +485,8 @@ export function computeTimelineDomain(
   ];
 
   return {
-    startYear: Math.max(...startYearCandidates),
-    endYear: Math.min(...endYearCandidates),
+    startYear: Math.max(...startYearCandidates) + earlyPadding,
+    endYear: Math.min(...endYearCandidates) - latePadding,
   };
 }
 
@@ -546,6 +505,22 @@ const allEntities: TimelineEntity[] = [
 
 // Assign swimlanes and export
 export const timelineData: TimelineEntity[] = assignSwimlanes(allEntities);
+
+// Kingdom lane metadata (cross-type: events+people share kingdom bands)
+export interface KingdomLaneInfo {
+  northLaneCount: number;
+  southLaneCount: number;
+}
+
+export function computeKingdomLanes(entities: TimelineEntity[]): KingdomLaneInfo {
+  const israelEntities = entities.filter(e => e.kingdom === 'Israel');
+  const judahEntities = entities.filter(e => e.kingdom === 'Judah');
+  const northLaneCount = israelEntities.reduce((m, e) => Math.max(m, (e.swimlane ?? 0) + 1), 0);
+  const southLaneCount = judahEntities.reduce((m, e) => Math.max(m, (e.swimlane ?? 0) + 1), 0);
+  return { northLaneCount, southLaneCount };
+}
+
+export const kingdomLanes: KingdomLaneInfo = computeKingdomLanes(timelineData);
 
 // Derived domain for viewport/data integrity checks.
 export const timelineDomain: TimelineDomain = computeTimelineDomain(

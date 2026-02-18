@@ -3,13 +3,23 @@
  * Single source of truth for zoom tiers and node metrics.
  */
 
-export type EntityType = 'person' | 'event' | 'book';
+import type { EntityType } from '../data/timeline-data';
+
+/** false = Figma-locked sizes, true = adaptive zoom tiers */
+export const ADAPTIVE_NODE_SIZING = false;
 
 export interface NodeMetrics {
   height: number;
+  minHeight: number;
   showLabel: boolean;
   showBadges: boolean;
 }
+
+const FIGMA_SIZES: Record<EntityType, NodeMetrics> = {
+  event:  { height: 20, minHeight: 20, showLabel: true, showBadges: true },
+  person: { height: 20, minHeight: 20, showLabel: true, showBadges: true },
+  book:   { height: 40, minHeight: 40, showLabel: true, showBadges: true },
+};
 
 export interface ZoomTier {
   maxZoom: number; // Upper bound (exclusive) for this tier
@@ -19,27 +29,27 @@ export interface ZoomTier {
 // Zoom tier configs per entity type
 // Tiers are checked in order; first match where zoomLevel < maxZoom wins
 const personZoomTiers: ZoomTier[] = [
-  { maxZoom: 0.75, metrics: { height: 4, showLabel: false, showBadges: false } },
-  { maxZoom: 1.25, metrics: { height: 8, showLabel: false, showBadges: false } },
-  { maxZoom: 1.5, metrics: { height: 16, showLabel: false, showBadges: false } },
-  { maxZoom: 1.75, metrics: { height: 16, showLabel: true, showBadges: false } },
-  { maxZoom: Infinity, metrics: { height: 24, showLabel: true, showBadges: true } },
+  { maxZoom: 0.4, metrics: { height: 4, minHeight: 8, showLabel: true, showBadges: false } },
+  { maxZoom: 0.65, metrics: { height: 8, minHeight: 8, showLabel: true, showBadges: false } },
+  { maxZoom: 0.75, metrics: { height: 16, minHeight: 16, showLabel: true, showBadges: false } },
+  { maxZoom: 1.0, metrics: { height: 16, minHeight: 16, showLabel: true, showBadges: false } },
+  { maxZoom: Infinity, metrics: { height: 24, minHeight: 24, showLabel: true, showBadges: true } },
 ];
 
 const eventZoomTiers: ZoomTier[] = [
-  { maxZoom: 0.75, metrics: { height: 6, showLabel: false, showBadges: false } },
-  { maxZoom: 1.25, metrics: { height: 10, showLabel: false, showBadges: false } },
-  { maxZoom: 1.5, metrics: { height: 16, showLabel: false, showBadges: false } },
-  { maxZoom: 1.75, metrics: { height: 16, showLabel: true, showBadges: false } },
-  { maxZoom: Infinity, metrics: { height: 20, showLabel: true, showBadges: true } },
+  { maxZoom: 0.4, metrics: { height: 6, minHeight: 10, showLabel: true, showBadges: false } },
+  { maxZoom: 0.65, metrics: { height: 10, minHeight: 10, showLabel: true, showBadges: false } },
+  { maxZoom: 0.75, metrics: { height: 16, minHeight: 16, showLabel: true, showBadges: false } },
+  { maxZoom: 1.0, metrics: { height: 16, minHeight: 16, showLabel: true, showBadges: false } },
+  { maxZoom: Infinity, metrics: { height: 20, minHeight: 20, showLabel: true, showBadges: true } },
 ];
 
 const bookZoomTiers: ZoomTier[] = [
-  { maxZoom: 0.75, metrics: { height: 3, showLabel: false, showBadges: false } },
-  { maxZoom: 1.25, metrics: { height: 6, showLabel: false, showBadges: false } },
-  { maxZoom: 1.5, metrics: { height: 12, showLabel: false, showBadges: false } },
-  { maxZoom: 1.75, metrics: { height: 12, showLabel: true, showBadges: false } },
-  { maxZoom: Infinity, metrics: { height: 18, showLabel: true, showBadges: true } },
+  { maxZoom: 0.4, metrics: { height: 3, minHeight: 6, showLabel: true, showBadges: false } },
+  { maxZoom: 0.65, metrics: { height: 6, minHeight: 6, showLabel: true, showBadges: false } },
+  { maxZoom: 0.75, metrics: { height: 12, minHeight: 12, showLabel: true, showBadges: false } },
+  { maxZoom: 1.0, metrics: { height: 12, minHeight: 12, showLabel: true, showBadges: false } },
+  { maxZoom: Infinity, metrics: { height: 18, minHeight: 18, showLabel: true, showBadges: true } },
 ];
 
 const zoomTiersByType: Record<EntityType, ZoomTier[]> = {
@@ -52,6 +62,7 @@ const zoomTiersByType: Record<EntityType, ZoomTier[]> = {
  * Get node metrics for an entity type at a given zoom level.
  */
 export function getNodeMetrics(entityType: EntityType, zoomLevel: number): NodeMetrics {
+  if (!ADAPTIVE_NODE_SIZING) return FIGMA_SIZES[entityType];
   const tiers = zoomTiersByType[entityType];
   for (const tier of tiers) {
     if (zoomLevel < tier.maxZoom) {
@@ -66,6 +77,7 @@ export function getNodeMetrics(entityType: EntityType, zoomLevel: number): NodeM
  * Get max node height for an entity type (highest zoom tier).
  */
 export function getMaxNodeHeight(entityType: EntityType): number {
+  if (!ADAPTIVE_NODE_SIZING) return FIGMA_SIZES[entityType].height;
   const tiers = zoomTiersByType[entityType];
   return tiers[tiers.length - 1].metrics.height;
 }
