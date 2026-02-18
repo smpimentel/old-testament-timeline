@@ -1,3 +1,5 @@
+import { BG_ANCHOR_COMPENSATION } from '../lib/scale';
+
 interface KingdomBackgroundProps {
   yearToX: (year: number) => number;
   pixelsPerYear: number;
@@ -14,24 +16,20 @@ const FIGMA_EXILE_VIEWBOX_X = 8300;
  * Renders the kingdoms foundation using the exact Figma-exported geometry.
  * Horizontal alignment is anchored at exile start (586 BC) so the chevron/split
  * placement tracks correctly against the timeline years.
+ * BG_ANCHOR_COMPENSATION undoes the timeline shift so background stays in place.
  */
 export function KingdomBackground({ yearToX, pixelsPerYear, topOffset }: KingdomBackgroundProps) {
   const scaleX = pixelsPerYear / FIGMA_BASE_PX_PER_YEAR;
   const exileX = yearToX(EXILE_ANCHOR_YEAR);
-  const rawLeft = exileX - (FIGMA_EXILE_VIEWBOX_X * scaleX);
-
-  // Clip SVG so it doesn't extend before x=0 (creation)
-  const clipVB = rawLeft < 0 ? Math.ceil(-rawLeft / scaleX) : 0;
-  const adjustedLeft = rawLeft + clipVB * scaleX;
-  const adjustedVBWidth = FIGMA_VIEWBOX_WIDTH - clipVB;
+  const left = exileX - (FIGMA_EXILE_VIEWBOX_X * scaleX) - BG_ANCHOR_COMPENSATION;
 
   return (
     <svg
       className="absolute pointer-events-none"
-      style={{ top: topOffset, left: adjustedLeft }}
-      width={adjustedVBWidth * scaleX}
+      style={{ top: topOffset, left, opacity: 0.5 }}
+      width={FIGMA_VIEWBOX_WIDTH * scaleX}
       height={FIGMA_VIEWBOX_HEIGHT}
-      viewBox={`${clipVB} 0 ${adjustedVBWidth} 816`}
+      viewBox="0 0 9072 816"
       preserveAspectRatio="none"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
