@@ -373,26 +373,7 @@ export function TimelineNode({
         const usePointLabel = isEvent || forcePointNode;
 
         if (usePointLabel) {
-          // Secular-context labels: above diamond to avoid kingdom band overlap
-          if (isSecularContext) {
-            return (
-              <div
-                className="absolute whitespace-nowrap pointer-events-none"
-                style={{
-                  left: '50%',
-                  bottom: nodeHeight + 4,
-                  transform: 'translateX(-50%)',
-                  fontSize: '11px',
-                  fontWeight: 400,
-                  fontFamily: 'var(--font-timeline)',
-                  color: 'var(--text-label)',
-                }}
-              >
-                {entity.name}
-              </div>
-            );
-          }
-          // Event labels: right of circle, vertically centered
+          // All point event labels: right of node, vertically centered
           return (
             <div
               className="absolute whitespace-nowrap pointer-events-none"

@@ -468,6 +468,17 @@ export function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
   assignLanesToGroup(israelEntities);
   assignLanesToGroup(judahEntities);
 
+  // Manual fixes: visual overlaps from unknown-era compression / dense zones
+  const overrides: Record<string, number> = {
+    'tower-of-babel': 1,
+    'temple-built': 2,
+    'first-olympic-games-in-greece': -1,
+    'founding-of-rome': 1,
+  };
+  for (const entity of entities) {
+    if (entity.id in overrides) entity.swimlane = (entity.swimlane ?? 0) + overrides[entity.id];
+  }
+
   return entities;
 }
 
