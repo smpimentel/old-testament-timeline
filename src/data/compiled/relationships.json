@@ -772,7 +772,7 @@
   {
     "id": "rel-111",
     "sourceId": "joshua",
-    "targetId": "joshua",
+    "targetId": "joshua-book",
     "type": "book-subject",
     "confidence": "high"
   },
@@ -1003,7 +1003,7 @@
   {
     "id": "rel-144",
     "sourceId": "conquest-of-canaan",
-    "targetId": "joshua",
+    "targetId": "joshua-book",
     "type": "book-subject",
     "confidence": "high"
   },
@@ -1017,7 +1017,7 @@
   {
     "id": "rel-146",
     "sourceId": "division-of-the-land",
-    "targetId": "joshua",
+    "targetId": "joshua-book",
     "type": "book-subject",
     "confidence": "high"
   },
@@ -1317,21 +1317,21 @@
   },
   {
     "id": "rel-189",
-    "sourceId": "joshua",
+    "sourceId": "joshua-book",
     "targetId": "joshua",
     "type": "book-subject",
     "confidence": "high"
   },
   {
     "id": "rel-190",
-    "sourceId": "joshua",
+    "sourceId": "joshua-book",
     "targetId": "conquest-of-canaan",
     "type": "event-participant",
     "confidence": "high"
   },
   {
     "id": "rel-191",
-    "sourceId": "joshua",
+    "sourceId": "joshua-book",
     "targetId": "division-of-the-land",
     "type": "event-participant",
     "confidence": "high"

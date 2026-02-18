@@ -4,7 +4,7 @@
 - **Milestone:** 1 — Ship v1.0 MVP
 - **Phase:** 6 — Visual Alignment with Figma (COMPLETE)
 - **Branch:** `working`
-- **Last action:** Removed period banner (overlapping events/main body)
+- **Last action:** Fixed Joshua duplicate ID (book → joshua-book)
 
 ## Completed
 - [x] Codebase mapping (7 docs in `.planning/codebase/`)
@@ -26,6 +26,7 @@
 - Role-based person colors (deviate from Figma uniform sage)
 - Period banner removed (overlapped events/main body)
 - Diamond axis ticks replace triangle pairs
+- Book IDs use `-book` suffix when name collides w/ person (exodus-book, joshua-book)
 
 ## Known Blockers
 - vitest worker timeout (system resource issue, not code-related)
