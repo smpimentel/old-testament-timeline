@@ -526,8 +526,20 @@ function build() {
     assignSwimlanes(events);
     assignSwimlanes(books);
 
-    // Extract relationships
-    const relationships = extractRelationships(rawPeople, rawEvents, rawBooks);
+    // Extract relationships, then filter orphaned references
+    const allRelationships = extractRelationships(rawPeople, rawEvents, rawBooks);
+    const allEntityIds = new Set([
+        ...people.map(e => e.id),
+        ...events.map(e => e.id),
+        ...books.map(e => e.id),
+    ]);
+    const relationships = allRelationships.filter(r =>
+        allEntityIds.has(r.sourceId) && allEntityIds.has(r.targetId)
+    );
+    const orphaned = allRelationships.length - relationships.length;
+    if (orphaned > 0) {
+        console.log(`Filtered ${orphaned} orphaned relationships`);
+    }
 
     // Write compiled files
     fs.writeFileSync(

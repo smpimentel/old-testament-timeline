@@ -1,26 +1,127 @@
 [
   {
-    "id": "flood",
-    "name": "The Great Flood",
-    "year": 2348,
+    "id": "creation",
+    "name": "Creation",
+    "year": 4004,
     "era": "BC",
     "approximate": true,
-    "priority": 1,
+    "priority": 2,
     "track": "events",
-    "description": "Because of widespread wickedness, God sent a global flood that destroyed all life except Noah's family and the animals on the ark. The flood lasted about one year.",
+    "description": "God created the heavens, earth, and all living things in six days, resting on the seventh. He made humanity (Adam and Eve) in His own image to rule over creation.",
     "scriptureRefs": [
-      "Genesis 6:13-22",
-      "Genesis 7:11-24",
-      "Gen 6-9"
+      "Genesis 1-2"
     ],
     "relatedPeople": [
-      "noah"
+      "adam",
+      "eve"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "category": "Creation",
+    "themes": [
+      "Origins"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
+  },
+  {
+    "id": "adam-eve",
+    "name": "Adam & Eve",
+    "year": 4004,
+    "era": "BC",
+    "approximate": true,
+    "category": "Creation",
+    "priority": 2,
+    "track": "events",
+    "description": "God formed Adam from the dust and created Eve from his rib. They lived in perfect fellowship with God in the Garden of Eden.",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Genesis 1-2"
+    ],
+    "relatedPeople": [
+      "seth",
+      "cain",
+      "able",
+      "adam"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ]
+  },
+  {
+    "id": "the-fall",
+    "name": "The Fall",
+    "year": 4000,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "track": "events",
+    "description": "Tempted by the serpent, Adam and Eve disobeyed God by eating the forbidden fruit. This introduced sin, shame, death, and separation from God into the human race.",
+    "scriptureRefs": [
+      "Genesis 3-5"
+    ],
+    "relatedPeople": [
+      "adam",
+      "eve"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "category": "Creation",
+    "themes": [
+      "Origins"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
+  },
+  {
+    "id": "flood",
+    "name": "The Great Flood",
+    "year": 2500,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "track": "events",
+    "description": "Because of widespread wickedness, God sent a global flood that destroyed all life except Noah’s family and the animals on the ark. The flood lasted about one year.",
+    "scriptureRefs": [
+      "Genesis 6-9"
+    ],
+    "relatedPeople": [
+      "noah",
+      "shem"
     ],
     "relatedBooks": [
       "genesis"
     ],
     "category": "Judgment",
-    "themes": ["Judgment"]
+    "themes": [
+      "Judgment"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
+  },
+  {
+    "id": "tower-of-babel",
+    "name": "The Dispersion of Nations (Tower of Babal)",
+    "year": 2100,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "track": "events",
+    "description": "Humanity built a tower to make a name for themselves and defy God. God confused their languages, causing them to scatter across the earth.",
+    "scriptureRefs": [
+      "Genesis 10"
+    ],
+    "relatedPeople": [
+      "noah",
+      "shem"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "category": "Judgment",
+    "themes": [
+      "Judgment"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "call-of-abraham",
@@ -28,13 +129,11 @@
     "year": 2091,
     "era": "BC",
     "approximate": true,
-    "priority": 1,
+    "priority": 2,
     "track": "events",
     "description": "God called Abram to leave his homeland and go to a land He would show him. God promised to make Abram a great nation, bless him, and bless all nations through his offspring.",
     "scriptureRefs": [
-      "Genesis 12:1-3",
-      "Gen 12",
-      "Gen 15"
+      "Genesis 15"
     ],
     "relatedPeople": [
       "abraham"
@@ -43,159 +142,62 @@
       "genesis"
     ],
     "category": "Covenant",
-    "themes": ["Covenant"]
-  },
-  {
-    "id": "exodus",
-    "name": "Exodus from Egypt",
-    "year": 1446,
-    "era": "BC",
-    "approximate": true,
-    "priority": 1,
-    "track": "events",
-    "description": "God delivered Israel from slavery in Egypt through ten plagues and parted the Red Sea. Moses led approximately 2-3 million Israelites out under God's protection.",
-    "scriptureRefs": [
-      "Exodus 12:31-42",
-      "Exodus 14:21-31",
-      "Exod 12-14"
+    "themes": [
+      "Covenant"
     ],
-    "relatedPeople": [
-      "moses"
-    ],
-    "relatedBooks": [
-      "exodus-book"
-    ],
-    "category": "Deliverance",
-    "themes": ["Deliverance"]
-  },
-  {
-    "id": "temple-built",
-    "name": "Construction of the First Temple",
-    "year": 966,
-    "era": "BC",
-    "approximate": true,
-    "priority": 1,
-    "track": "events",
-    "description": "King Solomon built the magnificent Temple in Jerusalem as a permanent dwelling place for God's presence among Israel. It took seven years to complete.",
-    "scriptureRefs": [
-      "1 Kings 6:1",
-      "1 Kings 8:10-11",
-      "1 Kgs 5-8"
-    ],
-    "relatedPeople": [
-      "david"
-    ],
-    "relatedBooks": [
-      "1-kings"
-    ],
-    "category": "Temple",
-    "themes": ["Temple"]
-  },
-  {
-    "id": "creation",
-    "name": "Creation",
-    "year": 4004,
-    "era": "BC",
-    "approximate": true,
-    "priority": 1,
-    "track": "events",
-    "description": "God created the heavens, earth, and all living things in six days, resting on the seventh. He made humanity (Adam and Eve) in His own image to rule over creation.",
-    "scriptureRefs": [
-      "Gen 1-2"
-    ],
-    "relatedPeople": [
-      "adam",
-      "eve"
-    ],
-    "relatedBooks": [
-      "genesis"
-    ],
-    "category": "Origins",
-    "themes": ["Origins"]
-  },
-  {
-    "id": "the-fall",
-    "name": "The Fall",
-    "year": 4004,
-    "era": "BC",
-    "approximate": true,
-    "priority": 1,
-    "track": "events",
-    "description": "Tempted by the serpent, Adam and Eve disobeyed God by eating the forbidden fruit. This introduced sin, shame, death, and separation from God into the human race.",
-    "scriptureRefs": [
-      "Gen 3-5"
-    ],
-    "relatedPeople": [
-      "adam",
-      "eve"
-    ],
-    "relatedBooks": [
-      "genesis"
-    ],
-    "category": "Origins",
-    "themes": ["Origins"]
-  },
-  {
-    "id": "tower-of-babel",
-    "name": "The Dispersion of Nations (Tower of Babel)",
-    "year": 2242,
-    "era": "BC",
-    "approximate": true,
-    "priority": 2,
-    "track": "events",
-    "description": "Humanity built a tower to make a name for themselves and defy God. God confused their languages, causing them to scatter across the earth.",
-    "scriptureRefs": [
-      "Gen 10-11"
-    ],
-    "relatedPeople": [],
-    "relatedBooks": [
-      "genesis"
-    ],
-    "category": "Judgment",
-    "themes": ["Judgment"]
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "ishmael-born",
-    "name": "Ishmael Born",
+    "name": "Ishmael born",
     "year": 2080,
     "era": "BC",
-    "approximate": false,
-    "priority": 3,
+    "approximate": true,
+    "priority": 2,
     "track": "events",
-    "description": "Abraham and Sarah, impatient for God's promise, had Abraham father a son through Hagar. Ishmael became the ancestor of many Arab peoples.",
+    "description": "Abraham and Sarah, impatient for God’s promise, had Abraham father a son through Hagar. Ishmael became the ancestor of many Arab peoples.",
     "scriptureRefs": [
-      "Gen 16"
+      "Genesis 16"
     ],
     "relatedPeople": [
-      "abraham"
+      "ishmael",
+      "abraham",
+      "hagar"
     ],
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Patriarchs",
-    "themes": ["Patriarchs"]
+    "category": "Patriarchal",
+    "themes": [
+      "Patriarchs"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "birth-of-isaac",
-    "name": "The Birth of Isaac",
+    "name": "The Birth of Issac",
     "year": 2066,
     "era": "BC",
-    "approximate": false,
+    "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "Sarah miraculously gave birth to Isaac when Abraham was 100 and she was 90. Isaac was the child of promise through whom God's covenant would continue.",
+    "description": "Sarah miraculously gave birth to Isaac when Abraham was 100 and she was 90. Isaac was the child of promise through whom God’s covenant would continue.",
     "scriptureRefs": [
-      "Gen 21"
+      "Genesis 21"
     ],
     "relatedPeople": [
       "abraham",
-      "isaac"
+      "issac",
+      "sarah"
     ],
     "relatedBooks": [
       "genesis"
     ],
     "category": "Covenant",
-    "themes": ["Covenant"]
+    "themes": [
+      "Covenant"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "twelve-tribes-of-israel",
@@ -207,21 +209,29 @@
     "track": "events",
     "description": "The twelve sons of Jacob (Israel) by Leah, Rachel, Bilhah, and Zilpah became the ancestors of the twelve tribes of Israel.",
     "scriptureRefs": [
-      "Gen 29-30",
-      "Gen 35:23-26"
+      "Genesis 29–30",
+      "35:23-26"
     ],
     "relatedPeople": [
-      "jacob"
+      "jacob",
+      "rachel",
+      "leah",
+      "levi",
+      "judah",
+      "joseph"
     ],
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Patriarchs",
-    "themes": ["Patriarchs"]
+    "category": "Patriarchal",
+    "themes": [
+      "Patriarchs"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "josephs-exaltation-in-egypt",
-    "name": "Joseph's Exaltation in Egypt",
+    "name": "Josephs Exaltation in Egypt",
     "year": 1899,
     "era": "BC",
     "approximate": true,
@@ -229,17 +239,76 @@
     "track": "events",
     "description": "Sold into slavery by his brothers, Joseph rose to become second-in-command in Egypt. He saved Egypt and his family from famine through God-given wisdom.",
     "scriptureRefs": [
-      "Gen 37-50"
+      "Gen 37; 39-47"
     ],
     "relatedPeople": [
       "joseph",
-      "jacob"
+      "jacob",
+      "judah"
     ],
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Patriarchs",
-    "themes": ["Patriarchs"]
+    "category": "Patriarchal",
+    "themes": [
+      "Patriarchs"
+    ],
+    "endYear": 1805,
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
+  },
+  {
+    "id": "code-of-hammurabi",
+    "name": "Code of Hammurabi",
+    "year": 1754,
+    "era": "BC",
+    "approximate": true,
+    "category": "Historical",
+    "priority": 2,
+    "track": "events",
+    "description": "King Hammurabi of Babylon established one of the earliest and most complete written legal codes in human history. The 282 laws, carved on a stone stele, governed commerce, property, family, and criminal justice across the Babylonian Empire.",
+    "source": "Pritchard, James B., editor. Ancient Near Eastern Texts Relating to the Old Testament. 3rd ed., Princeton UP, 1969. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994.",
+    "relatedPeople": [
+      "hammurabi"
+    ]
+  },
+  {
+    "id": "rise-of-the-egyptian-new-kingdom",
+    "name": "Rise of the Egyptian New Kingdom",
+    "year": 1550,
+    "endYear": 1070,
+    "era": "BC",
+    "approximate": true,
+    "category": "Historical",
+    "priority": 2,
+    "track": "events",
+    "description": "Egypt entered its most powerful and prosperous era under dynasties XVIII–XX, expanding its empire from Nubia to the Euphrates. This period produced famous pharaohs such as Hatshepsut, Thutmose III, Akhenaten, and Ramesses II.",
+    "source": "Shaw, Ian, editor. The Oxford History of Ancient Egypt. Oxford UP, 2000. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994."
+  },
+  {
+    "id": "exodus",
+    "name": "The Exodus",
+    "year": 1446,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "track": "events",
+    "description": "God delivered Israel from slavery in Egypt through ten plagues and parted the Red Sea. Moses led approximately 2–3 million Israelites out under God’s protection.",
+    "scriptureRefs": [
+      "Exod 1-15"
+    ],
+    "relatedPeople": [
+      "moses",
+      "aaron",
+      "pharaoh"
+    ],
+    "relatedBooks": [
+      "exodus-book"
+    ],
+    "category": "Deliverance",
+    "themes": [
+      "Deliverance"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "mosaic-covenant",
@@ -247,20 +316,51 @@
     "year": 1446,
     "era": "BC",
     "approximate": true,
-    "priority": 1,
+    "priority": 2,
     "track": "events",
     "description": "At Mount Sinai, God gave the Ten Commandments and the Law to Israel through Moses. Israel agreed to obey God as His chosen people and treasured possession.",
     "scriptureRefs": [
-      "Exod 19-24"
+      "Exod 19-24; 31:18; 34"
     ],
     "relatedPeople": [
-      "moses"
+      "moses",
+      "aaron"
     ],
     "relatedBooks": [
-      "exodus-book"
+      "exodus-book",
+      "leviticus",
+      "deuteronomy"
     ],
     "category": "Covenant",
-    "themes": ["Covenant"]
+    "themes": [
+      "Covenant"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
+  },
+  {
+    "id": "the-wilderness-wanderings",
+    "name": "The Wilderness Wanderings",
+    "year": 1446,
+    "endYear": 1406,
+    "era": "BC",
+    "approximate": true,
+    "category": "Wandering",
+    "priority": 2,
+    "track": "events",
+    "description": "Israel wandered 40 years in the wilderness due to unbelief. God provided manna, water, and the Law while preparing a new generation to enter the Promised Land.",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Num 10-36; Deut 1-4"
+    ],
+    "relatedPeople": [
+      "moses",
+      "aaron",
+      "joshua"
+    ],
+    "relatedBooks": [
+      "numbers",
+      "deuteronomy"
+    ]
   },
   {
     "id": "conquest-of-canaan",
@@ -268,16 +368,26 @@
     "year": 1406,
     "era": "BC",
     "approximate": true,
-    "priority": 1,
+    "priority": 2,
     "track": "events",
-    "description": "Under Joshua's leadership, Israel conquered key cities and territories in Canaan. The land was divided among the twelve tribes.",
+    "description": "Under Joshua’s leadership, Israel conquered key cities and territories in Canaan. The land was divided among the twelve tribes.",
     "scriptureRefs": [
       "Josh 1-12"
     ],
-    "relatedPeople": [],
-    "relatedBooks": [],
+    "relatedPeople": [
+      "joshua",
+      "caleb"
+    ],
+    "relatedBooks": [
+      "joshua-book"
+    ],
     "category": "Conquest",
-    "themes": ["Conquest", "Land"]
+    "themes": [
+      "Conquest",
+      "Land"
+    ],
+    "endYear": 1400,
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "division-of-the-land",
@@ -285,16 +395,227 @@
     "year": 1400,
     "era": "BC",
     "approximate": true,
-    "priority": 3,
+    "priority": 2,
     "track": "events",
-    "description": "Joshua divided the conquered land among the twelve tribes of Israel by lot. Special cities of refuge and Levitical cities were also designated.",
+    "description": "Joshua divided the conquered land among the twelve tribes of Israel by lot. Special cities of refuge and Levitical cities were also designated",
     "scriptureRefs": [
-      "Josh 13-21"
+      "Josh 13-22"
     ],
-    "relatedPeople": [],
-    "relatedBooks": [],
+    "relatedPeople": [
+      "joshua"
+    ],
+    "relatedBooks": [
+      "joshua-book"
+    ],
     "category": "Conquest",
-    "themes": ["Conquest", "Land"]
+    "themes": [
+      "Conquest",
+      "Land"
+    ],
+    "endYear": 1390,
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
+  },
+  {
+    "id": "the-era-of-the-judges",
+    "name": "The Era of the Judges",
+    "year": 1390,
+    "endYear": 1050,
+    "era": "BC",
+    "approximate": true,
+    "category": "Judge",
+    "priority": 2,
+    "track": "events",
+    "description": "Israel repeatedly fell into idolatry, oppression, repentance, and deliverance through judges (military leaders/prophets). This cycle lasted about 350 years.",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Judg 1-21; Ruth 1-4"
+    ],
+    "relatedPeople": [
+      "samuel",
+      "ruth",
+      "boaz"
+    ],
+    "relatedBooks": [
+      "judges",
+      "ruth-book"
+    ]
+  },
+  {
+    "id": "othniel",
+    "name": "Othniel",
+    "year": 1385,
+    "endYear": 1377,
+    "era": "BC",
+    "approximate": true,
+    "category": "Judge",
+    "priority": 2,
+    "track": "events",
+    "description": "Othniel was the first judge of Israel, the nephew and son-in-law of Caleb. He delivered Israel from eight years of oppression under King Cushan-Rishathaim of Mesopotamia, and the land had peace for forty years.",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Judges 3:7-11"
+    ],
+    "relatedPeople": [
+      "othniel",
+      "caleb"
+    ],
+    "relatedBooks": [
+      "judges"
+    ]
+  },
+  {
+    "id": "ehud",
+    "name": "Ehud",
+    "year": 1337,
+    "endYear": 1319,
+    "era": "BC",
+    "approximate": true,
+    "category": "Judge",
+    "priority": 2,
+    "track": "events",
+    "description": "Ehud was a left-handed Benjamite judge who delivered Israel from eighteen years of Moabite oppression. He assassinated King Eglon of Moab with a concealed sword and then led Israel to victory, securing eighty years of peace.",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Judges 3:12-31"
+    ],
+    "relatedPeople": [
+      "ehud"
+    ],
+    "relatedBooks": [
+      "judges"
+    ]
+  },
+  {
+    "id": "battle-of-kadesh",
+    "name": "Battle of Kadesh",
+    "year": 1274,
+    "era": "BC",
+    "approximate": true,
+    "category": "Historical",
+    "priority": 2,
+    "track": "events",
+    "description": "Pharaoh Ramesses II of Egypt clashed with the Hittite Empire under Muwatalli II at Kadesh in modern-day Syria in one of the largest chariot battles in ancient history. The conflict led to the earliest known peace treaty between two major powers.",
+    "source": "Bryce, Trevor. The Kingdom of the Hittites. Oxford UP, 2005. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994.",
+    "relatedPeople": [
+      "ramesses-ii",
+      "muwatalli-ii"
+    ]
+  },
+  {
+    "id": "deborah",
+    "name": "Deborah (with Barak)",
+    "year": 1259,
+    "endYear": 1239,
+    "era": "BC",
+    "approximate": true,
+    "category": "Judge",
+    "priority": 2,
+    "track": "events",
+    "description": "Deborah was a prophetess and the only female judge of Israel, who led alongside the military commander Barak. Together they defeated the Canaanite general Sisera and his army, and the land had peace for forty years.",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Judges 4:1-5:31"
+    ],
+    "relatedPeople": [
+      "deborah",
+      "barak",
+      "jael"
+    ],
+    "relatedBooks": [
+      "judges"
+    ]
+  },
+  {
+    "id": "the-bronze-age-collapse",
+    "name": "The Bronze Age Collapse",
+    "year": 1200,
+    "endYear": 1150,
+    "era": "BC",
+    "approximate": true,
+    "category": "Historical",
+    "priority": 2,
+    "track": "events",
+    "description": "A catastrophic wave of destruction swept across the Eastern Mediterranean, toppling the Hittite Empire, devastating Egyptian power, and destroying numerous Canaanite and Mycenaean cities. The collapse was driven by invasions (including the Sea Peoples), drought, famine, and disrupted trade networks.",
+    "source": "Cline, Eric H. 1177 B.C.: The Year Civilization Collapsed. Revised ed., Princeton UP, 2021. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994."
+  },
+  {
+    "id": "gideon",
+    "name": "Gideon",
+    "year": 1199,
+    "endYear": 1192,
+    "era": "BC",
+    "approximate": true,
+    "category": "Judge",
+    "priority": 2,
+    "track": "events",
+    "description": "Gideon was a reluctant judge whom God called to deliver Israel from the Midianites. With just 300 men armed with trumpets and torches, God gave him a miraculous victory, and the land had peace for forty years.",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Judges 6:1-8:32"
+    ],
+    "relatedPeople": [
+      "gideon"
+    ],
+    "relatedBooks": [
+      "judges"
+    ]
+  },
+  {
+    "id": "the-fall-of-troy",
+    "name": "The Fall of Troy",
+    "year": 1184,
+    "era": "BC",
+    "approximate": true,
+    "category": "Historical",
+    "priority": 2,
+    "track": "events",
+    "description": "According to Greek tradition, a coalition of Greek kingdoms besieged and destroyed the city of Troy after a ten-year war. Archaeological excavations at Hisarlik in modern Turkey have confirmed a destruction layer dating to this approximate period.",
+    "source": "Wood, Michael. In Search of the Trojan War. Updated ed., U of California P, 1998."
+  },
+  {
+    "id": "samson",
+    "name": "Samson",
+    "year": 1115,
+    "endYear": 1075,
+    "era": "BC",
+    "approximate": true,
+    "category": "Judge",
+    "priority": 2,
+    "track": "events",
+    "description": "Samson was a Nazirite judge endowed with supernatural strength from the Spirit of the Lord. He fought the Philistines throughout his life but was ultimately betrayed by Delilah, and in his death he destroyed more enemies than in his lifetime.",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Judges 13:1-16:31"
+    ],
+    "relatedPeople": [
+      "samson",
+      "delilah"
+    ],
+    "relatedBooks": [
+      "judges"
+    ]
+  },
+  {
+    "id": "jephthah",
+    "name": "Jephthah",
+    "year": 1104,
+    "endYear": 1086,
+    "era": "BC",
+    "approximate": true,
+    "category": "Judge",
+    "priority": 2,
+    "track": "events",
+    "description": "Jephthah was a Gileadite outcast who became a judge and delivered Israel from the Ammonites. He is remembered both for his military victory and for his rash vow to the Lord, which had tragic consequences for his daughter.",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Judges 10:6-12:15"
+    ],
+    "relatedPeople": [
+      "jephthah"
+    ],
+    "relatedBooks": [
+      "judges"
+    ]
   },
   {
     "id": "selection-of-king-saul",
@@ -304,18 +625,23 @@
     "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "The people demanded a king like other nations. God chose Saul as Israel's first king through the prophet Samuel.",
+    "description": "The people demanded a king like other nations. God chose Saul as Israel’s first king through the prophet Samuel.",
     "scriptureRefs": [
-      "1 Sam 8-10"
+      "1 Sam 8-12"
     ],
     "relatedPeople": [
-      "samuel"
+      "samuel",
+      "saul"
     ],
     "relatedBooks": [
       "1-samuel"
     ],
     "category": "Monarchy",
-    "themes": ["Monarchy", "Kingship"]
+    "themes": [
+      "Monarchy",
+      "Kingship"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "reign-of-king-david",
@@ -323,142 +649,85 @@
     "year": 1010,
     "era": "BC",
     "approximate": true,
-    "priority": 1,
+    "priority": 2,
     "track": "events",
-    "description": "David, a man after God's own heart, united Israel, defeated its enemies, and established Jerusalem as the capital. He brought the Ark to Jerusalem.",
+    "description": "David, a man after God’s own heart, united Israel, defeated its enemies, and established Jerusalem as the capital. He brought the Ark to Jerusalem.",
     "scriptureRefs": [
-      "2 Sam",
-      "1 Kgs 1-2"
+      "1 Sam 16-1 Kgs 2:11; 2 Sam 1-24; 1 Chr 11-29"
     ],
-    "relatedPeople": [],
+    "relatedPeople": [
+      "david",
+      "samuel",
+      "solomon",
+      "bathsheba",
+      "jonathan"
+    ],
     "relatedBooks": [
+      "1-samuel",
       "2-samuel",
-      "1-kings"
+      "1-chronicles",
+      "psalms"
     ],
     "category": "Monarchy",
-    "themes": ["Monarchy", "Kingship"]
+    "themes": [
+      "Monarchy",
+      "Kingship"
+    ],
+    "endYear": 970,
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
+  },
+  {
+    "id": "temple-built",
+    "name": "Construction of the First Temple",
+    "year": 966,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "track": "events",
+    "description": "King Solomon built the magnificent Temple in Jerusalem as a permanent dwelling place for God’s presence among Israel. It took seven years to complete.",
+    "scriptureRefs": [
+      "1 Kgs 5-8; 2 Chr 2-7"
+    ],
+    "relatedPeople": [
+      "solomon"
+    ],
+    "relatedBooks": [
+      "1-kings",
+      "2-chronicles"
+    ],
+    "category": "Monarchy",
+    "themes": [
+      "Temple"
+    ],
+    "endYear": 959,
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "division-of-the-kingdom",
     "name": "The Division of the Kingdom",
     "year": 931,
     "era": "BC",
-    "approximate": false,
-    "priority": 1,
+    "approximate": true,
+    "priority": 2,
     "track": "events",
-    "description": "After Solomon's death, the kingdom split into the northern kingdom of Israel (10 tribes) and the southern kingdom of Judah (2 tribes) due to Rehoboam's harsh rule.",
+    "description": "After Solomon’s death, the kingdom split into the northern kingdom of Israel (10 tribes) and the southern kingdom of Judah (2 tribes) due to Rehoboam’s harsh rule.",
     "scriptureRefs": [
-      "1 Kgs 12"
+      "1 Kgs 11:26-12:24; 2 Chr 10-11"
     ],
-    "relatedPeople": [],
+    "relatedPeople": [
+      "rehoboam",
+      "jeroboam"
+    ],
     "relatedBooks": [
-      "1-kings"
+      "1-kings",
+      "2-chronicles"
     ],
     "category": "Monarchy",
-    "themes": ["Monarchy", "Kingship"]
-  },
-  {
-    "id": "fall-of-northern-kingdom",
-    "name": "Fall of the Northern Kingdom",
-    "year": 721,
-    "era": "BC",
-    "approximate": false,
-    "priority": 1,
-    "kingdom": "Israel",
-    "track": "events",
-    "description": "After a three-year siege, Assyria captured Samaria and deported the Israelites. The northern kingdom ceased to exist as an independent nation.",
-    "scriptureRefs": [
-      "2 Kings 17:5-6",
-      "2 Kings 18:9-12"
+    "themes": [
+      "Monarchy",
+      "Kingship"
     ],
-    "relatedPeople": ["hoshea"],
-    "relatedBooks": [
-      "2-kings"
-    ],
-    "category": "Judgment",
-    "themes": ["Judgment"]
-  },
-  {
-    "id": "destruction-of-jerusalem",
-    "name": "Destruction of Jerusalem and Babylonian Captivity",
-    "year": 586,
-    "era": "BC",
-    "approximate": false,
-    "priority": 1,
-    "kingdom": "Judah",
-    "track": "events",
-    "description": "King Nebuchadnezzar destroyed Jerusalem and the Temple and deported most of Judah. This began the 70-year exile prophesied by Jeremiah. The third deportation of Israelites to foreign countries took place.",
-    "scriptureRefs": [
-      "2 Kgs 25",
-      "Jer 52"
-    ],
-    "relatedPeople": [],
-    "relatedBooks": [
-      "2-kings",
-      "jeremiah"
-    ],
-    "category": "Judgment",
-    "themes": ["Judgment"]
-  },
-  {
-    "id": "return-from-exile",
-    "name": "The Return from Exile",
-    "year": 538,
-    "era": "BC",
-    "approximate": false,
-    "priority": 1,
-    "kingdom": "Judah",
-    "track": "events",
-    "description": "Persian king Cyrus issued a decree allowing the Jews to return to Jerusalem and rebuild the Temple. About 50,000 returned under Zerubbabel.",
-    "scriptureRefs": [
-      "Ezra 1"
-    ],
-    "relatedPeople": [],
-    "relatedBooks": [
-      "ezra"
-    ],
-    "category": "Restoration",
-    "themes": ["Restoration", "Deliverance"]
-  },
-  {
-    "id": "dedication-of-second-temple",
-    "name": "The Dedication of the Second Temple",
-    "year": 515,
-    "era": "BC",
-    "approximate": false,
-    "priority": 1,
-    "kingdom": "Judah",
-    "track": "events",
-    "description": "After returning from the Babylonian captivity, the Jewish people completed the reconstruction of the temple on March 12, 515 BC. Its dedication was a pivotal moment in preserving the nation's religious heritage and worship identity after 70 years of exile.",
-    "scriptureRefs": [
-      "Ezra 3-6"
-    ],
-    "relatedPeople": [],
-    "relatedBooks": [
-      "ezra"
-    ],
-    "category": "Temple",
-    "themes": ["Temple", "Restoration"]
-  },
-  {
-    "id": "rebuilding-jerusalems-walls",
-    "name": "The Rebuilding of Jerusalem's Walls",
-    "year": 444,
-    "era": "BC",
-    "approximate": false,
-    "priority": 2,
-    "kingdom": "Judah",
-    "track": "events",
-    "description": "Nehemiah led the effort to restore the city's dilapidated walls to protect the inhabitants from external threats and prevent assimilation into surrounding cultures. Despite intense opposition, the project was remarkably completed in 52 days.",
-    "scriptureRefs": [
-      "Neh 7"
-    ],
-    "relatedPeople": [],
-    "relatedBooks": [
-      "nehemiah"
-    ],
-    "category": "Restoration",
-    "themes": ["Restoration"]
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "jeroboams-golden-calves",
@@ -470,11 +739,20 @@
     "kingdom": "Israel",
     "track": "events",
     "description": "Jeroboam set up golden calves at Dan and Bethel to prevent his people from worshipping at the Jerusalem Temple, establishing rival worship centers.",
-    "scriptureRefs": ["1 Kings 12:26-33"],
-    "relatedPeople": ["jeroboam-i"],
-    "relatedBooks": ["1-kings"],
+    "scriptureRefs": [
+      "1 Kings 12:26-33"
+    ],
+    "relatedPeople": [
+      "jeroboam-i"
+    ],
+    "relatedBooks": [
+      "1-kings"
+    ],
     "category": "Judgment",
-    "themes": ["Judgment", "Monarchy"]
+    "themes": [
+      "Judgment",
+      "Monarchy"
+    ]
   },
   {
     "id": "elijah-mount-carmel",
@@ -486,11 +764,79 @@
     "kingdom": "Israel",
     "track": "events",
     "description": "Elijah challenged 450 prophets of Baal on Mount Carmel. God sent fire from heaven to consume the sacrifice, proving He alone is God.",
-    "scriptureRefs": ["1 Kings 18:16-46"],
-    "relatedPeople": ["elijah", "ahab"],
-    "relatedBooks": ["1-kings"],
+    "scriptureRefs": [
+      "1 Kings 18:16-46"
+    ],
+    "relatedPeople": [
+      "elijah",
+      "ahab"
+    ],
+    "relatedBooks": [
+      "1-kings"
+    ],
     "category": "Deliverance",
-    "themes": ["Deliverance", "Judgment"]
+    "themes": [
+      "Deliverance",
+      "Judgment"
+    ]
+  },
+  {
+    "id": "first-olympic-games-in-greece",
+    "name": "First Olympic Games in Greece",
+    "year": 776,
+    "era": "BC",
+    "approximate": false,
+    "category": "Historical",
+    "priority": 2,
+    "track": "events",
+    "description": "The first recorded Olympic Games were held at Olympia in Greece, featuring a single foot race called the stadion. The games became a cornerstone of Greek culture, held every four years and serving as a unifying event across the Greek city-states.",
+    "source": "Swaddling, Judith. The Ancient Olympic Games. 2nd ed., U of Texas P, 1999."
+  },
+  {
+    "id": "founding-of-rome",
+    "name": "Founding of Rome",
+    "year": 753,
+    "era": "BC",
+    "approximate": true,
+    "category": "Historical",
+    "priority": 2,
+    "track": "events",
+    "description": "According to Roman tradition, Romulus founded the city of Rome on the Palatine Hill after killing his twin brother Remus. From these humble beginnings, Rome would grow into one of the most powerful empires in world history.",
+    "source": "Livy. The Early History of Rome: Books I-V of The History of Rome from Its Foundation. Translated by Aubrey de Selincourt, Penguin Classics, 2002.",
+    "relatedPeople": [
+      "romulus"
+    ]
+  },
+  {
+    "id": "fall-of-northern-kingdom",
+    "name": "The Fall of the Northern Kingdom",
+    "year": 721,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "kingdom": "Israel",
+    "track": "events",
+    "description": "Assyria conquered the northern kingdom of Israel, deported its people, and resettled the land with foreigners. This ended the northern kingdom.",
+    "scriptureRefs": [
+      "2 Kgs 17:1-23"
+    ],
+    "relatedPeople": [
+      "hoshea",
+      "isaiah",
+      "hosea",
+      "micah"
+    ],
+    "relatedBooks": [
+      "2-kings",
+      "isaiah",
+      "hosea-book",
+      "micah-book"
+    ],
+    "category": "Exile",
+    "themes": [
+      "Judgment"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
   {
     "id": "hezekiahs-reform",
@@ -502,11 +848,42 @@
     "kingdom": "Judah",
     "track": "events",
     "description": "Hezekiah reopened and cleansed the Temple, restored proper worship, and celebrated Passover. He also destroyed the bronze serpent Moses had made.",
-    "scriptureRefs": ["2 Chronicles 29-31", "2 Kings 18:1-8"],
-    "relatedPeople": ["hezekiah"],
-    "relatedBooks": ["2-kings"],
+    "scriptureRefs": [
+      "2 Chronicles 29-31",
+      "2 Kings 18:1-8"
+    ],
+    "relatedPeople": [
+      "hezekiah"
+    ],
+    "relatedBooks": [
+      "2-kings"
+    ],
     "category": "Restoration",
-    "themes": ["Restoration"]
+    "themes": [
+      "Restoration"
+    ]
+  },
+  {
+    "id": "rise-of-the-neo-babylonian-empire",
+    "name": "Rise of the Neo-Babylonian Empire",
+    "year": 626,
+    "endYear": 539,
+    "era": "BC",
+    "approximate": false,
+    "category": "Historical",
+    "priority": 2,
+    "track": "events",
+    "description": "Nabopolassar freed Babylon from Assyrian control and established the Neo-Babylonian Empire, which reached its zenith under his son Nebuchadnezzar II. This empire destroyed Jerusalem and the Temple in 586 BC and built the legendary Hanging Gardens.",
+    "source": "Wiseman, D. J. Nebuchadrezzar and Babylon. Oxford UP, 1985. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994.",
+    "relatedPeople": [
+      "nabopolassar",
+      "nebuchadnezzar"
+    ],
+    "relatedBooks": [
+      "2-kings",
+      "jeremiah-book",
+      "daniel-book"
+    ]
   },
   {
     "id": "josiahs-reform",
@@ -518,11 +895,21 @@
     "kingdom": "Judah",
     "track": "events",
     "description": "During Temple repairs, the Book of the Law was discovered. Josiah led sweeping reforms, destroyed pagan shrines, and renewed the covenant with God.",
-    "scriptureRefs": ["2 Kings 22-23", "2 Chronicles 34-35"],
-    "relatedPeople": ["josiah"],
-    "relatedBooks": ["2-kings"],
+    "scriptureRefs": [
+      "2 Kings 22-23",
+      "2 Chronicles 34-35"
+    ],
+    "relatedPeople": [
+      "josiah"
+    ],
+    "relatedBooks": [
+      "2-kings"
+    ],
     "category": "Restoration",
-    "themes": ["Restoration", "Covenant"]
+    "themes": [
+      "Restoration",
+      "Covenant"
+    ]
   },
   {
     "id": "first-deportation-babylon",
@@ -534,11 +921,18 @@
     "kingdom": "Judah",
     "track": "events",
     "description": "Nebuchadnezzar defeated Egypt at Carchemish and took the first group of Judean exiles to Babylon, including Daniel and other young nobles.",
-    "scriptureRefs": ["Daniel 1:1-6", "2 Kings 24:1"],
+    "scriptureRefs": [
+      "Daniel 1:1-6",
+      "2 Kings 24:1"
+    ],
     "relatedPeople": [],
-    "relatedBooks": ["2-kings"],
+    "relatedBooks": [
+      "2-kings"
+    ],
     "category": "Judgment",
-    "themes": ["Judgment"]
+    "themes": [
+      "Judgment"
+    ]
   },
   {
     "id": "second-deportation-babylon",
@@ -550,10 +944,169 @@
     "kingdom": "Judah",
     "track": "events",
     "description": "After King Jehoiachin's rebellion, Nebuchadnezzar besieged Jerusalem, took the king captive, and deported 10,000 of Judah's leading citizens.",
-    "scriptureRefs": ["2 Kings 24:10-16"],
+    "scriptureRefs": [
+      "2 Kings 24:10-16"
+    ],
     "relatedPeople": [],
-    "relatedBooks": ["2-kings"],
+    "relatedBooks": [
+      "2-kings"
+    ],
     "category": "Judgment",
-    "themes": ["Judgment"]
+    "themes": [
+      "Judgment"
+    ]
+  },
+  {
+    "id": "destruction-of-jerusalem",
+    "name": "The Babylonian Captivity",
+    "year": 586,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "kingdom": "Judah",
+    "track": "events",
+    "description": "Babylon destroyed Jerusalem and the Temple and deported most of Judah. This began the 70-year exile prophesied by Jeremiah.",
+    "scriptureRefs": [
+      "2 Kgs 24-25; 2 Chr 36:5-21; Jer 39; 52"
+    ],
+    "relatedPeople": [
+      "nebuchadnezzar",
+      "jeremiah",
+      "daniel",
+      "ezekiel",
+      "zedekiah"
+    ],
+    "relatedBooks": [
+      "2-kings",
+      "2-chronicles",
+      "jeremiah-book",
+      "lamentations",
+      "daniel-book",
+      "ezekiel-book"
+    ],
+    "category": "Exile",
+    "themes": [
+      "Judgment"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
+  },
+  {
+    "id": "return-from-exile",
+    "name": "The Return from Exile",
+    "year": 538,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "kingdom": "Judah",
+    "track": "events",
+    "description": "Persian king Cyrus issued a decree allowing the Jews to return to Jerusalem and rebuild the Temple. About 50,000 returned under Zerubbabel.",
+    "scriptureRefs": [
+      "Ezra 1-6; 2 Chr 36:22-23; Isa 44:28-45:1"
+    ],
+    "relatedPeople": [
+      "cyrus",
+      "zerubbabel",
+      "ezra",
+      "haggai",
+      "zechariah"
+    ],
+    "relatedBooks": [
+      "ezra",
+      "2-chronicles",
+      "isaiah",
+      "haggai-book",
+      "zechariah-book"
+    ],
+    "category": "Restoration",
+    "themes": [
+      "Restoration",
+      "Deliverance"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
+  },
+  {
+    "id": "dedication-of-second-temple",
+    "name": "The dedication of the second Temple",
+    "year": 515,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "kingdom": "Judah",
+    "track": "events",
+    "description": "After returning from the Babylonian captivity, the Jewish people completed the reconstruction of the temple on March 12, 515 BC. Its dedication was a pivotal moment in preserving the nation’s religious heritage and workshop identity after 70 years of exile",
+    "scriptureRefs": [
+      "Ezra 6:13-18; Hag 1-2"
+    ],
+    "relatedPeople": [
+      "zerubbabel",
+      "haggai",
+      "zechariah",
+      "joshua"
+    ],
+    "relatedBooks": [
+      "ezra",
+      "haggai-book",
+      "zechariah-book"
+    ],
+    "category": "Restoration",
+    "themes": [
+      "Temple",
+      "Restoration"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
+  },
+  {
+    "id": "battle-of-marathon",
+    "name": "Battle of Marathon",
+    "year": 490,
+    "era": "BC",
+    "approximate": false,
+    "category": "Historical",
+    "priority": 2,
+    "track": "events",
+    "description": "A vastly outnumbered Athenian army defeated the invading Persian forces on the plain of Marathon, marking a turning point in the Greco-Persian Wars. The victory preserved Greek independence and became a defining moment in Western civilization.",
+    "source": "Herodotus. The Histories. Translated by Robin Waterfield, Oxford UP, 1998."
+  },
+  {
+    "id": "construction-of-the-parthenon",
+    "name": "Construction of the Parthenon",
+    "year": 447,
+    "endYear": 432,
+    "era": "BC",
+    "approximate": false,
+    "category": "Historical",
+    "priority": 2,
+    "track": "events",
+    "description": "Athens built the Parthenon atop the Acropolis during the golden age of Pericles as a temple to the goddess Athena. It stands as one of the greatest achievements of classical Greek architecture and a symbol of Athenian democracy at its height.",
+    "source": "Hurwit, Jeffrey M. The Athenian Acropolis: History, Mythology, and Archaeology from the Neolithic Era to the Present. Cambridge UP, 1999.",
+    "relatedPeople": [
+      "pericles"
+    ]
+  },
+  {
+    "id": "rebuilding-jerusalems-walls",
+    "name": "The rebuilding of Jerusalem’s Walls",
+    "year": 444,
+    "era": "BC",
+    "approximate": true,
+    "priority": 2,
+    "kingdom": "Judah",
+    "track": "events",
+    "description": "Nehemiah led the effort to restore the city’s dilapidated walls to protect the inhabitants from external threats and prevent assimilation into surrounding cultures. Despite intense opposition, the project was remarkably completed in 52 Days.",
+    "scriptureRefs": [
+      "Neh 1-7; 12:27-47"
+    ],
+    "relatedPeople": [
+      "nehemiah",
+      "ezra"
+    ],
+    "relatedBooks": [
+      "nehemiah"
+    ],
+    "category": "Restoration",
+    "themes": [
+      "Restoration"
+    ],
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   }
 ]
