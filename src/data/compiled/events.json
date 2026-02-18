@@ -357,7 +357,7 @@
   {
     "id": "fall-of-northern-kingdom",
     "type": "event",
-    "name": "The Fall of the Northern Kingdom",
+    "name": "Fall of the Northern Kingdom",
     "startYear": 721,
     "endYear": 721,
     "certainty": "exact",
@@ -368,10 +368,12 @@
       "Judgment"
     ],
     "priority": 1,
-    "description": "Assyria conquered the northern kingdom of Israel, deported its people, and resettled the land with foreigners. This ended the northern kingdom.",
+    "description": "After a three-year siege, Assyria captured Samaria and deported the Israelites. The northern kingdom ceased to exist as an independent nation.",
     "scriptureRefs": [
-      "2 Kgs 17"
+      "2 Kings 17:5-6",
+      "2 Kings 18:9-12"
     ],
+    "kingdom": "Israel",
     "swimlane": 0
   },
   {
@@ -501,28 +503,6 @@
     "description": "Elijah challenged 450 prophets of Baal on Mount Carmel. God sent fire from heaven to consume the sacrifice, proving He alone is God.",
     "scriptureRefs": [
       "1 Kings 18:16-46"
-    ],
-    "kingdom": "Israel",
-    "swimlane": 2
-  },
-  {
-    "id": "assyrian-siege-samaria",
-    "type": "event",
-    "name": "Assyrian Siege of Samaria",
-    "startYear": 721,
-    "endYear": 721,
-    "certainty": "exact",
-    "categories": [
-      "judgment"
-    ],
-    "themes": [
-      "Judgment"
-    ],
-    "priority": 1,
-    "description": "After a three-year siege, Assyria captured Samaria and deported the Israelites. The northern kingdom ceased to exist as an independent nation.",
-    "scriptureRefs": [
-      "2 Kings 17:5-6",
-      "2 Kings 18:9-12"
     ],
     "kingdom": "Israel",
     "swimlane": 2

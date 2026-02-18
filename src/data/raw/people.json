@@ -1414,7 +1414,7 @@
     "description": "Last king of the northern kingdom",
     "bio": "Last king of Israel. Conspired against Pekah and became an Assyrian vassal. His secret alliance with Egypt provoked the Assyrian siege and fall of Samaria in 721 BC.",
     "scriptureRefs": ["2 Kings 17:1-6"],
-    "relatedEvents": ["assyrian-siege-samaria"],
+    "relatedEvents": ["fall-of-northern-kingdom"],
     "relatedBooks": ["2-kings"],
     "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
   },

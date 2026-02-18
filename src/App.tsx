@@ -146,16 +146,37 @@ function App() {
         <PeriodSection yearToX={yearToX} pixelsPerYear={pixelsPerYear} totalHeight={sectionLayout.periodSectionHeight} unknownVisualStartYear={UNKNOWN_VISUAL_START_YEAR} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} />
         <KingdomBackground yearToX={yearToX} topOffset={sectionLayout.mainSectionTop} />
         <TimeGrid startYear={START_YEAR} endYear={END_YEAR} height={sectionLayout.foundationHeight} axisY={sectionLayout.mainSectionTop + 2} />
-        <TrackLabels tracks={sectionLayout.tracks} />
+        <TrackLabels tracks={sectionLayout.tracks} startX={unknownVisualBand.startX} />
         <KingdomLaneDivider yearToX={yearToX} dividerY={MAIN_TOP + 400} />
         <RelationshipOverlay breadcrumbEntities={breadcrumbEntities} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} unknownEntityXById={unknownEntityXById} yearToX={yearToX} tracks={sectionLayout.tracks} />
-        {nodePlacements.map(({ entity, x, width, trackBand, forcePointNode }) => {
+        {/* Books coming soon overlay */}
+        <div
+          className="absolute flex items-center justify-center pointer-events-none"
+          style={{
+            left: 0,
+            top: sectionLayout.booksSectionTop,
+            width: TIMELINE_WIDTH,
+            height: sectionLayout.booksSectionHeight,
+            color: 'var(--color-base-text-secondary)',
+            fontSize: '14px',
+            fontFamily: 'var(--font-timeline)',
+            fontStyle: 'italic',
+            letterSpacing: '0.05em',
+          }}
+        >
+          Coming Soon
+        </div>
+        {nodePlacements.filter(({ entity }) => entity.type !== 'book').map(({ entity, x, width, trackBand, forcePointNode }) => {
           const isHighlighted = activeThemes.length > 0 && entity.themes?.some(t => activeThemes.includes(t));
           const isDimmed = activeThemes.length > 0 && !isHighlighted;
           const breadcrumbNumber = getBreadcrumbNumber(entity.id);
+          // Center "Division of the Kingdom" at Solomon's Y (SVG y=400)
+          const y = entity.id === 'division-of-the-kingdom'
+            ? MAIN_TOP + 400 - trackBand.laneStride / 2
+            : trackBand.baseY;
           return (
             <TimelineNode
-              key={`${entity.type}-${entity.id}`} entity={entity} x={x} y={trackBand.baseY} width={width}
+              key={`${entity.type}-${entity.id}`} entity={entity} x={x} y={y} width={width}
               height={trackBand.laneStride} laneStride={trackBand.laneStride} zoomLevel={zoomLevel}
               isHighlighted={isHighlighted || false} isDimmed={isDimmed}
               isInBreadcrumb={breadcrumbNumber !== undefined} breadcrumbNumber={breadcrumbNumber}

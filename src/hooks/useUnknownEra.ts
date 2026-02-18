@@ -29,9 +29,10 @@ export function useUnknownEra({
       });
 
     const map = new Map<string, number>();
-    const inset = 28;
-    const minX = unknownVisualBand.startX + inset;
-    const maxX = unknownVisualBand.startX + Math.max(inset, unknownVisualBand.width - inset);
+    const edgeInset = 4;
+    const endInset = 28;
+    const minX = unknownVisualBand.startX + edgeInset;
+    const maxX = unknownVisualBand.startX + Math.max(endInset, unknownVisualBand.width - endInset);
     const span = Math.max(0, maxX - minX);
     const divisor = Math.max(1, unknownEntities.length - 1);
 

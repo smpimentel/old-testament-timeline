@@ -828,7 +828,7 @@
   {
     "id": "rel-119",
     "sourceId": "hoshea",
-    "targetId": "assyrian-siege-samaria",
+    "targetId": "fall-of-northern-kingdom",
     "type": "event-participant",
     "confidence": "high"
   },
@@ -1345,14 +1345,14 @@
   },
   {
     "id": "rel-193",
-    "sourceId": "assyrian-siege-samaria",
+    "sourceId": "fall-of-northern-kingdom",
     "targetId": "hoshea",
     "type": "event-participant",
     "confidence": "high"
   },
   {
     "id": "rel-194",
-    "sourceId": "assyrian-siege-samaria",
+    "sourceId": "fall-of-northern-kingdom",
     "targetId": "2-kings",
     "type": "book-subject",
     "confidence": "high"

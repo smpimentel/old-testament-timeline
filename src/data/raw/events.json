@@ -359,17 +359,19 @@
   },
   {
     "id": "fall-of-northern-kingdom",
-    "name": "The Fall of the Northern Kingdom",
+    "name": "Fall of the Northern Kingdom",
     "year": 721,
     "era": "BC",
     "approximate": false,
     "priority": 1,
+    "kingdom": "Israel",
     "track": "events",
-    "description": "Assyria conquered the northern kingdom of Israel, deported its people, and resettled the land with foreigners. This ended the northern kingdom.",
+    "description": "After a three-year siege, Assyria captured Samaria and deported the Israelites. The northern kingdom ceased to exist as an independent nation.",
     "scriptureRefs": [
-      "2 Kgs 17"
+      "2 Kings 17:5-6",
+      "2 Kings 18:9-12"
     ],
-    "relatedPeople": [],
+    "relatedPeople": ["hoshea"],
     "relatedBooks": [
       "2-kings"
     ],
@@ -489,22 +491,6 @@
     "relatedBooks": ["1-kings"],
     "category": "Deliverance",
     "themes": ["Deliverance", "Judgment"]
-  },
-  {
-    "id": "assyrian-siege-samaria",
-    "name": "Assyrian Siege of Samaria",
-    "year": 721,
-    "era": "BC",
-    "approximate": false,
-    "priority": 1,
-    "kingdom": "Israel",
-    "track": "events",
-    "description": "After a three-year siege, Assyria captured Samaria and deported the Israelites. The northern kingdom ceased to exist as an independent nation.",
-    "scriptureRefs": ["2 Kings 17:5-6", "2 Kings 18:9-12"],
-    "relatedPeople": ["hoshea"],
-    "relatedBooks": ["2-kings"],
-    "category": "Judgment",
-    "themes": ["Judgment"]
   },
   {
     "id": "hezekiahs-reform",

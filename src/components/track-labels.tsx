@@ -4,6 +4,7 @@ interface TrackLabelsProps {
     people: { baseY: number };
     books: { baseY: number };
   };
+  startX: number;
 }
 
 const LABEL_STYLE = {
@@ -13,9 +14,9 @@ const LABEL_STYLE = {
   fontFamily: 'var(--font-timeline)',
 } as const;
 
-export function TrackLabels({ tracks }: TrackLabelsProps) {
+export function TrackLabels({ tracks, startX }: TrackLabelsProps) {
   return (
-    <div className="absolute left-4 pointer-events-none">
+    <div className="absolute pointer-events-none" style={{ left: startX + 8 }}>
       {(['events', 'people', 'books'] as const).map((type) => (
         <div
           key={type}

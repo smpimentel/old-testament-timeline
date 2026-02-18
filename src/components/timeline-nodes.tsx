@@ -1,6 +1,6 @@
 import { type TimelineEntity, type Period, roleColors, eventColors, genreColors } from '../data/timeline-data';
 import { getNodeMetrics, themeHighlightColors, breadcrumbAccentColor } from '../config/timeline-node-config';
-import { yearToX as scaleYearToX } from '../lib/scale';
+import { yearToX as scaleYearToX, LOG_BOUNDARY } from '../lib/scale';
 
 // ===== PERIOD BAND =====
 interface PeriodBandProps {
@@ -93,17 +93,19 @@ export function TimeGrid({
           background: 'var(--color-base-grid-major)',
         }}
       >
-        <div
-          className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap"
-          style={{
-            fontSize: 'var(--type-label-xs-size)',
-            color: 'var(--color-base-text-secondary)',
-            fontWeight: 400,
-            fontFamily: 'var(--font-timeline)',
-          }}
-        >
-          {year} BC
-        </div>
+        {year <= LOG_BOUNDARY && (
+          <div
+            className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap"
+            style={{
+              fontSize: 'var(--type-label-xs-size)',
+              color: 'var(--color-base-text-secondary)',
+              fontWeight: 400,
+              fontFamily: 'var(--font-timeline)',
+            }}
+          >
+            {year} BC
+          </div>
+        )}
       </div>
     );
   }
@@ -202,37 +204,6 @@ export function RoleBadge({ role, size = 'medium' }: RoleBadgeProps) {
   );
 }
 
-// ===== DATE BADGE =====
-interface DateBadgeProps {
-  startYear: number;
-  endYear?: number;
-  certainty: TimelineEntity['certainty'];
-}
-
-function DateBadge({ startYear, endYear, certainty }: DateBadgeProps) {
-  const isApproximate = certainty === 'approximate';
-  const label = endYear 
-    ? `${isApproximate ? 'c. ' : ''}${startYear}-${endYear} BC`
-    : `${isApproximate ? 'c. ' : ''}${startYear} BC`;
-
-  return (
-    <div
-      className="px-2 py-0.5 rounded font-mono"
-      style={{
-        background: 'var(--color-base-surface-elevated)',
-        border: isApproximate 
-          ? '1.5px dashed var(--color-base-text-secondary)'
-          : '1.5px solid var(--color-base-text-primary)',
-        color: 'var(--color-base-text-primary)',
-        fontSize: '10px',
-        fontWeight: 500,
-        whiteSpace: 'nowrap',
-      }}
-    >
-      {label}
-    </div>
-  );
-}
 
 // ===== TIMELINE NODE =====
 interface TimelineNodeProps {
@@ -459,16 +430,6 @@ export function TimelineNode({
         );
       })()}
 
-      {/* Date badge on hover for higher zoom */}
-      {showBadges && (
-        <div className="absolute left-0 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" style={{ bottom: nodeHeight + 4 }}>
-          <DateBadge
-            startYear={entity.startYear}
-            endYear={entity.endYear}
-            certainty={entity.certainty}
-          />
-        </div>
-      )}
     </button>
   );
 }

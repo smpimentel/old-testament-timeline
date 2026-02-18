@@ -15,15 +15,14 @@ const entities = [
 ];
 
 const periods = [
-  { id: 'dates-unknown', name: 'Dates Unknown', startYear: 4000, endYear: 2500, color: '#E0E0E0', description: 'Creation, Fall, Flood, Tower of Babel' },
-  { id: 'patriarchs', name: 'Time of the Patriarchs', startYear: 2166, endYear: 1876, color: '#FFF9C4', description: 'Abraham, Isaac, Jacob' },
-  { id: 'egypt', name: 'Israel in Egypt', startYear: 1876, endYear: 1446, color: '#FFCCBC', description: 'Israel enslaved in Egypt' },
+  { id: 'dates-unknown', name: 'Unknown', startYear: 4004, endYear: 2166, color: '#E0E0E0', description: 'Creation, Fall, Flood, Tower of Babel' },
+  { id: 'patriarchs', name: 'Patriarch', startYear: 2166, endYear: 1876, color: '#FFF9C4', description: 'Abraham, Isaac, Jacob' },
+  { id: 'egypt', name: 'Sojourn', startYear: 1876, endYear: 1446, color: '#FFCCBC', description: 'Israel enslaved in Egypt' },
   { id: 'wandering', name: 'Wandering', startYear: 1446, endYear: 1406, color: '#D7CCC8', description: 'Wilderness journey to Promised Land' },
-  { id: 'judges', name: 'Era of the Judges', startYear: 1406, endYear: 1050, color: '#C8E6C9', description: 'Israel repeatedly fell into idolatry, oppression, repentance, and deliverance through judges.' },
-  { id: 'united-kingdom', name: 'The Kings / United Kingdom', startYear: 1050, endYear: 930, color: '#BBDEFB', description: 'Saul, David, Solomon united Israel' },
-  { id: 'divided-kingdom', name: 'Kingdom Divides', startYear: 930, endYear: 586, color: '#E1BEE7', description: 'Kingdom split into Israel (north) and Judah (south)' },
-  { id: 'exile', name: 'Exile', startYear: 586, endYear: 538, color: '#BDBDBD', description: 'Babylonian captivity' },
-  { id: 'restoration', name: 'The Restoration', startYear: 538, endYear: 400, color: '#B2DFDB', description: 'Return from exile, temple rebuilt' },
+  { id: 'judges', name: 'Conquest/Judges', startYear: 1406, endYear: 1050, color: '#C8E6C9', description: 'Conquest of Canaan followed by the era of the judges.' },
+  { id: 'united-kingdom', name: 'United Monarchy', startYear: 1050, endYear: 930, color: '#BBDEFB', description: 'Saul, David, and Solomon ruled a united Israel.' },
+  { id: 'divided-kingdom', name: 'Divided Monarchy', startYear: 930, endYear: 586, color: '#E1BEE7', description: 'Kingdom split into Israel (north) and Judah (south)' },
+  { id: 'exile', name: 'Exile and Restoration', startYear: 586, endYear: 400, color: '#BDBDBD', description: 'Babylonian exile and the return to rebuild temple and covenant life.' },
 ];
 
 const NODE_COLORS = {

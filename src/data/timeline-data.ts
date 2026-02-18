@@ -417,8 +417,10 @@ function transformThemes(data: typeof themesData): Theme[] {
 
 // ===== SWIMLANE COLLISION DETECTION =====
 // Padding (in years) to prevent visual overlap from labels/markers.
-// At 4px/yr: 10yr = 40px buffer — enough clearance for event circles + labels.
-const LANE_GAP_YEARS = 10;
+// Gap after placing an entity before next can share the lane.
+// Point events need wider gap for labels (~150px at 4px/yr ≈ 40yr).
+const LANE_GAP_SPAN = 10;
+const LANE_GAP_POINT = 40;
 
 function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
   const sorted = group.sort((a, b) => b.startYear - a.startYear);
@@ -426,13 +428,15 @@ function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
 
   sorted.forEach((entity) => {
     const end = entity.endYear || entity.startYear;
+    const isPoint = !entity.endYear;
+    const gap = isPoint ? LANE_GAP_POINT : LANE_GAP_SPAN;
     let laneIndex = lanes.findIndex((lane) => lane.end > entity.startYear);
 
     if (laneIndex === -1) {
       laneIndex = lanes.length;
-      lanes.push({ end: end - LANE_GAP_YEARS });
+      lanes.push({ end: end - gap });
     } else {
-      lanes[laneIndex].end = Math.min(lanes[laneIndex].end, end - LANE_GAP_YEARS);
+      lanes[laneIndex].end = Math.min(lanes[laneIndex].end, end - gap);
     }
 
     entity.swimlane = laneIndex + offset;

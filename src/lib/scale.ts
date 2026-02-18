@@ -6,9 +6,6 @@ export const LOG_BAND_PX = 1350;      // px budget for pre-2300 BC era (fills ga
 export const LINEAR_PX_PER_YEAR = 4;  // post-2300 BC scale
 export const TIMELINE_X_OFFSET = -830; // shift content left; net -80px on linear zone (20yr), creation at bg edge
 
-// Compensation for kingdom background to stay in its original position
-const ORIGINAL_LOG_BAND_PX = 600;
-export const BG_ANCHOR_COMPENSATION = (LOG_BAND_PX - ORIGINAL_LOG_BAND_PX) + TIMELINE_X_OFFSET;
 
 /**
  * Convert a BC year to world-space x position.
