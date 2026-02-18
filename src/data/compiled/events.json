@@ -337,8 +337,8 @@
     "id": "division-of-the-kingdom",
     "type": "event",
     "name": "The Division of the Kingdom",
-    "startYear": 961,
-    "endYear": 961,
+    "startYear": 931,
+    "endYear": 931,
     "certainty": "exact",
     "categories": [
       "monarchy"
