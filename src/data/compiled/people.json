@@ -355,7 +355,7 @@
     "name": "Adam",
     "startYear": 4004,
     "endYear": 3074,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "Patriarch"
     ],
@@ -376,7 +376,7 @@
     "name": "Eve",
     "startYear": 4004,
     "endYear": 3074,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "Patriarch"
     ],
@@ -397,7 +397,7 @@
     "name": "Noah",
     "startYear": 2948,
     "endYear": 1998,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "Patriarch"
     ],
@@ -481,7 +481,7 @@
     "name": "Cain",
     "startYear": 3974,
     "endYear": 3904,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "Other"
     ],
@@ -498,7 +498,7 @@
     "name": "Abel",
     "startYear": 3974,
     "endYear": 3904,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "Other"
     ],
@@ -515,7 +515,7 @@
     "name": "Seth",
     "startYear": 3974,
     "endYear": 3904,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "Other"
     ],
@@ -532,7 +532,7 @@
     "name": "Lamech",
     "startYear": 2978,
     "endYear": 2908,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "Other"
     ],
@@ -549,7 +549,7 @@
     "name": "Shem",
     "startYear": 2918,
     "endYear": 2848,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "Other"
     ],
@@ -566,7 +566,7 @@
     "name": "Ham",
     "startYear": 2918,
     "endYear": 2848,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "Other"
     ],
@@ -583,7 +583,7 @@
     "name": "Japheth",
     "startYear": 2918,
     "endYear": 2848,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "Other"
     ],

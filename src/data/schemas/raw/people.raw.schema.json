@@ -80,6 +80,20 @@
         },
         "description": "IDs of related books"
       },
+      "source": {
+        "type": "string",
+        "description": "Data source attribution"
+      },
+      "timelineStory": {
+        "type": "string",
+        "enum": ["Active", "Life"],
+        "description": "Whether dates represent activity span or full lifespan"
+      },
+      "relatedPeople": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "IDs of related people"
+      },
       "familyTree": {
         "type": "object",
         "properties": {

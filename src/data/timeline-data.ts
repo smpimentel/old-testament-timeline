@@ -42,6 +42,7 @@ export const EVENT_CATEGORIES = [
   'monarchy',
   'restoration',
   'event',
+  'secular-context',
 ] as const;
 
 export type EventCategory = (typeof EVENT_CATEGORIES)[number];
@@ -67,6 +68,8 @@ export interface TimelineEntity {
   notes?: string;
   swimlane?: number;
   details?: string;
+  source?: string;
+  timelineStory?: 'Active' | 'Life';
 }
 
 export interface Period {
@@ -195,6 +198,7 @@ export const eventColors: Record<EventCategory, string> = {
   monarchy: '#F4D19B',
   restoration: '#C8D4B8',
   event: '#D9C4A8',
+  'secular-context': '#B8B0A8',
 };
 
 // ===== BOOK GENRE COLOR MAPPING =====
@@ -211,6 +215,7 @@ function normalizeToken(value: string): string {
 export function normalizeEventCategory(rawCategory?: string): EventCategory {
   if (!rawCategory) return 'event';
   const normalized = normalizeToken(rawCategory);
+  if (normalized === 'historical') return 'secular-context';
   if (eventCategorySet.has(normalized)) {
     return normalized as EventCategory;
   }
@@ -303,6 +308,8 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
       scripture: p.scriptureRefs?.join(', '),
       notes: p.bio,
       swimlane: p.swimlane || 0,
+      source: raw.source as string | undefined,
+      timelineStory: raw.timelineStory as 'Active' | 'Life' | undefined,
     };
   });
 }
@@ -328,6 +335,7 @@ function transformEvents(data: typeof eventsData): TimelineEntity[] {
       relationships: relationshipMap.get(e.id),
       scripture: e.scriptureRefs?.join(', '),
       swimlane: e.swimlane || 0,
+      source: raw.source as string | undefined,
     };
   });
 }

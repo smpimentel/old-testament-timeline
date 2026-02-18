@@ -5,7 +5,7 @@
     "name": "The Great Flood",
     "startYear": 2348,
     "endYear": 2348,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "judgment"
     ],
@@ -93,7 +93,7 @@
     "name": "Creation",
     "startYear": 4004,
     "endYear": 4004,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "origins"
     ],
@@ -113,7 +113,7 @@
     "name": "The Fall",
     "startYear": 4004,
     "endYear": 4004,
-    "certainty": "approximate",
+    "certainty": "estimated",
     "categories": [
       "origins"
     ],
@@ -374,7 +374,7 @@
       "2 Kings 18:9-12"
     ],
     "kingdom": "Israel",
-    "swimlane": 0
+    "swimlane": 2
   },
   {
     "id": "destruction-of-jerusalem",

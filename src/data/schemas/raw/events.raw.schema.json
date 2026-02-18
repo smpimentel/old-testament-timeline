@@ -60,6 +60,10 @@
           "type": "string"
         }
       },
+      "source": {
+        "type": "string",
+        "description": "Data source attribution"
+      },
       "relatedPeople": {
         "type": "array",
         "items": {
