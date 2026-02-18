@@ -1,1700 +1,2218 @@
 [
   {
     "id": "rel-1",
-    "sourceId": "terah",
-    "targetId": "abraham",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-2",
-    "sourceId": "terah",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-3",
-    "sourceId": "sarah",
-    "targetId": "abraham",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-4",
-    "sourceId": "sarah",
-    "targetId": "isaac",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-5",
-    "sourceId": "sarah",
-    "targetId": "call-of-abraham",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-6",
-    "sourceId": "sarah",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-7",
-    "sourceId": "isaac",
-    "targetId": "abraham",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-8",
-    "sourceId": "isaac",
-    "targetId": "sarah",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-9",
-    "sourceId": "isaac",
-    "targetId": "rebekah",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-10",
-    "sourceId": "isaac",
-    "targetId": "jacob",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-11",
-    "sourceId": "isaac",
-    "targetId": "esau",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-12",
-    "sourceId": "isaac",
-    "targetId": "birth-of-isaac",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-13",
-    "sourceId": "isaac",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-14",
-    "sourceId": "ishmael",
-    "targetId": "abraham",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-15",
-    "sourceId": "ishmael",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-16",
-    "sourceId": "amram",
-    "targetId": "jochebed",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-17",
-    "sourceId": "amram",
-    "targetId": "moses",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-18",
-    "sourceId": "amram",
-    "targetId": "exodus-book",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-19",
-    "sourceId": "jochebed",
-    "targetId": "amram",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-20",
-    "sourceId": "jochebed",
-    "targetId": "moses",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-21",
-    "sourceId": "jochebed",
-    "targetId": "exodus-book",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-22",
-    "sourceId": "zipporah",
-    "targetId": "moses",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-23",
-    "sourceId": "zipporah",
-    "targetId": "gershom",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-24",
-    "sourceId": "zipporah",
-    "targetId": "eliezer",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-25",
-    "sourceId": "zipporah",
-    "targetId": "exodus-book",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-26",
-    "sourceId": "gershom",
-    "targetId": "moses",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-27",
-    "sourceId": "gershom",
-    "targetId": "zipporah",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-28",
-    "sourceId": "gershom",
-    "targetId": "exodus-book",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-29",
-    "sourceId": "eliezer",
-    "targetId": "moses",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-30",
-    "sourceId": "eliezer",
-    "targetId": "zipporah",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-31",
-    "sourceId": "eliezer",
-    "targetId": "exodus-book",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-32",
-    "sourceId": "jesse",
-    "targetId": "david",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-33",
-    "sourceId": "bathsheba",
-    "targetId": "david",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-34",
-    "sourceId": "bathsheba",
-    "targetId": "solomon",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-35",
-    "sourceId": "solomon",
-    "targetId": "david",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-36",
-    "sourceId": "solomon",
-    "targetId": "bathsheba",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-37",
-    "sourceId": "solomon",
-    "targetId": "temple-built",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-38",
-    "sourceId": "absalom",
-    "targetId": "david",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-39",
-    "sourceId": "abraham",
-    "targetId": "terah",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-40",
-    "sourceId": "abraham",
-    "targetId": "sarah",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-41",
-    "sourceId": "abraham",
-    "targetId": "isaac",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-42",
-    "sourceId": "abraham",
-    "targetId": "ishmael",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-43",
-    "sourceId": "abraham",
-    "targetId": "call-of-abraham",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-44",
-    "sourceId": "abraham",
-    "targetId": "birth-of-isaac",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-45",
-    "sourceId": "abraham",
-    "targetId": "ishmael-born",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-46",
-    "sourceId": "abraham",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-47",
-    "sourceId": "moses",
-    "targetId": "amram",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-48",
-    "sourceId": "moses",
-    "targetId": "jochebed",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-49",
-    "sourceId": "moses",
-    "targetId": "zipporah",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-50",
-    "sourceId": "moses",
-    "targetId": "gershom",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-51",
-    "sourceId": "moses",
-    "targetId": "eliezer",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-52",
-    "sourceId": "moses",
-    "targetId": "exodus",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-53",
-    "sourceId": "moses",
-    "targetId": "mosaic-covenant",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-54",
-    "sourceId": "moses",
-    "targetId": "exodus-book",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-55",
-    "sourceId": "moses",
-    "targetId": "leviticus",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-56",
-    "sourceId": "moses",
-    "targetId": "numbers",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-57",
-    "sourceId": "moses",
-    "targetId": "deuteronomy",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-58",
-    "sourceId": "david",
-    "targetId": "jesse",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-59",
-    "sourceId": "david",
-    "targetId": "bathsheba",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-60",
-    "sourceId": "david",
-    "targetId": "solomon",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-61",
-    "sourceId": "david",
-    "targetId": "absalom",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-62",
-    "sourceId": "david",
-    "targetId": "temple-built",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-63",
-    "sourceId": "david",
-    "targetId": "psalms",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-64",
     "sourceId": "adam",
     "targetId": "eve",
     "type": "family-spouse",
     "confidence": "high"
   },
   {
-    "id": "rel-65",
+    "id": "rel-2",
     "sourceId": "adam",
     "targetId": "cain",
     "type": "family-child",
     "confidence": "high"
   },
   {
-    "id": "rel-66",
+    "id": "rel-3",
     "sourceId": "adam",
     "targetId": "abel",
     "type": "family-child",
     "confidence": "high"
   },
   {
-    "id": "rel-67",
+    "id": "rel-4",
     "sourceId": "adam",
     "targetId": "seth",
     "type": "family-child",
     "confidence": "high"
   },
   {
-    "id": "rel-68",
+    "id": "rel-5",
     "sourceId": "adam",
     "targetId": "creation",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-69",
+    "id": "rel-6",
     "sourceId": "adam",
     "targetId": "the-fall",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-70",
+    "id": "rel-7",
+    "sourceId": "adam",
+    "targetId": "cain",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-8",
+    "sourceId": "adam",
+    "targetId": "abel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-9",
+    "sourceId": "adam",
+    "targetId": "eve",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-10",
+    "sourceId": "adam",
+    "targetId": "seth",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-11",
     "sourceId": "adam",
     "targetId": "genesis",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-71",
+    "id": "rel-12",
     "sourceId": "eve",
     "targetId": "adam",
     "type": "family-spouse",
     "confidence": "high"
   },
   {
-    "id": "rel-72",
+    "id": "rel-13",
     "sourceId": "eve",
     "targetId": "cain",
     "type": "family-child",
     "confidence": "high"
   },
   {
-    "id": "rel-73",
+    "id": "rel-14",
     "sourceId": "eve",
     "targetId": "abel",
     "type": "family-child",
     "confidence": "high"
   },
   {
-    "id": "rel-74",
+    "id": "rel-15",
     "sourceId": "eve",
     "targetId": "seth",
     "type": "family-child",
     "confidence": "high"
   },
   {
-    "id": "rel-75",
+    "id": "rel-16",
     "sourceId": "eve",
     "targetId": "creation",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-76",
+    "id": "rel-17",
     "sourceId": "eve",
     "targetId": "the-fall",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-77",
+    "id": "rel-18",
+    "sourceId": "eve",
+    "targetId": "adam",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-19",
+    "sourceId": "eve",
+    "targetId": "cain",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-20",
+    "sourceId": "eve",
+    "targetId": "abel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-21",
+    "sourceId": "eve",
+    "targetId": "seth",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-22",
     "sourceId": "eve",
     "targetId": "genesis",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-78",
-    "sourceId": "noah",
-    "targetId": "lamech",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-79",
-    "sourceId": "noah",
-    "targetId": "shem",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-80",
-    "sourceId": "noah",
-    "targetId": "ham",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-81",
-    "sourceId": "noah",
-    "targetId": "japheth",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-82",
-    "sourceId": "noah",
-    "targetId": "flood",
+    "id": "rel-23",
+    "sourceId": "cain",
+    "targetId": "the-fall",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-83",
+    "id": "rel-24",
+    "sourceId": "cain",
+    "targetId": "adam",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-25",
+    "sourceId": "cain",
+    "targetId": "eve",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-26",
+    "sourceId": "cain",
+    "targetId": "abel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-27",
+    "sourceId": "cain",
+    "targetId": "seth",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-28",
+    "sourceId": "cain",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-29",
+    "sourceId": "abel",
+    "targetId": "the-fall",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-30",
+    "sourceId": "abel",
+    "targetId": "adam",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-31",
+    "sourceId": "abel",
+    "targetId": "eve",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-32",
+    "sourceId": "abel",
+    "targetId": "cain",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-33",
+    "sourceId": "abel",
+    "targetId": "seth",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-34",
+    "sourceId": "abel",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-35",
+    "sourceId": "seth",
+    "targetId": "the-fall",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-36",
+    "sourceId": "seth",
+    "targetId": "adam",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-37",
+    "sourceId": "seth",
+    "targetId": "eve",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-38",
+    "sourceId": "seth",
+    "targetId": "cain",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-39",
+    "sourceId": "seth",
+    "targetId": "abel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-40",
+    "sourceId": "seth",
+    "targetId": "noah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-41",
+    "sourceId": "seth",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-49",
     "sourceId": "noah",
     "targetId": "genesis",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-84",
+    "id": "rel-52",
+    "sourceId": "abraham",
+    "targetId": "isaac",
+    "type": "family-child",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-55",
+    "sourceId": "abraham",
+    "targetId": "ishmael-born",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-58",
+    "sourceId": "abraham",
+    "targetId": "isaac",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-59",
+    "sourceId": "abraham",
+    "targetId": "jacob",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-60",
+    "sourceId": "abraham",
+    "targetId": "noah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-61",
+    "sourceId": "abraham",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-62",
+    "sourceId": "isaac",
+    "targetId": "abraham",
+    "type": "family-parent",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-65",
+    "sourceId": "isaac",
+    "targetId": "jacob",
+    "type": "family-child",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-68",
+    "sourceId": "isaac",
+    "targetId": "abraham",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-71",
+    "sourceId": "isaac",
+    "targetId": "jacob",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-73",
+    "sourceId": "isaac",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-74",
     "sourceId": "jacob",
     "targetId": "isaac",
     "type": "family-parent",
     "confidence": "high"
   },
   {
-    "id": "rel-85",
-    "sourceId": "jacob",
-    "targetId": "rebekah",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-86",
-    "sourceId": "jacob",
-    "targetId": "rachel",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-87",
+    "id": "rel-77",
     "sourceId": "jacob",
     "targetId": "joseph",
     "type": "family-child",
     "confidence": "high"
   },
   {
-    "id": "rel-88",
-    "sourceId": "jacob",
-    "targetId": "reuben",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-89",
-    "sourceId": "jacob",
-    "targetId": "simeon",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-90",
+    "id": "rel-80",
     "sourceId": "jacob",
     "targetId": "levi",
     "type": "family-child",
     "confidence": "high"
   },
   {
-    "id": "rel-91",
+    "id": "rel-81",
     "sourceId": "jacob",
     "targetId": "judah",
     "type": "family-child",
     "confidence": "high"
   },
   {
-    "id": "rel-92",
+    "id": "rel-90",
     "sourceId": "jacob",
-    "targetId": "dan",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-93",
-    "sourceId": "jacob",
-    "targetId": "naphtali",
-    "type": "family-child",
+    "targetId": "isaac",
+    "type": "event-participant",
     "confidence": "high"
   },
   {
     "id": "rel-94",
     "sourceId": "jacob",
-    "targetId": "gad",
-    "type": "family-child",
+    "targetId": "levi",
+    "type": "event-participant",
     "confidence": "high"
   },
   {
     "id": "rel-95",
     "sourceId": "jacob",
-    "targetId": "asher",
-    "type": "family-child",
+    "targetId": "judah",
+    "type": "event-participant",
     "confidence": "high"
   },
   {
     "id": "rel-96",
     "sourceId": "jacob",
-    "targetId": "issachar",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-97",
-    "sourceId": "jacob",
-    "targetId": "zebulun",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-98",
-    "sourceId": "jacob",
-    "targetId": "benjamin",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-99",
-    "sourceId": "jacob",
-    "targetId": "twelve-tribes-of-israel",
+    "targetId": "joseph",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-100",
+    "id": "rel-97",
     "sourceId": "jacob",
     "targetId": "genesis",
     "type": "book-subject",
     "confidence": "high"
   },
   {
+    "id": "rel-99",
+    "sourceId": "levi",
+    "targetId": "jacob",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
     "id": "rel-101",
+    "sourceId": "levi",
+    "targetId": "judah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-102",
+    "sourceId": "levi",
+    "targetId": "joseph",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-103",
+    "sourceId": "levi",
+    "targetId": "moses",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-104",
+    "sourceId": "levi",
+    "targetId": "aaron",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-105",
+    "sourceId": "levi",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-107",
+    "sourceId": "judah",
+    "targetId": "jacob",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-109",
+    "sourceId": "judah",
+    "targetId": "levi",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-110",
+    "sourceId": "judah",
+    "targetId": "joseph",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-111",
+    "sourceId": "judah",
+    "targetId": "david",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-112",
+    "sourceId": "judah",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-113",
     "sourceId": "joseph",
     "targetId": "jacob",
     "type": "family-parent",
     "confidence": "high"
   },
   {
-    "id": "rel-102",
-    "sourceId": "joseph",
-    "targetId": "rachel",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-103",
-    "sourceId": "joseph",
-    "targetId": "asenath",
-    "type": "family-spouse",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-104",
+    "id": "rel-116",
     "sourceId": "joseph",
     "targetId": "manasseh",
     "type": "family-child",
     "confidence": "high"
   },
   {
-    "id": "rel-105",
-    "sourceId": "joseph",
-    "targetId": "ephraim",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-106",
+    "id": "rel-119",
     "sourceId": "joseph",
     "targetId": "josephs-exaltation-in-egypt",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-107",
+    "id": "rel-120",
+    "sourceId": "joseph",
+    "targetId": "jacob",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-122",
+    "sourceId": "joseph",
+    "targetId": "judah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-123",
+    "sourceId": "joseph",
+    "targetId": "levi",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-124",
+    "sourceId": "joseph",
+    "targetId": "moses",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-125",
     "sourceId": "joseph",
     "targetId": "genesis",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-108",
-    "sourceId": "samuel",
-    "targetId": "elkanah",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-109",
-    "sourceId": "samuel",
-    "targetId": "hannah",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-110",
-    "sourceId": "samuel",
-    "targetId": "selection-of-king-saul",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-111",
-    "sourceId": "samuel",
-    "targetId": "1-samuel",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-112",
-    "sourceId": "jeroboam-i",
-    "targetId": "division-of-the-kingdom",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-113",
-    "sourceId": "jeroboam-i",
-    "targetId": "jeroboams-golden-calves",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-114",
-    "sourceId": "jeroboam-i",
-    "targetId": "1-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-115",
-    "sourceId": "ahab",
-    "targetId": "elijah-mount-carmel",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-116",
-    "sourceId": "ahab",
-    "targetId": "1-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-117",
-    "sourceId": "jehu",
-    "targetId": "2-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-118",
-    "sourceId": "jeroboam-ii",
-    "targetId": "2-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-119",
-    "sourceId": "hoshea",
-    "targetId": "fall-of-northern-kingdom",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-120",
-    "sourceId": "hoshea",
-    "targetId": "2-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-121",
-    "sourceId": "rehoboam",
-    "targetId": "solomon",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-122",
-    "sourceId": "rehoboam",
-    "targetId": "division-of-the-kingdom",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-123",
-    "sourceId": "rehoboam",
-    "targetId": "1-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-124",
-    "sourceId": "asa",
-    "targetId": "1-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-125",
-    "sourceId": "jehoshaphat",
-    "targetId": "asa",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-126",
-    "sourceId": "jehoshaphat",
-    "targetId": "1-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-127",
-    "sourceId": "jehoshaphat",
-    "targetId": "2-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-128",
-    "sourceId": "hezekiah",
-    "targetId": "hezekiahs-reform",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-129",
-    "sourceId": "hezekiah",
-    "targetId": "2-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-130",
-    "sourceId": "hezekiah",
-    "targetId": "isaiah",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-131",
-    "sourceId": "josiah",
-    "targetId": "zedekiah-king",
-    "type": "family-child",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-132",
-    "sourceId": "josiah",
-    "targetId": "josiahs-reform",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
     "id": "rel-133",
-    "sourceId": "josiah",
-    "targetId": "2-kings",
-    "type": "book-subject",
+    "sourceId": "moses",
+    "targetId": "the-wilderness-wanderings",
+    "type": "event-participant",
     "confidence": "high"
   },
   {
     "id": "rel-134",
-    "sourceId": "zedekiah-king",
-    "targetId": "josiah",
-    "type": "family-parent",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-135",
-    "sourceId": "zedekiah-king",
-    "targetId": "destruction-of-jerusalem",
+    "sourceId": "moses",
+    "targetId": "aaron",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-136",
-    "sourceId": "zedekiah-king",
-    "targetId": "2-kings",
-    "type": "book-subject",
+    "id": "rel-135",
+    "sourceId": "moses",
+    "targetId": "joshua",
+    "type": "event-participant",
     "confidence": "high"
   },
   {
     "id": "rel-137",
-    "sourceId": "zedekiah-king",
-    "targetId": "jeremiah",
+    "sourceId": "moses",
+    "targetId": "exodus-book",
     "type": "book-subject",
     "confidence": "high"
   },
   {
     "id": "rel-138",
-    "sourceId": "elijah",
-    "targetId": "elijah-mount-carmel",
-    "type": "event-participant",
+    "sourceId": "moses",
+    "targetId": "leviticus",
+    "type": "book-subject",
     "confidence": "high"
   },
   {
     "id": "rel-139",
-    "sourceId": "elijah",
-    "targetId": "1-kings",
+    "sourceId": "moses",
+    "targetId": "numbers",
     "type": "book-subject",
     "confidence": "high"
   },
   {
     "id": "rel-140",
-    "sourceId": "elijah",
-    "targetId": "2-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-141",
-    "sourceId": "elisha",
-    "targetId": "2-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-142",
-    "sourceId": "amos",
-    "targetId": "amos",
+    "sourceId": "moses",
+    "targetId": "deuteronomy",
     "type": "book-subject",
     "confidence": "high"
   },
   {
     "id": "rel-143",
-    "sourceId": "hosea",
-    "targetId": "hosea",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-144",
-    "sourceId": "isaiah",
-    "targetId": "isaiah",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-145",
-    "sourceId": "micah",
-    "targetId": "micah",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-146",
-    "sourceId": "jeremiah",
-    "targetId": "first-deportation-babylon",
+    "sourceId": "samuel",
+    "targetId": "the-era-of-the-judges",
     "type": "event-participant",
     "confidence": "high"
   },
   {
     "id": "rel-147",
-    "sourceId": "jeremiah",
-    "targetId": "destruction-of-jerusalem",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-148",
-    "sourceId": "jeremiah",
-    "targetId": "jeremiah",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-149",
-    "sourceId": "zephaniah",
-    "targetId": "zephaniah",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-150",
-    "sourceId": "flood",
-    "targetId": "noah",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-151",
-    "sourceId": "flood",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-152",
-    "sourceId": "call-of-abraham",
-    "targetId": "abraham",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-153",
-    "sourceId": "call-of-abraham",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-154",
-    "sourceId": "exodus",
-    "targetId": "moses",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-155",
-    "sourceId": "exodus",
-    "targetId": "exodus-book",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-156",
-    "sourceId": "temple-built",
+    "sourceId": "samuel",
     "targetId": "david",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-157",
-    "sourceId": "temple-built",
-    "targetId": "1-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-158",
-    "sourceId": "creation",
-    "targetId": "adam",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-159",
-    "sourceId": "creation",
-    "targetId": "eve",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-160",
-    "sourceId": "creation",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-161",
-    "sourceId": "the-fall",
-    "targetId": "adam",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-162",
-    "sourceId": "the-fall",
-    "targetId": "eve",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-163",
-    "sourceId": "the-fall",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-164",
-    "sourceId": "tower-of-babel",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-165",
-    "sourceId": "ishmael-born",
-    "targetId": "abraham",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-166",
-    "sourceId": "ishmael-born",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-167",
-    "sourceId": "birth-of-isaac",
-    "targetId": "abraham",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-168",
-    "sourceId": "birth-of-isaac",
-    "targetId": "isaac",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-169",
-    "sourceId": "birth-of-isaac",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-170",
-    "sourceId": "twelve-tribes-of-israel",
-    "targetId": "jacob",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-171",
-    "sourceId": "twelve-tribes-of-israel",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-172",
-    "sourceId": "josephs-exaltation-in-egypt",
-    "targetId": "joseph",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-173",
-    "sourceId": "josephs-exaltation-in-egypt",
-    "targetId": "jacob",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-174",
-    "sourceId": "josephs-exaltation-in-egypt",
-    "targetId": "genesis",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-175",
-    "sourceId": "mosaic-covenant",
-    "targetId": "moses",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-176",
-    "sourceId": "mosaic-covenant",
-    "targetId": "exodus-book",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-177",
-    "sourceId": "selection-of-king-saul",
-    "targetId": "samuel",
-    "type": "event-participant",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-178",
-    "sourceId": "selection-of-king-saul",
+    "id": "rel-149",
+    "sourceId": "samuel",
     "targetId": "1-samuel",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-179",
-    "sourceId": "reign-of-king-david",
+    "id": "rel-151",
+    "sourceId": "jesse",
+    "targetId": "david",
+    "type": "family-child",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-153",
+    "sourceId": "jesse",
+    "targetId": "ruth",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-154",
+    "sourceId": "jesse",
+    "targetId": "boaz",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-155",
+    "sourceId": "jesse",
+    "targetId": "david",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-156",
+    "sourceId": "jesse",
+    "targetId": "samuel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-158",
+    "sourceId": "jesse",
+    "targetId": "1-samuel",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-159",
+    "sourceId": "jesse",
+    "targetId": "isaiah",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-160",
+    "sourceId": "david",
+    "targetId": "jesse",
+    "type": "family-parent",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-162",
+    "sourceId": "david",
+    "targetId": "solomon",
+    "type": "family-child",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-166",
+    "sourceId": "david",
+    "targetId": "samuel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-167",
+    "sourceId": "david",
+    "targetId": "jesse",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-168",
+    "sourceId": "david",
+    "targetId": "solomon",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-172",
+    "sourceId": "david",
+    "targetId": "1-samuel",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-173",
+    "sourceId": "david",
     "targetId": "2-samuel",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-180",
-    "sourceId": "reign-of-king-david",
+    "id": "rel-174",
+    "sourceId": "david",
     "targetId": "1-kings",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-181",
-    "sourceId": "division-of-the-kingdom",
-    "targetId": "1-kings",
+    "id": "rel-176",
+    "sourceId": "david",
+    "targetId": "psalms",
     "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-177",
+    "sourceId": "solomon",
+    "targetId": "david",
+    "type": "family-parent",
     "confidence": "high"
   },
   {
     "id": "rel-182",
-    "sourceId": "fall-of-northern-kingdom",
-    "targetId": "2-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-183",
-    "sourceId": "destruction-of-jerusalem",
-    "targetId": "2-kings",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-184",
-    "sourceId": "destruction-of-jerusalem",
-    "targetId": "jeremiah",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-185",
-    "sourceId": "return-from-exile",
-    "targetId": "ezra",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-186",
-    "sourceId": "dedication-of-second-temple",
-    "targetId": "ezra",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-187",
-    "sourceId": "rebuilding-jerusalems-walls",
-    "targetId": "nehemiah",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-188",
-    "sourceId": "jeroboams-golden-calves",
-    "targetId": "jeroboam-i",
+    "sourceId": "solomon",
+    "targetId": "david",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-189",
-    "sourceId": "jeroboams-golden-calves",
+    "id": "rel-184",
+    "sourceId": "solomon",
+    "targetId": "rehoboam",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-185",
+    "sourceId": "solomon",
     "targetId": "1-kings",
     "type": "book-subject",
     "confidence": "high"
   },
   {
     "id": "rel-190",
+    "sourceId": "jeroboam-i",
+    "targetId": "division-of-the-kingdom",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-191",
+    "sourceId": "jeroboam-i",
+    "targetId": "jeroboams-golden-calves",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-193",
+    "sourceId": "jeroboam-i",
+    "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-194",
+    "sourceId": "rehoboam",
+    "targetId": "solomon",
+    "type": "family-parent",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-195",
+    "sourceId": "rehoboam",
+    "targetId": "division-of-the-kingdom",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-197",
+    "sourceId": "rehoboam",
+    "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-200",
+    "sourceId": "asa",
+    "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-201",
+    "sourceId": "ahab",
+    "targetId": "elijah-mount-carmel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-202",
+    "sourceId": "ahab",
+    "targetId": "elijah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-204",
+    "sourceId": "ahab",
+    "targetId": "elisha",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-205",
+    "sourceId": "ahab",
+    "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-206",
+    "sourceId": "jehoshaphat",
+    "targetId": "asa",
+    "type": "family-parent",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-210",
+    "sourceId": "jehoshaphat",
+    "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-211",
+    "sourceId": "jehoshaphat",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-213",
+    "sourceId": "elijah",
+    "targetId": "elisha",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-214",
+    "sourceId": "elijah",
+    "targetId": "ahab",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-216",
+    "sourceId": "elijah",
+    "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-217",
+    "sourceId": "elijah",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-219",
+    "sourceId": "elisha",
+    "targetId": "elijah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-222",
+    "sourceId": "elisha",
+    "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-223",
+    "sourceId": "elisha",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-224",
+    "sourceId": "jehu",
+    "targetId": "elisha",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-225",
+    "sourceId": "jehu",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-226",
+    "sourceId": "jeroboam-ii",
+    "targetId": "jonah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-227",
+    "sourceId": "jeroboam-ii",
+    "targetId": "amos",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-228",
+    "sourceId": "jeroboam-ii",
+    "targetId": "hosea",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-229",
+    "sourceId": "jeroboam-ii",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-231",
+    "sourceId": "amos",
+    "targetId": "hosea",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-232",
+    "sourceId": "amos",
+    "targetId": "jonah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-233",
+    "sourceId": "amos",
+    "targetId": "isaiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-237",
+    "sourceId": "hosea",
+    "targetId": "amos",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-238",
+    "sourceId": "hosea",
+    "targetId": "isaiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-239",
+    "sourceId": "hosea",
+    "targetId": "micah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-243",
+    "sourceId": "isaiah",
+    "targetId": "micah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-244",
+    "sourceId": "isaiah",
+    "targetId": "hosea",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-245",
+    "sourceId": "isaiah",
+    "targetId": "amos",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-246",
+    "sourceId": "isaiah",
+    "targetId": "hezekiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-247",
+    "sourceId": "isaiah",
+    "targetId": "isaiah",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-248",
+    "sourceId": "isaiah",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-252",
+    "sourceId": "micah",
+    "targetId": "isaiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-253",
+    "sourceId": "micah",
+    "targetId": "hosea",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-254",
+    "sourceId": "micah",
+    "targetId": "amos",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-256",
+    "sourceId": "hoshea",
+    "targetId": "fall-of-northern-kingdom",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-257",
+    "sourceId": "hoshea",
+    "targetId": "hosea",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-258",
+    "sourceId": "hoshea",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-259",
+    "sourceId": "hezekiah",
+    "targetId": "hezekiahs-reform",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-260",
+    "sourceId": "hezekiah",
+    "targetId": "isaiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-261",
+    "sourceId": "hezekiah",
+    "targetId": "micah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-262",
+    "sourceId": "hezekiah",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-263",
+    "sourceId": "hezekiah",
+    "targetId": "isaiah",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-264",
+    "sourceId": "manasseh",
+    "targetId": "nahum",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-266",
+    "sourceId": "jeremiah",
+    "targetId": "habakkuk",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-267",
+    "sourceId": "jeremiah",
+    "targetId": "zephaniah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-268",
+    "sourceId": "jeremiah",
+    "targetId": "daniel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-269",
+    "sourceId": "jeremiah",
+    "targetId": "ezekiel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-273",
+    "sourceId": "jeremiah",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-276",
+    "sourceId": "zephaniah",
+    "targetId": "jeremiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-277",
+    "sourceId": "zephaniah",
+    "targetId": "habakkuk",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-278",
+    "sourceId": "zephaniah",
+    "targetId": "nahum",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-279",
+    "sourceId": "zephaniah",
+    "targetId": "josiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-281",
+    "sourceId": "josiah",
+    "targetId": "zedekiah-king",
+    "type": "family-child",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-282",
+    "sourceId": "josiah",
+    "targetId": "josiahs-reform",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-283",
+    "sourceId": "josiah",
+    "targetId": "zephaniah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-284",
+    "sourceId": "josiah",
+    "targetId": "jeremiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-286",
+    "sourceId": "josiah",
+    "targetId": "nahum",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-287",
+    "sourceId": "josiah",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-288",
+    "sourceId": "zedekiah-king",
+    "targetId": "josiah",
+    "type": "family-parent",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-289",
+    "sourceId": "zedekiah-king",
+    "targetId": "destruction-of-jerusalem",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-290",
+    "sourceId": "zedekiah-king",
+    "targetId": "jeremiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-291",
+    "sourceId": "zedekiah-king",
+    "targetId": "ezekiel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-292",
+    "sourceId": "zedekiah-king",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-293",
+    "sourceId": "zedekiah-king",
+    "targetId": "jeremiah",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-294",
+    "sourceId": "creation",
+    "targetId": "adam",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-295",
+    "sourceId": "creation",
+    "targetId": "eve",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-296",
+    "sourceId": "creation",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-297",
+    "sourceId": "adam-eve",
+    "targetId": "seth",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-298",
+    "sourceId": "adam-eve",
+    "targetId": "cain",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-300",
+    "sourceId": "adam-eve",
+    "targetId": "adam",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-301",
+    "sourceId": "adam-eve",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-302",
+    "sourceId": "the-fall",
+    "targetId": "adam",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-303",
+    "sourceId": "the-fall",
+    "targetId": "eve",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-304",
+    "sourceId": "the-fall",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-305",
+    "sourceId": "flood",
+    "targetId": "noah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-307",
+    "sourceId": "flood",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-308",
+    "sourceId": "tower-of-babel",
+    "targetId": "noah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-310",
+    "sourceId": "tower-of-babel",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-311",
+    "sourceId": "call-of-abraham",
+    "targetId": "abraham",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-312",
+    "sourceId": "call-of-abraham",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-314",
+    "sourceId": "ishmael-born",
+    "targetId": "abraham",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-316",
+    "sourceId": "ishmael-born",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-317",
+    "sourceId": "birth-of-isaac",
+    "targetId": "abraham",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-320",
+    "sourceId": "birth-of-isaac",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-321",
+    "sourceId": "twelve-tribes-of-israel",
+    "targetId": "jacob",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-324",
+    "sourceId": "twelve-tribes-of-israel",
+    "targetId": "levi",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-325",
+    "sourceId": "twelve-tribes-of-israel",
+    "targetId": "judah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-326",
+    "sourceId": "twelve-tribes-of-israel",
+    "targetId": "joseph",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-327",
+    "sourceId": "twelve-tribes-of-israel",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-328",
+    "sourceId": "josephs-exaltation-in-egypt",
+    "targetId": "joseph",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-329",
+    "sourceId": "josephs-exaltation-in-egypt",
+    "targetId": "jacob",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-330",
+    "sourceId": "josephs-exaltation-in-egypt",
+    "targetId": "judah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-331",
+    "sourceId": "josephs-exaltation-in-egypt",
+    "targetId": "genesis",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-333",
+    "sourceId": "exodus",
+    "targetId": "moses",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-334",
+    "sourceId": "exodus",
+    "targetId": "aaron",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-336",
+    "sourceId": "exodus",
+    "targetId": "exodus-book",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-337",
+    "sourceId": "mosaic-covenant",
+    "targetId": "moses",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-338",
+    "sourceId": "mosaic-covenant",
+    "targetId": "aaron",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-339",
+    "sourceId": "mosaic-covenant",
+    "targetId": "exodus-book",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-340",
+    "sourceId": "mosaic-covenant",
+    "targetId": "leviticus",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-341",
+    "sourceId": "mosaic-covenant",
+    "targetId": "deuteronomy",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-342",
+    "sourceId": "the-wilderness-wanderings",
+    "targetId": "moses",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-343",
+    "sourceId": "the-wilderness-wanderings",
+    "targetId": "aaron",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-344",
+    "sourceId": "the-wilderness-wanderings",
+    "targetId": "joshua",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-345",
+    "sourceId": "the-wilderness-wanderings",
+    "targetId": "numbers",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-346",
+    "sourceId": "the-wilderness-wanderings",
+    "targetId": "deuteronomy",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-347",
+    "sourceId": "conquest-of-canaan",
+    "targetId": "joshua",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-350",
+    "sourceId": "division-of-the-land",
+    "targetId": "joshua",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-352",
+    "sourceId": "the-era-of-the-judges",
+    "targetId": "samuel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-353",
+    "sourceId": "the-era-of-the-judges",
+    "targetId": "ruth",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-354",
+    "sourceId": "the-era-of-the-judges",
+    "targetId": "boaz",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-357",
+    "sourceId": "othniel",
+    "targetId": "othniel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-360",
+    "sourceId": "ehud",
+    "targetId": "ehud",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-364",
+    "sourceId": "deborah",
+    "targetId": "deborah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-368",
+    "sourceId": "gideon",
+    "targetId": "gideon",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-370",
+    "sourceId": "samson",
+    "targetId": "samson",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-373",
+    "sourceId": "jephthah",
+    "targetId": "jephthah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-375",
+    "sourceId": "selection-of-king-saul",
+    "targetId": "samuel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-377",
+    "sourceId": "selection-of-king-saul",
+    "targetId": "1-samuel",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-378",
+    "sourceId": "reign-of-king-david",
+    "targetId": "david",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-379",
+    "sourceId": "reign-of-king-david",
+    "targetId": "samuel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-380",
+    "sourceId": "reign-of-king-david",
+    "targetId": "solomon",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-383",
+    "sourceId": "reign-of-king-david",
+    "targetId": "1-samuel",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-384",
+    "sourceId": "reign-of-king-david",
+    "targetId": "2-samuel",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-386",
+    "sourceId": "reign-of-king-david",
+    "targetId": "psalms",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-387",
+    "sourceId": "temple-built",
+    "targetId": "solomon",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-388",
+    "sourceId": "temple-built",
+    "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-390",
+    "sourceId": "division-of-the-kingdom",
+    "targetId": "rehoboam",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-392",
+    "sourceId": "division-of-the-kingdom",
+    "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-394",
+    "sourceId": "jeroboams-golden-calves",
+    "targetId": "jeroboam-i",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-395",
+    "sourceId": "jeroboams-golden-calves",
+    "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-396",
     "sourceId": "elijah-mount-carmel",
     "targetId": "elijah",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-191",
+    "id": "rel-397",
     "sourceId": "elijah-mount-carmel",
     "targetId": "ahab",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-192",
+    "id": "rel-398",
     "sourceId": "elijah-mount-carmel",
     "targetId": "1-kings",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-193",
+    "id": "rel-400",
     "sourceId": "fall-of-northern-kingdom",
     "targetId": "hoshea",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-194",
+    "id": "rel-401",
+    "sourceId": "fall-of-northern-kingdom",
+    "targetId": "isaiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-402",
+    "sourceId": "fall-of-northern-kingdom",
+    "targetId": "hosea",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-403",
+    "sourceId": "fall-of-northern-kingdom",
+    "targetId": "micah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-404",
     "sourceId": "fall-of-northern-kingdom",
     "targetId": "2-kings",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-195",
+    "id": "rel-405",
+    "sourceId": "fall-of-northern-kingdom",
+    "targetId": "isaiah",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-408",
     "sourceId": "hezekiahs-reform",
     "targetId": "hezekiah",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-196",
+    "id": "rel-409",
     "sourceId": "hezekiahs-reform",
     "targetId": "2-kings",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-197",
+    "id": "rel-412",
+    "sourceId": "rise-of-the-neo-babylonian-empire",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-415",
     "sourceId": "josiahs-reform",
     "targetId": "josiah",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-198",
+    "id": "rel-416",
     "sourceId": "josiahs-reform",
     "targetId": "2-kings",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-199",
+    "id": "rel-417",
     "sourceId": "first-deportation-babylon",
     "targetId": "2-kings",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-200",
+    "id": "rel-418",
     "sourceId": "second-deportation-babylon",
     "targetId": "2-kings",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-201",
+    "id": "rel-420",
+    "sourceId": "destruction-of-jerusalem",
+    "targetId": "jeremiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-421",
+    "sourceId": "destruction-of-jerusalem",
+    "targetId": "daniel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-422",
+    "sourceId": "destruction-of-jerusalem",
+    "targetId": "ezekiel",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-424",
+    "sourceId": "destruction-of-jerusalem",
+    "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-432",
+    "sourceId": "return-from-exile",
+    "targetId": "ezra",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-433",
+    "sourceId": "return-from-exile",
+    "targetId": "haggai",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-434",
+    "sourceId": "return-from-exile",
+    "targetId": "zechariah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-435",
+    "sourceId": "return-from-exile",
+    "targetId": "ezra",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-437",
+    "sourceId": "return-from-exile",
+    "targetId": "isaiah",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-441",
+    "sourceId": "dedication-of-second-temple",
+    "targetId": "haggai",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-442",
+    "sourceId": "dedication-of-second-temple",
+    "targetId": "zechariah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-443",
+    "sourceId": "dedication-of-second-temple",
+    "targetId": "joshua",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-444",
+    "sourceId": "dedication-of-second-temple",
+    "targetId": "ezra",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-448",
+    "sourceId": "rebuilding-jerusalems-walls",
+    "targetId": "nehemiah",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-449",
+    "sourceId": "rebuilding-jerusalems-walls",
+    "targetId": "ezra",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-450",
+    "sourceId": "rebuilding-jerusalems-walls",
+    "targetId": "nehemiah",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-451",
     "sourceId": "genesis",
     "targetId": "abraham",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-202",
-    "sourceId": "genesis",
-    "targetId": "terah",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-203",
-    "sourceId": "genesis",
-    "targetId": "sarah",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-204",
+    "id": "rel-454",
     "sourceId": "genesis",
     "targetId": "isaac",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-205",
-    "sourceId": "genesis",
-    "targetId": "ishmael",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-206",
+    "id": "rel-456",
     "sourceId": "genesis",
     "targetId": "adam",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-207",
+    "id": "rel-457",
     "sourceId": "genesis",
     "targetId": "eve",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-208",
+    "id": "rel-458",
     "sourceId": "genesis",
     "targetId": "noah",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-209",
+    "id": "rel-459",
     "sourceId": "genesis",
     "targetId": "jacob",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-210",
+    "id": "rel-460",
     "sourceId": "genesis",
     "targetId": "joseph",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-211",
+    "id": "rel-461",
     "sourceId": "genesis",
     "targetId": "flood",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-212",
+    "id": "rel-462",
     "sourceId": "genesis",
     "targetId": "call-of-abraham",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-213",
+    "id": "rel-463",
     "sourceId": "genesis",
     "targetId": "creation",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-214",
+    "id": "rel-464",
     "sourceId": "genesis",
     "targetId": "the-fall",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-215",
+    "id": "rel-465",
     "sourceId": "genesis",
     "targetId": "tower-of-babel",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-216",
+    "id": "rel-466",
     "sourceId": "genesis",
     "targetId": "ishmael-born",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-217",
+    "id": "rel-467",
     "sourceId": "genesis",
     "targetId": "birth-of-isaac",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-218",
+    "id": "rel-468",
     "sourceId": "genesis",
     "targetId": "twelve-tribes-of-israel",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-219",
+    "id": "rel-469",
     "sourceId": "genesis",
     "targetId": "josephs-exaltation-in-egypt",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-220",
+    "id": "rel-470",
     "sourceId": "exodus-book",
     "targetId": "moses",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-221",
-    "sourceId": "exodus-book",
-    "targetId": "amram",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-222",
-    "sourceId": "exodus-book",
-    "targetId": "jochebed",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-223",
-    "sourceId": "exodus-book",
-    "targetId": "zipporah",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-224",
-    "sourceId": "exodus-book",
-    "targetId": "gershom",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-225",
-    "sourceId": "exodus-book",
-    "targetId": "eliezer",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-226",
+    "id": "rel-476",
     "sourceId": "exodus-book",
     "targetId": "exodus",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-227",
+    "id": "rel-477",
     "sourceId": "exodus-book",
     "targetId": "mosaic-covenant",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-228",
+    "id": "rel-478",
     "sourceId": "psalms",
     "targetId": "david",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-229",
+    "id": "rel-479",
     "sourceId": "leviticus",
     "targetId": "moses",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-230",
+    "id": "rel-480",
     "sourceId": "numbers",
     "targetId": "moses",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-231",
+    "id": "rel-481",
     "sourceId": "deuteronomy",
     "targetId": "moses",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-232",
+    "id": "rel-482",
     "sourceId": "1-samuel",
     "targetId": "samuel",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-233",
+    "id": "rel-483",
     "sourceId": "1-samuel",
     "targetId": "selection-of-king-saul",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-234",
+    "id": "rel-484",
     "sourceId": "2-samuel",
     "targetId": "reign-of-king-david",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-235",
+    "id": "rel-485",
     "sourceId": "1-kings",
     "targetId": "temple-built",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-236",
+    "id": "rel-486",
     "sourceId": "1-kings",
     "targetId": "reign-of-king-david",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-237",
+    "id": "rel-487",
     "sourceId": "1-kings",
     "targetId": "division-of-the-kingdom",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-238",
+    "id": "rel-488",
     "sourceId": "2-kings",
     "targetId": "fall-of-northern-kingdom",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-239",
+    "id": "rel-489",
     "sourceId": "2-kings",
     "targetId": "destruction-of-jerusalem",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-240",
+    "id": "rel-490",
     "sourceId": "jeremiah",
     "targetId": "destruction-of-jerusalem",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-241",
+    "id": "rel-491",
     "sourceId": "ezra",
     "targetId": "return-from-exile",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-242",
+    "id": "rel-492",
     "sourceId": "ezra",
     "targetId": "dedication-of-second-temple",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-243",
+    "id": "rel-493",
     "sourceId": "nehemiah",
     "targetId": "rebuilding-jerusalems-walls",
     "type": "event-participant",

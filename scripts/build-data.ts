@@ -57,6 +57,9 @@ interface RawPerson {
     scriptureRefs?: string[];
     relatedEvents?: string[];
     relatedBooks?: string[];
+    relatedPeople?: string[];
+    source?: string;
+    timelineStory?: string;
     familyTree?: {
         father?: string | null;
         mother?: string | null;
@@ -70,6 +73,7 @@ interface RawEvent {
     id: string;
     name: string;
     year: number;
+    endYear?: number;
     approximate?: boolean;
     priority: number;
     kingdom?: string;
@@ -79,6 +83,7 @@ interface RawEvent {
     relatedPeople?: string[];
     relatedBooks?: string[];
     category?: string;
+    source?: string;
     [key: string]: unknown;
 }
 
@@ -121,12 +126,19 @@ const RAW_DIR = path.resolve(__dirname, '../src/data/raw');
 const COMPILED_DIR = path.resolve(__dirname, '../src/data/compiled');
 
 function normalizeCategory(value: string): string {
-    return value.trim().toLowerCase().replace(/[\s_/-]+/g, '-');
+    const normalized = value.trim().toLowerCase().replace(/[\s_/-]+/g, '-');
+    if (normalized === 'historical') return 'secular-context';
+    return normalized;
 }
 
 // ============================================================================
 // Adapters - Transform raw data to compiled shape
 // ============================================================================
+
+function mapCertainty(approximate: boolean | undefined, startYear: number): Certainty {
+    if (startYear > 2300) return 'estimated'; // Pre-2300 BC (higher year = earlier)
+    return approximate ? 'approximate' : 'exact';
+}
 
 function transformPerson(raw: RawPerson): TimelineEntity {
     return {
@@ -135,7 +147,7 @@ function transformPerson(raw: RawPerson): TimelineEntity {
         name: raw.name,
         startYear: raw.birthYear,
         endYear: raw.deathYear,
-        certainty: raw.approximate ? 'approximate' : 'exact',
+        certainty: mapCertainty(raw.approximate, raw.birthYear),
         categories: [raw.role],
         themes: raw.themes || [],
         priority: raw.priority,
@@ -143,6 +155,8 @@ function transformPerson(raw: RawPerson): TimelineEntity {
         bio: raw.bio,
         scriptureRefs: raw.scriptureRefs,
         ...(raw.kingdom && { kingdom: raw.kingdom }),
+        ...(raw.source && { source: raw.source }),
+        ...(raw.timelineStory && { timelineStory: raw.timelineStory }),
     };
 }
 
@@ -154,14 +168,15 @@ function transformEvent(raw: RawEvent): TimelineEntity {
         type: 'event',
         name: raw.name,
         startYear: raw.year,
-        endYear: raw.year, // point event
-        certainty: raw.approximate ? 'approximate' : 'exact',
+        endYear: raw.endYear ?? raw.year,
+        certainty: mapCertainty(raw.approximate, raw.year),
         categories: [category],
         themes: raw.themes || [],
         priority: raw.priority,
         description: raw.description,
         scriptureRefs: raw.scriptureRefs,
         ...(raw.kingdom && { kingdom: raw.kingdom }),
+        ...(raw.source && { source: raw.source }),
     };
 }
 
@@ -304,6 +319,19 @@ function extractRelationships(
                     id: genId(),
                     sourceId: person.id,
                     targetId: eventId,
+                    type: 'event-participant',
+                    confidence: 'high',
+                });
+            }
+        }
+
+        // People -> people
+        if (person.relatedPeople) {
+            for (const relatedId of person.relatedPeople) {
+                relationships.push({
+                    id: genId(),
+                    sourceId: person.id,
+                    targetId: relatedId,
                     type: 'event-participant',
                     confidence: 'high',
                 });
@@ -498,8 +526,20 @@ function build() {
     assignSwimlanes(events);
     assignSwimlanes(books);
 
-    // Extract relationships
-    const relationships = extractRelationships(rawPeople, rawEvents, rawBooks);
+    // Extract relationships, then filter orphaned references
+    const allRelationships = extractRelationships(rawPeople, rawEvents, rawBooks);
+    const allEntityIds = new Set([
+        ...people.map(e => e.id),
+        ...events.map(e => e.id),
+        ...books.map(e => e.id),
+    ]);
+    const relationships = allRelationships.filter(r =>
+        allEntityIds.has(r.sourceId) && allEntityIds.has(r.targetId)
+    );
+    const orphaned = allRelationships.length - relationships.length;
+    if (orphaned > 0) {
+        console.log(`Filtered ${orphaned} orphaned relationships`);
+    }
 
     // Write compiled files
     fs.writeFileSync(

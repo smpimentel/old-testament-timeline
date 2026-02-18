@@ -1,518 +1,21 @@
 [
   {
-    "id": "terah",
-    "name": "Terah",
-    "birthYear": 2296,
-    "deathYear": 2091,
-    "era": "BC",
-    "approximate": true,
-    "role": "Patriarch",
-    "priority": 3,
-    "themes": [],
-    "track": "people",
-    "description": "Father of Abraham",
-    "bio": "Father of Abraham, Nahor, and Haran. Originally from Ur of the Chaldeans, he began the journey toward Canaan but settled in Haran.",
-    "scriptureRefs": [
-      "Genesis 11:26-32"
-    ],
-    "relatedEvents": [],
-    "relatedBooks": [
-      "genesis"
-    ],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": [
-        "abraham"
-      ]
-    }
-  },
-  {
-    "id": "sarah",
-    "name": "Sarah",
-    "birthYear": 2156,
-    "deathYear": 2029,
-    "era": "BC",
-    "approximate": true,
-    "role": "Patriarch",
-    "priority": 2,
-    "themes": ["Covenant"],
-    "track": "people",
-    "description": "Wife of Abraham, mother of Isaac",
-    "bio": "Originally named Sarai, she was Abraham's wife and half-sister. Despite being barren until age 90, God promised she would bear a son. She gave birth to Isaac, the child of promise.",
-    "scriptureRefs": [
-      "Genesis 17:15-16",
-      "Genesis 21:1-7",
-      "Hebrews 11:11"
-    ],
-    "relatedEvents": [
-      "call-of-abraham"
-    ],
-    "relatedBooks": [
-      "genesis"
-    ],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": "abraham",
-      "children": [
-        "isaac"
-      ]
-    }
-  },
-  {
-    "id": "isaac",
-    "name": "Isaac",
-    "birthYear": 2066,
-    "deathYear": 1886,
-    "era": "BC",
-    "approximate": false,
-    "role": "Patriarch",
-    "priority": 1,
-    "themes": ["Covenant"],
-    "track": "people",
-    "description": "The promised son of Abraham and Sarah, father of Jacob.",
-    "bio": "The promised son of Abraham and Sarah, born when they were elderly. Nearly sacrificed by Abraham as a test of faith. Married Rebekah and fathered Jacob and Esau.",
-    "scriptureRefs": [
-      "Genesis 21:1-7",
-      "Genesis 22:1-19",
-      "Genesis 25:19-26",
-      "Gen 25-27"
-    ],
-    "relatedEvents": [
-      "birth-of-isaac"
-    ],
-    "relatedBooks": [
-      "genesis"
-    ],
-    "familyTree": {
-      "father": "abraham",
-      "mother": "sarah",
-      "spouse": "rebekah",
-      "children": [
-        "jacob",
-        "esau"
-      ]
-    }
-  },
-  {
-    "id": "ishmael",
-    "name": "Ishmael",
-    "birthYear": 2080,
-    "deathYear": 1943,
-    "era": "BC",
-    "approximate": true,
-    "role": "Patriarch",
-    "priority": 3,
-    "themes": [],
-    "track": "people",
-    "description": "Son of Abraham and Hagar",
-    "bio": "Firstborn son of Abraham through Hagar, Sarah's Egyptian servant. Father of twelve princes and considered the ancestor of many Arab peoples.",
-    "scriptureRefs": [
-      "Genesis 16:1-16",
-      "Genesis 21:8-21",
-      "Genesis 25:12-18"
-    ],
-    "relatedEvents": [],
-    "relatedBooks": [
-      "genesis"
-    ],
-    "familyTree": {
-      "father": "abraham",
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "amram",
-    "name": "Amram",
-    "birthYear": 1600,
-    "deathYear": 1463,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 3,
-    "themes": [],
-    "track": "people",
-    "description": "Father of Moses, Aaron, and Miriam",
-    "bio": "A Levite who married Jochebed. Father of Moses, Aaron, and Miriam. Lived during the Egyptian slavery period.",
-    "scriptureRefs": [
-      "Exodus 6:18-20",
-      "Numbers 26:59"
-    ],
-    "relatedEvents": [],
-    "relatedBooks": [
-      "exodus-book"
-    ],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": "jochebed",
-      "children": [
-        "moses"
-      ]
-    }
-  },
-  {
-    "id": "jochebed",
-    "name": "Jochebed",
-    "birthYear": 1595,
-    "deathYear": 1460,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 3,
-    "themes": [],
-    "track": "people",
-    "description": "Mother of Moses, Aaron, and Miriam",
-    "bio": "A Levite woman who married Amram. Hid baby Moses for three months then placed him in a basket on the Nile. Later hired as his nurse by Pharaoh's daughter.",
-    "scriptureRefs": [
-      "Exodus 2:1-10",
-      "Exodus 6:20",
-      "Hebrews 11:23"
-    ],
-    "relatedEvents": [],
-    "relatedBooks": [
-      "exodus-book"
-    ],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": "amram",
-      "children": [
-        "moses"
-      ]
-    }
-  },
-  {
-    "id": "zipporah",
-    "name": "Zipporah",
-    "birthYear": 1510,
-    "deathYear": 1400,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 3,
-    "themes": [],
-    "track": "people",
-    "description": "Wife of Moses, daughter of Jethro",
-    "bio": "Daughter of Jethro, priest of Midian. Moses met her at a well while fleeing Egypt. She bore him two sons: Gershom and Eliezer.",
-    "scriptureRefs": [
-      "Exodus 2:16-22",
-      "Exodus 4:24-26",
-      "Exodus 18:1-6"
-    ],
-    "relatedEvents": [],
-    "relatedBooks": [
-      "exodus-book"
-    ],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": "moses",
-      "children": [
-        "gershom",
-        "eliezer"
-      ]
-    }
-  },
-  {
-    "id": "gershom",
-    "name": "Gershom",
-    "birthYear": 1485,
-    "deathYear": 1400,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Firstborn son of Moses and Zipporah",
-    "bio": "Firstborn son of Moses, born in Midian. His name means 'sojourner there' reflecting Moses' status as a stranger in a foreign land.",
-    "scriptureRefs": [
-      "Exodus 2:22",
-      "Exodus 18:3"
-    ],
-    "relatedEvents": [],
-    "relatedBooks": [
-      "exodus-book"
-    ],
-    "familyTree": {
-      "father": "moses",
-      "mother": "zipporah",
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "eliezer",
-    "name": "Eliezer",
-    "birthYear": 1480,
-    "deathYear": 1395,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Second son of Moses and Zipporah",
-    "bio": "Second son of Moses. His name means 'God of my father was my help' commemorating God's deliverance of Moses from Pharaoh.",
-    "scriptureRefs": [
-      "Exodus 18:4",
-      "1 Chronicles 23:15"
-    ],
-    "relatedEvents": [],
-    "relatedBooks": [
-      "exodus-book"
-    ],
-    "familyTree": {
-      "father": "moses",
-      "mother": "zipporah",
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "jesse",
-    "name": "Jesse",
-    "birthYear": 1080,
-    "deathYear": 1000,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 3,
-    "themes": [],
-    "track": "people",
-    "description": "Father of King David",
-    "bio": "A Bethlehemite of the tribe of Judah. Father of eight sons including David. Grandson of Ruth and Boaz.",
-    "scriptureRefs": [
-      "1 Samuel 16:1-13",
-      "Ruth 4:17-22",
-      "Isaiah 11:1"
-    ],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": [
-        "david"
-      ]
-    }
-  },
-  {
-    "id": "bathsheba",
-    "name": "Bathsheba",
-    "birthYear": 1025,
-    "deathYear": 950,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 3,
-    "themes": [],
-    "track": "people",
-    "description": "Wife of David, mother of Solomon",
-    "bio": "Originally wife of Uriah the Hittite. David saw her bathing and committed adultery with her, later arranging Uriah's death. She became David's wife and mother of Solomon.",
-    "scriptureRefs": [
-      "2 Samuel 11:1-27",
-      "2 Samuel 12:24",
-      "1 Kings 1:11-31"
-    ],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": "david",
-      "children": [
-        "solomon"
-      ]
-    }
-  },
-  {
-    "id": "solomon",
-    "name": "Solomon",
-    "birthYear": 990,
-    "deathYear": 931,
-    "era": "BC",
-    "approximate": false,
-    "role": "King",
-    "priority": 2,
-    "themes": ["Kingship", "Temple"],
-    "track": "people",
-    "description": "Son of David, builder of the Temple",
-    "bio": "Third king of Israel, known for wisdom granted by God. Built the First Temple in Jerusalem. Author of Proverbs, Ecclesiastes, and Song of Solomon. His reign marked Israel's golden age.",
-    "scriptureRefs": [
-      "1 Kings 3:5-14",
-      "1 Kings 6:1-38",
-      "1 Kings 11:1-13"
-    ],
-    "relatedEvents": [
-      "temple-built"
-    ],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": "david",
-      "mother": "bathsheba",
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "absalom",
-    "name": "Absalom",
-    "birthYear": 1010,
-    "deathYear": 980,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 3,
-    "themes": [],
-    "track": "people",
-    "description": "Son of David who rebelled against him",
-    "bio": "Third son of David, known for his handsome appearance. Killed his half-brother Amnon for raping his sister Tamar. Later led a rebellion against David but was killed by Joab.",
-    "scriptureRefs": [
-      "2 Samuel 13:1-39",
-      "2 Samuel 15:1-12",
-      "2 Samuel 18:9-15"
-    ],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": "david",
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "abraham",
-    "name": "Abraham",
-    "birthYear": 2166,
-    "deathYear": 1991,
-    "era": "BC",
-    "approximate": false,
-    "role": "Patriarch",
-    "priority": 1,
-    "themes": ["Covenant", "Land"],
-    "track": "people",
-    "description": "Father of the Hebrew nation, called by God to leave Ur.",
-    "bio": "Abraham (originally Abram) is the father of the Hebrew nation. God called him to leave Ur and promised to make him a great nation and bless all families of the earth through him.",
-    "scriptureRefs": [
-      "Genesis 12:1-3",
-      "Genesis 15:1-6",
-      "Hebrews 11:8-12",
-      "Gen 11-25"
-    ],
-    "relatedEvents": [
-      "call-of-abraham",
-      "birth-of-isaac",
-      "ishmael-born"
-    ],
-    "relatedBooks": [
-      "genesis"
-    ],
-    "familyTree": {
-      "father": "terah",
-      "mother": null,
-      "spouse": "sarah",
-      "children": [
-        "isaac",
-        "ishmael"
-      ]
-    }
-  },
-  {
-    "id": "moses",
-    "name": "Moses",
-    "birthYear": 1526,
-    "deathYear": 1406,
-    "era": "BC",
-    "approximate": true,
-    "role": "Prophet",
-    "priority": 1,
-    "themes": ["Covenant", "Deliverance"],
-    "track": "people",
-    "description": "Deliverer of Israel from Egypt, received the Law at Sinai.",
-    "bio": "Born in Egypt during Hebrew slavery, Moses was rescued by Pharaoh's daughter. Called by God at the burning bush, he led Israel out of Egypt and received the Law at Sinai.",
-    "scriptureRefs": [
-      "Exodus 3:1-10",
-      "Exodus 20:1-17",
-      "Deuteronomy 34:10-12",
-      "Exod 2-Deut 34"
-    ],
-    "relatedEvents": [
-      "exodus",
-      "mosaic-covenant"
-    ],
-    "relatedBooks": [
-      "exodus-book",
-      "leviticus",
-      "numbers",
-      "deuteronomy"
-    ],
-    "familyTree": {
-      "father": "amram",
-      "mother": "jochebed",
-      "spouse": "zipporah",
-      "children": [
-        "gershom",
-        "eliezer"
-      ]
-    }
-  },
-  {
-    "id": "david",
-    "name": "David",
-    "birthYear": 1040,
-    "deathYear": 970,
-    "era": "BC",
-    "approximate": false,
-    "role": "King",
-    "priority": 1,
-    "themes": ["Kingship", "Messiah"],
-    "track": "people",
-    "description": "Israel's greatest king, ancestor of Christ",
-    "bio": "A shepherd from Bethlehem, David was anointed king by Samuel. He united Israel, conquered Jerusalem, and established a dynasty through which the Messiah would come.",
-    "scriptureRefs": [
-      "1 Samuel 16:1-13",
-      "2 Samuel 7:12-16",
-      "Psalm 23"
-    ],
-    "relatedEvents": [
-      "temple-built"
-    ],
-    "relatedBooks": [
-      "psalms"
-    ],
-    "familyTree": {
-      "father": "jesse",
-      "mother": null,
-      "spouse": "bathsheba",
-      "children": [
-        "solomon",
-        "absalom"
-      ]
-    }
-  },
-  {
     "id": "adam",
     "name": "Adam",
     "birthYear": 4004,
     "deathYear": 3074,
     "era": "BC",
     "approximate": true,
-    "role": "Patriarch",
-    "priority": 1,
-    "themes": ["Origins"],
+    "role": "Other",
+    "priority": 2,
+    "themes": [
+      "Origins"
+    ],
     "track": "people",
-    "description": "The first man, created by God from the dust of the ground.",
+    "description": "God formed Adam from the dust and created Eve from his rib. They lived in perfect fellowship with God in the Garden of Eden.",
     "bio": "God formed Adam from the dust and created Eve from his rib. They lived in perfect fellowship with God in the Garden of Eden.",
     "scriptureRefs": [
-      "Gen 1-2"
+      "Gen 1-5"
     ],
     "relatedEvents": [
       "creation",
@@ -530,7 +33,15 @@
         "abel",
         "seth"
       ]
-    }
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "cain",
+      "abel",
+      "eve",
+      "seth"
+    ]
   },
   {
     "id": "eve",
@@ -539,14 +50,16 @@
     "deathYear": 3074,
     "era": "BC",
     "approximate": true,
-    "role": "Patriarch",
+    "role": "Other",
     "priority": 2,
-    "themes": ["Origins"],
+    "themes": [
+      "Origins"
+    ],
     "track": "people",
-    "description": "The first woman, created from Adam's rib.",
+    "description": "Eve was the first woman, formed from Adam's rib to be his companion. She was deceived by the serpent in the Garden of Eden and, along with Adam, introduced sin into the world.",
     "bio": "Eve was created by God from Adam's rib to be his companion. Together they were tempted by the serpent and disobeyed God.",
     "scriptureRefs": [
-      "Gen 1-3"
+      "Gen 1-5"
     ],
     "relatedEvents": [
       "creation",
@@ -564,26 +77,149 @@
         "abel",
         "seth"
       ]
-    }
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "adam",
+      "cain",
+      "abel",
+      "seth"
+    ]
+  },
+  {
+    "id": "cain",
+    "name": "Cain",
+    "birthYear": 3875,
+    "deathYear": 3904,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 2,
+    "themes": [],
+    "track": "people",
+    "description": "Cain was the firstborn son of Adam and Eve, a farmer by trade. After God rejected his offering, he murdered his brother Abel out of jealousy and was cursed to be a restless wanderer.",
+    "bio": "",
+    "scriptureRefs": [
+      "Gen 4:1-24"
+    ],
+    "relatedEvents": [
+      "the-fall"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "adam",
+      "eve",
+      "abel",
+      "seth"
+    ]
+  },
+  {
+    "id": "abel",
+    "name": "Able",
+    "birthYear": 3875,
+    "deathYear": 3875,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 2,
+    "themes": [],
+    "track": "people",
+    "description": "Abel was the second son of Adam and Eve, a keeper of flocks. His faithful offering pleased God, but he was murdered by his brother Cain, becoming the first martyr in Scripture.",
+    "bio": "",
+    "scriptureRefs": [
+      "Gen 4:1-8; Heb 11:4"
+    ],
+    "relatedEvents": [
+      "the-fall"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "adam",
+      "eve",
+      "cain",
+      "seth"
+    ]
+  },
+  {
+    "id": "seth",
+    "name": "Seth",
+    "birthYear": 3874,
+    "deathYear": 2962,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 2,
+    "themes": [],
+    "track": "people",
+    "description": "Seth was the third named son of Adam and Eve, born after Abel's death. Through his line the godly lineage continued, eventually leading to Noah and ultimately to Christ.",
+    "bio": "",
+    "scriptureRefs": [
+      "Gen 5:6-8"
+    ],
+    "relatedEvents": [
+      "the-fall"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "adam",
+      "eve",
+      "cain",
+      "abel",
+      "noah"
+    ]
   },
   {
     "id": "noah",
     "name": "Noah",
-    "birthYear": 2948,
-    "deathYear": 1998,
+    "birthYear": 2950,
+    "deathYear": 2000,
     "era": "BC",
     "approximate": true,
     "role": "Patriarch",
-    "priority": 1,
-    "themes": ["Judgment"],
+    "priority": 2,
+    "themes": [
+      "Judgment"
+    ],
     "track": "people",
-    "description": "Righteous man who built the ark and preserved humanity through the Flood.",
+    "description": "Noah was a righteous man who walked with God. He built the ark and preserved humanity and animal kinds through the Flood.",
     "bio": "Noah was a righteous man who walked with God. He built the ark and preserved humanity and animal kinds through the Flood.",
     "scriptureRefs": [
       "Gen 6-9"
     ],
     "relatedEvents": [
-      "flood"
+      "the-great-flood",
+      "the-dispersion-of-nations"
     ],
     "relatedBooks": [
       "genesis"
@@ -597,7 +233,100 @@
         "ham",
         "japheth"
       ]
-    }
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "shem"
+    ]
+  },
+  {
+    "id": "abraham",
+    "name": "Abraham",
+    "birthYear": 2166,
+    "deathYear": 1991,
+    "era": "BC",
+    "approximate": true,
+    "role": "Patriarch",
+    "priority": 2,
+    "themes": [
+      "Covenant",
+      "Land"
+    ],
+    "track": "people",
+    "description": "Abraham (originally Abram) is the father of the Hebrew nation. God called him to leave Ur and promised to make him a great nation and bless all families of the earth through him.",
+    "bio": "Abraham (originally Abram) is the father of the Hebrew nation. God called him to leave Ur and promised to make him a great nation and bless all families of the earth through him.",
+    "scriptureRefs": [
+      "Gen 12-25; Heb 11:8-19"
+    ],
+    "relatedEvents": [
+      "the-call-of-abraham",
+      "ishmael-born",
+      "the-birth-of-issac"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": "terah",
+      "mother": null,
+      "spouse": "sarah",
+      "children": [
+        "isaac",
+        "ishmael"
+      ]
+    },
+    "timelineStory": "Life",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "sarah",
+      "isaac",
+      "jacob",
+      "noah"
+    ]
+  },
+  {
+    "id": "isaac",
+    "name": "Isaac",
+    "birthYear": 2066,
+    "deathYear": 1886,
+    "era": "BC",
+    "approximate": true,
+    "role": "Patriarch",
+    "priority": 2,
+    "themes": [
+      "Covenant"
+    ],
+    "track": "people",
+    "description": "Isaac was the promised son born to Abraham and Sarah in their old age. He became the father of Jacob (Israel) and continued God’s covenant line.",
+    "bio": "The promised son of Abraham and Sarah, born when they were elderly. Nearly sacrificed by Abraham as a test of faith. Married Rebekah and fathered Jacob and Esau.",
+    "scriptureRefs": [
+      "Gen 21-28; 35:27-29; Heb 11:20"
+    ],
+    "relatedEvents": [
+      "the-birth-of-issac"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": "abraham",
+      "mother": "sarah",
+      "spouse": "rebekah",
+      "children": [
+        "jacob",
+        "esau"
+      ]
+    },
+    "timelineStory": "Life",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "abraham",
+      "sarah",
+      "rebekah",
+      "jacob",
+      "esau"
+    ]
   },
   {
     "id": "jacob",
@@ -605,18 +334,20 @@
     "birthYear": 2006,
     "deathYear": 1859,
     "era": "BC",
-    "approximate": false,
+    "approximate": true,
     "role": "Patriarch",
-    "priority": 1,
-    "themes": ["Covenant"],
+    "priority": 2,
+    "themes": [
+      "Covenant"
+    ],
     "track": "people",
-    "description": "Younger twin of Isaac, renamed Israel, father of the twelve tribes.",
+    "description": "Jacob (later renamed Israel) was the younger twin son of Isaac. He fathered the twelve tribes of Israel and received the covenant blessing from God.",
     "bio": "Jacob (later renamed Israel) was the younger twin son of Isaac. He fathered the twelve tribes of Israel and received the covenant blessing from God.",
     "scriptureRefs": [
-      "Gen 27-36"
+      "Gen 25:19-50:13; Heb 11:21"
     ],
     "relatedEvents": [
-      "twelve-tribes-of-israel"
+      "the-twelve-tribes-of-israel"
     ],
     "relatedBooks": [
       "genesis"
@@ -639,25 +370,116 @@
         "zebulun",
         "benjamin"
       ]
-    }
+    },
+    "timelineStory": "Life",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "isaac",
+      "rebekah",
+      "leah",
+      "rachel",
+      "levi",
+      "judah",
+      "joseph"
+    ]
+  },
+  {
+    "id": "levi",
+    "name": "Levi",
+    "birthYear": 1919,
+    "deathYear": 1782,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 2,
+    "themes": [],
+    "track": "people",
+    "description": "Levi was the third son of Jacob and Leah, and the ancestor of Israel's priestly tribe. The Levites were set apart by God to serve in the tabernacle and later the temple.",
+    "bio": "",
+    "scriptureRefs": [
+      "Gen 29:34; 34:25-31; 46:11; 49:5-7; Exod 6:16-25"
+    ],
+    "relatedEvents": [
+      "the-twelve-tribes-of-israel"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "jacob",
+      "leah",
+      "judah",
+      "joseph",
+      "moses",
+      "aaron"
+    ]
+  },
+  {
+    "id": "judah",
+    "name": "Judah",
+    "birthYear": 1918,
+    "deathYear": 1906,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 2,
+    "themes": [],
+    "track": "people",
+    "description": "Judah was the fourth son of Jacob and Leah, whose tribe became the ruling tribe of Israel. The Messianic line passed through Judah, fulfilling Jacob's prophecy that the scepter would not depart from his descendants.",
+    "bio": "",
+    "scriptureRefs": [
+      "Gen 29:35; 37:26-27; 38; 43:3-10; 44:14-34; 49:8-12"
+    ],
+    "relatedEvents": [
+      "the-twelve-tribes-of-israel"
+    ],
+    "relatedBooks": [
+      "genesis"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "jacob",
+      "leah",
+      "levi",
+      "joseph",
+      "david"
+    ]
   },
   {
     "id": "joseph",
     "name": "Joseph",
-    "birthYear": 1916,
-    "deathYear": 1806,
+    "birthYear": 1915,
+    "deathYear": 1805,
     "era": "BC",
-    "approximate": false,
+    "approximate": true,
     "role": "Patriarch",
-    "priority": 1,
-    "themes": ["Covenant"],
+    "priority": 2,
+    "themes": [
+      "Covenant"
+    ],
     "track": "people",
-    "description": "Son of Jacob who rose to second-in-command in Egypt.",
+    "description": "Joseph was Jacob's favored son, sold into slavery by his jealous brothers. Through God's providence he rose to become second-in-command of Egypt and saved his family from famine.",
     "bio": "Sold into slavery by his brothers, Joseph rose to become second-in-command in Egypt. He saved Egypt and his family from famine through God-given wisdom.",
     "scriptureRefs": [
-      "Gen 37-50"
+      "Gen 30:22-24; 37; 39-50; Heb 11:22"
     ],
     "relatedEvents": [
+      "the-twelve-tribes-of-israel",
       "josephs-exaltation-in-egypt"
     ],
     "relatedBooks": [
@@ -671,7 +493,186 @@
         "manasseh",
         "ephraim"
       ]
-    }
+    },
+    "timelineStory": "Life",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "jacob",
+      "rachel",
+      "judah",
+      "levi",
+      "moses"
+    ]
+  },
+  {
+    "id": "aaron",
+    "name": "Aaron",
+    "birthYear": 1529,
+    "deathYear": 1406,
+    "era": "BC",
+    "approximate": true,
+    "role": "Priest",
+    "priority": 2,
+    "track": "people",
+    "description": "Aaron was Moses' older brother and Israel's first high priest. He served as Moses' spokesman before Pharaoh and was consecrated to lead Israel's priesthood, though he also led the people in making the golden calf.",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Exod 4-Num 20:22-29; 33:38-39"
+    ],
+    "relatedPeople": [
+      "moses",
+      "joshua",
+      "levi"
+    ],
+    "relatedEvents": [
+      "the-exodus",
+      "the-mosaic-covenant",
+      "the-wilderness-wanderings"
+    ],
+    "relatedBooks": [
+      "exodus-book",
+      "leviticus",
+      "numbers"
+    ]
+  },
+  {
+    "id": "moses",
+    "name": "Moses",
+    "birthYear": 1526,
+    "deathYear": 1406,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 2,
+    "themes": [
+      "Covenant",
+      "Deliverance"
+    ],
+    "track": "people",
+    "description": "Born during Pharaoh’s infanticide, Moses was raised in Pharaoh’s court, fled to Midian, and later led Israel out of Egypt. He received the Law at Sinai.",
+    "bio": "Born in Egypt during Hebrew slavery, Moses was rescued by Pharaoh's daughter. Called by God at the burning bush, he led Israel out of Egypt and received the Law at Sinai.",
+    "scriptureRefs": [
+      "Exod 2-Deut 34; Heb 11:23-29"
+    ],
+    "relatedEvents": [
+      "the-exodus",
+      "the-mosaic-covenant",
+      "the-wilderness-wanderings"
+    ],
+    "relatedBooks": [
+      "exodus-book",
+      "leviticus",
+      "numbers",
+      "deuteronomy"
+    ],
+    "familyTree": {
+      "father": "amram",
+      "mother": "jochebed",
+      "spouse": "zipporah",
+      "children": [
+        "gershom",
+        "eliezer"
+      ]
+    },
+    "timelineStory": "Life",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "aaron",
+      "joshua",
+      "pharaoh"
+    ]
+  },
+  {
+    "id": "joshua",
+    "name": "Joshua",
+    "birthYear": 1485,
+    "deathYear": 1375,
+    "era": "BC",
+    "approximate": true,
+    "role": "Judge",
+    "priority": 2,
+    "track": "people",
+    "description": "(originally named Hoshea) was Moses’ longtime assistant and the faithful military leader who succeeded him as the commander of Israel. He courageously led the Israelites across the Jordan River into the Promised Land, directed the conquest of Canaan.",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Exod 17:9-14; 24:13; 33:11; Num 13-14; 27:18-23; Josh 1-24"
+    ],
+    "relatedPeople": [
+      "moses",
+      "aaron",
+      "caleb"
+    ],
+    "relatedEvents": [
+      "the-wilderness-wanderings",
+      "the-conquest-of-canaan",
+      "division-of-the-land"
+    ],
+    "relatedBooks": [
+      "exodus-book",
+      "numbers",
+      "deuteronomy",
+      "joshua-book"
+    ]
+  },
+  {
+    "id": "boaz",
+    "name": "Boaz",
+    "birthYear": 1160,
+    "deathYear": 1090,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 2,
+    "track": "people",
+    "description": "Boaz was a wealthy and godly landowner in Bethlehem who served as the kinsman-redeemer for Ruth. He married Ruth, and their son Obed became the grandfather of King David.",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Ruth 2-4"
+    ],
+    "relatedPeople": [
+      "ruth",
+      "naomi",
+      "jesse",
+      "david"
+    ],
+    "relatedEvents": [
+      "the-era-of-the-judges"
+    ],
+    "relatedBooks": [
+      "ruth-book"
+    ]
+  },
+  {
+    "id": "ruth",
+    "name": "Ruth",
+    "birthYear": 1150,
+    "deathYear": 1100,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 2,
+    "track": "people",
+    "description": "Ruth was a Moabite woman who faithfully followed her mother-in-law Naomi back to Bethlehem after her husband's death. Her loyalty and devotion led to her marriage to Boaz, placing her in the lineage of King David and ultimately Christ.",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Ruth 1-4"
+    ],
+    "relatedPeople": [
+      "boaz",
+      "naomi",
+      "jesse",
+      "david"
+    ],
+    "relatedEvents": [
+      "the-era-of-the-judges"
+    ],
+    "relatedBooks": [
+      "ruth-book"
+    ]
   },
   {
     "id": "samuel",
@@ -681,647 +682,176 @@
     "era": "BC",
     "approximate": true,
     "role": "Prophet",
-    "priority": 1,
-    "themes": ["Kingship"],
+    "priority": 2,
+    "themes": [
+      "Kingship"
+    ],
     "track": "people",
-    "description": "Last judge, prophet, and priest who anointed Israel's first two kings.",
+    "description": "Samuel was the last judge, a prophet, and priest. He anointed Israel’s first two kings (Saul and David) and called the nation back to faithfulness to God.",
     "bio": "Samuel was the last judge, a prophet, and priest. He anointed Israel's first two kings (Saul and David) and called the nation back to faithfulness to God.",
     "scriptureRefs": [
-      "1 Sam 1-25"
+      "1 Sam 1-25; 28:3-20"
     ],
     "relatedEvents": [
-      "selection-of-king-saul"
+      "the-era-of-the-judges",
+      "the-selection-of-king-saul"
     ],
     "relatedBooks": [
-      "1-samuel"
+      "1-samuel",
+      "1-chronicles"
     ],
     "familyTree": {
       "father": "elkanah",
       "mother": "hannah",
       "spouse": null,
       "children": []
-    }
+    },
+    "timelineStory": "Life",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "eli",
+      "saul",
+      "david",
+      "hannah"
+    ]
   },
   {
-    "id": "cain",
-    "name": "Cain",
-    "birthYear": 3974,
-    "deathYear": 3904,
+    "id": "jesse",
+    "name": "Jesse",
+    "birthYear": 1080,
+    "deathYear": 1010,
     "era": "BC",
     "approximate": true,
     "role": "Other",
-    "priority": 4,
+    "priority": 2,
     "themes": [],
     "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
+    "description": "Jesse was the grandson of Boaz and Ruth and the father of King David. He lived in Bethlehem, where the prophet Samuel came to anoint one of his sons as the future king of Israel.",
+    "bio": "A Bethlehemite of the tribe of Judah. Father of eight sons including David. Grandson of Ruth and Boaz.",
+    "scriptureRefs": [
+      "Ruth 4:17",
+      "22; 1 Sam 16-17; Isa 11:1",
+      "10"
+    ],
+    "relatedEvents": [
+      "the-selection-of-king-saul"
+    ],
+    "relatedBooks": [
+      "ruth-book",
+      "1-samuel",
+      "isaiah"
+    ],
     "familyTree": {
       "father": null,
       "mother": null,
       "spouse": null,
-      "children": []
-    }
+      "children": [
+        "david"
+      ]
+    },
+    "timelineStory": "Life",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "ruth",
+      "boaz",
+      "david",
+      "samuel"
+    ]
   },
   {
-    "id": "abel",
-    "name": "Abel",
-    "birthYear": 3974,
-    "deathYear": 3904,
+    "id": "david",
+    "name": "David",
+    "birthYear": 1040,
+    "deathYear": 970,
     "era": "BC",
     "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
+    "role": "King",
+    "priority": 2,
+    "themes": [
+      "Kingship",
+      "Messiah"
+    ],
     "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
+    "description": "David was a shepherd boy anointed by Samuel who became Israel's greatest king, uniting the nation and establishing Jerusalem as its capital. He was called a man after God's own heart and received the covenant promise that his throne would endure forever.",
+    "bio": "A shepherd from Bethlehem, David was anointed king by Samuel. He united Israel, conquered Jerusalem, and established a dynasty through which the Messiah would come.",
+    "scriptureRefs": [
+      "1 Sam 16-1 Kgs 2:11; 1 Chr 11-29; Ps (various)"
+    ],
+    "relatedEvents": [
+      "the-selection-of-king-saul",
+      "the-reign-of-king-david"
+    ],
+    "relatedBooks": [
+      "1-samuel",
+      "2-samuel",
+      "1-kings",
+      "1-chronicles",
+      "psalms"
+    ],
     "familyTree": {
-      "father": null,
+      "father": "jesse",
       "mother": null,
-      "spouse": null,
-      "children": []
-    }
+      "spouse": "bathsheba",
+      "children": [
+        "solomon",
+        "absalom"
+      ]
+    },
+    "timelineStory": "Life",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "samuel",
+      "jesse",
+      "solomon",
+      "bathsheba",
+      "saul",
+      "jonathan"
+    ]
   },
   {
-    "id": "seth",
-    "name": "Seth",
-    "birthYear": 3974,
-    "deathYear": 3904,
+    "id": "solomon",
+    "name": "Solomon",
+    "birthYear": 990,
+    "deathYear": 931,
     "era": "BC",
     "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
+    "role": "King",
+    "priority": 2,
+    "themes": [
+      "Kingship",
+      "Temple"
+    ],
     "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
+    "description": "Solomon was the son of David and Bathsheba who succeeded his father as king of Israel. Renowned for his God-given wisdom, he built the first temple in Jerusalem but later turned to idolatry through his many foreign wives.",
+    "bio": "Third king of Israel, known for wisdom granted by God. Built the First Temple in Jerusalem. Author of Proverbs, Ecclesiastes, and Song of Solomon. His reign marked Israel's golden age.",
+    "scriptureRefs": [
+      "1 Kgs 1-11; 2 Chr 1-9; Prov; Eccl; Song"
+    ],
+    "relatedEvents": [
+      "the-reign-of-king-david",
+      "construction-of-the-first-temple",
+      "the-division-of-the-kingdom"
+    ],
+    "relatedBooks": [
+      "1-kings",
+      "2-chronicles",
+      "proverbs",
+      "ecclesiastes",
+      "song-of-songs"
+    ],
     "familyTree": {
-      "father": null,
-      "mother": null,
+      "father": "david",
+      "mother": "bathsheba",
       "spouse": null,
       "children": []
-    }
-  },
-  {
-    "id": "lamech",
-    "name": "Lamech",
-    "birthYear": 2978,
-    "deathYear": 2908,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "shem",
-    "name": "Shem",
-    "birthYear": 2918,
-    "deathYear": 2848,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "ham",
-    "name": "Ham",
-    "birthYear": 2918,
-    "deathYear": 2848,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "japheth",
-    "name": "Japheth",
-    "birthYear": 2918,
-    "deathYear": 2848,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "rebekah",
-    "name": "Rebekah",
-    "birthYear": 2051,
-    "deathYear": 1981,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "esau",
-    "name": "Esau",
-    "birthYear": 2036,
-    "deathYear": 1966,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "rachel",
-    "name": "Rachel",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "reuben",
-    "name": "Reuben",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "simeon",
-    "name": "Simeon",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "levi",
-    "name": "Levi",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "judah",
-    "name": "Judah",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "dan",
-    "name": "Dan",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "naphtali",
-    "name": "Naphtali",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "gad",
-    "name": "Gad",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "asher",
-    "name": "Asher",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "issachar",
-    "name": "Issachar",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "zebulun",
-    "name": "Zebulun",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "benjamin",
-    "name": "Benjamin",
-    "birthYear": 1976,
-    "deathYear": 1906,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "asenath",
-    "name": "Asenath",
-    "birthYear": 1916,
-    "deathYear": 1846,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "manasseh",
-    "name": "Manasseh",
-    "birthYear": 1886,
-    "deathYear": 1816,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "ephraim",
-    "name": "Ephraim",
-    "birthYear": 1886,
-    "deathYear": 1816,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "nun",
-    "name": "Nun",
-    "birthYear": 1515,
-    "deathYear": 1445,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "elkanah",
-    "name": "Elkanah",
-    "birthYear": 1130,
-    "deathYear": 1060,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
-    "id": "hannah",
-    "name": "Hannah",
-    "birthYear": 1130,
-    "deathYear": 1060,
-    "era": "BC",
-    "approximate": true,
-    "role": "Other",
-    "priority": 4,
-    "themes": [],
-    "track": "people",
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "relatedEvents": [],
-    "relatedBooks": [],
-    "familyTree": {
-      "father": null,
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
+    },
+    "timelineStory": "Life",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "david",
+      "bathsheba",
+      "rehoboam"
+    ]
   },
   {
     "id": "jeroboam-i",
@@ -1329,94 +859,37 @@
     "birthYear": 930,
     "deathYear": 909,
     "era": "BC",
-    "approximate": true,
+    "approximate": false,
     "role": "King",
     "kingdom": "Israel",
     "priority": 2,
-    "themes": ["Kingship", "Monarchy"],
+    "themes": [
+      "Kingship",
+      "Monarchy"
+    ],
     "track": "people",
     "description": "First king of the northern kingdom of Israel",
     "bio": "Led the rebellion against Rehoboam and became the first king of the breakaway northern kingdom. Set up golden calves at Dan and Bethel, establishing idolatrous worship.",
-    "scriptureRefs": ["1 Kings 11:26-40", "1 Kings 12:25-33"],
-    "relatedEvents": ["division-of-the-kingdom", "jeroboams-golden-calves"],
-    "relatedBooks": ["1-kings"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
-  },
-  {
-    "id": "ahab",
-    "name": "Ahab",
-    "birthYear": 874,
-    "deathYear": 853,
-    "era": "BC",
-    "approximate": true,
-    "role": "King",
-    "kingdom": "Israel",
-    "priority": 2,
-    "themes": ["Kingship", "Monarchy", "Judgment"],
-    "track": "people",
-    "description": "Wicked king of Israel, husband of Jezebel",
-    "bio": "Married the Phoenician princess Jezebel and promoted Baal worship throughout Israel. Confronted by Elijah at Mount Carmel. Killed in battle at Ramoth-gilead.",
-    "scriptureRefs": ["1 Kings 16:29-33", "1 Kings 21", "1 Kings 22:29-40"],
-    "relatedEvents": ["elijah-mount-carmel"],
-    "relatedBooks": ["1-kings"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
-  },
-  {
-    "id": "jehu",
-    "name": "Jehu",
-    "birthYear": 841,
-    "deathYear": 814,
-    "era": "BC",
-    "approximate": true,
-    "role": "King",
-    "kingdom": "Israel",
-    "priority": 2,
-    "themes": ["Kingship", "Monarchy", "Judgment"],
-    "track": "people",
-    "description": "King of Israel who destroyed Baal worship",
-    "bio": "Anointed by Elisha's servant to destroy the house of Ahab. Killed Joram, Jezebel, and all Baal worshippers, but continued Jeroboam's calf worship.",
-    "scriptureRefs": ["2 Kings 9-10"],
-    "relatedEvents": [],
-    "relatedBooks": ["2-kings"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
-  },
-  {
-    "id": "jeroboam-ii",
-    "name": "Jeroboam II",
-    "birthYear": 793,
-    "deathYear": 753,
-    "era": "BC",
-    "approximate": true,
-    "role": "King",
-    "kingdom": "Israel",
-    "priority": 2,
-    "themes": ["Kingship", "Monarchy"],
-    "track": "people",
-    "description": "Powerful king who restored Israel's borders",
-    "bio": "Longest and most prosperous reign of any northern king. Restored Israel's borders from Lebo-hamath to the Sea of the Arabah. Despite material prosperity, spiritual decline continued.",
-    "scriptureRefs": ["2 Kings 14:23-29"],
-    "relatedEvents": [],
-    "relatedBooks": ["2-kings"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
-  },
-  {
-    "id": "hoshea",
-    "name": "Hoshea",
-    "birthYear": 732,
-    "deathYear": 721,
-    "era": "BC",
-    "approximate": true,
-    "role": "King",
-    "kingdom": "Israel",
-    "priority": 2,
-    "themes": ["Kingship", "Monarchy", "Judgment"],
-    "track": "people",
-    "description": "Last king of the northern kingdom",
-    "bio": "Last king of Israel. Conspired against Pekah and became an Assyrian vassal. His secret alliance with Egypt provoked the Assyrian siege and fall of Samaria in 721 BC.",
-    "scriptureRefs": ["2 Kings 17:1-6"],
-    "relatedEvents": ["fall-of-northern-kingdom"],
-    "relatedBooks": ["2-kings"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
+    "scriptureRefs": [
+      "1 Kgs 14:20"
+    ],
+    "relatedEvents": [
+      "division-of-the-kingdom",
+      "jeroboams-golden-calves"
+    ],
+    "relatedBooks": [
+      "1-kings"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "ahijah"
+    ]
   },
   {
     "id": "rehoboam",
@@ -1424,18 +897,52 @@
     "birthYear": 930,
     "deathYear": 913,
     "era": "BC",
-    "approximate": true,
+    "approximate": false,
     "role": "King",
     "kingdom": "Judah",
     "priority": 2,
-    "themes": ["Kingship", "Monarchy"],
+    "themes": [
+      "Kingship",
+      "Monarchy"
+    ],
     "track": "people",
     "description": "First king of the southern kingdom of Judah",
     "bio": "Son of Solomon whose harsh response to the northern tribes' petition caused the kingdom to split. Ruled Judah and Benjamin from Jerusalem.",
-    "scriptureRefs": ["1 Kings 12:1-24", "2 Chronicles 10-12"],
-    "relatedEvents": ["division-of-the-kingdom"],
-    "relatedBooks": ["1-kings"],
-    "familyTree": { "father": "solomon", "mother": null, "spouse": null, "children": [] }
+    "scriptureRefs": [
+      "1 Kgs 14:21; 2 Chr 12:13"
+    ],
+    "relatedEvents": [
+      "division-of-the-kingdom"
+    ],
+    "relatedBooks": [
+      "1-kings"
+    ],
+    "familyTree": {
+      "father": "solomon",
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "shemaiah"
+    ]
+  },
+  {
+    "id": "abijah",
+    "name": "Abijah",
+    "birthYear": 913,
+    "deathYear": 910,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "1 Kgs 14:2; 2 Chr 13:2"
+    ]
   },
   {
     "id": "asa",
@@ -1443,18 +950,175 @@
     "birthYear": 910,
     "deathYear": 869,
     "era": "BC",
-    "approximate": true,
+    "approximate": false,
     "role": "King",
     "kingdom": "Judah",
     "priority": 2,
-    "themes": ["Kingship", "Monarchy", "Restoration"],
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Restoration"
+    ],
     "track": "people",
     "description": "Reformer king of Judah",
     "bio": "Third king of Judah who instituted religious reforms, removed idols, and fortified cities. Relied on God early but later turned to foreign alliances.",
-    "scriptureRefs": ["1 Kings 15:9-24", "2 Chronicles 14-16"],
+    "scriptureRefs": [
+      "1 Kgs 15:10; 2 Chr 16:13"
+    ],
     "relatedEvents": [],
-    "relatedBooks": ["1-kings"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
+    "relatedBooks": [
+      "1-kings"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "azariah-son-of-oded",
+      "hanani"
+    ]
+  },
+  {
+    "id": "nadab",
+    "name": "Nadab",
+    "birthYear": 909,
+    "deathYear": 908,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "1 Kgs 15:25"
+    ]
+  },
+  {
+    "id": "baasha",
+    "name": "Baasha",
+    "birthYear": 908,
+    "deathYear": 886,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "1 Kgs 15:33"
+    ],
+    "relatedPeople": [
+      "jehu-son-of-hanani"
+    ]
+  },
+  {
+    "id": "elah",
+    "name": "Elah",
+    "birthYear": 886,
+    "deathYear": 885,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "1 Kgs 16:8"
+    ]
+  },
+  {
+    "id": "zimri",
+    "name": "Zimri",
+    "birthYear": 885,
+    "deathYear": 885,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "1 Kgs 16:15"
+    ]
+  },
+  {
+    "id": "tibni",
+    "name": "Tibni",
+    "birthYear": 885,
+    "deathYear": 880,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "1 Kgs 16:21–22"
+    ]
+  },
+  {
+    "id": "omri",
+    "name": "Omri",
+    "birthYear": 885,
+    "deathYear": 874,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "1 Kgs 16:23"
+    ]
+  },
+  {
+    "id": "ahab",
+    "name": "Ahab",
+    "birthYear": 874,
+    "deathYear": 853,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Judgment"
+    ],
+    "track": "people",
+    "description": "Wicked king of Israel, husband of Jezebel",
+    "bio": "Married the Phoenician princess Jezebel and promoted Baal worship throughout Israel. Confronted by Elijah at Mount Carmel. Killed in battle at Ramoth-gilead.",
+    "scriptureRefs": [
+      "1 Kgs 16:29"
+    ],
+    "relatedEvents": [
+      "elijah-mount-carmel"
+    ],
+    "relatedBooks": [
+      "1-kings"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "elijah",
+      "micaiah",
+      "elisha"
+    ]
   },
   {
     "id": "jehoshaphat",
@@ -1462,113 +1126,460 @@
     "birthYear": 872,
     "deathYear": 848,
     "era": "BC",
-    "approximate": true,
+    "approximate": false,
     "role": "King",
     "kingdom": "Judah",
     "priority": 2,
-    "themes": ["Kingship", "Monarchy", "Covenant"],
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Covenant"
+    ],
     "track": "people",
     "description": "Godly king who strengthened Judah",
     "bio": "Strengthened Judah's defenses and sent Levites to teach the Law throughout the land. Allied with Ahab against Aram but was rebuked by the prophet Jehu.",
-    "scriptureRefs": ["1 Kings 22", "2 Chronicles 17-20"],
+    "scriptureRefs": [
+      "1 Kgs 22:42; 2 Chr 20:31"
+    ],
     "relatedEvents": [],
-    "relatedBooks": ["1-kings", "2-kings"],
-    "familyTree": { "father": "asa", "mother": null, "spouse": null, "children": [] }
-  },
-  {
-    "id": "hezekiah",
-    "name": "Hezekiah",
-    "birthYear": 715,
-    "deathYear": 686,
-    "era": "BC",
-    "approximate": true,
-    "role": "King",
-    "kingdom": "Judah",
-    "priority": 2,
-    "themes": ["Kingship", "Monarchy", "Restoration"],
-    "track": "people",
-    "description": "Reformer king who trusted God against Assyria",
-    "bio": "One of Judah's greatest kings. Restored Temple worship, celebrated Passover, and trusted God when Sennacherib besieged Jerusalem. God miraculously delivered the city.",
-    "scriptureRefs": ["2 Kings 18-20", "2 Chronicles 29-32", "Isaiah 36-39"],
-    "relatedEvents": ["hezekiahs-reform"],
-    "relatedBooks": ["2-kings", "isaiah"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
-  },
-  {
-    "id": "josiah",
-    "name": "Josiah",
-    "birthYear": 640,
-    "deathYear": 609,
-    "era": "BC",
-    "approximate": true,
-    "role": "King",
-    "kingdom": "Judah",
-    "priority": 2,
-    "themes": ["Kingship", "Monarchy", "Restoration", "Covenant"],
-    "track": "people",
-    "description": "Last great reformer king of Judah",
-    "bio": "Became king at age 8. Found the Book of the Law during Temple repairs and led the most thorough reform in Judah's history. Killed at Megiddo fighting Pharaoh Necho.",
-    "scriptureRefs": ["2 Kings 22-23", "2 Chronicles 34-35"],
-    "relatedEvents": ["josiahs-reform"],
-    "relatedBooks": ["2-kings"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": ["zedekiah-king"] }
-  },
-  {
-    "id": "zedekiah-king",
-    "name": "Zedekiah",
-    "birthYear": 597,
-    "deathYear": 586,
-    "era": "BC",
-    "approximate": true,
-    "role": "King",
-    "kingdom": "Judah",
-    "priority": 2,
-    "themes": ["Kingship", "Monarchy", "Judgment"],
-    "track": "people",
-    "description": "Last king of Judah",
-    "bio": "Installed as puppet king by Nebuchadnezzar. Rebelled against Babylon despite Jeremiah's warnings. Jerusalem fell, he was blinded and taken to Babylon.",
-    "scriptureRefs": ["2 Kings 24:17-25:7", "Jeremiah 52"],
-    "relatedEvents": ["destruction-of-jerusalem"],
-    "relatedBooks": ["2-kings", "jeremiah"],
-    "familyTree": { "father": "josiah", "mother": null, "spouse": null, "children": [] }
+    "relatedBooks": [
+      "1-kings",
+      "2-kings"
+    ],
+    "familyTree": {
+      "father": "asa",
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "jahaziel",
+      "jehu-son-of-hanani",
+      "eliezer-son-of-dodavahu"
+    ]
   },
   {
     "id": "elijah",
     "name": "Elijah",
-    "birthYear": 875,
-    "deathYear": 848,
+    "birthYear": 865,
+    "deathYear": 847,
     "era": "BC",
     "approximate": true,
     "role": "Prophet",
     "kingdom": "Israel",
     "priority": 2,
-    "themes": ["Judgment", "Deliverance"],
+    "themes": [
+      "Judgment",
+      "Deliverance"
+    ],
     "track": "people",
-    "description": "Prophet who confronted Baal worship in Israel",
+    "description": "Elijah was a powerful prophet who confronted the worship of Baal in the northern kingdom of Israel, most famously on Mount Carmel. He was taken up to heaven in a chariot of fire without experiencing death.",
     "bio": "Dramatic prophet who challenged Ahab and Jezebel's Baal worship. Called down fire from heaven on Mount Carmel. Taken to heaven in a chariot of fire.",
-    "scriptureRefs": ["1 Kings 17-19", "2 Kings 1-2"],
-    "relatedEvents": ["elijah-mount-carmel"],
-    "relatedBooks": ["1-kings", "2-kings"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
+    "scriptureRefs": [
+      "1 Kgs 17-19; 21; 2 Kgs 1-2"
+    ],
+    "relatedEvents": [
+      "the-division-of-the-kingdom"
+    ],
+    "relatedBooks": [
+      "1-kings",
+      "2-kings"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "elisha",
+      "ahab",
+      "jezebel"
+    ]
+  },
+  {
+    "id": "ahaziah-israel",
+    "name": "Ahaziah",
+    "birthYear": 853,
+    "deathYear": 852,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "1 Kgs 22:51"
+    ],
+    "relatedPeople": [
+      "elijah",
+      "elisha"
+    ]
+  },
+  {
+    "id": "joram-judah",
+    "name": "Joram (Jehoram)",
+    "birthYear": 853,
+    "deathYear": 841,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 8:16–17; 2 Chr 21:5"
+    ],
+    "relatedPeople": [
+      "elijah"
+    ]
+  },
+  {
+    "id": "joram-israel",
+    "name": "Joram (Jehoram)",
+    "birthYear": 852,
+    "deathYear": 841,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 3:1;"
+    ],
+    "relatedPeople": [
+      "elisha"
+    ]
   },
   {
     "id": "elisha",
     "name": "Elisha",
-    "birthYear": 848,
-    "deathYear": 800,
+    "birthYear": 847,
+    "deathYear": 798,
     "era": "BC",
     "approximate": true,
     "role": "Prophet",
     "kingdom": "Israel",
     "priority": 2,
-    "themes": ["Deliverance"],
+    "themes": [
+      "Deliverance"
+    ],
     "track": "people",
-    "description": "Successor of Elijah, prophet of miracles",
+    "description": "Elisha was the prophet who succeeded Elijah after receiving a double portion of his spirit. He performed many miracles throughout his ministry, including healing Naaman's leprosy and raising a widow's son from the dead.",
     "bio": "Received a double portion of Elijah's spirit. Performed numerous miracles including healing Naaman's leprosy and raising the Shunammite's son.",
-    "scriptureRefs": ["2 Kings 2-13"],
+    "scriptureRefs": [
+      "1 Kgs 19:16-21; 2 Kgs 2-9; 13:14-21"
+    ],
+    "relatedEvents": [
+      "the-division-of-the-kingdom"
+    ],
+    "relatedBooks": [
+      "1-kings",
+      "2-kings"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "elijah",
+      "naaman",
+      "jehoram"
+    ]
+  },
+  {
+    "id": "obadiah",
+    "name": "Obadiah",
+    "birthYear": 845,
+    "deathYear": 840,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 2,
+    "track": "people",
+    "description": "Obadiah authored the shortest book in the Old Testament, a single chapter of prophecy against Edom. He condemned the Edomites for their pride and for gloating over Judah's destruction at the hands of Babylon.",
+    "kingdom": "Judah",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Obad 1"
+    ],
+    "relatedPeople": [
+      "joel",
+      "jeremiah"
+    ],
+    "relatedEvents": [
+      "the-babylonian-captivity"
+    ],
+    "relatedBooks": [
+      "obadiah-book"
+    ]
+  },
+  {
+    "id": "jehu",
+    "name": "Jehu",
+    "birthYear": 841,
+    "deathYear": 814,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Judgment"
+    ],
+    "track": "people",
+    "description": "King of Israel who destroyed Baal worship",
+    "bio": "Anointed by Elisha's servant to destroy the house of Ahab. Killed Joram, Jezebel, and all Baal worshippers, but continued Jeroboam's calf worship.",
+    "scriptureRefs": [
+      "2 Kgs 10:36"
+    ],
     "relatedEvents": [],
-    "relatedBooks": ["2-kings"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
+    "relatedBooks": [
+      "2-kings"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "elisha"
+    ]
+  },
+  {
+    "id": "ahaziah-judah",
+    "name": "Ahaziah",
+    "birthYear": 841,
+    "deathYear": 841,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 8:26; 2 Chr 22:2"
+    ]
+  },
+  {
+    "id": "athaliah",
+    "name": "Athaliah (Queen)",
+    "birthYear": 841,
+    "deathYear": 835,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 11:3; 2 Chr 22:12"
+    ]
+  },
+  {
+    "id": "joel",
+    "name": "Joel",
+    "birthYear": 835,
+    "deathYear": 800,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 2,
+    "track": "people",
+    "description": "Joel was a prophet who used a devastating locust plague as a backdrop to call Judah to repentance. He prophesied about the coming Day of the Lord and the future outpouring of God's Spirit on all people.",
+    "kingdom": "Judah",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Joel 1-3"
+    ],
+    "relatedPeople": [
+      "obadiah",
+      "malachi"
+    ],
+    "relatedEvents": [
+      "the-return-from-exile"
+    ],
+    "relatedBooks": [
+      "joel-book"
+    ]
+  },
+  {
+    "id": "joash-judah",
+    "name": "Joash (Jehoash)",
+    "birthYear": 835,
+    "deathYear": 796,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 12:1; 2 Chr 24:1"
+    ],
+    "relatedPeople": [
+      "joel",
+      "zechariah-son-of-jehoiada"
+    ]
+  },
+  {
+    "id": "jehoahaz-israel",
+    "name": "Jehoahaz",
+    "birthYear": 814,
+    "deathYear": 798,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 13:1"
+    ],
+    "relatedPeople": [
+      "elisha"
+    ]
+  },
+  {
+    "id": "joash-israel",
+    "name": "Joash (Jehoash)",
+    "birthYear": 798,
+    "deathYear": 782,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 13:10"
+    ],
+    "relatedPeople": [
+      "elisha"
+    ]
+  },
+  {
+    "id": "amaziah",
+    "name": "Amaziah",
+    "birthYear": 796,
+    "deathYear": 767,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 14:1–2; 2 Chr 25:1"
+    ]
+  },
+  {
+    "id": "jeroboam-ii",
+    "name": "Jeroboam II",
+    "birthYear": 793,
+    "deathYear": 753,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "themes": [
+      "Kingship",
+      "Monarchy"
+    ],
+    "track": "people",
+    "description": "Powerful king who restored Israel's borders",
+    "bio": "Longest and most prosperous reign of any northern king. Restored Israel's borders from Lebo-hamath to the Sea of the Arabah. Despite material prosperity, spiritual decline continued.",
+    "scriptureRefs": [
+      "2 Kgs 14:23"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [
+      "2-kings"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "jonah",
+      "amos",
+      "hosea"
+    ]
+  },
+  {
+    "id": "azariah",
+    "name": "Azariah (Uzziah)",
+    "birthYear": 792,
+    "deathYear": 740,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 15:1–2; 2 Chr 26:3"
+    ],
+    "relatedPeople": [
+      "isaiah"
+    ]
+  },
+  {
+    "id": "jonah",
+    "name": "Jonah",
+    "birthYear": 786,
+    "deathYear": 747,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 2,
+    "track": "people",
+    "description": "Jonah was a prophet sent by God to preach repentance to the Assyrian city of Nineveh. After fleeing from God's call and being swallowed by a great fish, he obeyed and Nineveh repented.",
+    "kingdom": "Israel",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "2 Kgs 14:25; Jonah 1-4"
+    ],
+    "relatedPeople": [
+      "amos",
+      "hosea"
+    ],
+    "relatedEvents": [
+      "the-division-of-the-kingdom"
+    ],
+    "relatedBooks": [
+      "jonah-book",
+      "2-kings"
+    ]
   },
   {
     "id": "amos",
@@ -1580,90 +1591,503 @@
     "role": "Prophet",
     "kingdom": "Israel",
     "priority": 2,
-    "themes": ["Judgment"],
+    "themes": [
+      "Judgment"
+    ],
     "track": "people",
-    "description": "Shepherd-prophet who warned Israel of judgment",
+    "description": "Amos was a shepherd and fig farmer from Tekoa whom God called to prophesy against the northern kingdom of Israel. His message focused on social justice, condemning the oppression of the poor and Israel's empty religious rituals.",
     "bio": "A shepherd from Tekoa in Judah sent to prophesy against the northern kingdom. Denounced social injustice, religious hypocrisy, and predicted exile.",
-    "scriptureRefs": ["Amos 1:1", "Amos 7:14-15"],
-    "relatedEvents": [],
-    "relatedBooks": ["amos"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
+    "scriptureRefs": [
+      "Amos 1-9"
+    ],
+    "relatedEvents": [
+      "the-division-of-the-kingdom"
+    ],
+    "relatedBooks": [
+      "amos-book"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "hosea",
+      "jonah",
+      "isaiah"
+    ]
   },
   {
     "id": "hosea",
     "name": "Hosea",
-    "birthYear": 755,
-    "deathYear": 715,
+    "birthYear": 760,
+    "deathYear": 730,
     "era": "BC",
     "approximate": true,
     "role": "Prophet",
     "kingdom": "Israel",
     "priority": 2,
-    "themes": ["Covenant", "Judgment"],
+    "themes": [
+      "Covenant",
+      "Judgment"
+    ],
     "track": "people",
-    "description": "Prophet of God's faithful love despite Israel's unfaithfulness",
+    "description": "Hosea was a prophet to the northern kingdom whose marriage to the unfaithful Gomer served as a living parable. His life illustrated God's steadfast love for Israel despite her spiritual adultery and idolatry.",
     "bio": "God commanded Hosea to marry an unfaithful wife as a living parable of Israel's spiritual adultery. Prophesied during Israel's final decades before Assyrian exile.",
-    "scriptureRefs": ["Hosea 1-3"],
-    "relatedEvents": [],
-    "relatedBooks": ["hosea"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
+    "scriptureRefs": [
+      "Hosea 1-14"
+    ],
+    "relatedEvents": [
+      "the-division-of-the-kingdom",
+      "the-fall-of-the-northern-kingdom"
+    ],
+    "relatedBooks": [
+      "hosea-book"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "amos",
+      "isaiah",
+      "micah"
+    ]
+  },
+  {
+    "id": "zechariah",
+    "name": "Zechariah",
+    "birthYear": 753,
+    "deathYear": 753,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "priority": 2,
+    "track": "people",
+    "description": "Zechariah was a post-exilic prophet and priest who, alongside Haggai, encouraged the rebuilding of the temple. His book contains vivid apocalyptic visions and striking Messianic prophecies about Christ's entry into Jerusalem and His eventual reign.",
+    "kingdom": "Israel",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "2 Kgs 15:8"
+    ],
+    "relatedPeople": [
+      "amos",
+      "hosea"
+    ],
+    "relatedEvents": [
+      "the-return-from-exile",
+      "the-dedication-of-the-second-temple"
+    ],
+    "relatedBooks": [
+      "zechariah-book",
+      "ezra"
+    ]
+  },
+  {
+    "id": "shallum",
+    "name": "Shallum",
+    "birthYear": 752,
+    "deathYear": 752,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 15:13"
+    ]
+  },
+  {
+    "id": "menahem",
+    "name": "Menahem",
+    "birthYear": 752,
+    "deathYear": 742,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 15:17"
+    ],
+    "relatedPeople": [
+      "hosea"
+    ]
+  },
+  {
+    "id": "pekah",
+    "name": "Pekah",
+    "birthYear": 752,
+    "deathYear": 732,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 15:27"
+    ],
+    "relatedPeople": [
+      "hosea"
+    ]
+  },
+  {
+    "id": "jotham",
+    "name": "Jotham",
+    "birthYear": 750,
+    "deathYear": 732,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 15:32–33; 2 Chr 27:1"
+    ],
+    "relatedPeople": [
+      "isaiah",
+      "micah"
+    ]
+  },
+  {
+    "id": "pekahiah",
+    "name": "Pekahiah",
+    "birthYear": 742,
+    "deathYear": 740,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 15:23"
+    ],
+    "relatedPeople": [
+      "hosea"
+    ]
   },
   {
     "id": "isaiah",
     "name": "Isaiah",
     "birthYear": 740,
-    "deathYear": 681,
-    "era": "BC",
-    "approximate": true,
-    "role": "Prophet",
-    "kingdom": "Judah",
-    "priority": 2,
-    "themes": ["Messiah", "Judgment", "Restoration"],
-    "track": "people",
-    "description": "Greatest of the writing prophets",
-    "bio": "Called in a vision of God's throne. Prophesied during the reigns of Uzziah through Hezekiah. Wrote extensively about the coming Messiah and Israel's restoration.",
-    "scriptureRefs": ["Isaiah 6", "Isaiah 53"],
-    "relatedEvents": [],
-    "relatedBooks": ["isaiah"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
-  },
-  {
-    "id": "micah",
-    "name": "Micah",
-    "birthYear": 735,
     "deathYear": 700,
     "era": "BC",
     "approximate": true,
     "role": "Prophet",
     "kingdom": "Judah",
     "priority": 2,
-    "themes": ["Judgment", "Messiah"],
+    "themes": [
+      "Messiah",
+      "Judgment",
+      "Restoration"
+    ],
     "track": "people",
-    "description": "Prophet who foretold Messiah's birthplace",
-    "bio": "Contemporary of Isaiah from the countryside town of Moresheth. Pronounced judgment on both Israel and Judah. Predicted the Messiah would be born in Bethlehem.",
-    "scriptureRefs": ["Micah 5:2", "Micah 6:8"],
-    "relatedEvents": [],
-    "relatedBooks": ["micah"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
+    "description": "Isaiah was a major prophet who ministered in Judah during the reigns of four kings, calling the nation to repentance and trust in God. His prophecies contain some of the most detailed Messianic predictions in Scripture, including the suffering servant passages.",
+    "bio": "Called in a vision of God's throne. Prophesied during the reigns of Uzziah through Hezekiah. Wrote extensively about the coming Messiah and Israel's restoration.",
+    "scriptureRefs": [
+      "2 Kgs 19-20; Isa 1-66; 2 Chr 26:22; 32:20-32"
+    ],
+    "relatedEvents": [
+      "the-fall-of-the-northern-kingdom",
+      "the-division-of-the-kingdom"
+    ],
+    "relatedBooks": [
+      "isaiah",
+      "2-kings",
+      "2-chronicles"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "micah",
+      "hosea",
+      "amos",
+      "hezekiah"
+    ]
   },
   {
-    "id": "jeremiah",
-    "name": "Jeremiah",
-    "birthYear": 626,
-    "deathYear": 586,
+    "id": "micah",
+    "name": "Micah",
+    "birthYear": 737,
+    "deathYear": 690,
     "era": "BC",
     "approximate": true,
     "role": "Prophet",
     "kingdom": "Judah",
     "priority": 2,
-    "themes": ["Judgment", "Covenant"],
+    "themes": [
+      "Judgment",
+      "Messiah"
+    ],
     "track": "people",
-    "description": "The weeping prophet who warned of Jerusalem's fall",
+    "description": "Micah was a prophet from the small town of Moresheth who prophesied against both Samaria and Jerusalem. He famously foretold that the Messiah would be born in Bethlehem and called Israel to act justly, love mercy, and walk humbly with God.",
+    "bio": "Contemporary of Isaiah from the countryside town of Moresheth. Pronounced judgment on both Israel and Judah. Predicted the Messiah would be born in Bethlehem.",
+    "scriptureRefs": [
+      "Mic 1-7; Jer 26:18"
+    ],
+    "relatedEvents": [
+      "the-fall-of-the-northern-kingdom",
+      "the-division-of-the-kingdom"
+    ],
+    "relatedBooks": [
+      "micah-book"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "isaiah",
+      "hosea",
+      "amos"
+    ]
+  },
+  {
+    "id": "ahaz",
+    "name": "Ahaz",
+    "birthYear": 735,
+    "deathYear": 715,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 16:1; 2 Chr 28:1"
+    ],
+    "relatedPeople": [
+      "isaiah",
+      "micah"
+    ]
+  },
+  {
+    "id": "hoshea",
+    "name": "Hoshea",
+    "birthYear": 732,
+    "deathYear": 723,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Israel",
+    "priority": 2,
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Judgment"
+    ],
+    "track": "people",
+    "description": "Last king of the northern kingdom",
+    "bio": "Last king of Israel. Conspired against Pekah and became an Assyrian vassal. His secret alliance with Egypt provoked the Assyrian siege and fall of Samaria in 721 BC.",
+    "scriptureRefs": [
+      "2 Kgs 17:1"
+    ],
+    "relatedEvents": [
+      "fall-of-northern-kingdom"
+    ],
+    "relatedBooks": [
+      "2-kings"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "hosea"
+    ]
+  },
+  {
+    "id": "hezekiah",
+    "name": "Hezekiah",
+    "birthYear": 715,
+    "deathYear": 686,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Restoration"
+    ],
+    "track": "people",
+    "description": "Reformer king who trusted God against Assyria",
+    "bio": "One of Judah's greatest kings. Restored Temple worship, celebrated Passover, and trusted God when Sennacherib besieged Jerusalem. God miraculously delivered the city.",
+    "scriptureRefs": [
+      "2 Kgs 18:18; 2 Chr 29:1"
+    ],
+    "relatedEvents": [
+      "hezekiahs-reform"
+    ],
+    "relatedBooks": [
+      "2-kings",
+      "isaiah"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "isaiah",
+      "micah"
+    ]
+  },
+  {
+    "id": "manasseh",
+    "name": "Manasseh",
+    "birthYear": 686,
+    "deathYear": 642,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "priority": 2,
+    "themes": [],
+    "track": "people",
+    "description": "Supporting biblical figure linked through family or narrative relationships.",
+    "bio": "",
+    "scriptureRefs": [
+      "2 Kgs 21:1; 2 Chr 33:1"
+    ],
+    "relatedEvents": [],
+    "relatedBooks": [],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "kingdom": "Judah",
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "nahum"
+    ]
+  },
+  {
+    "id": "nahum",
+    "name": "Nehum",
+    "birthYear": 650,
+    "deathYear": 612,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 2,
+    "track": "people",
+    "description": "Nahum was a prophet whose message focused on the coming destruction of Nineveh, the Assyrian capital. His prophecy declared God's judgment against Assyria's cruelty and violence, comforting Judah with the promise of their oppressor's downfall.",
+    "kingdom": "Judah",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Nah 1-3"
+    ],
+    "relatedPeople": [
+      "zephaniah",
+      "jeremiah",
+      "habakkuk"
+    ],
+    "relatedEvents": [
+      "the-fall-of-the-northern-kingdom"
+    ],
+    "relatedBooks": [
+      "nahum-book"
+    ]
+  },
+  {
+    "id": "jeremiah",
+    "name": "Jeremiah",
+    "birthYear": 650,
+    "deathYear": 582,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "kingdom": "Judah",
+    "priority": 2,
+    "themes": [
+      "Judgment",
+      "Covenant"
+    ],
+    "track": "people",
+    "description": "Jeremiah was called as a prophet while still young and ministered to Judah for over 40 years leading up to and during the Babylonian exile. Known as the weeping prophet, he faithfully proclaimed God's judgment despite intense personal suffering and rejection.",
     "bio": "Called as a young man to prophesy Judah's destruction. Witnessed the fall of Jerusalem and the exile. Promised a new covenant written on hearts.",
-    "scriptureRefs": ["Jeremiah 1:4-10", "Jeremiah 31:31-34"],
-    "relatedEvents": ["first-deportation-babylon", "destruction-of-jerusalem"],
-    "relatedBooks": ["jeremiah"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
+    "scriptureRefs": [
+      "2 Chr 35:25; 36:12",
+      "21-22; Jer 1-52; Lam"
+    ],
+    "relatedEvents": [
+      "the-babylonian-captivity"
+    ],
+    "relatedBooks": [
+      "jeremiah-book",
+      "lamentations",
+      "2-kings",
+      "2-chronicles"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "habakkuk",
+      "zephaniah",
+      "daniel",
+      "ezekiel",
+      "baruch"
+    ]
+  },
+  {
+    "id": "amon",
+    "name": "Amon",
+    "birthYear": 642,
+    "deathYear": 640,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 21:19; 2 Chr 33:21"
+    ]
   },
   {
     "id": "zephaniah",
@@ -1675,13 +2099,360 @@
     "role": "Prophet",
     "kingdom": "Judah",
     "priority": 2,
-    "themes": ["Judgment", "Restoration"],
+    "themes": [
+      "Judgment",
+      "Restoration"
+    ],
     "track": "people",
-    "description": "Prophet of the Day of the Lord",
+    "description": "Zephaniah was a prophet of royal descent who ministered during King Josiah's reign in Judah. He proclaimed the coming Day of the Lord as a time of judgment on Judah's idolatry, but also promised a future restoration for a faithful remnant.",
     "bio": "Royal descendant who prophesied during Josiah's reign. Proclaimed the coming Day of the Lord as universal judgment, but also promised restoration for a faithful remnant.",
-    "scriptureRefs": ["Zephaniah 1:1", "Zephaniah 3:14-20"],
-    "relatedEvents": [],
-    "relatedBooks": ["zephaniah"],
-    "familyTree": { "father": null, "mother": null, "spouse": null, "children": [] }
+    "scriptureRefs": [
+      "Zeph 1-3"
+    ],
+    "relatedEvents": [
+      "the-division-of-the-kingdom"
+    ],
+    "relatedBooks": [
+      "zephaniah-book"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "relatedPeople": [
+      "jeremiah",
+      "habakkuk",
+      "nahum",
+      "josiah"
+    ]
+  },
+  {
+    "id": "josiah",
+    "name": "Josiah",
+    "birthYear": 640,
+    "deathYear": 608,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Restoration",
+      "Covenant"
+    ],
+    "track": "people",
+    "description": "Last great reformer king of Judah",
+    "bio": "Became king at age 8. Found the Book of the Law during Temple repairs and led the most thorough reform in Judah's history. Killed at Megiddo fighting Pharaoh Necho.",
+    "scriptureRefs": [
+      "2 Kgs 22:1; 2 Chr 34:1"
+    ],
+    "relatedEvents": [
+      "josiahs-reform"
+    ],
+    "relatedBooks": [
+      "2-kings"
+    ],
+    "familyTree": {
+      "father": null,
+      "mother": null,
+      "spouse": null,
+      "children": [
+        "zedekiah-king"
+      ]
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "zephaniah",
+      "jeremiah",
+      "huldah",
+      "nahum"
+    ]
+  },
+  {
+    "id": "daniel",
+    "name": "Daniel",
+    "birthYear": 620,
+    "deathYear": 540,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 2,
+    "track": "people",
+    "description": "Daniel was a young Jewish nobleman taken captive to Babylon who rose to serve as a high official under multiple empires. He remained faithful to God throughout his life, receiving apocalyptic visions and surviving the lions' den.",
+    "kingdom": "Judah",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Dan 1-12; Ezek 14:14",
+      "20; 28:3"
+    ],
+    "relatedPeople": [
+      "ezekiel",
+      "jeremiah",
+      "nebuchadnezzar",
+      "shadrach",
+      "meshach",
+      "abednego"
+    ],
+    "relatedEvents": [
+      "the-babylonian-captivity",
+      "the-return-from-exile"
+    ],
+    "relatedBooks": [
+      "daniel-book",
+      "ezekiel-book"
+    ]
+  },
+  {
+    "id": "ezekiel",
+    "name": "Ezekiel",
+    "birthYear": 620,
+    "deathYear": 570,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 2,
+    "track": "people",
+    "description": "Ezekiel was a priest and prophet who ministered to the Jewish exiles in Babylon during the captivity. His dramatic visions and symbolic acts conveyed God's judgment on Jerusalem and His promise to restore Israel, including the famous vision of the valley of dry bones.",
+    "kingdom": "Judah",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Ezek 1-48"
+    ],
+    "relatedPeople": [
+      "daniel",
+      "jeremiah"
+    ],
+    "relatedEvents": [
+      "the-babylonian-captivity"
+    ],
+    "relatedBooks": [
+      "ezekiel-book"
+    ]
+  },
+  {
+    "id": "jehoahaz-judah",
+    "name": "Jehoahaz",
+    "birthYear": 609,
+    "deathYear": 609,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 23:31; 2 Chr 36:2"
+    ],
+    "relatedPeople": [
+      "jeremiah"
+    ]
+  },
+  {
+    "id": "jehoiakim",
+    "name": "Jehoiakim",
+    "birthYear": 609,
+    "deathYear": 598,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 23:36; 2 Chr 36:5"
+    ],
+    "relatedPeople": [
+      "jeremiah",
+      "habakkuk"
+    ]
+  },
+  {
+    "id": "habakkuk",
+    "name": "Habakkuk",
+    "birthYear": 608,
+    "deathYear": 598,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 2,
+    "track": "people",
+    "description": "Habakkuk was a prophet who boldly questioned God about why He allowed injustice in Judah and why He would use the wicked Babylonians as instruments of judgment. God's response taught him that the righteous shall live by faith, a truth later central to the New Testament.",
+    "kingdom": "Judah",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Hab 1-3"
+    ],
+    "relatedPeople": [
+      "jeremiah",
+      "zephaniah",
+      "nahum"
+    ],
+    "relatedEvents": [
+      "the-babylonian-captivity"
+    ],
+    "relatedBooks": [
+      "habakkuk-book"
+    ]
+  },
+  {
+    "id": "jehoiachin",
+    "name": "Jehoiachin",
+    "birthYear": 598,
+    "deathYear": 597,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "track": "people",
+    "timelineStory": "Active",
+    "scriptureRefs": [
+      "2 Kgs 24:8; 2 Chr 36:9"
+    ],
+    "relatedPeople": [
+      "jeremiah"
+    ]
+  },
+  {
+    "id": "zedekiah-king",
+    "name": "Zedekiah",
+    "birthYear": 597,
+    "deathYear": 586,
+    "era": "BC",
+    "approximate": false,
+    "role": "King",
+    "kingdom": "Judah",
+    "priority": 2,
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Judgment"
+    ],
+    "track": "people",
+    "description": "Last king of Judah",
+    "bio": "Installed as puppet king by Nebuchadnezzar. Rebelled against Babylon despite Jeremiah's warnings. Jerusalem fell, he was blinded and taken to Babylon.",
+    "scriptureRefs": [
+      "2 Kgs 24:18; 2 Chr 36:11"
+    ],
+    "relatedEvents": [
+      "destruction-of-jerusalem"
+    ],
+    "relatedBooks": [
+      "2-kings",
+      "jeremiah"
+    ],
+    "familyTree": {
+      "father": "josiah",
+      "mother": null,
+      "spouse": null,
+      "children": []
+    },
+    "timelineStory": "Active",
+    "relatedPeople": [
+      "jeremiah",
+      "ezekiel"
+    ]
+  },
+  {
+    "id": "haggai",
+    "name": "Haggai",
+    "birthYear": 520,
+    "deathYear": 520,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 2,
+    "track": "people",
+    "description": "Haggai was a post-exilic prophet who urged the returned Jewish community to complete the rebuilding of the temple in Jerusalem. His short but powerful messages motivated the people to prioritize God's house over their own comfort.",
+    "kingdom": "Judah",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Hag 1-2; Ezra 5:1; 6:14"
+    ],
+    "relatedPeople": [
+      "zechariah",
+      "zerubbabel",
+      "joshua"
+    ],
+    "relatedEvents": [
+      "the-return-from-exile",
+      "the-dedication-of-the-second-temple"
+    ],
+    "relatedBooks": [
+      "haggai-book",
+      "ezra"
+    ]
+  },
+  {
+    "id": "esther",
+    "name": "Esther",
+    "birthYear": 478,
+    "deathYear": 472,
+    "era": "BC",
+    "approximate": true,
+    "role": "Other",
+    "priority": 2,
+    "track": "people",
+    "description": "Esther was a Jewish woman who became queen of Persia during the reign of King Xerxes (Ahasuerus). She courageously risked her life to save the Jewish people from a plot of annihilation devised by the official Haman.",
+    "kingdom": "Judah",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Esth 1-10"
+    ],
+    "relatedPeople": [
+      "mordecai",
+      "haman",
+      "xerxes"
+    ],
+    "relatedEvents": [
+      "the-return-from-exile"
+    ],
+    "relatedBooks": [
+      "esther-book"
+    ]
+  },
+  {
+    "id": "malachi",
+    "name": "Malachi",
+    "birthYear": 435,
+    "deathYear": 435,
+    "era": "BC",
+    "approximate": true,
+    "role": "Prophet",
+    "priority": 2,
+    "track": "people",
+    "description": "Malachi was the last Old Testament prophet, ministering to the post-exilic community in Jerusalem. He confronted the people's spiritual apathy, corrupt worship, and broken covenants, while pointing ahead to the coming messenger who would prepare the way for the Lord.",
+    "kingdom": "Judah",
+    "timelineStory": "Active",
+    "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
+    "scriptureRefs": [
+      "Mal 1-4"
+    ],
+    "relatedPeople": [
+      "haggai",
+      "zechariah",
+      "ezra",
+      "nehemiah"
+    ],
+    "relatedEvents": [
+      "the-return-from-exile",
+      "the-rebuilding-of-jerusalems-walls"
+    ],
+    "relatedBooks": [
+      "malachi-book"
+    ]
   }
 ]

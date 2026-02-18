@@ -64,6 +64,13 @@
         "items": {
           "type": "string"
         }
+      },
+      "source": {
+        "type": "string"
+      },
+      "timelineStory": {
+        "type": "string",
+        "enum": ["Active", "Life"]
       }
     },
     "required": ["id", "type", "name", "startYear", "certainty", "categories"],

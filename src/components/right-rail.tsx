@@ -150,8 +150,8 @@ export function RightRail({ entity, onClose, onViewRelationship, pathMode }: Rig
               >
                 {dateLabel}
               </div>
-              <p 
-                style={{ 
+              <p
+                style={{
                   fontSize: 'var(--type-body-sm-size)',
                   lineHeight: 'var(--type-body-sm-line)',
                   color: 'var(--color-base-text-primary)',
@@ -159,6 +159,17 @@ export function RightRail({ entity, onClose, onViewRelationship, pathMode }: Rig
               >
                 {entity.description}
               </p>
+              {entity.timelineStory === 'Active' && (
+                <p
+                  className="italic"
+                  style={{
+                    fontSize: 'var(--type-label-xs-size)',
+                    color: 'var(--color-base-text-secondary)',
+                  }}
+                >
+                  Dates reflect period of scriptural activity, not full lifespan.
+                </p>
+              )}
             </div>
           </section>
 
@@ -295,18 +306,18 @@ export function RightRail({ entity, onClose, onViewRelationship, pathMode }: Rig
           {/* Notes Section */}
           {entity.notes && (
             <section>
-              <h3 
+              <h3
                 className="text-sm font-semibold mb-2 uppercase tracking-wide"
-                style={{ 
+                style={{
                   color: 'var(--color-base-text-secondary)',
                   fontSize: 'var(--type-label-xs-size)',
                 }}
               >
                 Notes
               </h3>
-              <p 
+              <p
                 className="leading-relaxed"
-                style={{ 
+                style={{
                   fontSize: 'var(--type-body-sm-size)',
                   lineHeight: 'var(--type-body-sm-line)',
                   color: 'var(--color-base-text-primary)',
@@ -314,6 +325,34 @@ export function RightRail({ entity, onClose, onViewRelationship, pathMode }: Rig
               >
                 {entity.notes}
               </p>
+            </section>
+          )}
+
+          {/* Source Section */}
+          {entity.source && (
+            <section>
+              <details className="group">
+                <summary
+                  className="cursor-pointer text-sm font-semibold uppercase tracking-wide list-none flex items-center gap-1"
+                  style={{
+                    color: 'var(--color-base-text-secondary)',
+                    fontSize: 'var(--type-label-xs-size)',
+                  }}
+                >
+                  Source
+                  <span className="text-xs ml-1 opacity-60">+</span>
+                </summary>
+                <p
+                  className="mt-2"
+                  style={{
+                    fontSize: 'var(--type-body-sm-size)',
+                    lineHeight: 'var(--type-body-sm-line)',
+                    color: 'var(--color-base-text-primary)',
+                  }}
+                >
+                  {entity.source}
+                </p>
+              </details>
             </section>
           )}
         </div>

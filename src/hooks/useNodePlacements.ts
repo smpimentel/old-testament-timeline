@@ -73,7 +73,11 @@ export function useNodePlacements({
         x,
         width,
         trackBand,
-        forcePointNode: entity.type === 'person' && isUnknownEraEntity,
+        forcePointNode: entity.type === 'person' && (
+          isUnknownEraEntity ||
+          !entity.endYear ||
+          (entity.startYear - (entity.endYear ?? entity.startYear)) <= 10
+        ),
       };
     });
   }, [filteredEntities, yearToX, pixelsPerYear, tracks, unknownEntityXById, unknownVisualEndYear]);

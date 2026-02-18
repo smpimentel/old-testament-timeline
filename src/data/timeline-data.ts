@@ -42,6 +42,7 @@ export const EVENT_CATEGORIES = [
   'monarchy',
   'restoration',
   'event',
+  'secular-context',
 ] as const;
 
 export type EventCategory = (typeof EVENT_CATEGORIES)[number];
@@ -67,6 +68,8 @@ export interface TimelineEntity {
   notes?: string;
   swimlane?: number;
   details?: string;
+  source?: string;
+  timelineStory?: 'Active' | 'Life';
 }
 
 export interface Period {
@@ -195,6 +198,7 @@ export const eventColors: Record<EventCategory, string> = {
   monarchy: '#F4D19B',
   restoration: '#C8D4B8',
   event: '#D9C4A8',
+  'secular-context': '#B8B0A8',
 };
 
 // ===== BOOK GENRE COLOR MAPPING =====
@@ -211,6 +215,7 @@ function normalizeToken(value: string): string {
 export function normalizeEventCategory(rawCategory?: string): EventCategory {
   if (!rawCategory) return 'event';
   const normalized = normalizeToken(rawCategory);
+  if (normalized === 'historical') return 'secular-context';
   if (eventCategorySet.has(normalized)) {
     return normalized as EventCategory;
   }
@@ -292,7 +297,7 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
       type: 'person' as EntityType,
       name: p.name,
       startYear: p.startYear,
-      endYear: p.endYear,
+      endYear: p.endYear !== p.startYear ? p.endYear : undefined,
       certainty: p.certainty as DateCertainty,
       priority: (p.priority || 2) as 1 | 2 | 3 | 4,
       description: p.description || p.bio || '',
@@ -303,6 +308,8 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
       scripture: p.scriptureRefs?.join(', '),
       notes: p.bio,
       swimlane: p.swimlane || 0,
+      source: raw.source as string | undefined,
+      timelineStory: raw.timelineStory as 'Active' | 'Life' | undefined,
     };
   });
 }
@@ -328,6 +335,7 @@ function transformEvents(data: typeof eventsData): TimelineEntity[] {
       relationships: relationshipMap.get(e.id),
       scripture: e.scriptureRefs?.join(', '),
       swimlane: e.swimlane || 0,
+      source: raw.source as string | undefined,
     };
   });
 }
@@ -419,7 +427,7 @@ function transformThemes(data: typeof themesData): Theme[] {
 // Padding (in years) to prevent visual overlap from labels/markers.
 // Gap after placing an entity before next can share the lane.
 // Point events need wider gap for labels (~150px at 4px/yr ≈ 40yr).
-const LANE_GAP_SPAN = 10;
+const LANE_GAP_SPAN = 25;
 const LANE_GAP_POINT = 40;
 
 function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
@@ -459,6 +467,17 @@ export function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
   const judahEntities = entities.filter(e => e.kingdom === 'Judah');
   assignLanesToGroup(israelEntities);
   assignLanesToGroup(judahEntities);
+
+  // Manual fixes: visual overlaps from unknown-era compression / dense zones
+  const overrides: Record<string, number> = {
+    'tower-of-babel': 1,
+    'temple-built': 2,
+    'first-olympic-games-in-greece': -1,
+    'founding-of-rome': 1,
+  };
+  for (const entity of entities) {
+    if (entity.id in overrides) entity.swimlane = (entity.swimlane ?? 0) + overrides[entity.id];
+  }
 
   return entities;
 }

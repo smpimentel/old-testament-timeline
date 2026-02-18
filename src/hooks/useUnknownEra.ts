@@ -18,15 +18,16 @@ export function useUnknownEra({
 
   const unknownEntityXById = useMemo(() => {
     const unknownEntities = timelineData
-      .filter((entity) => entity.type !== 'book' && entity.startYear > unknownVisualEndYear)
-      .sort((a, b) => {
-        if (a.startYear !== b.startYear) return b.startYear - a.startYear;
-        const typeOrder = { event: 0, person: 1, book: 2 } as const;
-        if (typeOrder[a.type] !== typeOrder[b.type]) {
-          return typeOrder[a.type] - typeOrder[b.type];
-        }
-        return a.id.localeCompare(b.id);
-      });
+      .filter((entity) => entity.type !== 'book' && entity.startYear > unknownVisualEndYear);
+
+    // Group entities by startYear — all entities at the same year share one x-position
+    const yearGroups = new Map<number, typeof unknownEntities>();
+    for (const entity of unknownEntities) {
+      const group = yearGroups.get(entity.startYear) ?? [];
+      group.push(entity);
+      yearGroups.set(entity.startYear, group);
+    }
+    const sortedYears = [...yearGroups.keys()].sort((a, b) => b - a);
 
     const map = new Map<string, number>();
     const edgeInset = 4;
@@ -34,11 +35,14 @@ export function useUnknownEra({
     const minX = unknownVisualBand.startX + edgeInset;
     const maxX = unknownVisualBand.startX + Math.max(endInset, unknownVisualBand.width - endInset);
     const span = Math.max(0, maxX - minX);
-    const divisor = Math.max(1, unknownEntities.length - 1);
+    const divisor = Math.max(1, sortedYears.length - 1);
 
-    unknownEntities.forEach((entity, index) => {
-      const ratio = unknownEntities.length === 1 ? 0.5 : index / divisor;
-      map.set(entity.id, minX + (ratio * span));
+    sortedYears.forEach((year, groupIndex) => {
+      const ratio = sortedYears.length === 1 ? 0.5 : groupIndex / divisor;
+      const x = minX + (ratio * span);
+      for (const entity of yearGroups.get(year)!) {
+        map.set(entity.id, x);
+      }
     });
 
     return map;
