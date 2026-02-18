@@ -57,13 +57,13 @@ function App() {
   const { pathMode, breadcrumbs, togglePathMode, addBreadcrumb, handleClearBreadcrumbs, breadcrumbEntities, getBreadcrumbNumber } = usePathTracing();
   const { searchQuery, setSearchQuery, selectedPeriod, setSelectedPeriod, activeThemes, handleThemeToggle, filteredEntities } = useEntityFilter();
   const { selectedEntity, hoveredEntity, hoverPosition, handleEntityClick: baseHandleEntityClick, handleEntityHover, handleEntityLeave, closeSelection, setSelectedEntity } = useEntitySelection();
-  const { panX, panY, zoomLevel, isDragging, canvasRef, pixelsPerYear, yearToX, panToYear, panToCenterOnYear, canvasEventHandlers } = useViewport({ selectedEntityOpen: !!selectedEntity, railWidth });
+  const { panX, panY, zoomLevel, isDragging, canvasRef, pixelsPerYear, yearToX, panToYear, panToCenterOnYear, fitYearRangeToView, canvasEventHandlers } = useViewport({ selectedEntityOpen: !!selectedEntity, railWidth });
 
   const handlePeriodSelect = (periodId: string) => {
     const period = periods.find(p => p.id === periodId);
     if (period) {
       setSelectedPeriod(periodId);
-      panToYear(period.startYear, 120);
+      fitYearRangeToView(period.startYear, period.endYear);
     }
   };
 
@@ -122,7 +122,7 @@ function App() {
         <div className="absolute pointer-events-none" style={{ left: 0, top: sectionLayout.booksSectionTop, width: TIMELINE_WIDTH, height: sectionLayout.booksSectionHeight, background: 'rgba(255, 253, 247, 0.38)', borderTop: '1px solid #D8CBB7' }} />
         <UnknownEraBand startX={unknownVisualBand.startX} width={unknownVisualBand.width} mainSectionTop={sectionLayout.mainSectionTop} mainSectionHeight={sectionLayout.mainSectionHeight} />
         <PeriodSection yearToX={yearToX} pixelsPerYear={pixelsPerYear} totalHeight={sectionLayout.periodSectionHeight} unknownVisualStartYear={UNKNOWN_VISUAL_START_YEAR} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} />
-        <KingdomBackground yearToX={yearToX} pixelsPerYear={pixelsPerYear} topOffset={sectionLayout.mainSectionTop} />
+        <KingdomBackground yearToX={yearToX} topOffset={sectionLayout.mainSectionTop} />
         <TimeGrid startYear={START_YEAR} endYear={END_YEAR} height={sectionLayout.foundationHeight} axisY={sectionLayout.mainSectionTop + 2} />
         <TrackLabels tracks={sectionLayout.tracks} />
         <RelationshipOverlay breadcrumbEntities={breadcrumbEntities} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} unknownEntityXById={unknownEntityXById} yearToX={yearToX} tracks={sectionLayout.tracks} />
