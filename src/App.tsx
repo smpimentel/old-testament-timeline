@@ -24,26 +24,32 @@ const trackLayout = computeTrackLayout(createConfigFromEntities(timelineData));
 const UNKNOWN_VISUAL_START_YEAR = 4004;
 const UNKNOWN_VISUAL_END_YEAR = 2300;
 
-// Section layout: events → kingdom bands → people → books
+// Section layout: anchored to SVG background rectangles
 const PERIOD_H = 170;
 const MAIN_TOP = PERIOD_H;
 const laneStride = trackLayout.events.laneStride; // 28px
 
 // Non-kingdom events at top
 const eventsBaseY = MAIN_TOP + 48;
-const eventsBandBottom = eventsBaseY + trackLayout.events.bandHeight;
 
-// Kingdom bands between events and people tracks
-const kingdomNorthBaseY = eventsBandBottom + 12;
+// Kingdom bands centered in SVG background rectangles
+// Blue rect (Israel): SVG y=0..390, center at SVG y=195
 const northBandHeight = kingdomLanes.northLaneCount * laneStride;
-const kingdomSouthBaseY = kingdomNorthBaseY + northBandHeight + 16;
-const southBandHeight = kingdomLanes.southLaneCount * laneStride;
-const kingdomBottom = kingdomSouthBaseY + southBandHeight;
+const kingdomNorthBaseY = MAIN_TOP + 195 - northBandHeight / 2;
 
-// Non-kingdom people below kingdom bands
-const peopleBaseY = kingdomBottom + 20;
-const mainContentBottom = peopleBaseY + trackLayout.people.bandHeight + 36;
-const mainSectionHeight = Math.max(800, mainContentBottom - MAIN_TOP);
+// Gold rect (Judah): SVG y=410..800, center at SVG y=605
+const southBandHeight = kingdomLanes.southLaneCount * laneStride;
+const kingdomSouthBaseY = MAIN_TOP + 605 - southBandHeight / 2;
+
+// Non-kingdom people: Solomon (swimlane 2) centered at SVG y=400
+const peopleBaseY = MAIN_TOP + 400 - 2 * laneStride - laneStride / 2;
+
+const mainContentBottom = Math.max(
+  MAIN_TOP + 800,
+  kingdomSouthBaseY + southBandHeight,
+  peopleBaseY + trackLayout.people.bandHeight,
+) + 36;
+const mainSectionHeight = mainContentBottom - MAIN_TOP;
 const booksSectionTop = MAIN_TOP + mainSectionHeight + 24;
 const booksBaseY = booksSectionTop + 20;
 const booksSectionHeight = trackLayout.books.bandHeight + 20 + 24;
@@ -141,7 +147,7 @@ function App() {
         <KingdomBackground yearToX={yearToX} topOffset={sectionLayout.mainSectionTop} />
         <TimeGrid startYear={START_YEAR} endYear={END_YEAR} height={sectionLayout.foundationHeight} axisY={sectionLayout.mainSectionTop + 2} />
         <TrackLabels tracks={sectionLayout.tracks} />
-        <KingdomLaneDivider yearToX={yearToX} dividerY={kingdomSouthBaseY - 8} />
+        <KingdomLaneDivider yearToX={yearToX} dividerY={MAIN_TOP + 400} />
         <RelationshipOverlay breadcrumbEntities={breadcrumbEntities} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} unknownEntityXById={unknownEntityXById} yearToX={yearToX} tracks={sectionLayout.tracks} />
         {nodePlacements.map(({ entity, x, width, trackBand, forcePointNode }) => {
           const isHighlighted = activeThemes.length > 0 && entity.themes?.some(t => activeThemes.includes(t));
