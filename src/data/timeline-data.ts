@@ -455,19 +455,12 @@ function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
 
 export function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
   // Non-kingdom entities: assign by type (separate tracks)
-  const nonKingdomPersons = entities.filter((e) => e.type === 'person' && !e.kingdom);
-  const nonKingdomEvents = entities.filter((e) => e.type === 'event' && !e.kingdom);
-  const books = entities.filter((e) => e.type === 'book');
-
-  // Secular events get top lanes (lowest swimlanes = closest to top of events track,
-  // farthest from kingdom band) to prevent cross-track visual overlap
-  const secularEvents = nonKingdomEvents.filter((e) => e.category === 'secular-context');
-  const biblicalEvents = nonKingdomEvents.filter((e) => e.category !== 'secular-context');
-  const secularLaneCount = assignLanesToGroup(secularEvents);
-  assignLanesToGroup(biblicalEvents, secularLaneCount);
-
-  assignLanesToGroup(nonKingdomPersons);
-  assignLanesToGroup(books);
+  const nonKingdomByType = {
+    person: entities.filter((e) => e.type === 'person' && !e.kingdom),
+    event: entities.filter((e) => e.type === 'event' && !e.kingdom),
+    book: entities.filter((e) => e.type === 'book'),
+  };
+  Object.values(nonKingdomByType).forEach((group) => assignLanesToGroup(group));
 
   // Kingdom entities: assign by kingdom across types (events+people share lanes)
   const israelEntities = entities.filter(e => e.kingdom === 'Israel');

@@ -27,7 +27,6 @@ export interface NodeLabelInput {
   name: string;
   priority: number;
   kingdom?: string;
-  y?: number;
 }
 
 function estimateLabelWidth(label: string, maxWidth: number): number {
@@ -115,31 +114,6 @@ export function computeNodeLabelVisibility(
     laneIntervals.push({ start, end });
     placedByLane.set(laneKey, laneIntervals);
     visibility[node.id] = true;
-  }
-
-  // Cross-track collision: hide labels that overlap across different tracks
-  // when entities are at similar Y positions (e.g., events track vs kingdom band)
-  const Y_PROXIMITY = 40;
-  const visibleLabels: Array<{ id: string; start: number; end: number; y: number; priority: number }> = [];
-  for (const node of ordered) {
-    if (!visibility[node.id] || node.y === undefined) continue;
-    const labelWidth = estimateLabelWidth(node.name, MAX_NODE_LABEL_WIDTH);
-    visibleLabels.push({ id: node.id, start: node.x, end: node.x + labelWidth, y: node.y, priority: node.priority });
-  }
-  visibleLabels.sort((a, b) => a.start - b.start);
-  for (let i = 0; i < visibleLabels.length; i++) {
-    const a = visibleLabels[i];
-    if (!visibility[a.id]) continue;
-    for (let j = i + 1; j < visibleLabels.length; j++) {
-      const b = visibleLabels[j];
-      if (b.start > a.end + LABEL_GAP) break; // sorted by start, no more overlaps
-      if (!visibility[b.id]) continue;
-      if (Math.abs(a.y - b.y) > Y_PROXIMITY) continue;
-      if (!intervalsOverlap(a.start - LABEL_GAP, a.end + LABEL_GAP, b.start - LABEL_GAP, b.end + LABEL_GAP)) continue;
-      // Hide lower-priority label (higher number = lower priority)
-      if (a.priority > b.priority) visibility[a.id] = false;
-      else visibility[b.id] = false;
-    }
   }
 
   return visibility;
