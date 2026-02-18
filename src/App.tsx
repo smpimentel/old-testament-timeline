@@ -77,7 +77,7 @@ function App() {
   const sidebarWidth = isMobile ? 0 : (sidebarOpen ? SIDEBAR_WIDTH_OPEN : SIDEBAR_WIDTH_CLOSED);
 
   const { pathMode, breadcrumbs, togglePathMode, addBreadcrumb, handleClearBreadcrumbs, breadcrumbEntities, getBreadcrumbNumber } = usePathTracing();
-  const { searchQuery, setSearchQuery, selectedPeriod, setSelectedPeriod, activeThemes, handleThemeToggle, filteredEntities } = useEntityFilter();
+  const { searchQuery, setSearchQuery, selectedPeriod, setSelectedPeriod, activeThemes, handleThemeToggle, filteredEntities, showSecularContext, handleSecularContextToggle } = useEntityFilter();
   const { selectedEntity, hoveredEntity, hoverPosition, handleEntityClick: baseHandleEntityClick, handleEntityHover, handleEntityLeave, closeSelection, setSelectedEntity } = useEntitySelection();
   const { panX, panY, zoomLevel, isDragging, canvasRef, pixelsPerYear, yearToX, panToCenterOnYear, fitYearRangeToView, canvasEventHandlers } = useViewport({ selectedEntityOpen: !!selectedEntity, railWidth });
 
@@ -132,6 +132,7 @@ function App() {
         breadcrumbs={breadcrumbs} onClearBreadcrumbs={handleClearBreadcrumbs}
         pathMode={pathMode} onPathModeToggle={togglePathMode}
         isOpen={sidebarOpen} onToggle={() => setSidebarOpen(prev => !prev)}
+        showSecularContext={showSecularContext} onSecularContextToggle={handleSecularContextToggle}
       />
 
       <TimelineCanvas

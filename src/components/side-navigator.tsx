@@ -25,6 +25,8 @@ interface SideNavigatorProps {
   onPathModeToggle: () => void;
   isOpen: boolean;
   onToggle: () => void;
+  showSecularContext: boolean;
+  onSecularContextToggle: () => void;
 }
 
 /** Divider line matching Figma */
@@ -77,6 +79,8 @@ export function SideNavigator({
   onPathModeToggle,
   isOpen,
   onToggle,
+  showSecularContext,
+  onSecularContextToggle,
 }: SideNavigatorProps) {
   const [searchFocused, setSearchFocused] = useState(false);
 
@@ -235,6 +239,52 @@ export function SideNavigator({
                 </button>
               );
             })}
+          </div>
+        </div>
+
+        <Divider />
+
+        {/* Filters Section */}
+        <div style={{ padding: `10px ${sectionPx}px` }}>
+          <SectionHeader isOpen={isOpen}>Filters</SectionHeader>
+          <div className="flex flex-col items-center" style={{ gap: isOpen ? 6 : 8 }}>
+            {isOpen ? (
+              <button
+                onClick={onSecularContextToggle}
+                aria-pressed={showSecularContext}
+                className="w-full px-3 py-1.5 rounded-full transition-all text-center"
+                style={{
+                  background: showSecularContext ? '#B8B0A8' : 'transparent',
+                  border: `1.5px solid ${showSecularContext ? '#B8B0A8' : 'var(--color-base-grid-major)'}`,
+                  color: 'var(--color-base-text-primary)',
+                  fontSize: 'var(--type-label-xs-size)',
+                  fontWeight: showSecularContext ? 600 : 500,
+                  fontFamily: 'var(--font-body)',
+                }}
+              >
+                Historical Events
+              </button>
+            ) : (
+              <button
+                onClick={onSecularContextToggle}
+                aria-pressed={showSecularContext}
+                aria-label="Historical Events"
+                title="Historical Events"
+                className="flex items-center justify-center rounded-full transition-all flex-shrink-0"
+                style={{
+                  width: 30,
+                  height: 30,
+                  background: showSecularContext ? '#B8B0A8' : 'transparent',
+                  border: `1.5px solid ${showSecularContext ? '#B8B0A8' : 'var(--color-base-grid-major)'}`,
+                  color: 'var(--color-base-text-primary)',
+                  fontSize: 'var(--type-label-xs-size)',
+                  fontWeight: 700,
+                  fontFamily: 'var(--font-body)',
+                }}
+              >
+                H
+              </button>
+            )}
           </div>
         </div>
 
