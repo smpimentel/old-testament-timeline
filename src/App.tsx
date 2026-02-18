@@ -30,7 +30,7 @@ const MAIN_TOP = PERIOD_H;
 const eventsBaseY = MAIN_TOP + 48;
 const peopleBaseY = eventsBaseY + trackLayout.events.bandHeight + 20;
 const mainContentBottom = peopleBaseY + trackLayout.people.bandHeight + 36;
-const mainSectionHeight = Math.max(420, mainContentBottom - MAIN_TOP);
+const mainSectionHeight = Math.max(800, mainContentBottom - MAIN_TOP);
 const booksSectionTop = MAIN_TOP + mainSectionHeight + 24;
 const booksBaseY = booksSectionTop + 20;
 const booksSectionHeight = trackLayout.books.bandHeight + 20 + 24;
@@ -123,7 +123,7 @@ function App() {
         <div className="absolute pointer-events-none" style={{ left: 0, top: sectionLayout.booksSectionTop, width: TIMELINE_WIDTH, height: sectionLayout.booksSectionHeight, background: 'rgba(255, 253, 247, 0.38)', borderTop: '1px solid #D8CBB7' }} />
         <UnknownEraBand startX={unknownVisualBand.startX} width={unknownVisualBand.width} mainSectionTop={sectionLayout.mainSectionTop} mainSectionHeight={sectionLayout.mainSectionHeight} />
         <PeriodSection yearToX={yearToX} pixelsPerYear={pixelsPerYear} totalHeight={sectionLayout.periodSectionHeight} unknownVisualStartYear={UNKNOWN_VISUAL_START_YEAR} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} />
-        <KingdomBackground yearToX={yearToX} pixelsPerYear={pixelsPerYear} trackHeight={sectionLayout.mainSectionHeight} topOffset={sectionLayout.mainSectionTop} />
+        <KingdomBackground yearToX={yearToX} pixelsPerYear={pixelsPerYear} topOffset={sectionLayout.mainSectionTop} />
         <TimeGrid startYear={START_YEAR} endYear={END_YEAR} height={sectionLayout.foundationHeight} axisY={sectionLayout.mainSectionTop + 2} />
         <TrackLabels tracks={sectionLayout.tracks} />
         <RelationshipOverlay breadcrumbEntities={breadcrumbEntities} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} unknownEntityXById={unknownEntityXById} yearToX={yearToX} tracks={sectionLayout.tracks} />

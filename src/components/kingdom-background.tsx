@@ -1,12 +1,10 @@
 interface KingdomBackgroundProps {
   yearToX: (year: number) => number;
   pixelsPerYear: number;
-  trackHeight: number;
   topOffset: number;
 }
 
 const FIGMA_BASE_PX_PER_YEAR = 4;
-const FIGMA_BODY_HEIGHT = 800;
 const FIGMA_VIEWBOX_WIDTH = 9072;
 const FIGMA_VIEWBOX_HEIGHT = 816;
 const EXILE_ANCHOR_YEAR = 586;
@@ -17,9 +15,8 @@ const FIGMA_EXILE_VIEWBOX_X = 8300;
  * Horizontal alignment is anchored at exile start (586 BC) so the chevron/split
  * placement tracks correctly against the timeline years.
  */
-export function KingdomBackground({ yearToX, pixelsPerYear, trackHeight, topOffset }: KingdomBackgroundProps) {
+export function KingdomBackground({ yearToX, pixelsPerYear, topOffset }: KingdomBackgroundProps) {
   const scaleX = pixelsPerYear / FIGMA_BASE_PX_PER_YEAR;
-  const scaleY = trackHeight / FIGMA_BODY_HEIGHT;
   const exileX = yearToX(EXILE_ANCHOR_YEAR);
   const left = exileX - (FIGMA_EXILE_VIEWBOX_X * scaleX);
 
@@ -28,7 +25,7 @@ export function KingdomBackground({ yearToX, pixelsPerYear, trackHeight, topOffs
       className="absolute pointer-events-none"
       style={{ top: topOffset, left }}
       width={FIGMA_VIEWBOX_WIDTH * scaleX}
-      height={FIGMA_VIEWBOX_HEIGHT * scaleY}
+      height={FIGMA_VIEWBOX_HEIGHT}
       viewBox="0 0 9072 816"
       preserveAspectRatio="none"
       fill="none"
