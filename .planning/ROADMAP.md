@@ -59,16 +59,27 @@
 - Timeline axis ticks and grid
 - Scaling/zoom behavior fixes
 
-## Phase 7: Data Expansion
+## Phase 7: Kingdom-Split Lanes
+**Goal:** Split Events/People tracks into North (Israel) / South (Judah) sub-bands for divided monarchy (930-586 BC)
+**Requirements:** R4.1, R4.2 (partial — monarchy-era data)
+**Estimate:** Large
+- Add `kingdom` field to data schema (raw + compiled + runtime)
+- Populate divided monarchy kings (11+), prophets (8+), events (8+)
+- Kingdom-aware swimlane assignment (north lanes / south lanes)
+- Visual lane divider + kingdom labels at 930 BC boundary
+- North lane ends 721 BC, south continues to 586 BC
+
+## Phase 8: Data Expansion
 **Goal:** Comprehensive OT timeline data for v1.0
 **Requirements:** R4.1–R4.5
 **Estimate:** Large
-- Audit existing data coverage gaps
-- Add missing people, events, books
-- Evaluate new entity types (places, prophecies, covenants)
-- Enrich metadata (descriptions, scripture refs)
-- Validate all data against schemas
-- Rebuild compiled data, run full test suite
+**Plans:** 4 plans
+
+Plans:
+- [ ] 8-01-PLAN.md — Schema + pipeline + runtime type updates
+- [ ] 8-02-PLAN.md — Excel import and data population
+- [ ] 8-03-PLAN.md — UI: diamond events, detail panel, secular-context toggle
+- [ ] 8-04-PLAN.md — Validation, integration, visual verification
 
 ---
 
