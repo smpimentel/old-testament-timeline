@@ -6,6 +6,7 @@ import {
   themeTags,
   timelineData,
   timelineDomain,
+  kingdomLanes,
   normalizeEventCategory,
 } from './timeline-data';
 import { END_YEAR, START_YEAR } from '../hooks/useViewport';
@@ -82,5 +83,38 @@ describe('timeline-data integrity', () => {
     }
 
     expect(compiledCategorySet.size).toBeGreaterThan(1);
+  });
+
+  it('kingdom field is valid when present', () => {
+    const kingdomEntities = timelineData.filter(e => e.kingdom);
+    expect(kingdomEntities.length).toBeGreaterThan(0);
+
+    for (const entity of kingdomEntities) {
+      expect(['Israel', 'Judah']).toContain(entity.kingdom);
+    }
+  });
+
+  it('kingdom entities have swimlanes in correct ranges', () => {
+    for (const type of ['event', 'person'] as const) {
+      const lanes = type === 'event' ? kingdomLanes.event : kingdomLanes.person;
+      const entities = timelineData.filter(e => e.type === type && e.kingdom);
+
+      for (const entity of entities) {
+        const swimlane = entity.swimlane ?? 0;
+        if (entity.kingdom === 'Israel') {
+          expect(swimlane).toBeGreaterThanOrEqual(lanes.northStartLane);
+          expect(swimlane).toBeLessThan(lanes.southStartLane);
+        } else if (entity.kingdom === 'Judah') {
+          expect(swimlane).toBeGreaterThanOrEqual(lanes.southStartLane);
+        }
+      }
+    }
+  });
+
+  it('has divided monarchy kings and prophets', () => {
+    const kings = timelineData.filter(e => e.role === 'king' && e.kingdom);
+    const prophets = timelineData.filter(e => e.role === 'prophet' && e.kingdom);
+    expect(kings.length).toBeGreaterThanOrEqual(11);
+    expect(prophets.length).toBeGreaterThanOrEqual(8);
   });
 });

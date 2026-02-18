@@ -46,6 +46,8 @@ export const EVENT_CATEGORIES = [
 
 export type EventCategory = (typeof EVENT_CATEGORIES)[number];
 
+export type Kingdom = 'Israel' | 'Judah';
+
 export interface TimelineEntity {
   id: string;
   type: EntityType;
@@ -59,6 +61,7 @@ export interface TimelineEntity {
   role?: PersonRole;
   category?: EventCategory;
   genre?: BookGenre;
+  kingdom?: Kingdom;
   relationships?: string[];
   scripture?: string;
   notes?: string;
@@ -281,6 +284,8 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
   return data.map((p: (typeof peopleData)[number]) => {
     const categories = p.categories || [];
     const role = mapPersonCategory(categories);
+    const raw = p as Record<string, unknown>;
+    const kingdom = raw.kingdom as Kingdom | undefined;
 
     return {
       id: p.id,
@@ -293,6 +298,7 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
       description: p.description || p.bio || '',
       role,
       themes: (p.themes as ThemeTag[]) || undefined,
+      kingdom,
       relationships: relationshipMap.get(p.id),
       scripture: p.scriptureRefs?.join(', '),
       notes: p.bio,
@@ -304,6 +310,8 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
 function transformEvents(data: typeof eventsData): TimelineEntity[] {
   return data.map((e: (typeof eventsData)[number]) => {
     const category = normalizeEventCategory(e.categories?.[0]);
+    const raw = e as Record<string, unknown>;
+    const kingdom = raw.kingdom as Kingdom | undefined;
 
     return {
       id: e.id,
@@ -316,6 +324,7 @@ function transformEvents(data: typeof eventsData): TimelineEntity[] {
       description: e.description || '',
       category,
       themes: (e.themes as ThemeTag[]) || undefined,
+      kingdom,
       relationships: relationshipMap.get(e.id),
       scripture: e.scriptureRefs?.join(', '),
       swimlane: e.swimlane || 0,
@@ -407,6 +416,27 @@ function transformThemes(data: typeof themesData): Theme[] {
 }
 
 // ===== SWIMLANE COLLISION DETECTION =====
+function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
+  const sorted = group.sort((a, b) => b.startYear - a.startYear);
+  const lanes: Array<{ end: number }> = [];
+
+  sorted.forEach((entity) => {
+    const end = entity.endYear || entity.startYear;
+    let laneIndex = lanes.findIndex((lane) => lane.end > entity.startYear);
+
+    if (laneIndex === -1) {
+      laneIndex = lanes.length;
+      lanes.push({ end });
+    } else {
+      lanes[laneIndex].end = Math.min(lanes[laneIndex].end, end);
+    }
+
+    entity.swimlane = laneIndex + offset;
+  });
+
+  return lanes.length;
+}
+
 export function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
   const byType = {
     person: entities.filter((e) => e.type === 'person'),
@@ -415,22 +445,13 @@ export function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
   };
 
   Object.values(byType).forEach((group) => {
-    const sorted = group.sort((a, b) => b.startYear - a.startYear);
-    const lanes: Array<{ end: number }> = [];
+    const northEntities = group.filter(e => e.kingdom === 'Israel');
+    const southEntities = group.filter(e => e.kingdom === 'Judah');
+    const otherEntities = group.filter(e => !e.kingdom);
 
-    sorted.forEach((entity) => {
-      const end = entity.endYear || entity.startYear;
-      let laneIndex = lanes.findIndex((lane) => lane.end > entity.startYear);
-
-      if (laneIndex === -1) {
-        laneIndex = lanes.length;
-        lanes.push({ end });
-      } else {
-        lanes[laneIndex].end = Math.min(lanes[laneIndex].end, end);
-      }
-
-      entity.swimlane = laneIndex;
-    });
+    const otherLaneCount = assignLanesToGroup(otherEntities);
+    const northLaneCount = assignLanesToGroup(northEntities, otherLaneCount);
+    assignLanesToGroup(southEntities, otherLaneCount + northLaneCount);
   });
 
   return entities;
@@ -478,6 +499,39 @@ const allEntities: TimelineEntity[] = [
 
 // Assign swimlanes and export
 export const timelineData: TimelineEntity[] = assignSwimlanes(allEntities);
+
+// Kingdom lane metadata for divider rendering
+export interface KingdomLaneInfo {
+  /** First lane index used by north kingdom entities (per type) */
+  northStartLane: number;
+  /** Number of lanes used by north kingdom */
+  northLaneCount: number;
+  /** First lane index used by south kingdom entities */
+  southStartLane: number;
+  /** Number of lanes used by south kingdom */
+  southLaneCount: number;
+}
+
+export function computeKingdomLanes(entities: TimelineEntity[], type: EntityType): KingdomLaneInfo {
+  const typeEntities = entities.filter(e => e.type === type);
+  const otherMax = typeEntities.filter(e => !e.kingdom).reduce((m, e) => Math.max(m, (e.swimlane ?? 0) + 1), 0);
+  const northEntities = typeEntities.filter(e => e.kingdom === 'Israel');
+  const southEntities = typeEntities.filter(e => e.kingdom === 'Judah');
+  const northLaneCount = northEntities.length > 0 ? northEntities.reduce((m, e) => Math.max(m, (e.swimlane ?? 0) + 1), 0) - otherMax : 0;
+  const southLaneCount = southEntities.length > 0 ? southEntities.reduce((m, e) => Math.max(m, (e.swimlane ?? 0) + 1), 0) - otherMax - northLaneCount : 0;
+
+  return {
+    northStartLane: otherMax,
+    northLaneCount,
+    southStartLane: otherMax + northLaneCount,
+    southLaneCount,
+  };
+}
+
+export const kingdomLanes = {
+  event: computeKingdomLanes(timelineData, 'event'),
+  person: computeKingdomLanes(timelineData, 'person'),
+};
 
 // Derived domain for viewport/data integrity checks.
 export const timelineDomain: TimelineDomain = computeTimelineDomain(

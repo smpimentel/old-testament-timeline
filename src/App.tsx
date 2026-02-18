@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
-import { timelineData, periods, type TimelineEntity } from './data/timeline-data';
+import { timelineData, periods, kingdomLanes, type TimelineEntity } from './data/timeline-data';
 import { computeTrackLayout, createConfigFromEntities } from './lib/timeline-track-layout';
 import { PeriodSection } from './components/period-section';
 import { UnknownEraBand } from './components/unknown-era-band';
@@ -10,6 +10,7 @@ import { TrackLabels } from './components/track-labels';
 import { SideNavigator, SIDEBAR_WIDTH_OPEN, SIDEBAR_WIDTH_CLOSED } from './components/side-navigator';
 import { TimelineNode, TimeGrid } from './components/timeline-nodes';
 import { KingdomBackground } from './components/kingdom-background';
+import { KingdomLaneDivider } from './components/kingdom-lane-divider';
 import { RightRail } from './components/right-rail';
 import { HoverTooltip } from './components/hover-tooltip';
 import { WelcomeOverlay } from './components/welcome-overlay';
@@ -57,7 +58,7 @@ function App() {
   const { pathMode, breadcrumbs, togglePathMode, addBreadcrumb, handleClearBreadcrumbs, breadcrumbEntities, getBreadcrumbNumber } = usePathTracing();
   const { searchQuery, setSearchQuery, selectedPeriod, setSelectedPeriod, activeThemes, handleThemeToggle, filteredEntities } = useEntityFilter();
   const { selectedEntity, hoveredEntity, hoverPosition, handleEntityClick: baseHandleEntityClick, handleEntityHover, handleEntityLeave, closeSelection, setSelectedEntity } = useEntitySelection();
-  const { panX, panY, zoomLevel, isDragging, canvasRef, pixelsPerYear, yearToX, panToYear, panToCenterOnYear, fitYearRangeToView, canvasEventHandlers } = useViewport({ selectedEntityOpen: !!selectedEntity, railWidth });
+  const { panX, panY, zoomLevel, isDragging, canvasRef, pixelsPerYear, yearToX, panToCenterOnYear, fitYearRangeToView, canvasEventHandlers } = useViewport({ selectedEntityOpen: !!selectedEntity, railWidth });
 
   const handlePeriodSelect = (periodId: string) => {
     const period = periods.find(p => p.id === periodId);
@@ -125,6 +126,7 @@ function App() {
         <KingdomBackground yearToX={yearToX} topOffset={sectionLayout.mainSectionTop} />
         <TimeGrid startYear={START_YEAR} endYear={END_YEAR} height={sectionLayout.foundationHeight} axisY={sectionLayout.mainSectionTop + 2} />
         <TrackLabels tracks={sectionLayout.tracks} />
+        <KingdomLaneDivider yearToX={yearToX} tracks={sectionLayout.tracks} kingdomLanes={kingdomLanes} />
         <RelationshipOverlay breadcrumbEntities={breadcrumbEntities} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} unknownEntityXById={unknownEntityXById} yearToX={yearToX} tracks={sectionLayout.tracks} />
         {nodePlacements.map(({ entity, x, width, trackBand, forcePointNode }) => {
           const isHighlighted = activeThemes.length > 0 && entity.themes?.some(t => activeThemes.includes(t));

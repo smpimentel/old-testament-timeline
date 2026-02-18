@@ -41,6 +41,11 @@
         "items": { "type": "string" },
         "description": "Explicit theme tags"
       },
+      "kingdom": {
+        "type": "string",
+        "enum": ["Israel", "Judah"],
+        "description": "Kingdom assignment for divided monarchy era"
+      },
       "swimlane": {
         "type": "integer",
         "description": "Assigned swimlane for timeline display"

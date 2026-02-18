@@ -933,5 +933,466 @@
     "bio": "",
     "scriptureRefs": [],
     "swimlane": 1
+  },
+  {
+    "id": "jeroboam-i",
+    "type": "person",
+    "name": "Jeroboam I",
+    "startYear": 930,
+    "endYear": 909,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy"
+    ],
+    "priority": 2,
+    "description": "First king of the northern kingdom of Israel",
+    "bio": "Led the rebellion against Rehoboam and became the first king of the breakaway northern kingdom. Set up golden calves at Dan and Bethel, establishing idolatrous worship.",
+    "scriptureRefs": [
+      "1 Kings 11:26-40",
+      "1 Kings 12:25-33"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 16
+  },
+  {
+    "id": "ahab",
+    "type": "person",
+    "name": "Ahab",
+    "startYear": 874,
+    "endYear": 853,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Judgment"
+    ],
+    "priority": 2,
+    "description": "Wicked king of Israel, husband of Jezebel",
+    "bio": "Married the Phoenician princess Jezebel and promoted Baal worship throughout Israel. Confronted by Elijah at Mount Carmel. Killed in battle at Ramoth-gilead.",
+    "scriptureRefs": [
+      "1 Kings 16:29-33",
+      "1 Kings 21",
+      "1 Kings 22:29-40"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 17
+  },
+  {
+    "id": "jehu",
+    "type": "person",
+    "name": "Jehu",
+    "startYear": 841,
+    "endYear": 814,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Judgment"
+    ],
+    "priority": 2,
+    "description": "King of Israel who destroyed Baal worship",
+    "bio": "Anointed by Elisha's servant to destroy the house of Ahab. Killed Joram, Jezebel, and all Baal worshippers, but continued Jeroboam's calf worship.",
+    "scriptureRefs": [
+      "2 Kings 9-10"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 16
+  },
+  {
+    "id": "jeroboam-ii",
+    "type": "person",
+    "name": "Jeroboam II",
+    "startYear": 793,
+    "endYear": 753,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy"
+    ],
+    "priority": 2,
+    "description": "Powerful king who restored Israel's borders",
+    "bio": "Longest and most prosperous reign of any northern king. Restored Israel's borders from Lebo-hamath to the Sea of the Arabah. Despite material prosperity, spiritual decline continued.",
+    "scriptureRefs": [
+      "2 Kings 14:23-29"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 16
+  },
+  {
+    "id": "hoshea",
+    "type": "person",
+    "name": "Hoshea",
+    "startYear": 732,
+    "endYear": 721,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Judgment"
+    ],
+    "priority": 2,
+    "description": "Last king of the northern kingdom",
+    "bio": "Last king of Israel. Conspired against Pekah and became an Assyrian vassal. His secret alliance with Egypt provoked the Assyrian siege and fall of Samaria in 721 BC.",
+    "scriptureRefs": [
+      "2 Kings 17:1-6"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 16
+  },
+  {
+    "id": "rehoboam",
+    "type": "person",
+    "name": "Rehoboam",
+    "startYear": 930,
+    "endYear": 913,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy"
+    ],
+    "priority": 2,
+    "description": "First king of the southern kingdom of Judah",
+    "bio": "Son of Solomon whose harsh response to the northern tribes' petition caused the kingdom to split. Ruled Judah and Benjamin from Jerusalem.",
+    "scriptureRefs": [
+      "1 Kings 12:1-24",
+      "2 Chronicles 10-12"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 19
+  },
+  {
+    "id": "asa",
+    "type": "person",
+    "name": "Asa",
+    "startYear": 910,
+    "endYear": 869,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Restoration"
+    ],
+    "priority": 2,
+    "description": "Reformer king of Judah",
+    "bio": "Third king of Judah who instituted religious reforms, removed idols, and fortified cities. Relied on God early but later turned to foreign alliances.",
+    "scriptureRefs": [
+      "1 Kings 15:9-24",
+      "2 Chronicles 14-16"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 19
+  },
+  {
+    "id": "jehoshaphat",
+    "type": "person",
+    "name": "Jehoshaphat",
+    "startYear": 872,
+    "endYear": 848,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Covenant"
+    ],
+    "priority": 2,
+    "description": "Godly king who strengthened Judah",
+    "bio": "Strengthened Judah's defenses and sent Levites to teach the Law throughout the land. Allied with Ahab against Aram but was rebuked by the prophet Jehu.",
+    "scriptureRefs": [
+      "1 Kings 22",
+      "2 Chronicles 17-20"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 20
+  },
+  {
+    "id": "hezekiah",
+    "type": "person",
+    "name": "Hezekiah",
+    "startYear": 715,
+    "endYear": 686,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Restoration"
+    ],
+    "priority": 2,
+    "description": "Reformer king who trusted God against Assyria",
+    "bio": "One of Judah's greatest kings. Restored Temple worship, celebrated Passover, and trusted God when Sennacherib besieged Jerusalem. God miraculously delivered the city.",
+    "scriptureRefs": [
+      "2 Kings 18-20",
+      "2 Chronicles 29-32",
+      "Isaiah 36-39"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 21
+  },
+  {
+    "id": "josiah",
+    "type": "person",
+    "name": "Josiah",
+    "startYear": 640,
+    "endYear": 609,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Restoration",
+      "Covenant"
+    ],
+    "priority": 2,
+    "description": "Last great reformer king of Judah",
+    "bio": "Became king at age 8. Found the Book of the Law during Temple repairs and led the most thorough reform in Judah's history. Killed at Megiddo fighting Pharaoh Necho.",
+    "scriptureRefs": [
+      "2 Kings 22-23",
+      "2 Chronicles 34-35"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 19
+  },
+  {
+    "id": "zedekiah-king",
+    "type": "person",
+    "name": "Zedekiah",
+    "startYear": 597,
+    "endYear": 586,
+    "certainty": "approximate",
+    "categories": [
+      "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Monarchy",
+      "Judgment"
+    ],
+    "priority": 2,
+    "description": "Last king of Judah",
+    "bio": "Installed as puppet king by Nebuchadnezzar. Rebelled against Babylon despite Jeremiah's warnings. Jerusalem fell, he was blinded and taken to Babylon.",
+    "scriptureRefs": [
+      "2 Kings 24:17-25:7",
+      "Jeremiah 52"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 19
+  },
+  {
+    "id": "elijah",
+    "type": "person",
+    "name": "Elijah",
+    "startYear": 875,
+    "endYear": 848,
+    "certainty": "approximate",
+    "categories": [
+      "Prophet"
+    ],
+    "themes": [
+      "Judgment",
+      "Deliverance"
+    ],
+    "priority": 2,
+    "description": "Prophet who confronted Baal worship in Israel",
+    "bio": "Dramatic prophet who challenged Ahab and Jezebel's Baal worship. Called down fire from heaven on Mount Carmel. Taken to heaven in a chariot of fire.",
+    "scriptureRefs": [
+      "1 Kings 17-19",
+      "2 Kings 1-2"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 16
+  },
+  {
+    "id": "elisha",
+    "type": "person",
+    "name": "Elisha",
+    "startYear": 848,
+    "endYear": 800,
+    "certainty": "approximate",
+    "categories": [
+      "Prophet"
+    ],
+    "themes": [
+      "Deliverance"
+    ],
+    "priority": 2,
+    "description": "Successor of Elijah, prophet of miracles",
+    "bio": "Received a double portion of Elijah's spirit. Performed numerous miracles including healing Naaman's leprosy and raising the Shunammite's son.",
+    "scriptureRefs": [
+      "2 Kings 2-13"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 17
+  },
+  {
+    "id": "amos",
+    "type": "person",
+    "name": "Amos",
+    "startYear": 760,
+    "endYear": 750,
+    "certainty": "approximate",
+    "categories": [
+      "Prophet"
+    ],
+    "themes": [
+      "Judgment"
+    ],
+    "priority": 2,
+    "description": "Shepherd-prophet who warned Israel of judgment",
+    "bio": "A shepherd from Tekoa in Judah sent to prophesy against the northern kingdom. Denounced social injustice, religious hypocrisy, and predicted exile.",
+    "scriptureRefs": [
+      "Amos 1:1",
+      "Amos 7:14-15"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 17
+  },
+  {
+    "id": "hosea",
+    "type": "person",
+    "name": "Hosea",
+    "startYear": 755,
+    "endYear": 715,
+    "certainty": "approximate",
+    "categories": [
+      "Prophet"
+    ],
+    "themes": [
+      "Covenant",
+      "Judgment"
+    ],
+    "priority": 2,
+    "description": "Prophet of God's faithful love despite Israel's unfaithfulness",
+    "bio": "God commanded Hosea to marry an unfaithful wife as a living parable of Israel's spiritual adultery. Prophesied during Israel's final decades before Assyrian exile.",
+    "scriptureRefs": [
+      "Hosea 1-3"
+    ],
+    "kingdom": "Israel",
+    "swimlane": 18
+  },
+  {
+    "id": "isaiah",
+    "type": "person",
+    "name": "Isaiah",
+    "startYear": 740,
+    "endYear": 681,
+    "certainty": "approximate",
+    "categories": [
+      "Prophet"
+    ],
+    "themes": [
+      "Messiah",
+      "Judgment",
+      "Restoration"
+    ],
+    "priority": 2,
+    "description": "Greatest of the writing prophets",
+    "bio": "Called in a vision of God's throne. Prophesied during the reigns of Uzziah through Hezekiah. Wrote extensively about the coming Messiah and Israel's restoration.",
+    "scriptureRefs": [
+      "Isaiah 6",
+      "Isaiah 53"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 19
+  },
+  {
+    "id": "micah",
+    "type": "person",
+    "name": "Micah",
+    "startYear": 735,
+    "endYear": 700,
+    "certainty": "approximate",
+    "categories": [
+      "Prophet"
+    ],
+    "themes": [
+      "Judgment",
+      "Messiah"
+    ],
+    "priority": 2,
+    "description": "Prophet who foretold Messiah's birthplace",
+    "bio": "Contemporary of Isaiah from the countryside town of Moresheth. Pronounced judgment on both Israel and Judah. Predicted the Messiah would be born in Bethlehem.",
+    "scriptureRefs": [
+      "Micah 5:2",
+      "Micah 6:8"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 20
+  },
+  {
+    "id": "jeremiah",
+    "type": "person",
+    "name": "Jeremiah",
+    "startYear": 626,
+    "endYear": 586,
+    "certainty": "approximate",
+    "categories": [
+      "Prophet"
+    ],
+    "themes": [
+      "Judgment",
+      "Covenant"
+    ],
+    "priority": 2,
+    "description": "The weeping prophet who warned of Jerusalem's fall",
+    "bio": "Called as a young man to prophesy Judah's destruction. Witnessed the fall of Jerusalem and the exile. Promised a new covenant written on hearts.",
+    "scriptureRefs": [
+      "Jeremiah 1:4-10",
+      "Jeremiah 31:31-34"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 21
+  },
+  {
+    "id": "zephaniah",
+    "type": "person",
+    "name": "Zephaniah",
+    "startYear": 640,
+    "endYear": 609,
+    "certainty": "approximate",
+    "categories": [
+      "Prophet"
+    ],
+    "themes": [
+      "Judgment",
+      "Restoration"
+    ],
+    "priority": 2,
+    "description": "Prophet of the Day of the Lord",
+    "bio": "Royal descendant who prophesied during Josiah's reign. Proclaimed the coming Day of the Lord as universal judgment, but also promised restoration for a faithful remnant.",
+    "scriptureRefs": [
+      "Zephaniah 1:1",
+      "Zephaniah 3:14-20"
+    ],
+    "kingdom": "Judah",
+    "swimlane": 20
   }
 ]

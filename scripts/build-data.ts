@@ -49,6 +49,7 @@ interface RawPerson {
     deathYear: number;
     approximate?: boolean;
     role: string;
+    kingdom?: string;
     priority: number;
     themes?: string[];
     description?: string;
@@ -71,6 +72,7 @@ interface RawEvent {
     year: number;
     approximate?: boolean;
     priority: number;
+    kingdom?: string;
     themes?: string[];
     description?: string;
     scriptureRefs?: string[];
@@ -140,6 +142,7 @@ function transformPerson(raw: RawPerson): TimelineEntity {
         description: raw.description,
         bio: raw.bio,
         scriptureRefs: raw.scriptureRefs,
+        ...(raw.kingdom && { kingdom: raw.kingdom }),
     };
 }
 
@@ -158,6 +161,7 @@ function transformEvent(raw: RawEvent): TimelineEntity {
         priority: raw.priority,
         description: raw.description,
         scriptureRefs: raw.scriptureRefs,
+        ...(raw.kingdom && { kingdom: raw.kingdom }),
     };
 }
 
@@ -379,6 +383,27 @@ function extractRelationships(
 // Swimlane Assignment
 // ============================================================================
 
+function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
+    const sorted = group.sort((a, b) => b.startYear - a.startYear);
+    const lanes: Array<{ end: number }> = [];
+
+    for (const entity of sorted) {
+        const entityEnd = entity.endYear ?? entity.startYear;
+        let laneIndex = lanes.findIndex(lane => lane.end > entity.startYear);
+
+        if (laneIndex === -1) {
+            laneIndex = lanes.length;
+            lanes.push({ end: entityEnd });
+        } else {
+            lanes[laneIndex].end = Math.min(lanes[laneIndex].end, entityEnd);
+        }
+
+        entity.swimlane = laneIndex + offset;
+    }
+
+    return lanes.length;
+}
+
 function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
     const byType: Record<string, TimelineEntity[]> = {};
 
@@ -388,25 +413,16 @@ function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
     }
 
     for (const group of Object.values(byType)) {
-        // Sort by startYear descending (BC: larger = earlier)
-        const sorted = group.sort((a, b) => b.startYear - a.startYear);
-        const lanes: Array<{ end: number }> = [];
+        const northEntities = group.filter(e => e.kingdom === 'Israel');
+        const southEntities = group.filter(e => e.kingdom === 'Judah');
+        const otherEntities = group.filter(e => !e.kingdom);
 
-        for (const entity of sorted) {
-            const entityEnd = entity.endYear ?? entity.startYear;
-
-            // Find lane where end > startYear (lane freed before entity starts)
-            let laneIndex = lanes.findIndex(lane => lane.end > entity.startYear);
-
-            if (laneIndex === -1) {
-                laneIndex = lanes.length;
-                lanes.push({ end: entityEnd });
-            } else {
-                lanes[laneIndex].end = Math.min(lanes[laneIndex].end, entityEnd);
-            }
-
-            entity.swimlane = laneIndex;
-        }
+        // Assign non-kingdom entities first (lanes 0..N)
+        const otherLaneCount = assignLanesToGroup(otherEntities);
+        // North kingdom starts after other lanes
+        const northLaneCount = assignLanesToGroup(northEntities, otherLaneCount);
+        // South kingdom after north lanes
+        assignLanesToGroup(southEntities, otherLaneCount + northLaneCount);
     }
 
     return entities;
