@@ -383,6 +383,7 @@
     "era": "BC",
     "approximate": false,
     "priority": 1,
+    "kingdom": "Judah",
     "track": "events",
     "description": "King Nebuchadnezzar destroyed Jerusalem and the Temple and deported most of Judah. This began the 70-year exile prophesied by Jeremiah. The third deportation of Israelites to foreign countries took place.",
     "scriptureRefs": [
@@ -404,6 +405,7 @@
     "era": "BC",
     "approximate": false,
     "priority": 1,
+    "kingdom": "Judah",
     "track": "events",
     "description": "Persian king Cyrus issued a decree allowing the Jews to return to Jerusalem and rebuild the Temple. About 50,000 returned under Zerubbabel.",
     "scriptureRefs": [
@@ -423,6 +425,7 @@
     "era": "BC",
     "approximate": false,
     "priority": 1,
+    "kingdom": "Judah",
     "track": "events",
     "description": "After returning from the Babylonian captivity, the Jewish people completed the reconstruction of the temple on March 12, 515 BC. Its dedication was a pivotal moment in preserving the nation's religious heritage and worship identity after 70 years of exile.",
     "scriptureRefs": [
@@ -442,6 +445,7 @@
     "era": "BC",
     "approximate": false,
     "priority": 2,
+    "kingdom": "Judah",
     "track": "events",
     "description": "Nehemiah led the effort to restore the city's dilapidated walls to protect the inhabitants from external threats and prevent assimilation into surrounding cultures. Despite intense opposition, the project was remarkably completed in 52 days.",
     "scriptureRefs": [

@@ -393,7 +393,8 @@
       "2 Kgs 25",
       "Jer 52"
     ],
-    "swimlane": 0
+    "kingdom": "Judah",
+    "swimlane": 3
   },
   {
     "id": "return-from-exile",
@@ -414,7 +415,8 @@
     "scriptureRefs": [
       "Ezra 1"
     ],
-    "swimlane": 0
+    "kingdom": "Judah",
+    "swimlane": 3
   },
   {
     "id": "dedication-of-second-temple",
@@ -435,7 +437,8 @@
     "scriptureRefs": [
       "Ezra 3-6"
     ],
-    "swimlane": 0
+    "kingdom": "Judah",
+    "swimlane": 3
   },
   {
     "id": "rebuilding-jerusalems-walls",
@@ -455,7 +458,8 @@
     "scriptureRefs": [
       "Neh 7"
     ],
-    "swimlane": 0
+    "kingdom": "Judah",
+    "swimlane": 3
   },
   {
     "id": "jeroboams-golden-calves",
