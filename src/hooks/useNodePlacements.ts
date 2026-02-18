@@ -84,7 +84,7 @@ export function useNodePlacements({
 
   const nodeLabelVisibility = useMemo(() => {
     return computeNodeLabelVisibility(
-      nodePlacements.map(({ entity, x, width }) => ({
+      nodePlacements.map(({ entity, x, width, trackBand }) => ({
         id: entity.id,
         type: entity.type,
         swimlane: entity.swimlane ?? 0,
@@ -93,6 +93,7 @@ export function useNodePlacements({
         name: entity.name,
         priority: entity.priority,
         kingdom: entity.kingdom,
+        y: trackBand.baseY + (entity.swimlane ?? 0) * trackBand.laneStride,
       })),
       zoomLevel,
     );
