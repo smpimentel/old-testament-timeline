@@ -291,6 +291,9 @@ export function TimelineNode({
   const isPointNode = forcePointNode || (entity.type === 'event' && !entity.endYear);
   const nodeWidth = isPointNode ? nodeHeight : width;
 
+  // Secular-context events render as diamonds (rotated squares)
+  const isSecularContext = entity.type === 'event' && entity.category === 'secular-context';
+
   // Accessibility: year range label
   const yearRange = entity.endYear
     ? `${entity.startYear} to ${entity.endYear} BC`
@@ -334,7 +337,8 @@ export function TimelineNode({
         style={{
           background: backgroundColor,
           border: `${borderWidth} solid ${borderColor}`,
-          borderRadius: isPointNode ? '50%' : '5px',
+          borderRadius: isSecularContext && isPointNode ? '2px' : isPointNode ? '50%' : '5px',
+          transform: isSecularContext && isPointNode ? 'rotate(45deg)' : undefined,
           boxShadow: isInBreadcrumb || isHighlighted
             ? '0 2px 8px rgba(45, 36, 28, 0.15)'
             : 'var(--shadow-standard)',
