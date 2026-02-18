@@ -28,7 +28,9 @@ describe('timeline-track-layout', () => {
     });
 
     it('has positive gaps', () => {
-      expect(DEFAULT_TRACK_CONFIG.laneGap).toBeGreaterThan(0);
+      expect(DEFAULT_TRACK_CONFIG.laneGap.event).toBeGreaterThan(0);
+      expect(DEFAULT_TRACK_CONFIG.laneGap.person).toBeGreaterThan(0);
+      expect(DEFAULT_TRACK_CONFIG.laneGap.book).toBeGreaterThan(0);
       expect(DEFAULT_TRACK_CONFIG.trackGap).toBeGreaterThan(0);
     });
   });
@@ -43,9 +45,9 @@ describe('timeline-track-layout', () => {
       const layout = computeTrackLayout();
       const { maxNodeHeight, laneGap } = DEFAULT_TRACK_CONFIG;
 
-      expect(layout.events.laneStride).toBe(maxNodeHeight.event + laneGap);
-      expect(layout.people.laneStride).toBe(maxNodeHeight.person + laneGap);
-      expect(layout.books.laneStride).toBe(maxNodeHeight.book + laneGap);
+      expect(layout.events.laneStride).toBe(maxNodeHeight.event + laneGap.event);
+      expect(layout.people.laneStride).toBe(maxNodeHeight.person + laneGap.person);
+      expect(layout.books.laneStride).toBe(maxNodeHeight.book + laneGap.book);
     });
 
     it('computes correct band heights', () => {
@@ -147,7 +149,7 @@ describe('timeline-track-layout', () => {
     it('handles zero lane gap', () => {
       const zeroGapConfig: TrackLayoutConfig = {
         ...DEFAULT_TRACK_CONFIG,
-        laneGap: 0,
+        laneGap: { event: 0, person: 0, book: 0 },
       };
       const layout = computeTrackLayout(zeroGapConfig);
       expect(validateTrackLayout(layout)).toBe(true);
@@ -165,7 +167,7 @@ describe('timeline-track-layout', () => {
     it('handles minimal config (1 lane each, small heights)', () => {
       const minimalConfig: TrackLayoutConfig = {
         maxNodeHeight: { event: 1, person: 1, book: 1 },
-        laneGap: 1,
+        laneGap: { event: 1, person: 1, book: 1 },
         trackGap: 1,
         headerOffset: 0,
         laneCount: { event: 1, person: 1, book: 1 },
@@ -177,7 +179,7 @@ describe('timeline-track-layout', () => {
     it('handles worst-case: max lanes + max heights', () => {
       const worstCase: TrackLayoutConfig = {
         maxNodeHeight: { event: 200, person: 200, book: 200 },
-        laneGap: 50,
+        laneGap: { event: 50, person: 50, book: 50 },
         trackGap: 100,
         headerOffset: 200,
         laneCount: { event: 50, person: 50, book: 50 },
@@ -191,7 +193,7 @@ describe('timeline-track-layout', () => {
     const configVariations: [string, Partial<TrackLayoutConfig>][] = [
       ['double node heights', { maxNodeHeight: { event: 48, person: 56, book: 44 } }],
       ['triple lane counts', { laneCount: { event: 12, person: 18, book: 9 } }],
-      ['larger gaps', { laneGap: 24, trackGap: 96 }],
+      ['larger gaps', { laneGap: { event: 24, person: 24, book: 24 }, trackGap: 96 }],
       ['smaller header', { headerOffset: 50 }],
       ['larger header', { headerOffset: 200 }],
     ];
@@ -284,7 +286,7 @@ describe('timeline-track-layout', () => {
       const config = createConfigFromEntities(entities);
 
       expect(config.maxNodeHeight).toEqual(DEFAULT_TRACK_CONFIG.maxNodeHeight);
-      expect(config.laneGap).toBe(DEFAULT_TRACK_CONFIG.laneGap);
+      expect(config.laneGap).toEqual(DEFAULT_TRACK_CONFIG.laneGap);
       expect(config.trackGap).toBe(DEFAULT_TRACK_CONFIG.trackGap);
       expect(config.headerOffset).toBe(DEFAULT_TRACK_CONFIG.headerOffset);
     });
@@ -299,7 +301,7 @@ describe('timeline-track-layout', () => {
 
       expect(config.laneCount.event).toBe(6);
       expect(config.laneCount.person).toBe(11);
-      expect(config.laneCount.book).toBe(5);
+      expect(config.laneCount.book).toBe(6);
     });
 
     it('ensures minimum of 1 lane per type', () => {
@@ -330,14 +332,14 @@ describe('timeline-track-layout', () => {
 
       // Snapshot of expected values - test fails if layout algorithm changes unexpectedly
       expect(layout.events.baseY).toBe(120); // headerOffset
-      expect(layout.events.laneStride).toBe(32); // 24 + 8
-      expect(layout.events.bandHeight).toBe(128); // 32 * 4
+      expect(layout.events.laneStride).toBe(28); // 20 + 8
+      expect(layout.events.bandHeight).toBe(112); // 28 * 4
 
-      expect(layout.people.laneStride).toBe(36); // 28 + 8
-      expect(layout.people.bandHeight).toBe(216); // 36 * 6
+      expect(layout.people.laneStride).toBe(28); // 20 + 8
+      expect(layout.people.bandHeight).toBe(168); // 28 * 6
 
-      expect(layout.books.laneStride).toBe(30); // 22 + 8
-      expect(layout.books.bandHeight).toBe(150); // 30 * 5
+      expect(layout.books.laneStride).toBe(60); // 40 + 20
+      expect(layout.books.bandHeight).toBe(360); // 60 * 6
     });
 
     it('track stacking follows expected formula', () => {

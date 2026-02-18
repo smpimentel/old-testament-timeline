@@ -5,12 +5,21 @@
 
 import type { EntityType } from '../data/timeline-data';
 
+/** false = Figma-locked sizes, true = adaptive zoom tiers */
+export const ADAPTIVE_NODE_SIZING = false;
+
 export interface NodeMetrics {
   height: number;
   minHeight: number;
   showLabel: boolean;
   showBadges: boolean;
 }
+
+const FIGMA_SIZES: Record<EntityType, NodeMetrics> = {
+  event:  { height: 20, minHeight: 20, showLabel: true, showBadges: true },
+  person: { height: 20, minHeight: 20, showLabel: true, showBadges: true },
+  book:   { height: 40, minHeight: 40, showLabel: true, showBadges: true },
+};
 
 export interface ZoomTier {
   maxZoom: number; // Upper bound (exclusive) for this tier
@@ -53,6 +62,7 @@ const zoomTiersByType: Record<EntityType, ZoomTier[]> = {
  * Get node metrics for an entity type at a given zoom level.
  */
 export function getNodeMetrics(entityType: EntityType, zoomLevel: number): NodeMetrics {
+  if (!ADAPTIVE_NODE_SIZING) return FIGMA_SIZES[entityType];
   const tiers = zoomTiersByType[entityType];
   for (const tier of tiers) {
     if (zoomLevel < tier.maxZoom) {
@@ -67,6 +77,7 @@ export function getNodeMetrics(entityType: EntityType, zoomLevel: number): NodeM
  * Get max node height for an entity type (highest zoom tier).
  */
 export function getMaxNodeHeight(entityType: EntityType): number {
+  if (!ADAPTIVE_NODE_SIZING) return FIGMA_SIZES[entityType].height;
   const tiers = zoomTiersByType[entityType];
   return tiers[tiers.length - 1].metrics.height;
 }
