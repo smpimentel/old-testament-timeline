@@ -4,7 +4,7 @@
 - **Milestone:** 1 — Ship v1.0 MVP
 - **Phase:** 6 — Visual Alignment with Figma (COMPLETE)
 - **Branch:** `working`
-- **Last action:** Completed quick task 3: Replace kingdom bg with updated Figma export
+- **Last action:** Completed quick task 4: Remove bottom half of themes from nav panel
 
 ## Completed
 - [x] Codebase mapping (7 docs in `.planning/codebase/`)
@@ -34,6 +34,7 @@
 |---|-------------|------|--------|-----------|
 | 1 | Remove navigation minimap | 2026-02-18 | 7e31b30 | [1-remove-navigation-minimap](./quick/1-remove-navigation-minimap/) |
 | 3 | Replace kingdom bg with Figma export | 2026-02-18 | 8697a22 | [3-replace-kingdom-bg-with-figma-export](./quick/3-replace-kingdom-bg-with-figma-export/) |
+| 4 | Remove bottom half of themes from nav panel | 2026-02-18 | 008aed3 | [4-remove-bottom-half-nav-themes](./quick/4-remove-bottom-half-nav-themes/) |
 
 ## Known Blockers
 - vitest worker timeout (system resource issue, not code-related)
