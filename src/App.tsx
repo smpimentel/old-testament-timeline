@@ -11,7 +11,6 @@ import { SideNavigator, SIDEBAR_WIDTH_OPEN, SIDEBAR_WIDTH_CLOSED } from './compo
 import { TimelineNode, TimeGrid } from './components/timeline-nodes';
 import { KingdomBackground } from './components/kingdom-background';
 import { RightRail } from './components/right-rail';
-import { Minimap } from './components/minimap';
 import { HoverTooltip } from './components/hover-tooltip';
 import { WelcomeOverlay } from './components/welcome-overlay';
 import {
@@ -58,7 +57,7 @@ function App() {
   const { pathMode, breadcrumbs, togglePathMode, addBreadcrumb, handleClearBreadcrumbs, breadcrumbEntities, getBreadcrumbNumber } = usePathTracing();
   const { searchQuery, setSearchQuery, selectedPeriod, setSelectedPeriod, activeThemes, handleThemeToggle, filteredEntities } = useEntityFilter();
   const { selectedEntity, hoveredEntity, hoverPosition, handleEntityClick: baseHandleEntityClick, handleEntityHover, handleEntityLeave, closeSelection, setSelectedEntity } = useEntitySelection();
-  const { panX, panY, zoomLevel, isDragging, canvasRef, pixelsPerYear, viewportWidth, yearToX, panToYear, panToCenterOnYear, setPanX, canvasEventHandlers } = useViewport({ selectedEntityOpen: !!selectedEntity, railWidth });
+  const { panX, panY, zoomLevel, isDragging, canvasRef, pixelsPerYear, yearToX, panToYear, panToCenterOnYear, canvasEventHandlers } = useViewport({ selectedEntityOpen: !!selectedEntity, railWidth });
 
   const handlePeriodSelect = (periodId: string) => {
     const period = periods.find(p => p.id === periodId);
@@ -156,12 +155,6 @@ function App() {
           <RightRail entity={selectedEntity} onClose={closeSelection} onViewRelationship={handleViewRelationship} pathMode={pathMode} />
         )}
       </AnimatePresence>
-      <Minimap
-        entities={timelineData} viewportX={-panX}
-        viewportWidth={viewportWidth - (selectedEntity ? railWidth : 0)}
-        totalWidth={TIMELINE_WIDTH} onViewportChange={(x) => setPanX(-x)}
-        zoomLevel={zoomLevel} pixelsPerYear={pixelsPerYear} startYear={START_YEAR}
-      />
       <AnimatePresence>
         {showWelcome && <WelcomeOverlay onClose={() => setShowWelcome(false)} />}
       </AnimatePresence>
