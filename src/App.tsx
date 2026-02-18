@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
-import { timelineData, periods, type TimelineEntity } from './data/timeline-data';
+import { timelineData, periods, kingdomLanes, type TimelineEntity } from './data/timeline-data';
 import { computeTrackLayout, createConfigFromEntities } from './lib/timeline-track-layout';
 import { PeriodSection } from './components/period-section';
 import { UnknownEraBand } from './components/unknown-era-band';
@@ -24,18 +24,29 @@ const trackLayout = computeTrackLayout(createConfigFromEntities(timelineData));
 const UNKNOWN_VISUAL_START_YEAR = 4004;
 const UNKNOWN_VISUAL_END_YEAR = 2300;
 
-// Section layout computed once from module-level constants ([] deps)
+// Section layout: events → kingdom bands → people → books
 const PERIOD_H = 170;
 const MAIN_TOP = PERIOD_H;
+const laneStride = trackLayout.events.laneStride; // 28px
+
+// Non-kingdom events at top
 const eventsBaseY = MAIN_TOP + 48;
-const peopleBaseY = eventsBaseY + trackLayout.events.bandHeight + 20;
+const eventsBandBottom = eventsBaseY + trackLayout.events.bandHeight;
+
+// Kingdom bands between events and people tracks
+const kingdomNorthBaseY = eventsBandBottom + 12;
+const northBandHeight = kingdomLanes.northLaneCount * laneStride;
+const kingdomSouthBaseY = kingdomNorthBaseY + northBandHeight + 16;
+const southBandHeight = kingdomLanes.southLaneCount * laneStride;
+const kingdomBottom = kingdomSouthBaseY + southBandHeight;
+
+// Non-kingdom people below kingdom bands
+const peopleBaseY = kingdomBottom + 20;
 const mainContentBottom = peopleBaseY + trackLayout.people.bandHeight + 36;
 const mainSectionHeight = Math.max(800, mainContentBottom - MAIN_TOP);
 const booksSectionTop = MAIN_TOP + mainSectionHeight + 24;
 const booksBaseY = booksSectionTop + 20;
 const booksSectionHeight = trackLayout.books.bandHeight + 20 + 24;
-// Kingdom bands aligned with SVG background Rectangle 3 (north) and Rectangle 4 (south)
-const kingdomLaneStride = trackLayout.events.laneStride; // 28px, same for events & people
 const sectionLayout = {
   periodSectionHeight: PERIOD_H,
   mainSectionTop: MAIN_TOP,
@@ -47,8 +58,8 @@ const sectionLayout = {
     events: { ...trackLayout.events, baseY: eventsBaseY },
     people: { ...trackLayout.people, baseY: peopleBaseY },
     books: { ...trackLayout.books, baseY: booksBaseY },
-    kingdomNorth: { baseY: MAIN_TOP + 30, laneStride: kingdomLaneStride },
-    kingdomSouth: { baseY: MAIN_TOP + 420, laneStride: kingdomLaneStride },
+    kingdomNorth: { baseY: kingdomNorthBaseY, laneStride },
+    kingdomSouth: { baseY: kingdomSouthBaseY, laneStride },
   },
 };
 
@@ -130,7 +141,7 @@ function App() {
         <KingdomBackground yearToX={yearToX} topOffset={sectionLayout.mainSectionTop} />
         <TimeGrid startYear={START_YEAR} endYear={END_YEAR} height={sectionLayout.foundationHeight} axisY={sectionLayout.mainSectionTop + 2} />
         <TrackLabels tracks={sectionLayout.tracks} />
-        <KingdomLaneDivider yearToX={yearToX} mainSectionTop={sectionLayout.mainSectionTop} />
+        <KingdomLaneDivider yearToX={yearToX} dividerY={kingdomSouthBaseY - 8} />
         <RelationshipOverlay breadcrumbEntities={breadcrumbEntities} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} unknownEntityXById={unknownEntityXById} yearToX={yearToX} tracks={sectionLayout.tracks} />
         {nodePlacements.map(({ entity, x, width, trackBand, forcePointNode }) => {
           const isHighlighted = activeThemes.length > 0 && entity.themes?.some(t => activeThemes.includes(t));
