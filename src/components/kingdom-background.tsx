@@ -79,10 +79,10 @@ export function KingdomBackground({ yearToX, pixelsPerYear, trackHeight, topOffs
         </g>
 
         <g id="label-israel">
-          <rect x="6779" y="13" width="106" height="38" rx="19" fill="#F5EDD6" stroke="#ABC6C3" strokeWidth="2" />
+          <rect x="6779" y="13" width="108" height="40" rx="27" fill="#F5EDD6" stroke="#ABC6C3" strokeWidth="2" />
           <text
-            x="6832"
-            y="32"
+            x="6833"
+            y="33"
             textAnchor="middle"
             dominantBaseline="middle"
             fill="#6B5D3E"
@@ -95,10 +95,10 @@ export function KingdomBackground({ yearToX, pixelsPerYear, trackHeight, topOffs
         </g>
 
         <g id="label-judah">
-          <rect x="6779" y="747" width="106" height="38" rx="19" fill="#F5EDD6" stroke="#F0DEAF" strokeWidth="2" />
+          <rect x="6779" y="747" width="108" height="40" rx="27" fill="#F5EDD6" stroke="#F0DEAF" strokeWidth="2" />
           <text
-            x="6832"
-            y="766"
+            x="6833"
+            y="767"
             textAnchor="middle"
             dominantBaseline="middle"
             fill="#6B5D3E"
