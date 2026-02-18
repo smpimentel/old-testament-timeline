@@ -6,14 +6,15 @@ import {
   type TimelineEntity,
 } from './data/timeline-data';
 import { computeTrackLayout, createConfigFromEntities } from './lib/timeline-track-layout';
-import { computePeriodLabelLayout } from './lib/timeline-label-layout';
+import { PeriodSection } from './components/period-section';
+import { UnknownEraBand } from './components/unknown-era-band';
+import { RelationshipOverlay } from './components/relationship-overlay';
 import { SideNavigator, SIDEBAR_WIDTH_OPEN, SIDEBAR_WIDTH_CLOSED } from './components/side-navigator';
-import { TimelineNode, TimeGrid, PeriodBand } from './components/timeline-nodes';
+import { TimelineNode, TimeGrid } from './components/timeline-nodes';
 import { KingdomBackground } from './components/kingdom-background';
 import { RightRail } from './components/right-rail';
 import { Minimap } from './components/minimap';
 import { HoverTooltip } from './components/hover-tooltip';
-import { RelationshipLine } from './components/relationship-lines';
 import { WelcomeOverlay } from './components/welcome-overlay';
 import {
   useViewport,
@@ -153,20 +154,6 @@ function App() {
     }
   };
 
-  const periodBands = useMemo(() => {
-    const unknownStartX = yearToX(UNKNOWN_VISUAL_START_YEAR);
-    const unknownEndX = yearToX(UNKNOWN_VISUAL_END_YEAR);
-    const unknownVisualWidth = Math.max(0, unknownEndX - unknownStartX);
-
-    return periods.map((period) => ({
-      period,
-      x: period.id === 'dates-unknown' ? unknownStartX : yearToX(period.startYear),
-      width: period.id === 'dates-unknown'
-        ? unknownVisualWidth
-        : (period.startYear - period.endYear) * pixelsPerYear,
-    }));
-  }, [yearToX, pixelsPerYear]);
-
   const { unknownVisualBand, unknownEntityXById } = useUnknownEra({
     yearToX,
     unknownVisualStartYear: UNKNOWN_VISUAL_START_YEAR,
@@ -197,17 +184,6 @@ function App() {
       },
     };
   }, []);
-
-  const periodLabelLayout = useMemo(() => {
-    return computePeriodLabelLayout(
-      periodBands.map(({ period, x, width }) => ({
-        id: period.id,
-        name: period.name,
-        x,
-        width,
-      })),
-    );
-  }, [periodBands]);
 
   const { nodePlacements, nodeLabelVisibility } = useNodePlacements({
     filteredEntities,
@@ -284,33 +260,20 @@ function App() {
             }}
           />
 
-          {/* Unknown era (intentionally not-to-scale visual span) */}
-          <div
-            className="absolute pointer-events-none"
-            style={{
-              left: unknownVisualBand.startX,
-              top: sectionLayout.mainSectionTop,
-              width: unknownVisualBand.width,
-              height: sectionLayout.mainSectionHeight,
-              background: 'rgba(245, 237, 214, 0.34)',
-              borderRight: '1px solid rgba(111, 98, 84, 0.18)',
-            }}
+          <UnknownEraBand
+            startX={unknownVisualBand.startX}
+            width={unknownVisualBand.width}
+            mainSectionTop={sectionLayout.mainSectionTop}
+            mainSectionHeight={sectionLayout.mainSectionHeight}
           />
 
-          {/* Period Bands (behind kingdom shapes) */}
-          {periodBands.map(({ period, x, width }) => {
-            const labelPlacement = periodLabelLayout[period.id];
-            return (
-              <PeriodBand
-                key={period.id}
-                period={period}
-                x={x}
-                width={width}
-                totalHeight={sectionLayout.periodSectionHeight}
-                labelLane={labelPlacement?.lane}
-              />
-            );
-          })}
+          <PeriodSection
+            yearToX={yearToX}
+            pixelsPerYear={pixelsPerYear}
+            totalHeight={sectionLayout.periodSectionHeight}
+            unknownVisualStartYear={UNKNOWN_VISUAL_START_YEAR}
+            unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR}
+          />
 
           {/* Kingdom Background Shape (on top of period bands) */}
           <KingdomBackground
@@ -397,50 +360,13 @@ function App() {
             </div>
           </div>
 
-          {/* Relationship Lines (breadcrumb path) */}
-          {breadcrumbEntities.length > 1 && (
-            <>
-              {breadcrumbEntities.slice(0, -1).map((entity, idx) => {
-                const nextEntity = breadcrumbEntities[idx + 1];
-                if (!entity || !nextEntity) return null;
-
-                const getEntityX = (item: TimelineEntity) => {
-                  const inUnknownZone = item.type !== 'book' && item.startYear > UNKNOWN_VISUAL_END_YEAR;
-                  if (inUnknownZone) {
-                    return unknownEntityXById.get(item.id) ?? yearToX(item.startYear);
-                  }
-                  return yearToX(item.startYear);
-                };
-
-                const startX = getEntityX(entity);
-                const endX = getEntityX(nextEntity);
-
-                // Compute Y from track layout: baseY + (swimlane * laneStride) + node center
-                const getEntityCenterY = (e: TimelineEntity) => {
-                  let track = sectionLayout.tracks.events;
-                  if (e.type === 'person') track = sectionLayout.tracks.people;
-                  else if (e.type === 'book') track = sectionLayout.tracks.books;
-                  const swimlane = e.swimlane ?? 0;
-                  return track.baseY + (swimlane * track.laneStride) + (track.laneStride / 2);
-                };
-
-                const startY = getEntityCenterY(entity);
-                const endY = getEntityCenterY(nextEntity);
-
-                return (
-                  <RelationshipLine
-                    key={`${entity.id}-${nextEntity.id}`}
-                    startX={startX}
-                    startY={startY}
-                    endX={endX}
-                    endY={endY}
-                    type="breadcrumb"
-                    isAnimated
-                  />
-                );
-              })}
-            </>
-          )}
+          <RelationshipOverlay
+            breadcrumbEntities={breadcrumbEntities}
+            unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR}
+            unknownEntityXById={unknownEntityXById}
+            yearToX={yearToX}
+            tracks={sectionLayout.tracks}
+          />
 
           {/* Timeline Nodes */}
           {nodePlacements.map(({ entity, x, width, trackBand, forcePointNode }) => {
