@@ -1,9 +1,6 @@
 import { useState } from 'react';
 import { Search, Route, X, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
-import { periods, themeColors, type ThemeTag } from '../data/timeline-data';
-
-/** Top 4 themes shown in sidebar */
-const SIDEBAR_THEMES: ThemeTag[] = ['Covenant', 'Kingship', 'Land', 'Messiah'];
+import { periods, themeColors, themeTags, type ThemeTag } from '../data/timeline-data';
 
 /** Periods hidden from sidebar nav */
 const HIDDEN_PERIODS = new Set(['dates-unknown']);
@@ -192,7 +189,7 @@ export function SideNavigator({
             className="flex flex-col items-center"
             style={{ gap: isOpen ? 6 : 8 }}
           >
-            {SIDEBAR_THEMES.map((theme) => {
+            {themeTags.map((theme) => {
               const isActive = activeThemes.includes(theme);
               const color = themeColors[theme];
               return isOpen ? (

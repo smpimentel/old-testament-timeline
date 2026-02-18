@@ -37,6 +37,11 @@
       "priority": {
         "$ref": "common.raw.schema.json#/definitions/priority"
       },
+      "themes": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Explicit theme tags for this event"
+      },
       "track": {
         "type": "string",
         "const": "events"

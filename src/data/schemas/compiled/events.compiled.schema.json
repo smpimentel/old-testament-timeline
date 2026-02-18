@@ -36,6 +36,11 @@
         },
         "description": "Categories for this event"
       },
+      "themes": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Explicit theme tags"
+      },
       "swimlane": {
         "type": "integer",
         "description": "Assigned swimlane for timeline display"
