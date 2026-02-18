@@ -2,9 +2,9 @@
 
 ## Current
 - **Milestone:** 1 — Ship v1.0 MVP
-- **Phase:** 7 — Kingdom-Split Lanes (COMPLETE)
+- **Phase:** 8 — Data Expansion (IN PROGRESS, plan 3/4 done)
 - **Branch:** `working`
-- **Last action:** Completed Phase 7: kingdom-split lanes for divided monarchy
+- **Last action:** 8-03: UI for data expansion (diamond nodes, source footer, filter toggle)
 
 ## Completed
 - [x] Codebase mapping (7 docs in `.planning/codebase/`)
@@ -37,6 +37,8 @@
 | 3 | Replace kingdom bg with Figma export | 2026-02-18 | 8697a22 | [3-replace-kingdom-bg-with-figma-export](./quick/3-replace-kingdom-bg-with-figma-export/) |
 | 4 | Remove bottom half of themes from nav panel | 2026-02-18 | 008aed3 | [4-remove-bottom-half-nav-themes](./quick/4-remove-bottom-half-nav-themes/) |
 | 5 | Fix period nav pan math & fit-to-view | 2026-02-18 | 0be0985 | [5-fix-period-nav-fit-to-view](./quick/5-fix-period-nav-fit-to-view/) |
+| 6 | Anchor kingdom bands to SVG background rects | 2026-02-18 | 7dcd889 | — |
+| 7 | Center Division of Kingdom event on Solomon | 2026-02-18 | 0994e61 | [7-center-division-event-on-solomon](./quick/7-center-division-event-on-solomon/) |
 
 ## Known Blockers
 - vitest worker timeout (system resource issue, not code-related)
