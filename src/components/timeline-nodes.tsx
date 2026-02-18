@@ -1,5 +1,6 @@
 import { type TimelineEntity, type Period, roleColors, eventColors, genreColors } from '../data/timeline-data';
 import { getNodeMetrics, themeHighlightColors, breadcrumbAccentColor } from '../config/timeline-node-config';
+import { yearToX as scaleYearToX } from '../lib/scale';
 
 // ===== PERIOD BAND =====
 interface PeriodBandProps {
@@ -64,38 +65,23 @@ export function PeriodBand({ period, x, width, totalHeight, labelLane = 0 }: Per
 interface TimeGridProps {
   startYear: number;
   endYear: number;
-  pixelsPerYear: number;
   height: number;
   axisY?: number;
-  unscaledUntilYear?: number;
 }
 
 export function TimeGrid({
   startYear,
   endYear,
-  pixelsPerYear,
   height,
   axisY: axisYOverride,
-  unscaledUntilYear,
 }: TimeGridProps) {
   const gridLines = [];
+  const majorInterval = 100;
+  const minorInterval = 20;
 
-  // Determine grid interval based on zoom (adjusted for 4px/yr)
-  let majorInterval = 500;
-  let minorInterval = 100;
-
-  if (pixelsPerYear >= 6) {
-    majorInterval = 100;
-    minorInterval = 20;
-  } else if (pixelsPerYear >= 2) {
-    majorInterval = 200;
-    minorInterval = 50;
-  }
-
-  // Major grid lines
+  // Major grid lines (100-year intervals)
   for (let year = Math.ceil(endYear / majorInterval) * majorInterval; year <= startYear; year += majorInterval) {
-    if (unscaledUntilYear !== undefined && year > unscaledUntilYear) continue;
-    const x = (startYear - year) * pixelsPerYear;
+    const x = scaleYearToX(year);
     gridLines.push(
       <div
         key={`major-${year}`}
@@ -104,15 +90,15 @@ export function TimeGrid({
           left: x,
           height,
           width: '1px',
-          background: '#C7B8A2',
+          background: 'var(--color-base-grid-major)',
         }}
       >
         <div
           className="absolute -top-6 left-1/2 -translate-x-1/2 whitespace-nowrap"
           style={{
             fontSize: 'var(--type-label-xs-size)',
-            color: '#6F6254',
-            fontWeight: 600,
+            color: 'var(--color-base-text-secondary)',
+            fontWeight: 400,
             fontFamily: 'var(--font-timeline)',
           }}
         >
@@ -122,45 +108,42 @@ export function TimeGrid({
     );
   }
 
-  // Minor grid lines
-  if (pixelsPerYear >= 1) {
-    for (let year = Math.ceil(endYear / minorInterval) * minorInterval; year <= startYear; year += minorInterval) {
-      if (year % majorInterval !== 0) {
-        if (unscaledUntilYear !== undefined && year > unscaledUntilYear) continue;
-        const x = (startYear - year) * pixelsPerYear;
-        gridLines.push(
-          <div
-            key={`minor-${year}`}
-            className="absolute top-0"
-            style={{
-              left: x,
-              height,
-              width: '1px',
-              background: '#E3D7C4',
-            }}
-          />
-        );
-      }
+  // Minor grid lines (20-year intervals)
+  for (let year = Math.ceil(endYear / minorInterval) * minorInterval; year <= startYear; year += minorInterval) {
+    if (year % majorInterval !== 0) {
+      const x = scaleYearToX(year);
+      gridLines.push(
+        <div
+          key={`minor-${year}`}
+          className="absolute top-0"
+          style={{
+            left: x,
+            height,
+            width: '1px',
+            background: 'var(--color-base-grid-minor)',
+          }}
+        />
+      );
     }
   }
 
-  // Timeline axis in the vertical center, matching the concept layout foundation.
+  // Timeline axis
   const axisY = axisYOverride ?? Math.round(height / 2);
+  const totalWidth = scaleYearToX(endYear);
   const axisTicks = [];
+
+  // Diamond ticks at 100-year intervals
   for (let year = Math.ceil(endYear / 100) * 100; year <= startYear; year += 100) {
-    if (unscaledUntilYear !== undefined && year > unscaledUntilYear) continue;
-    const x = (startYear - year) * pixelsPerYear;
+    const x = scaleYearToX(year);
     axisTicks.push(
       <svg
         key={`axis-tick-${year}`}
         className="absolute"
-        style={{ left: x - 3.5, top: axisY - 7.5 }}
-        width="7"
-        height="15"
-        viewBox="0 0 7 15"
+        style={{ left: x - 3, top: axisY - 3 }}
+        width="6"
+        height="6"
       >
-        <polygon points="3.5,0 6.5,5 0.5,5" fill="#F5EDD6" />
-        <polygon points="3.5,15 6.5,10 0.5,10" fill="#F5EDD6" />
+        <polygon points="3,0 6,3 3,6 0,3" fill="#6F6254" />
       </svg>
     );
   }
@@ -172,11 +155,10 @@ export function TimeGrid({
       className="absolute"
       style={{
         left: 0,
-        top: axisY - 2.5,
-        width: (startYear - endYear) * pixelsPerYear,
-        height: '5px',
-        background: '#F5EDD6',
-        boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.15)',
+        top: axisY - 1,
+        width: totalWidth,
+        height: '2px',
+        background: 'var(--color-base-grid-major)',
       }}
     />
   );
