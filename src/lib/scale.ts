@@ -2,9 +2,9 @@
 
 export const ERA_START = 4004;        // BC — Creation, leftmost point
 export const LOG_BOUNDARY = 2300;     // BC — hard join between log and linear
-export const LOG_BAND_PX = 750;       // px budget for pre-2300 BC era (stretched for wider unknown era)
+export const LOG_BAND_PX = 1350;      // px budget for pre-2300 BC era (fills gap from creation to linear zone)
 export const LINEAR_PX_PER_YEAR = 4;  // post-2300 BC scale
-export const TIMELINE_X_OFFSET = -80; // shift all content left by ~20yr
+export const TIMELINE_X_OFFSET = -830; // shift content left; net -80px on linear zone (20yr), creation at bg edge
 
 // Compensation for kingdom background to stay in its original position
 const ORIGINAL_LOG_BAND_PX = 600;
