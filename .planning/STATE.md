@@ -4,7 +4,7 @@
 - **Milestone:** 1 — Ship v1.0 MVP
 - **Phase:** 6 — Visual Alignment with Figma (COMPLETE)
 - **Branch:** `working`
-- **Last action:** Removed Joshua person+book from data (key collision)
+- **Last action:** Completed quick task 1: Remove navigation minimap
 
 ## Completed
 - [x] Codebase mapping (7 docs in `.planning/codebase/`)
@@ -27,6 +27,12 @@
 - Period banner removed (overlapped events/main body)
 - Diamond axis ticks replace triangle pairs
 - Book IDs use `-book` suffix when name collides w/ person (exodus-book, joshua-book)
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Directory |
+|---|-------------|------|--------|-----------|
+| 1 | Remove navigation minimap | 2026-02-18 | 7e31b30 | [1-remove-navigation-minimap](./quick/1-remove-navigation-minimap/) |
 
 ## Known Blockers
 - vitest worker timeout (system resource issue, not code-related)
