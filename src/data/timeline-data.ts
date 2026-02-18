@@ -297,7 +297,7 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
       type: 'person' as EntityType,
       name: p.name,
       startYear: p.startYear,
-      endYear: p.endYear,
+      endYear: p.endYear !== p.startYear ? p.endYear : undefined,
       certainty: p.certainty as DateCertainty,
       priority: (p.priority || 2) as 1 | 2 | 3 | 4,
       description: p.description || p.bio || '',

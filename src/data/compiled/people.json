@@ -206,7 +206,7 @@
     "type": "person",
     "name": "Levi",
     "startYear": 1919,
-    "endYear": 1782,
+    "endYear": 1919,
     "certainty": "approximate",
     "categories": [
       "Other"
@@ -227,7 +227,7 @@
     "type": "person",
     "name": "Judah",
     "startYear": 1918,
-    "endYear": 1906,
+    "endYear": 1918,
     "certainty": "approximate",
     "categories": [
       "Other"
