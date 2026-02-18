@@ -63,7 +63,7 @@ function App() {
     const period = periods.find(p => p.id === periodId);
     if (period) {
       setSelectedPeriod(periodId);
-      fitYearRangeToView(period.startYear, period.endYear);
+      fitYearRangeToView(period.startYear, period.endYear, sectionLayout.foundationHeight);
     }
   };
 

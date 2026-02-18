@@ -93,21 +93,29 @@ export function useViewport({ selectedEntityOpen, railWidth }: UseViewportOption
     setPanX(adjustedViewportWidth / 2 - targetX * zoomLevel);
   }, [yearToX, viewportWidth, selectedEntityOpen, railWidth, zoomLevel]);
 
-  // Fit a year range to the viewport — adjusts both zoom and pan
-  const fitYearRangeToView = useCallback((startYear: number, endYear: number) => {
+  // Fit a year range to the viewport — adjusts zoom and pan to show full width + height
+  const fitYearRangeToView = useCallback((startYear: number, endYear: number, contentHeight?: number) => {
     const startX = yearToX(startYear);
     const endX = yearToX(endYear);
     const worldWidth = Math.abs(endX - startX);
 
     const rect = canvasRef.current?.getBoundingClientRect();
     const availableWidth = rect ? rect.width : viewportWidth;
+    const availableHeight = rect ? rect.height : window.innerHeight;
 
-    const padding = 60;
-    const newZoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, (availableWidth - padding * 2) / worldWidth));
+    const pad = 60;
+    const hZoom = (availableWidth - pad * 2) / worldWidth;
+    const vZoom = contentHeight ? (availableHeight - pad * 2) / contentHeight : Infinity;
+    const newZoom = Math.max(MIN_ZOOM, Math.min(MAX_ZOOM, Math.min(hZoom, vZoom)));
 
     const centerWorldX = (startX + endX) / 2;
     setPanX(availableWidth / 2 - centerWorldX * newZoom);
-    setPanY(0);
+    // Center vertically if content height provided
+    if (contentHeight) {
+      setPanY((availableHeight - contentHeight * newZoom) / 2);
+    } else {
+      setPanY(0);
+    }
     setZoomLevel(newZoom);
   }, [yearToX, viewportWidth]);
 
