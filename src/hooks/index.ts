@@ -22,3 +22,6 @@ export {
   type UseModalA11yOptions,
   type UseModalA11yReturn,
 } from './useModalA11y';
+
+export { useNodePlacements, type NodePlacement } from './useNodePlacements';
+export { useUnknownEra } from './useUnknownEra';

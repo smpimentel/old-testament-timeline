@@ -6,7 +6,7 @@ import {
   type TimelineEntity,
 } from './data/timeline-data';
 import { computeTrackLayout, createConfigFromEntities } from './lib/timeline-track-layout';
-import { computeNodeLabelVisibility, computePeriodLabelLayout } from './lib/timeline-label-layout';
+import { computePeriodLabelLayout } from './lib/timeline-label-layout';
 import { SideNavigator, SIDEBAR_WIDTH_OPEN, SIDEBAR_WIDTH_CLOSED } from './components/side-navigator';
 import { TimelineNode, TimeGrid, PeriodBand } from './components/timeline-nodes';
 import { KingdomBackground } from './components/kingdom-background';
@@ -21,6 +21,8 @@ import {
   useEntityFilter,
   usePathTracing,
   useIsMobile,
+  useNodePlacements,
+  useUnknownEra,
   START_YEAR,
   END_YEAR,
   TIMELINE_WIDTH,
@@ -165,41 +167,11 @@ function App() {
     }));
   }, [yearToX, pixelsPerYear]);
 
-  const unknownVisualBand = useMemo(() => {
-    const startX = yearToX(UNKNOWN_VISUAL_START_YEAR);
-    const endX = yearToX(UNKNOWN_VISUAL_END_YEAR);
-    return {
-      startX,
-      width: Math.max(0, endX - startX),
-    };
-  }, [yearToX]);
-
-  const unknownEntityXById = useMemo(() => {
-    const unknownEntities = timelineData
-      .filter((entity) => entity.type !== 'book' && entity.startYear > UNKNOWN_VISUAL_END_YEAR)
-      .sort((a, b) => {
-        if (a.startYear !== b.startYear) return b.startYear - a.startYear;
-        const typeOrder = { event: 0, person: 1, book: 2 } as const;
-        if (typeOrder[a.type] !== typeOrder[b.type]) {
-          return typeOrder[a.type] - typeOrder[b.type];
-        }
-        return a.id.localeCompare(b.id);
-      });
-
-    const map = new Map<string, number>();
-    const inset = 28;
-    const minX = unknownVisualBand.startX + inset;
-    const maxX = unknownVisualBand.startX + Math.max(inset, unknownVisualBand.width - inset);
-    const span = Math.max(0, maxX - minX);
-    const divisor = Math.max(1, unknownEntities.length - 1);
-
-    unknownEntities.forEach((entity, index) => {
-      const ratio = unknownEntities.length === 1 ? 0.5 : index / divisor;
-      map.set(entity.id, minX + (ratio * span));
-    });
-
-    return map;
-  }, [unknownVisualBand.startX, unknownVisualBand.width]);
+  const { unknownVisualBand, unknownEntityXById } = useUnknownEra({
+    yearToX,
+    unknownVisualStartYear: UNKNOWN_VISUAL_START_YEAR,
+    unknownVisualEndYear: UNKNOWN_VISUAL_END_YEAR,
+  });
 
   const sectionLayout = useMemo(() => {
     const eventsBaseY = MAIN_SECTION_TOP + MAIN_SECTION_PADDING_TOP;
@@ -237,45 +209,15 @@ function App() {
     );
   }, [periodBands]);
 
-  const nodePlacements = useMemo(() => {
-    return filteredEntities.map((entity) => {
-      const isUnknownEraEntity = entity.startYear > UNKNOWN_VISUAL_END_YEAR;
-      const shouldCompressUnknownX = entity.type !== 'book' && isUnknownEraEntity;
-      const x = shouldCompressUnknownX
-        ? (unknownEntityXById.get(entity.id) ?? yearToX(entity.startYear))
-        : yearToX(entity.startYear);
-      const width = entity.endYear
-        ? (entity.startYear - entity.endYear) * pixelsPerYear
-        : 32;
-
-      let trackBand = sectionLayout.tracks.events;
-      if (entity.type === 'person') trackBand = sectionLayout.tracks.people;
-      else if (entity.type === 'book') trackBand = sectionLayout.tracks.books;
-
-      return {
-        entity,
-        x,
-        width,
-        trackBand,
-        forcePointNode: entity.type === 'person' && isUnknownEraEntity,
-      };
-    });
-  }, [filteredEntities, yearToX, pixelsPerYear, sectionLayout, unknownEntityXById]);
-
-  const nodeLabelVisibility = useMemo(() => {
-    return computeNodeLabelVisibility(
-      nodePlacements.map(({ entity, x, width }) => ({
-        id: entity.id,
-        type: entity.type,
-        swimlane: entity.swimlane ?? 0,
-        x,
-        width,
-        name: entity.name,
-        priority: entity.priority,
-      })),
-      zoomLevel,
-    );
-  }, [nodePlacements, zoomLevel]);
+  const { nodePlacements, nodeLabelVisibility } = useNodePlacements({
+    filteredEntities,
+    yearToX,
+    pixelsPerYear,
+    tracks: sectionLayout.tracks,
+    unknownEntityXById,
+    unknownVisualEndYear: UNKNOWN_VISUAL_END_YEAR,
+    zoomLevel,
+  });
 
   return (
     <div className="h-screen w-screen overflow-hidden" style={{ background: '#F5EDD6' }}>
