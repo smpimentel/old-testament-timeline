@@ -9,6 +9,7 @@
     "categories": [
       "Patriarch"
     ],
+    "themes": [],
     "priority": 3,
     "description": "Father of Abraham",
     "bio": "Father of Abraham, Nahor, and Haran. Originally from Ur of the Chaldeans, he began the journey toward Canaan but settled in Haran.",
@@ -26,6 +27,9 @@
     "certainty": "approximate",
     "categories": [
       "Patriarch"
+    ],
+    "themes": [
+      "Covenant"
     ],
     "priority": 2,
     "description": "Wife of Abraham, mother of Isaac",
@@ -46,6 +50,9 @@
     "certainty": "exact",
     "categories": [
       "Patriarch"
+    ],
+    "themes": [
+      "Covenant"
     ],
     "priority": 1,
     "description": "The promised son of Abraham and Sarah, father of Jacob.",
@@ -68,6 +75,7 @@
     "categories": [
       "Patriarch"
     ],
+    "themes": [],
     "priority": 3,
     "description": "Son of Abraham and Hagar",
     "bio": "Firstborn son of Abraham through Hagar, Sarah's Egyptian servant. Father of twelve princes and considered the ancestor of many Arab peoples.",
@@ -88,6 +96,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 3,
     "description": "Father of Moses, Aaron, and Miriam",
     "bio": "A Levite who married Jochebed. Father of Moses, Aaron, and Miriam. Lived during the Egyptian slavery period.",
@@ -107,6 +116,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 3,
     "description": "Mother of Moses, Aaron, and Miriam",
     "bio": "A Levite woman who married Amram. Hid baby Moses for three months then placed him in a basket on the Nile. Later hired as his nurse by Pharaoh's daughter.",
@@ -127,6 +137,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 3,
     "description": "Wife of Moses, daughter of Jethro",
     "bio": "Daughter of Jethro, priest of Midian. Moses met her at a well while fleeing Egypt. She bore him two sons: Gershom and Eliezer.",
@@ -147,6 +158,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Firstborn son of Moses and Zipporah",
     "bio": "Firstborn son of Moses, born in Midian. His name means 'sojourner there' reflecting Moses' status as a stranger in a foreign land.",
@@ -166,6 +178,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Second son of Moses and Zipporah",
     "bio": "Second son of Moses. His name means 'God of my father was my help' commemorating God's deliverance of Moses from Pharaoh.",
@@ -185,6 +198,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 3,
     "description": "Father of King David",
     "bio": "A Bethlehemite of the tribe of Judah. Father of eight sons including David. Grandson of Ruth and Boaz.",
@@ -205,6 +219,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 3,
     "description": "Wife of David, mother of Solomon",
     "bio": "Originally wife of Uriah the Hittite. David saw her bathing and committed adultery with her, later arranging Uriah's death. She became David's wife and mother of Solomon.",
@@ -224,6 +239,10 @@
     "certainty": "exact",
     "categories": [
       "King"
+    ],
+    "themes": [
+      "Kingship",
+      "Temple"
     ],
     "priority": 2,
     "description": "Son of David, builder of the Temple",
@@ -245,6 +264,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 3,
     "description": "Son of David who rebelled against him",
     "bio": "Third son of David, known for his handsome appearance. Killed his half-brother Amnon for raping his sister Tamar. Later led a rebellion against David but was killed by Joab.",
@@ -264,6 +284,10 @@
     "certainty": "exact",
     "categories": [
       "Patriarch"
+    ],
+    "themes": [
+      "Covenant",
+      "Land"
     ],
     "priority": 1,
     "description": "Father of the Hebrew nation, called by God to leave Ur.",
@@ -286,6 +310,10 @@
     "categories": [
       "Prophet"
     ],
+    "themes": [
+      "Covenant",
+      "Deliverance"
+    ],
     "priority": 1,
     "description": "Deliverer of Israel from Egypt, received the Law at Sinai.",
     "bio": "Born in Egypt during Hebrew slavery, Moses was rescued by Pharaoh's daughter. Called by God at the burning bush, he led Israel out of Egypt and received the Law at Sinai.",
@@ -307,6 +335,10 @@
     "categories": [
       "King"
     ],
+    "themes": [
+      "Kingship",
+      "Messiah"
+    ],
     "priority": 1,
     "description": "Israel's greatest king, ancestor of Christ",
     "bio": "A shepherd from Bethlehem, David was anointed king by Samuel. He united Israel, conquered Jerusalem, and established a dynasty through which the Messiah would come.",
@@ -327,6 +359,9 @@
     "categories": [
       "Patriarch"
     ],
+    "themes": [
+      "Origins"
+    ],
     "priority": 1,
     "description": "The first man, created by God from the dust of the ground.",
     "bio": "God formed Adam from the dust and created Eve from his rib. They lived in perfect fellowship with God in the Garden of Eden.",
@@ -344,6 +379,9 @@
     "certainty": "approximate",
     "categories": [
       "Patriarch"
+    ],
+    "themes": [
+      "Origins"
     ],
     "priority": 2,
     "description": "The first woman, created from Adam's rib.",
@@ -363,6 +401,9 @@
     "categories": [
       "Patriarch"
     ],
+    "themes": [
+      "Judgment"
+    ],
     "priority": 1,
     "description": "Righteous man who built the ark and preserved humanity through the Flood.",
     "bio": "Noah was a righteous man who walked with God. He built the ark and preserved humanity and animal kinds through the Flood.",
@@ -380,6 +421,9 @@
     "certainty": "exact",
     "categories": [
       "Patriarch"
+    ],
+    "themes": [
+      "Covenant"
     ],
     "priority": 1,
     "description": "Younger twin of Isaac, renamed Israel, father of the twelve tribes.",
@@ -399,6 +443,9 @@
     "categories": [
       "Patriarch"
     ],
+    "themes": [
+      "Covenant"
+    ],
     "priority": 1,
     "description": "Son of Jacob who rose to second-in-command in Egypt.",
     "bio": "Sold into slavery by his brothers, Joseph rose to become second-in-command in Egypt. He saved Egypt and his family from famine through God-given wisdom.",
@@ -416,6 +463,10 @@
     "certainty": "approximate",
     "categories": [
       "Warrior"
+    ],
+    "themes": [
+      "Land",
+      "Conquest"
     ],
     "priority": 1,
     "description": "Moses' successor who led Israel into the Promised Land.",
@@ -435,6 +486,9 @@
     "categories": [
       "Prophet"
     ],
+    "themes": [
+      "Kingship"
+    ],
     "priority": 1,
     "description": "Last judge, prophet, and priest who anointed Israel's first two kings.",
     "bio": "Samuel was the last judge, a prophet, and priest. He anointed Israel's first two kings (Saul and David) and called the nation back to faithfulness to God.",
@@ -453,6 +507,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -469,6 +524,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -485,6 +541,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -501,6 +558,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -517,6 +575,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -533,6 +592,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -549,6 +609,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -565,6 +626,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -581,6 +643,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -597,6 +660,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -613,6 +677,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -629,6 +694,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -645,6 +711,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -661,6 +728,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -677,6 +745,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -693,6 +762,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -709,6 +779,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -725,6 +796,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -741,6 +813,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -757,6 +830,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -773,6 +847,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -789,6 +864,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -805,6 +881,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -821,6 +898,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -837,6 +915,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -853,6 +932,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",
@@ -869,6 +949,7 @@
     "categories": [
       "Other"
     ],
+    "themes": [],
     "priority": 4,
     "description": "Supporting biblical figure linked through family or narrative relationships.",
     "bio": "",

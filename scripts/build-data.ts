@@ -26,6 +26,7 @@ interface TimelineEntity {
     endYear?: number;
     certainty: Certainty;
     categories: string[];
+    themes?: string[];
     swimlane?: number;
     priority?: number;
     description?: string;
@@ -49,6 +50,7 @@ interface RawPerson {
     approximate?: boolean;
     role: string;
     priority: number;
+    themes?: string[];
     description?: string;
     bio?: string;
     scriptureRefs?: string[];
@@ -69,6 +71,7 @@ interface RawEvent {
     year: number;
     approximate?: boolean;
     priority: number;
+    themes?: string[];
     description?: string;
     scriptureRefs?: string[];
     relatedPeople?: string[];
@@ -84,6 +87,7 @@ interface RawBook {
     endYear: number;
     category: string;
     priority: number;
+    themes?: string[];
     author?: string;
     description?: string;
     scriptureRefs?: string[];
@@ -131,6 +135,7 @@ function transformPerson(raw: RawPerson): TimelineEntity {
         endYear: raw.deathYear,
         certainty: raw.approximate ? 'approximate' : 'exact',
         categories: [raw.role],
+        themes: raw.themes || [],
         priority: raw.priority,
         description: raw.description,
         bio: raw.bio,
@@ -149,6 +154,7 @@ function transformEvent(raw: RawEvent): TimelineEntity {
         endYear: raw.year, // point event
         certainty: raw.approximate ? 'approximate' : 'exact',
         categories: [category],
+        themes: raw.themes || [],
         priority: raw.priority,
         description: raw.description,
         scriptureRefs: raw.scriptureRefs,
@@ -164,6 +170,7 @@ function transformBook(raw: RawBook): TimelineEntity {
         endYear: raw.endYear,
         certainty: 'approximate', // books generally approximate
         categories: [raw.category],
+        themes: raw.themes || [],
         priority: raw.priority,
         author: raw.author,
         description: raw.description,

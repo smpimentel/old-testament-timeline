@@ -19,7 +19,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Judgment"
+    "category": "Judgment",
+    "themes": ["Judgment"]
   },
   {
     "id": "call-of-abraham",
@@ -41,7 +42,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Covenant"
+    "category": "Covenant",
+    "themes": ["Covenant"]
   },
   {
     "id": "exodus",
@@ -63,7 +65,8 @@
     "relatedBooks": [
       "exodus-book"
     ],
-    "category": "Deliverance"
+    "category": "Deliverance",
+    "themes": ["Deliverance"]
   },
   {
     "id": "temple-built",
@@ -85,7 +88,8 @@
     "relatedBooks": [
       "1-kings"
     ],
-    "category": "Temple"
+    "category": "Temple",
+    "themes": ["Temple"]
   },
   {
     "id": "creation",
@@ -106,7 +110,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Origins"
+    "category": "Origins",
+    "themes": ["Origins"]
   },
   {
     "id": "the-fall",
@@ -127,7 +132,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Origins"
+    "category": "Origins",
+    "themes": ["Origins"]
   },
   {
     "id": "tower-of-babel",
@@ -145,7 +151,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Judgment"
+    "category": "Judgment",
+    "themes": ["Judgment"]
   },
   {
     "id": "ishmael-born",
@@ -165,7 +172,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Patriarchs"
+    "category": "Patriarchs",
+    "themes": ["Patriarchs"]
   },
   {
     "id": "birth-of-isaac",
@@ -186,7 +194,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Covenant"
+    "category": "Covenant",
+    "themes": ["Covenant"]
   },
   {
     "id": "twelve-tribes-of-israel",
@@ -207,7 +216,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Patriarchs"
+    "category": "Patriarchs",
+    "themes": ["Patriarchs"]
   },
   {
     "id": "josephs-exaltation-in-egypt",
@@ -228,7 +238,8 @@
     "relatedBooks": [
       "genesis"
     ],
-    "category": "Patriarchs"
+    "category": "Patriarchs",
+    "themes": ["Patriarchs"]
   },
   {
     "id": "mosaic-covenant",
@@ -248,7 +259,8 @@
     "relatedBooks": [
       "exodus-book"
     ],
-    "category": "Covenant"
+    "category": "Covenant",
+    "themes": ["Covenant"]
   },
   {
     "id": "conquest-of-canaan",
@@ -268,7 +280,8 @@
     "relatedBooks": [
       "joshua"
     ],
-    "category": "Conquest"
+    "category": "Conquest",
+    "themes": ["Conquest", "Land"]
   },
   {
     "id": "division-of-the-land",
@@ -288,7 +301,8 @@
     "relatedBooks": [
       "joshua"
     ],
-    "category": "Conquest"
+    "category": "Conquest",
+    "themes": ["Conquest", "Land"]
   },
   {
     "id": "selection-of-king-saul",
@@ -308,7 +322,8 @@
     "relatedBooks": [
       "1-samuel"
     ],
-    "category": "Monarchy"
+    "category": "Monarchy",
+    "themes": ["Monarchy", "Kingship"]
   },
   {
     "id": "reign-of-king-david",
@@ -328,7 +343,8 @@
       "2-samuel",
       "1-kings"
     ],
-    "category": "Monarchy"
+    "category": "Monarchy",
+    "themes": ["Monarchy", "Kingship"]
   },
   {
     "id": "division-of-the-kingdom",
@@ -346,7 +362,8 @@
     "relatedBooks": [
       "1-kings"
     ],
-    "category": "Monarchy"
+    "category": "Monarchy",
+    "themes": ["Monarchy", "Kingship"]
   },
   {
     "id": "fall-of-northern-kingdom",
@@ -364,7 +381,8 @@
     "relatedBooks": [
       "2-kings"
     ],
-    "category": "Judgment"
+    "category": "Judgment",
+    "themes": ["Judgment"]
   },
   {
     "id": "destruction-of-jerusalem",
@@ -384,7 +402,8 @@
       "2-kings",
       "jeremiah"
     ],
-    "category": "Judgment"
+    "category": "Judgment",
+    "themes": ["Judgment"]
   },
   {
     "id": "return-from-exile",
@@ -402,7 +421,8 @@
     "relatedBooks": [
       "ezra"
     ],
-    "category": "Restoration"
+    "category": "Restoration",
+    "themes": ["Restoration", "Deliverance"]
   },
   {
     "id": "dedication-of-second-temple",
@@ -420,7 +440,8 @@
     "relatedBooks": [
       "ezra"
     ],
-    "category": "Temple"
+    "category": "Temple",
+    "themes": ["Temple", "Restoration"]
   },
   {
     "id": "rebuilding-jerusalems-walls",
@@ -438,6 +459,7 @@
     "relatedBooks": [
       "nehemiah"
     ],
-    "category": "Restoration"
+    "category": "Restoration",
+    "themes": ["Restoration"]
   }
 ]

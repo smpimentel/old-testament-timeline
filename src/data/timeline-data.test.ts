@@ -62,6 +62,10 @@ describe('timeline-data integrity', () => {
     expect(timelineDomain.endYear).toBeLessThan(400);
   });
 
+  it('themeTags includes all themes from themes.json', () => {
+    expect(themeTags.length).toBeGreaterThanOrEqual(12);
+  });
+
   it('preserves semantic event categories from raw to compiled data', () => {
     const rawCategoryById = new Map<string, string>();
     for (const rawEvent of rawEvents as RawEventLike[]) {

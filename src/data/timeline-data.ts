@@ -24,6 +24,9 @@ export const THEME_TAGS = [
   'Restoration',
   'Origins',
   'Temple',
+  'Patriarchs',
+  'Conquest',
+  'Monarchy',
 ] as const;
 
 export type ThemeTag = (typeof THEME_TAGS)[number];
@@ -121,36 +124,11 @@ interface ThemeLike {
   description?: string;
 }
 
-const themeOrder = new Map<ThemeTag, number>(
-  THEME_TAGS.map((tag, index) => [tag, index]),
-);
-
 const eventCategorySet = new Set<string>(EVENT_CATEGORIES);
 
-const themeAliasMap: Record<string, ThemeTag> = {
-  covenant: 'Covenant',
-  kingship: 'Kingship',
-  king: 'Kingship',
-  kings: 'Kingship',
-  land: 'Land',
-  messiah: 'Messiah',
-  judgment: 'Judgment',
-  deliverance: 'Deliverance',
-  restoration: 'Restoration',
-  origins: 'Origins',
-  origin: 'Origins',
-  temple: 'Temple',
-  pentateuch: 'Covenant',
-  history: 'Land',
-  poetry: 'Messiah',
-  wisdom: 'Messiah',
-  'major-prophets': 'Judgment',
-  'minor-prophets': 'Judgment',
-  prophet: 'Covenant',
-  priest: 'Covenant',
-  judge: 'Deliverance',
-  scribe: 'Restoration',
-};
+const themeTagLookup = new Map<string, ThemeTag>(
+  THEME_TAGS.map(t => [normalizeToken(t), t])
+);
 
 // ===== THEME COLOR MAPPING =====
 const defaultThemeColors: Record<ThemeTag, string> = {
@@ -163,6 +141,9 @@ const defaultThemeColors: Record<ThemeTag, string> = {
   Restoration: '#2E8B57',
   Origins: '#8B4513',
   Temple: '#CD853F',
+  Patriarchs: '#DAA520',
+  Conquest: '#556B2F',
+  Monarchy: '#9932CC',
 };
 
 function buildThemeColors(themeList: Theme[]): Record<ThemeTag, string> {
@@ -235,47 +216,7 @@ export function normalizeEventCategory(rawCategory?: string): EventCategory {
 
 export function normalizeThemeTag(rawTag?: string): ThemeTag | undefined {
   if (!rawTag) return undefined;
-  return themeAliasMap[normalizeToken(rawTag)];
-}
-
-function dedupeAndSortThemes(themeCandidates: Array<ThemeTag | undefined>): ThemeTag[] | undefined {
-  const uniqueThemes = new Set<ThemeTag>();
-
-  for (const theme of themeCandidates) {
-    if (theme) {
-      uniqueThemes.add(theme);
-    }
-  }
-
-  if (uniqueThemes.size === 0) {
-    return undefined;
-  }
-
-  return [...uniqueThemes].sort((a, b) => {
-    return (themeOrder.get(a) ?? Number.MAX_SAFE_INTEGER)
-      - (themeOrder.get(b) ?? Number.MAX_SAFE_INTEGER);
-  });
-}
-
-function inferThemesFromCategories(categories: string[] | undefined): ThemeTag[] | undefined {
-  if (!categories || categories.length === 0) {
-    return undefined;
-  }
-
-  return dedupeAndSortThemes(
-    categories.map((category) => normalizeThemeTag(category)),
-  );
-}
-
-function mergeThemes(...themeGroups: Array<ThemeTag[] | undefined>): ThemeTag[] | undefined {
-  const merged: Array<ThemeTag | undefined> = [];
-
-  for (const group of themeGroups) {
-    if (!group) continue;
-    merged.push(...group);
-  }
-
-  return dedupeAndSortThemes(merged);
+  return themeTagLookup.get(normalizeToken(rawTag));
 }
 
 function selectCanonicalPeriod(
@@ -351,10 +292,7 @@ function transformPeople(data: typeof peopleData): TimelineEntity[] {
       priority: (p.priority || 2) as 1 | 2 | 3 | 4,
       description: p.description || p.bio || '',
       role,
-      themes: mergeThemes(
-        inferThemesFromCategories(categories),
-        inferThemesFromCategories([role]),
-      ),
+      themes: (p.themes as ThemeTag[]) || undefined,
       relationships: relationshipMap.get(p.id),
       scripture: p.scriptureRefs?.join(', '),
       notes: p.bio,
@@ -377,10 +315,7 @@ function transformEvents(data: typeof eventsData): TimelineEntity[] {
       priority: (e.priority || 2) as 1 | 2 | 3 | 4,
       description: e.description || '',
       category,
-      themes: mergeThemes(
-        inferThemesFromCategories(e.categories),
-        inferThemesFromCategories([category]),
-      ),
+      themes: (e.themes as ThemeTag[]) || undefined,
       relationships: relationshipMap.get(e.id),
       scripture: e.scriptureRefs?.join(', '),
       swimlane: e.swimlane || 0,
@@ -402,7 +337,7 @@ function transformBooks(data: typeof booksData): TimelineEntity[] {
       priority: (b.priority || 2) as 1 | 2 | 3 | 4,
       description: b.description || '',
       genre: mapBookCategory(categories),
-      themes: inferThemesFromCategories(categories),
+      themes: (b.themes as ThemeTag[]) || undefined,
       relationships: relationshipMap.get(b.id),
       scripture: b.scriptureRefs?.join(', '),
       notes: `Author: ${b.author || 'Unknown'}`,
