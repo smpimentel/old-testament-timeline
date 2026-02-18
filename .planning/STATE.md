@@ -4,7 +4,7 @@
 - **Milestone:** 1 — Ship v1.0 MVP
 - **Phase:** 6 — Visual Alignment with Figma (COMPLETE)
 - **Branch:** `working`
-- **Last action:** Phase 6 executed (7 commits, P6-1 through P6-7)
+- **Last action:** Removed period banner (overlapping events/main body)
 
 ## Completed
 - [x] Codebase mapping (7 docs in `.planning/codebase/`)
@@ -24,7 +24,7 @@
 - Dual-scale coordinate system: log 4004–2300 BC + linear 4px/yr post-2300 BC (src/lib/scale.ts)
 - ADAPTIVE_NODE_SIZING feature flag (default: false = Figma-locked sizes)
 - Role-based person colors (deviate from Figma uniform sage)
-- Glassmorphism period banner over kingdoms section
+- Period banner removed (overlapped events/main body)
 - Diamond axis ticks replace triangle pairs
 
 ## Known Blockers

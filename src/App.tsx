@@ -10,7 +10,6 @@ import { TrackLabels } from './components/track-labels';
 import { SideNavigator, SIDEBAR_WIDTH_OPEN, SIDEBAR_WIDTH_CLOSED } from './components/side-navigator';
 import { TimelineNode, TimeGrid } from './components/timeline-nodes';
 import { KingdomBackground } from './components/kingdom-background';
-import { PeriodBanner } from './components/period-banner';
 import { RightRail } from './components/right-rail';
 import { Minimap } from './components/minimap';
 import { HoverTooltip } from './components/hover-tooltip';
@@ -125,7 +124,6 @@ function App() {
         <UnknownEraBand startX={unknownVisualBand.startX} width={unknownVisualBand.width} mainSectionTop={sectionLayout.mainSectionTop} mainSectionHeight={sectionLayout.mainSectionHeight} />
         <PeriodSection yearToX={yearToX} pixelsPerYear={pixelsPerYear} totalHeight={sectionLayout.periodSectionHeight} unknownVisualStartYear={UNKNOWN_VISUAL_START_YEAR} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} />
         <KingdomBackground yearToX={yearToX} pixelsPerYear={pixelsPerYear} trackHeight={sectionLayout.mainSectionHeight} topOffset={sectionLayout.mainSectionTop} />
-        <PeriodBanner yearToX={yearToX} topOffset={sectionLayout.mainSectionTop} />
         <TimeGrid startYear={START_YEAR} endYear={END_YEAR} height={sectionLayout.foundationHeight} axisY={sectionLayout.mainSectionTop + 2} />
         <TrackLabels tracks={sectionLayout.tracks} />
         <RelationshipOverlay breadcrumbEntities={breadcrumbEntities} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} unknownEntityXById={unknownEntityXById} yearToX={yearToX} tracks={sectionLayout.tracks} />
