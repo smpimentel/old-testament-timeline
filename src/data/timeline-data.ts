@@ -170,14 +170,14 @@ export const themeColors: Record<ThemeTag, string> = buildThemeColors(
 
 // ===== ROLE COLOR MAPPING =====
 export const roleColors: Record<PersonRole, string> = {
-  king: '#B7CCA9',
-  prophet: '#B7CCA9',
-  judge: '#B7CCA9',
-  priest: '#B7CCA9',
-  patriarch: '#B7CCA9',
-  warrior: '#B7CCA9',
-  scribe: '#B7CCA9',
-  other: '#B7CCA9',
+  king: '#F5D99F',
+  prophet: '#C8B8D4',
+  judge: '#B8C4A8',
+  priest: '#D4C5E0',
+  patriarch: '#C8D4B8',
+  warrior: '#D9B5A0',
+  scribe: '#E6DCC8',
+  other: '#D4D9DE',
 };
 
 // ===== EVENT CATEGORY COLOR MAPPING =====

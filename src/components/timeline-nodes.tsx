@@ -301,8 +301,8 @@ export function TimelineNode({
   const swimlaneOffset = (entity.swimlane || 0) * laneStride;
   const adjustedY = y + swimlaneOffset;
 
-  // Get color based on type
-  let backgroundColor = '#D4D9DE';
+  // Get color based on type (default per entity type)
+  let backgroundColor = entity.type === 'person' ? 'var(--person-fill)' : '#D4D9DE';
   if (entity.type === 'person' && entity.role) {
     backgroundColor = roleColors[entity.role];
   } else if (entity.type === 'event' && entity.category) {
@@ -311,9 +311,9 @@ export function TimelineNode({
     backgroundColor = genreColors[entity.genre];
   }
 
-  // Highlight/dim logic
+  // Highlight/dim logic — per-type stroke colors
   let opacity = 1;
-  let borderColor = '#6B5D3E';
+  let borderColor = entity.type === 'person' ? 'var(--person-stroke)' : 'var(--stroke-event)';
   let borderWidth = '1px';
   
   if (isDimmed) {
@@ -384,7 +384,7 @@ export function TimelineNode({
           borderRadius: isPointNode ? '50%' : '5px',
           boxShadow: isInBreadcrumb || isHighlighted
             ? '0 2px 8px rgba(45, 36, 28, 0.15)'
-            : '0px 4px 4px rgba(0,0,0,0.25)',
+            : 'var(--shadow-standard)',
         }}
       />
 
@@ -427,7 +427,7 @@ export function TimelineNode({
                 fontSize: '11px',
                 fontWeight: 400,
                 fontFamily: 'var(--font-timeline)',
-                color: '#3D3929',
+                color: 'var(--text-label)',
               }}
             >
               {entity.name}
@@ -445,11 +445,11 @@ export function TimelineNode({
                 top: '50%',
                 transform: 'translateY(-50%)',
                 maxWidth: nodeWidth - 16,
-                fontSize: isInsideBook ? `${Math.min(20, Math.max(14, nodeHeight - 4))}px` : '14px',
+                fontSize: isInsideBook ? '20px' : '14px',
                 fontWeight: 400,
                 fontFamily: 'var(--font-timeline-serif)',
-                color: isInsideBook ? '#F5F0E0' : '#3A3535',
-                textShadow: '0px 2px 5px rgba(0,0,0,0.25)',
+                color: isInsideBook ? 'var(--text-book)' : 'var(--text-dark)',
+                textShadow: 'var(--shadow-text)',
               }}
             >
               {entity.name}
@@ -466,7 +466,7 @@ export function TimelineNode({
               fontSize: '11px',
               fontWeight: 400,
               fontFamily: 'var(--font-timeline)',
-              color: '#3D3929',
+              color: 'var(--text-label)',
               maxWidth: width,
               overflow: 'hidden',
               textOverflow: 'ellipsis',
