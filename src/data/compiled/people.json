@@ -3,7 +3,7 @@
     "id": "adam",
     "type": "person",
     "name": "Adam",
-    "startYear": 4004,
+    "startYear": 4003,
     "endYear": 3074,
     "certainty": "estimated",
     "categories": [
@@ -26,7 +26,7 @@
     "id": "eve",
     "type": "person",
     "name": "Eve",
-    "startYear": 4004,
+    "startYear": 4003,
     "endYear": 3074,
     "certainty": "estimated",
     "categories": [
