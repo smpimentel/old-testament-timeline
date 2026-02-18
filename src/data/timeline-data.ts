@@ -416,6 +416,10 @@ function transformThemes(data: typeof themesData): Theme[] {
 }
 
 // ===== SWIMLANE COLLISION DETECTION =====
+// Padding (in years) to prevent visual overlap from labels/markers.
+// At 4px/yr: 10yr = 40px buffer — enough clearance for event circles + labels.
+const LANE_GAP_YEARS = 10;
+
 function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
   const sorted = group.sort((a, b) => b.startYear - a.startYear);
   const lanes: Array<{ end: number }> = [];
@@ -426,9 +430,9 @@ function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
 
     if (laneIndex === -1) {
       laneIndex = lanes.length;
-      lanes.push({ end });
+      lanes.push({ end: end - LANE_GAP_YEARS });
     } else {
-      lanes[laneIndex].end = Math.min(lanes[laneIndex].end, end);
+      lanes[laneIndex].end = Math.min(lanes[laneIndex].end, end - LANE_GAP_YEARS);
     }
 
     entity.swimlane = laneIndex + offset;
@@ -438,21 +442,19 @@ function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
 }
 
 export function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
-  const byType = {
-    person: entities.filter((e) => e.type === 'person'),
-    event: entities.filter((e) => e.type === 'event'),
+  // Non-kingdom entities: assign by type (separate tracks)
+  const nonKingdomByType = {
+    person: entities.filter((e) => e.type === 'person' && !e.kingdom),
+    event: entities.filter((e) => e.type === 'event' && !e.kingdom),
     book: entities.filter((e) => e.type === 'book'),
   };
+  Object.values(nonKingdomByType).forEach((group) => assignLanesToGroup(group));
 
-  Object.values(byType).forEach((group) => {
-    const northEntities = group.filter(e => e.kingdom === 'Israel');
-    const southEntities = group.filter(e => e.kingdom === 'Judah');
-    const otherEntities = group.filter(e => !e.kingdom);
-
-    const otherLaneCount = assignLanesToGroup(otherEntities);
-    const northLaneCount = assignLanesToGroup(northEntities, otherLaneCount);
-    assignLanesToGroup(southEntities, otherLaneCount + northLaneCount);
-  });
+  // Kingdom entities: assign by kingdom across types (events+people share lanes)
+  const israelEntities = entities.filter(e => e.kingdom === 'Israel');
+  const judahEntities = entities.filter(e => e.kingdom === 'Judah');
+  assignLanesToGroup(israelEntities);
+  assignLanesToGroup(judahEntities);
 
   return entities;
 }
@@ -500,38 +502,21 @@ const allEntities: TimelineEntity[] = [
 // Assign swimlanes and export
 export const timelineData: TimelineEntity[] = assignSwimlanes(allEntities);
 
-// Kingdom lane metadata for divider rendering
+// Kingdom lane metadata (cross-type: events+people share kingdom bands)
 export interface KingdomLaneInfo {
-  /** First lane index used by north kingdom entities (per type) */
-  northStartLane: number;
-  /** Number of lanes used by north kingdom */
   northLaneCount: number;
-  /** First lane index used by south kingdom entities */
-  southStartLane: number;
-  /** Number of lanes used by south kingdom */
   southLaneCount: number;
 }
 
-export function computeKingdomLanes(entities: TimelineEntity[], type: EntityType): KingdomLaneInfo {
-  const typeEntities = entities.filter(e => e.type === type);
-  const otherMax = typeEntities.filter(e => !e.kingdom).reduce((m, e) => Math.max(m, (e.swimlane ?? 0) + 1), 0);
-  const northEntities = typeEntities.filter(e => e.kingdom === 'Israel');
-  const southEntities = typeEntities.filter(e => e.kingdom === 'Judah');
-  const northLaneCount = northEntities.length > 0 ? northEntities.reduce((m, e) => Math.max(m, (e.swimlane ?? 0) + 1), 0) - otherMax : 0;
-  const southLaneCount = southEntities.length > 0 ? southEntities.reduce((m, e) => Math.max(m, (e.swimlane ?? 0) + 1), 0) - otherMax - northLaneCount : 0;
-
-  return {
-    northStartLane: otherMax,
-    northLaneCount,
-    southStartLane: otherMax + northLaneCount,
-    southLaneCount,
-  };
+export function computeKingdomLanes(entities: TimelineEntity[]): KingdomLaneInfo {
+  const israelEntities = entities.filter(e => e.kingdom === 'Israel');
+  const judahEntities = entities.filter(e => e.kingdom === 'Judah');
+  const northLaneCount = israelEntities.reduce((m, e) => Math.max(m, (e.swimlane ?? 0) + 1), 0);
+  const southLaneCount = judahEntities.reduce((m, e) => Math.max(m, (e.swimlane ?? 0) + 1), 0);
+  return { northLaneCount, southLaneCount };
 }
 
-export const kingdomLanes = {
-  event: computeKingdomLanes(timelineData, 'event'),
-  person: computeKingdomLanes(timelineData, 'person'),
-};
+export const kingdomLanes: KingdomLaneInfo = computeKingdomLanes(timelineData);
 
 // Derived domain for viewport/data integrity checks.
 export const timelineDomain: TimelineDomain = computeTimelineDomain(

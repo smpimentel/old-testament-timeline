@@ -94,20 +94,19 @@ describe('timeline-data integrity', () => {
     }
   });
 
-  it('kingdom entities have swimlanes in correct ranges', () => {
-    for (const type of ['event', 'person'] as const) {
-      const lanes = type === 'event' ? kingdomLanes.event : kingdomLanes.person;
-      const entities = timelineData.filter(e => e.type === type && e.kingdom);
+  it('kingdom entities have independent swimlanes per kingdom', () => {
+    const israelEntities = timelineData.filter(e => e.kingdom === 'Israel');
+    const judahEntities = timelineData.filter(e => e.kingdom === 'Judah');
 
-      for (const entity of entities) {
-        const swimlane = entity.swimlane ?? 0;
-        if (entity.kingdom === 'Israel') {
-          expect(swimlane).toBeGreaterThanOrEqual(lanes.northStartLane);
-          expect(swimlane).toBeLessThan(lanes.southStartLane);
-        } else if (entity.kingdom === 'Judah') {
-          expect(swimlane).toBeGreaterThanOrEqual(lanes.southStartLane);
-        }
-      }
+    // Israel entities get swimlanes starting at 0
+    for (const entity of israelEntities) {
+      expect(entity.swimlane).toBeGreaterThanOrEqual(0);
+      expect(entity.swimlane).toBeLessThan(kingdomLanes.northLaneCount);
+    }
+    // Judah entities get swimlanes starting at 0
+    for (const entity of judahEntities) {
+      expect(entity.swimlane).toBeGreaterThanOrEqual(0);
+      expect(entity.swimlane).toBeLessThan(kingdomLanes.southLaneCount);
     }
   });
 

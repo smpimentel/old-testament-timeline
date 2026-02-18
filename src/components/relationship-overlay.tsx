@@ -15,6 +15,8 @@ interface RelationshipOverlayProps {
     events: TrackBand;
     people: TrackBand;
     books: TrackBand;
+    kingdomNorth?: TrackBand;
+    kingdomSouth?: TrackBand;
   };
 }
 
@@ -36,8 +38,10 @@ export function RelationshipOverlay({
   };
 
   const getEntityCenterY = (e: TimelineEntity) => {
-    let track = tracks.events;
-    if (e.type === 'person') track = tracks.people;
+    let track: TrackBand = tracks.events;
+    if (e.kingdom === 'Israel' && tracks.kingdomNorth) track = tracks.kingdomNorth;
+    else if (e.kingdom === 'Judah' && tracks.kingdomSouth) track = tracks.kingdomSouth;
+    else if (e.type === 'person') track = tracks.people;
     else if (e.type === 'book') track = tracks.books;
     const swimlane = e.swimlane ?? 0;
     return track.baseY + (swimlane * track.laneStride) + (track.laneStride / 2);

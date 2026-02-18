@@ -8,10 +8,17 @@ interface TrackBand {
   bandHeight: number;
 }
 
+interface KingdomBand {
+  baseY: number;
+  laneStride: number;
+}
+
 interface SectionTracks {
   events: TrackBand;
   people: TrackBand;
   books: TrackBand;
+  kingdomNorth?: KingdomBand;
+  kingdomSouth?: KingdomBand;
 }
 
 export interface NodePlacement {
@@ -50,9 +57,16 @@ export function useNodePlacements({
         ? (entity.startYear - entity.endYear) * pixelsPerYear
         : 32;
 
-      let trackBand = tracks.events;
-      if (entity.type === 'person') trackBand = tracks.people;
-      else if (entity.type === 'book') trackBand = tracks.books;
+      let trackBand: TrackBand | KingdomBand = tracks.events;
+      if (entity.kingdom === 'Israel' && tracks.kingdomNorth) {
+        trackBand = tracks.kingdomNorth;
+      } else if (entity.kingdom === 'Judah' && tracks.kingdomSouth) {
+        trackBand = tracks.kingdomSouth;
+      } else if (entity.type === 'person') {
+        trackBand = tracks.people;
+      } else if (entity.type === 'book') {
+        trackBand = tracks.books;
+      }
 
       return {
         entity,
