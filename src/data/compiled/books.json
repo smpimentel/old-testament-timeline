@@ -114,25 +114,6 @@
     "swimlane": 3
   },
   {
-    "id": "joshua-book",
-    "type": "book",
-    "name": "Joshua",
-    "startYear": 1406,
-    "endYear": 1375,
-    "certainty": "approximate",
-    "categories": [
-      "History"
-    ],
-    "themes": [],
-    "priority": 2,
-    "author": "Joshua (traditional)",
-    "description": "Israel crosses Jordan, conquers Canaan, and receives tribal allotments.",
-    "scriptureRefs": [
-      "Joshua 1:1"
-    ],
-    "swimlane": 4
-  },
-  {
     "id": "1-samuel",
     "type": "book",
     "name": "1 Samuel",

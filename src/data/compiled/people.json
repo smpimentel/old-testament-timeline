@@ -186,7 +186,7 @@
       "Exodus 18:4",
       "1 Chronicles 23:15"
     ],
-    "swimlane": 7
+    "swimlane": 6
   },
   {
     "id": "jesse",
@@ -453,28 +453,6 @@
       "Gen 37-50"
     ],
     "swimlane": 0
-  },
-  {
-    "id": "joshua",
-    "type": "person",
-    "name": "Joshua",
-    "startYear": 1485,
-    "endYear": 1375,
-    "certainty": "approximate",
-    "categories": [
-      "Warrior"
-    ],
-    "themes": [
-      "Land",
-      "Conquest"
-    ],
-    "priority": 1,
-    "description": "Moses' successor who led Israel into the Promised Land.",
-    "bio": "Originally named Hoshea, Joshua was Moses' longtime assistant and the faithful military leader who succeeded him as the commander of Israel. He courageously led the Israelites across the Jordan River into the Promised Land and directed the conquest of Canaan.",
-    "scriptureRefs": [
-      "Josh 1-24"
-    ],
-    "swimlane": 6
   },
   {
     "id": "samuel",

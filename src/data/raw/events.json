@@ -274,12 +274,8 @@
     "scriptureRefs": [
       "Josh 1-12"
     ],
-    "relatedPeople": [
-      "joshua"
-    ],
-    "relatedBooks": [
-      "joshua-book"
-    ],
+    "relatedPeople": [],
+    "relatedBooks": [],
     "category": "Conquest",
     "themes": ["Conquest", "Land"]
   },
@@ -295,12 +291,8 @@
     "scriptureRefs": [
       "Josh 13-21"
     ],
-    "relatedPeople": [
-      "joshua"
-    ],
-    "relatedBooks": [
-      "joshua-book"
-    ],
+    "relatedPeople": [],
+    "relatedBooks": [],
     "category": "Conquest",
     "themes": ["Conquest", "Land"]
   },

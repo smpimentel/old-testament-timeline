@@ -4,7 +4,7 @@
 - **Milestone:** 1 — Ship v1.0 MVP
 - **Phase:** 6 — Visual Alignment with Figma (COMPLETE)
 - **Branch:** `working`
-- **Last action:** Fixed Joshua duplicate ID (book → joshua-book)
+- **Last action:** Removed Joshua person+book from data (key collision)
 
 ## Completed
 - [x] Codebase mapping (7 docs in `.planning/codebase/`)

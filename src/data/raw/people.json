@@ -674,36 +674,6 @@
     }
   },
   {
-    "id": "joshua",
-    "name": "Joshua",
-    "birthYear": 1485,
-    "deathYear": 1375,
-    "era": "BC",
-    "approximate": true,
-    "role": "Warrior",
-    "priority": 1,
-    "themes": ["Land", "Conquest"],
-    "track": "people",
-    "description": "Moses' successor who led Israel into the Promised Land.",
-    "bio": "Originally named Hoshea, Joshua was Moses' longtime assistant and the faithful military leader who succeeded him as the commander of Israel. He courageously led the Israelites across the Jordan River into the Promised Land and directed the conquest of Canaan.",
-    "scriptureRefs": [
-      "Josh 1-24"
-    ],
-    "relatedEvents": [
-      "conquest-of-canaan",
-      "division-of-the-land"
-    ],
-    "relatedBooks": [
-      "joshua-book"
-    ],
-    "familyTree": {
-      "father": "nun",
-      "mother": null,
-      "spouse": null,
-      "children": []
-    }
-  },
-  {
     "id": "samuel",
     "name": "Samuel",
     "birthYear": 1100,
