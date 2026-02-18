@@ -109,23 +109,6 @@
     "swimlane": 2
   },
   {
-    "id": "lamech",
-    "type": "person",
-    "name": "Lamech",
-    "startYear": 2978,
-    "endYear": 2908,
-    "certainty": "estimated",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 0
-  },
-  {
     "id": "noah",
     "type": "person",
     "name": "Noah",
@@ -146,76 +129,6 @@
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 1
-  },
-  {
-    "id": "shem",
-    "type": "person",
-    "name": "Shem",
-    "startYear": 2918,
-    "endYear": 2848,
-    "certainty": "estimated",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 2
-  },
-  {
-    "id": "ham",
-    "type": "person",
-    "name": "Ham",
-    "startYear": 2918,
-    "endYear": 2848,
-    "certainty": "estimated",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 3
-  },
-  {
-    "id": "japheth",
-    "type": "person",
-    "name": "Japheth",
-    "startYear": 2918,
-    "endYear": 2848,
-    "certainty": "estimated",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 4
-  },
-  {
-    "id": "terah",
-    "type": "person",
-    "name": "Terah",
-    "startYear": 2296,
-    "endYear": 2091,
-    "certainty": "approximate",
-    "categories": [
-      "Patriarch"
-    ],
-    "themes": [],
-    "priority": 3,
-    "description": "Father of Abraham",
-    "bio": "Father of Abraham, Nahor, and Haran. Originally from Ur of the Chaldeans, he began the journey toward Canaan but settled in Haran.",
-    "scriptureRefs": [
-      "Genesis 11:26-32"
-    ],
     "swimlane": 0
   },
   {
@@ -240,51 +153,7 @@
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Life",
-    "swimlane": 2
-  },
-  {
-    "id": "sarah",
-    "type": "person",
-    "name": "Sarah",
-    "startYear": 2156,
-    "endYear": 2029,
-    "certainty": "approximate",
-    "categories": [
-      "Patriarch"
-    ],
-    "themes": [
-      "Covenant"
-    ],
-    "priority": 2,
-    "description": "Wife of Abraham, mother of Isaac",
-    "bio": "Originally named Sarai, she was Abraham's wife and half-sister. Despite being barren until age 90, God promised she would bear a son. She gave birth to Isaac, the child of promise.",
-    "scriptureRefs": [
-      "Genesis 17:15-16",
-      "Genesis 21:1-7",
-      "Hebrews 11:11"
-    ],
-    "swimlane": 3
-  },
-  {
-    "id": "ishmael",
-    "type": "person",
-    "name": "Ishmael",
-    "startYear": 2080,
-    "endYear": 1943,
-    "certainty": "approximate",
-    "categories": [
-      "Patriarch"
-    ],
-    "themes": [],
-    "priority": 3,
-    "description": "Son of Abraham and Hagar",
-    "bio": "Firstborn son of Abraham through Hagar, Sarah's Egyptian servant. Father of twelve princes and considered the ancestor of many Arab peoples.",
-    "scriptureRefs": [
-      "Genesis 16:1-16",
-      "Genesis 21:8-21",
-      "Genesis 25:12-18"
-    ],
-    "swimlane": 0
+    "swimlane": 1
   },
   {
     "id": "isaac",
@@ -307,41 +176,7 @@
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Life",
-    "swimlane": 4
-  },
-  {
-    "id": "rebekah",
-    "type": "person",
-    "name": "Rebekah",
-    "startYear": 2051,
-    "endYear": 1981,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 5
-  },
-  {
-    "id": "esau",
-    "type": "person",
-    "name": "Esau",
-    "startYear": 2036,
-    "endYear": 1966,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 6
+    "swimlane": 2
   },
   {
     "id": "jacob",
@@ -365,176 +200,6 @@
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Life",
     "swimlane": 3
-  },
-  {
-    "id": "rachel",
-    "type": "person",
-    "name": "Rachel",
-    "startYear": 1976,
-    "endYear": 1906,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 1
-  },
-  {
-    "id": "reuben",
-    "type": "person",
-    "name": "Reuben",
-    "startYear": 1976,
-    "endYear": 1906,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 2
-  },
-  {
-    "id": "simeon",
-    "type": "person",
-    "name": "Simeon",
-    "startYear": 1976,
-    "endYear": 1906,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 5
-  },
-  {
-    "id": "dan",
-    "type": "person",
-    "name": "Dan",
-    "startYear": 1976,
-    "endYear": 1906,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 7
-  },
-  {
-    "id": "naphtali",
-    "type": "person",
-    "name": "Naphtali",
-    "startYear": 1976,
-    "endYear": 1906,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 8
-  },
-  {
-    "id": "gad",
-    "type": "person",
-    "name": "Gad",
-    "startYear": 1976,
-    "endYear": 1906,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 9
-  },
-  {
-    "id": "asher",
-    "type": "person",
-    "name": "Asher",
-    "startYear": 1976,
-    "endYear": 1906,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 10
-  },
-  {
-    "id": "issachar",
-    "type": "person",
-    "name": "Issachar",
-    "startYear": 1976,
-    "endYear": 1906,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 11
-  },
-  {
-    "id": "zebulun",
-    "type": "person",
-    "name": "Zebulun",
-    "startYear": 1976,
-    "endYear": 1906,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 12
-  },
-  {
-    "id": "benjamin",
-    "type": "person",
-    "name": "Benjamin",
-    "startYear": 1976,
-    "endYear": 1906,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 13
   },
   {
     "id": "levi",
@@ -576,24 +241,7 @@
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 6
-  },
-  {
-    "id": "asenath",
-    "type": "person",
-    "name": "Asenath",
-    "startYear": 1916,
-    "endYear": 1846,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 14
+    "swimlane": 1
   },
   {
     "id": "joseph",
@@ -603,7 +251,7 @@
     "endYear": 1805,
     "certainty": "approximate",
     "categories": [
-      "Other"
+      "Patriarch"
     ],
     "themes": [
       "Covenant"
@@ -616,65 +264,7 @@
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Life",
-    "swimlane": 15
-  },
-  {
-    "id": "ephraim",
-    "type": "person",
-    "name": "Ephraim",
-    "startYear": 1886,
-    "endYear": 1816,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 1
-  },
-  {
-    "id": "amram",
-    "type": "person",
-    "name": "Amram",
-    "startYear": 1600,
-    "endYear": 1463,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 3,
-    "description": "Father of Moses, Aaron, and Miriam",
-    "bio": "A Levite who married Jochebed. Father of Moses, Aaron, and Miriam. Lived during the Egyptian slavery period.",
-    "scriptureRefs": [
-      "Exodus 6:18-20",
-      "Numbers 26:59"
-    ],
-    "swimlane": 0
-  },
-  {
-    "id": "jochebed",
-    "type": "person",
-    "name": "Jochebed",
-    "startYear": 1595,
-    "endYear": 1460,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 3,
-    "description": "Mother of Moses, Aaron, and Miriam",
-    "bio": "A Levite woman who married Amram. Hid baby Moses for three months then placed him in a basket on the Nile. Later hired as his nurse by Pharaoh's daughter.",
-    "scriptureRefs": [
-      "Exodus 2:1-10",
-      "Exodus 6:20",
-      "Hebrews 11:23"
-    ],
-    "swimlane": 1
+    "swimlane": 4
   },
   {
     "id": "aaron",
@@ -694,7 +284,7 @@
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 2
+    "swimlane": 0
   },
   {
     "id": "moses",
@@ -718,45 +308,7 @@
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Life",
-    "swimlane": 3
-  },
-  {
-    "id": "nun",
-    "type": "person",
-    "name": "Nun",
-    "startYear": 1515,
-    "endYear": 1445,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 4
-  },
-  {
-    "id": "zipporah",
-    "type": "person",
-    "name": "Zipporah",
-    "startYear": 1510,
-    "endYear": 1400,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 3,
-    "description": "Wife of Moses, daughter of Jethro",
-    "bio": "Daughter of Jethro, priest of Midian. Moses met her at a well while fleeing Egypt. She bore him two sons: Gershom and Eliezer.",
-    "scriptureRefs": [
-      "Exodus 2:16-22",
-      "Exodus 4:24-26",
-      "Exodus 18:1-6"
-    ],
-    "swimlane": 5
+    "swimlane": 1
   },
   {
     "id": "joshua",
@@ -776,47 +328,7 @@
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 6
-  },
-  {
-    "id": "gershom",
-    "type": "person",
-    "name": "Gershom",
-    "startYear": 1485,
-    "endYear": 1400,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Firstborn son of Moses and Zipporah",
-    "bio": "Firstborn son of Moses, born in Midian. His name means 'sojourner there' reflecting Moses' status as a stranger in a foreign land.",
-    "scriptureRefs": [
-      "Exodus 2:22",
-      "Exodus 18:3"
-    ],
-    "swimlane": 7
-  },
-  {
-    "id": "eliezer",
-    "type": "person",
-    "name": "Eliezer",
-    "startYear": 1480,
-    "endYear": 1395,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Second son of Moses and Zipporah",
-    "bio": "Second son of Moses. His name means 'God of my father was my help' commemorating God's deliverance of Moses from Pharaoh.",
-    "scriptureRefs": [
-      "Exodus 18:4",
-      "1 Chronicles 23:15"
-    ],
-    "swimlane": 8
+    "swimlane": 2
   },
   {
     "id": "boaz",
@@ -859,40 +371,6 @@
     "swimlane": 1
   },
   {
-    "id": "elkanah",
-    "type": "person",
-    "name": "Elkanah",
-    "startYear": 1130,
-    "endYear": 1060,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 2
-  },
-  {
-    "id": "hannah",
-    "type": "person",
-    "name": "Hannah",
-    "startYear": 1130,
-    "endYear": 1060,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 4,
-    "description": "Supporting biblical figure linked through family or narrative relationships.",
-    "bio": "",
-    "scriptureRefs": [],
-    "swimlane": 3
-  },
-  {
     "id": "samuel",
     "type": "person",
     "name": "Samuel",
@@ -913,7 +391,7 @@
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Life",
-    "swimlane": 4
+    "swimlane": 2
   },
   {
     "id": "jesse",
@@ -963,48 +441,6 @@
     "swimlane": 1
   },
   {
-    "id": "bathsheba",
-    "type": "person",
-    "name": "Bathsheba",
-    "startYear": 1025,
-    "endYear": 950,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 3,
-    "description": "Wife of David, mother of Solomon",
-    "bio": "Originally wife of Uriah the Hittite. David saw her bathing and committed adultery with her, later arranging Uriah's death. She became David's wife and mother of Solomon.",
-    "scriptureRefs": [
-      "2 Samuel 11:1-27",
-      "2 Samuel 12:24",
-      "1 Kings 1:11-31"
-    ],
-    "swimlane": 2
-  },
-  {
-    "id": "absalom",
-    "type": "person",
-    "name": "Absalom",
-    "startYear": 1010,
-    "endYear": 980,
-    "certainty": "approximate",
-    "categories": [
-      "Other"
-    ],
-    "themes": [],
-    "priority": 3,
-    "description": "Son of David who rebelled against him",
-    "bio": "Third son of David, known for his handsome appearance. Killed his half-brother Amnon for raping his sister Tamar. Later led a rebellion against David but was killed by Joab.",
-    "scriptureRefs": [
-      "2 Samuel 13:1-39",
-      "2 Samuel 15:1-12",
-      "2 Samuel 18:9-15"
-    ],
-    "swimlane": 3
-  },
-  {
     "id": "solomon",
     "type": "person",
     "name": "Solomon",
@@ -1050,7 +486,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 16
+    "swimlane": 5
   },
   {
     "id": "rehoboam",
@@ -1074,7 +510,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "abijah",
@@ -1093,7 +529,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 23
+    "swimlane": 12
   },
   {
     "id": "asa",
@@ -1118,7 +554,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "nadab",
@@ -1137,7 +573,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 17
+    "swimlane": 6
   },
   {
     "id": "baasha",
@@ -1156,7 +592,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 16
+    "swimlane": 5
   },
   {
     "id": "elah",
@@ -1175,7 +611,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 17
+    "swimlane": 6
   },
   {
     "id": "zimri",
@@ -1194,7 +630,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 16
+    "swimlane": 5
   },
   {
     "id": "tibni",
@@ -1213,7 +649,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 18
+    "swimlane": 7
   },
   {
     "id": "omri",
@@ -1232,7 +668,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 19
+    "swimlane": 8
   },
   {
     "id": "ahab",
@@ -1257,7 +693,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 16
+    "swimlane": 5
   },
   {
     "id": "jehoshaphat",
@@ -1282,7 +718,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 23
+    "swimlane": 12
   },
   {
     "id": "elijah",
@@ -1307,7 +743,7 @@
     "kingdom": "Israel",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 17
+    "swimlane": 6
   },
   {
     "id": "ahaziah-israel",
@@ -1326,7 +762,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 18
+    "swimlane": 7
   },
   {
     "id": "joram-judah",
@@ -1345,7 +781,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "joram-israel",
@@ -1364,7 +800,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 16
+    "swimlane": 5
   },
   {
     "id": "elisha",
@@ -1388,7 +824,7 @@
     "kingdom": "Israel",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 18
+    "swimlane": 7
   },
   {
     "id": "obadiah",
@@ -1409,7 +845,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 23
+    "swimlane": 12
   },
   {
     "id": "jehu",
@@ -1434,7 +870,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 17
+    "swimlane": 6
   },
   {
     "id": "ahaziah-judah",
@@ -1453,7 +889,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 24
+    "swimlane": 13
   },
   {
     "id": "athaliah",
@@ -1472,7 +908,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 25
+    "swimlane": 14
   },
   {
     "id": "joel",
@@ -1493,7 +929,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "joash-judah",
@@ -1512,7 +948,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 23
+    "swimlane": 12
   },
   {
     "id": "jehoahaz-israel",
@@ -1531,7 +967,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 16
+    "swimlane": 5
   },
   {
     "id": "joash-israel",
@@ -1550,7 +986,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 17
+    "swimlane": 6
   },
   {
     "id": "amaziah",
@@ -1569,7 +1005,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "jeroboam-ii",
@@ -1593,7 +1029,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 16
+    "swimlane": 5
   },
   {
     "id": "azariah",
@@ -1612,7 +1048,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 23
+    "swimlane": 12
   },
   {
     "id": "jonah",
@@ -1633,7 +1069,7 @@
     "kingdom": "Israel",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 18
+    "swimlane": 7
   },
   {
     "id": "amos",
@@ -1657,7 +1093,7 @@
     "kingdom": "Israel",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 17
+    "swimlane": 6
   },
   {
     "id": "hosea",
@@ -1682,7 +1118,7 @@
     "kingdom": "Israel",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 19
+    "swimlane": 8
   },
   {
     "id": "zechariah",
@@ -1703,7 +1139,7 @@
     "kingdom": "Israel",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 20
+    "swimlane": 9
   },
   {
     "id": "shallum",
@@ -1722,7 +1158,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 16
+    "swimlane": 5
   },
   {
     "id": "menahem",
@@ -1741,7 +1177,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 20
+    "swimlane": 9
   },
   {
     "id": "pekah",
@@ -1760,7 +1196,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 21
+    "swimlane": 10
   },
   {
     "id": "jotham",
@@ -1779,7 +1215,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "pekahiah",
@@ -1798,7 +1234,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 16
+    "swimlane": 5
   },
   {
     "id": "isaiah",
@@ -1824,7 +1260,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 24
+    "swimlane": 13
   },
   {
     "id": "micah",
@@ -1849,7 +1285,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 23
+    "swimlane": 12
   },
   {
     "id": "ahaz",
@@ -1868,7 +1304,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 25
+    "swimlane": 14
   },
   {
     "id": "hoshea",
@@ -1893,7 +1329,7 @@
     ],
     "kingdom": "Israel",
     "timelineStory": "Active",
-    "swimlane": 16
+    "swimlane": 5
   },
   {
     "id": "hezekiah",
@@ -1918,7 +1354,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "manasseh",
@@ -1939,7 +1375,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 23
+    "swimlane": 12
   },
   {
     "id": "nahum",
@@ -1960,7 +1396,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "jeremiah",
@@ -1986,7 +1422,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 24
+    "swimlane": 13
   },
   {
     "id": "amon",
@@ -2005,7 +1441,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 25
+    "swimlane": 14
   },
   {
     "id": "zephaniah",
@@ -2030,7 +1466,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 23
+    "swimlane": 12
   },
   {
     "id": "josiah",
@@ -2056,7 +1492,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 26
+    "swimlane": 15
   },
   {
     "id": "daniel",
@@ -2078,7 +1514,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 25
+    "swimlane": 14
   },
   {
     "id": "ezekiel",
@@ -2099,7 +1535,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 27
+    "swimlane": 16
   },
   {
     "id": "jehoahaz-judah",
@@ -2118,7 +1554,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "jehoiakim",
@@ -2137,7 +1573,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 28
+    "swimlane": 17
   },
   {
     "id": "habakkuk",
@@ -2158,7 +1594,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "jehoiachin",
@@ -2177,7 +1613,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 23
+    "swimlane": 12
   },
   {
     "id": "zedekiah-king",
@@ -2202,7 +1638,7 @@
     ],
     "kingdom": "Judah",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "haggai",
@@ -2223,7 +1659,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "esther",
@@ -2244,7 +1680,7 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   },
   {
     "id": "malachi",
@@ -2265,6 +1701,6 @@
     "kingdom": "Judah",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "timelineStory": "Active",
-    "swimlane": 22
+    "swimlane": 11
   }
 ]

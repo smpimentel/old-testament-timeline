@@ -84,9 +84,9 @@
   {
     "id": "tower-of-babel",
     "type": "event",
-    "name": "The Dispersion of Nations (Tower of Babal)",
-    "startYear": 2100,
-    "endYear": 2100,
+    "name": "The Dispersion of Nations (Tower of Babel)",
+    "startYear": 2280,
+    "endYear": 2280,
     "certainty": "approximate",
     "categories": [
       "judgment"

@@ -427,7 +427,7 @@ function transformThemes(data: typeof themesData): Theme[] {
 // Padding (in years) to prevent visual overlap from labels/markers.
 // Gap after placing an entity before next can share the lane.
 // Point events need wider gap for labels (~150px at 4px/yr ≈ 40yr).
-const LANE_GAP_SPAN = 10;
+const LANE_GAP_SPAN = 25;
 const LANE_GAP_POINT = 40;
 
 function assignLanesToGroup(group: TimelineEntity[], offset = 0): number {
