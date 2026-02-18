@@ -2,9 +2,9 @@
 
 ## Current
 - **Milestone:** 1 — Ship v1.0 MVP
-- **Phase:** 6 — Visual Alignment with Figma (COMPLETE)
+- **Phase:** 7 — Kingdom-Split Lanes (COMPLETE)
 - **Branch:** `working`
-- **Last action:** Completed quick task 5: Fix period nav pan math & add fit-to-view
+- **Last action:** Completed Phase 7: kingdom-split lanes for divided monarchy
 
 ## Completed
 - [x] Codebase mapping (7 docs in `.planning/codebase/`)
@@ -15,9 +15,10 @@
 - [x] Phase 4: Fix Theme & Category Bugs — TL-006, TL-007 (R1.6, R1.7)
 - [x] Phase 5: App.tsx Decomposition (R2.5)
 - [x] Phase 6: Visual Alignment with Figma (R3.1–R3.7)
+- [x] Phase 7: Kingdom-Split Lanes (R4.1, R4.2 partial)
 
 ## Next
-- Plan Phase 7: Data Expansion (R4.1–R4.5)
+- Phase 8: Data Expansion (R4.1–R4.5)
 
 ## Key Decisions
 - Priority order: Stabilize → Visual → Data
