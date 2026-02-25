@@ -1,7 +1,7 @@
 import { X, ArrowRight, BookOpen, ChevronDown } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useState } from 'react';
-import { type TimelineEntity, type Theme, type ThemeTag, timelineData, themeColors, themeById, themeOverlayByTheme } from '../data/timeline-data';
+import { type TimelineEntity, type Theme, timelineData, themeColors, themeById, themeOverlayByTheme } from '../data/timeline-data';
 import { useIsMobile, useModalA11y } from '../hooks';
 
 // ===== Discriminated union for right-rail content =====
@@ -304,7 +304,6 @@ function ThemeDetail({
 
   // Merge overlay nodes + associated events into Key Moments (deduplicated)
   // Linked overlay nodes are replaced by their main event counterpart
-  const linkedIds = new Set(overlayNodes.map(n => n.linkedEntityId).filter(Boolean));
   const seenIds = new Set<string>();
   const keyMoments: TimelineEntity[] = [];
   for (const node of overlayNodes) {

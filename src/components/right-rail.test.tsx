@@ -44,10 +44,14 @@ const mockEntity: TimelineEntity = {
 describe('RightRail a11y', () => {
   let onClose: ReturnType<typeof vi.fn<() => void>>;
   let onViewRelationship: ReturnType<typeof vi.fn<(targetId: string) => void>>;
+  let onViewEntity: ReturnType<typeof vi.fn<(entity: TimelineEntity) => void>>;
+  let onViewTheme: ReturnType<typeof vi.fn>;
 
   beforeEach(() => {
     onClose = vi.fn<() => void>();
     onViewRelationship = vi.fn<(targetId: string) => void>();
+    onViewEntity = vi.fn<(entity: TimelineEntity) => void>();
+    onViewTheme = vi.fn();
   });
 
   afterEach(() => {
@@ -57,9 +61,11 @@ describe('RightRail a11y', () => {
   it('has role="dialog" and aria-modal="true"', () => {
     render(
       <RightRail
-        entity={mockEntity}
+        content={{ kind: 'entity', entity: mockEntity }}
         onClose={onClose}
         onViewRelationship={onViewRelationship}
+        onViewEntity={onViewEntity}
+        onViewTheme={onViewTheme}
         pathMode={false}
       />
     );
@@ -72,9 +78,11 @@ describe('RightRail a11y', () => {
   it('has accessible label with entity name', () => {
     render(
       <RightRail
-        entity={mockEntity}
+        content={{ kind: 'entity', entity: mockEntity }}
         onClose={onClose}
         onViewRelationship={onViewRelationship}
+        onViewEntity={onViewEntity}
+        onViewTheme={onViewTheme}
         pathMode={false}
       />
     );
@@ -86,9 +94,11 @@ describe('RightRail a11y', () => {
   it('closes on ESC key', async () => {
     render(
       <RightRail
-        entity={mockEntity}
+        content={{ kind: 'entity', entity: mockEntity }}
         onClose={onClose}
         onViewRelationship={onViewRelationship}
+        onViewEntity={onViewEntity}
+        onViewTheme={onViewTheme}
         pathMode={false}
       />
     );
@@ -101,9 +111,11 @@ describe('RightRail a11y', () => {
   it('focuses close button on open', async () => {
     render(
       <RightRail
-        entity={mockEntity}
+        content={{ kind: 'entity', entity: mockEntity }}
         onClose={onClose}
         onViewRelationship={onViewRelationship}
+        onViewEntity={onViewEntity}
+        onViewTheme={onViewTheme}
         pathMode={false}
       />
     );
@@ -120,9 +132,11 @@ describe('RightRail a11y', () => {
 
     render(
       <RightRail
-        entity={mockEntity}
+        content={{ kind: 'entity', entity: mockEntity }}
         onClose={onClose}
         onViewRelationship={onViewRelationship}
+        onViewEntity={onViewEntity}
+        onViewTheme={onViewTheme}
         pathMode={false}
       />
     );
@@ -156,9 +170,11 @@ describe('RightRail a11y', () => {
 
     render(
       <RightRail
-        entity={mockEntity}
+        content={{ kind: 'entity', entity: mockEntity }}
         onClose={onClose}
         onViewRelationship={onViewRelationship}
+        onViewEntity={onViewEntity}
+        onViewTheme={onViewTheme}
         pathMode={false}
       />
     );
@@ -174,9 +190,11 @@ describe('RightRail a11y', () => {
   it('close button has accessible label', () => {
     render(
       <RightRail
-        entity={mockEntity}
+        content={{ kind: 'entity', entity: mockEntity }}
         onClose={onClose}
         onViewRelationship={onViewRelationship}
+        onViewEntity={onViewEntity}
+        onViewTheme={onViewTheme}
         pathMode={false}
       />
     );
