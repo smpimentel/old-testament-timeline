@@ -2,22 +2,45 @@
   {
     "id": "Covenant",
     "color": "#F4D19B",
-    "description": "God's covenant promises and their fulfillment — from Abraham through Sinai."
+    "description": "God's covenant promises and their fulfillment — from Abraham through Sinai.",
+    "theologicalDevelopment": "The covenant theme unfolds progressively through the Old Testament. God's promise to Noah (Gen 9) establishes a universal covenant of preservation. The Abrahamic covenant (Gen 12, 15, 17) introduces unconditional promises of land, seed, and blessing. At Sinai the Mosaic covenant (Exod 19-24) binds Israel to God through law and sacrifice. The Davidic covenant (2 Sam 7) guarantees an eternal throne, and the prophets look forward to a New Covenant (Jer 31:31-34) written on the heart rather than on stone.",
+    "sources": [
+      "Dumbrell, Covenant and Creation (Thomas Nelson, 1984)",
+      "Robertson, The Christ of the Covenants (P&R, 1980)",
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)"
+    ]
   },
   {
     "id": "Kingship",
     "color": "#D4B5D4",
-    "description": "The rise and fall of the monarchy"
+    "description": "The rise and fall of the monarchy",
+    "theologicalDevelopment": "God is declared king from the earliest poetry (Exod 15:18). Israel's request for a human king (1 Sam 8) creates tension between divine and earthly rule. Saul's failure gives way to David's covenant kingship and Solomon's golden age, but the divided monarchy spirals into idolatry. Exile ends the earthly Davidic line, yet the prophets sustain hope for a messianic king who will reign in righteousness forever (Isa 9:6-7; Ezek 37:24-25).",
+    "sources": [
+      "Merrill, Kingdom of Priests (Baker, 2008)",
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ]
   },
   {
     "id": "Land",
     "color": "#C8D4B8",
-    "description": "The promise and possession of the Holy Land"
+    "description": "The promise and possession of the Holy Land",
+    "theologicalDevelopment": "The land theme begins in Eden, where God places humanity in a garden-home. After the Fall, the promise to Abraham (Gen 12:1-3; 15:18-21) anchors Israel's identity to a specific territory. Forty years of wilderness wandering test Israel's faith before Joshua leads the conquest. Possession is never permanent — exile strips the land away as covenant judgment — yet the prophets consistently envision return and restoration of the land under God's blessing.",
+    "sources": [
+      "Hess, The Old Testament: A Historical, Theological, and Critical Introduction (Baker, 2016)",
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ]
   },
   {
     "id": "Messiah",
     "color": "#A8D5E2",
-    "description": "Prophecies and types pointing to Christ"
+    "description": "Prophecies and types pointing to Christ",
+    "theologicalDevelopment": "Messianic expectation begins with the Protoevangelium (Gen 3:15), the promise that the woman's seed will crush the serpent. The line narrows through Abraham's seed, then to Judah's scepter (Gen 49:10), and finally to the Davidic king (2 Sam 7:12-16). The prophets elaborate the portrait: a righteous Branch (Jer 23:5), a Suffering Servant who bears sin (Isa 52-53), and the heavenly Son of Man who receives an everlasting kingdom (Dan 7:13-14).",
+    "sources": [
+      "Kaiser, The Messiah in the Old Testament (Zondervan, 1995)",
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)"
+    ]
   },
   {
     "id": "Judgment",

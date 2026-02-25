@@ -53,9 +53,9 @@ export const DEFAULT_TRACK_CONFIG: TrackLayoutConfig = {
   maxNodeHeight: {
     event: 20,
     person: 20,
-    book: 40,
+    book: 20,
   },
-  laneGap: { event: 8, person: 8, book: 20 },
+  laneGap: { event: 8, person: 8, book: 8 },
   trackGap: 48,
   headerOffset: 120,
   laneCount: {

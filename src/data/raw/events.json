@@ -81,7 +81,7 @@
     "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "Because of widespread wickedness, God sent a global flood that destroyed all life except Noah’s family and the animals on the ark. The flood lasted about one year.",
+    "description": "Because of widespread wickedness, God sent a global flood that destroyed all life except Noah\u2019s family and the animals on the ark. The flood lasted about one year.",
     "scriptureRefs": [
       "Genesis 6-9"
     ],
@@ -155,7 +155,7 @@
     "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "Abraham and Sarah, impatient for God’s promise, had Abraham father a son through Hagar. Ishmael became the ancestor of many Arab peoples.",
+    "description": "Abraham and Sarah, impatient for God\u2019s promise, had Abraham father a son through Hagar. Ishmael became the ancestor of many Arab peoples.",
     "scriptureRefs": [
       "Genesis 16"
     ],
@@ -181,7 +181,7 @@
     "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "Sarah miraculously gave birth to Isaac when Abraham was 100 and she was 90. Isaac was the child of promise through whom God’s covenant would continue.",
+    "description": "Sarah miraculously gave birth to Isaac when Abraham was 100 and she was 90. Isaac was the child of promise through whom God\u2019s covenant would continue.",
     "scriptureRefs": [
       "Genesis 21"
     ],
@@ -209,7 +209,7 @@
     "track": "events",
     "description": "The twelve sons of Jacob (Israel) by Leah, Rachel, Bilhah, and Zilpah became the ancestors of the twelve tribes of Israel.",
     "scriptureRefs": [
-      "Genesis 29–30",
+      "Genesis 29\u201330",
       "35:23-26"
     ],
     "relatedPeople": [
@@ -281,7 +281,7 @@
     "category": "Historical",
     "priority": 2,
     "track": "events",
-    "description": "Egypt entered its most powerful and prosperous era under dynasties XVIII–XX, expanding its empire from Nubia to the Euphrates. This period produced famous pharaohs such as Hatshepsut, Thutmose III, Akhenaten, and Ramesses II.",
+    "description": "Egypt entered its most powerful and prosperous era under dynasties XVIII\u2013XX, expanding its empire from Nubia to the Euphrates. This period produced famous pharaohs such as Hatshepsut, Thutmose III, Akhenaten, and Ramesses II.",
     "source": "Shaw, Ian, editor. The Oxford History of Ancient Egypt. Oxford UP, 2000. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994."
   },
   {
@@ -292,7 +292,7 @@
     "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "God delivered Israel from slavery in Egypt through ten plagues and parted the Red Sea. Moses led approximately 2–3 million Israelites out under God’s protection.",
+    "description": "God delivered Israel from slavery in Egypt through ten plagues and parted the Red Sea. Moses led approximately 2\u20133 million Israelites out under God\u2019s protection.",
     "scriptureRefs": [
       "Exod 1-15"
     ],
@@ -360,6 +360,9 @@
     "relatedBooks": [
       "numbers",
       "deuteronomy"
+    ],
+    "themes": [
+      "Land"
     ]
   },
   {
@@ -370,7 +373,7 @@
     "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "Under Joshua’s leadership, Israel conquered key cities and territories in Canaan. The land was divided among the twelve tribes.",
+    "description": "Under Joshua\u2019s leadership, Israel conquered key cities and territories in Canaan. The land was divided among the twelve tribes.",
     "scriptureRefs": [
       "Josh 1-12"
     ],
@@ -625,7 +628,7 @@
     "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "The people demanded a king like other nations. God chose Saul as Israel’s first king through the prophet Samuel.",
+    "description": "The people demanded a king like other nations. God chose Saul as Israel\u2019s first king through the prophet Samuel.",
     "scriptureRefs": [
       "1 Sam 8-12"
     ],
@@ -651,7 +654,7 @@
     "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "David, a man after God’s own heart, united Israel, defeated its enemies, and established Jerusalem as the capital. He brought the Ark to Jerusalem.",
+    "description": "David, a man after God\u2019s own heart, united Israel, defeated its enemies, and established Jerusalem as the capital. He brought the Ark to Jerusalem.",
     "scriptureRefs": [
       "1 Sam 16-1 Kgs 2:11; 2 Sam 1-24; 1 Chr 11-29"
     ],
@@ -684,7 +687,7 @@
     "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "King Solomon built the magnificent Temple in Jerusalem as a permanent dwelling place for God’s presence among Israel. It took seven years to complete.",
+    "description": "King Solomon built the magnificent Temple in Jerusalem as a permanent dwelling place for God\u2019s presence among Israel. It took seven years to complete.",
     "scriptureRefs": [
       "1 Kgs 5-8; 2 Chr 2-7"
     ],
@@ -697,7 +700,8 @@
     ],
     "category": "Monarchy",
     "themes": [
-      "Temple"
+      "Temple",
+      "Covenant"
     ],
     "endYear": 959,
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
@@ -710,7 +714,7 @@
     "approximate": true,
     "priority": 2,
     "track": "events",
-    "description": "After Solomon’s death, the kingdom split into the northern kingdom of Israel (10 tribes) and the southern kingdom of Judah (2 tribes) due to Rehoboam’s harsh rule.",
+    "description": "After Solomon\u2019s death, the kingdom split into the northern kingdom of Israel (10 tribes) and the southern kingdom of Judah (2 tribes) due to Rehoboam\u2019s harsh rule.",
     "scriptureRefs": [
       "1 Kgs 11:26-12:24; 2 Chr 10-11"
     ],
@@ -834,7 +838,9 @@
     ],
     "category": "Exile",
     "themes": [
-      "Judgment"
+      "Judgment",
+      "Land",
+      "Kingship"
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
@@ -986,7 +992,8 @@
     ],
     "category": "Exile",
     "themes": [
-      "Judgment"
+      "Judgment",
+      "Land"
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
@@ -1020,7 +1027,8 @@
     "category": "Restoration",
     "themes": [
       "Restoration",
-      "Deliverance"
+      "Deliverance",
+      "Land"
     ],
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011."
   },
@@ -1033,7 +1041,7 @@
     "priority": 2,
     "kingdom": "Judah",
     "track": "events",
-    "description": "After returning from the Babylonian captivity, the Jewish people completed the reconstruction of the temple on March 12, 515 BC. Its dedication was a pivotal moment in preserving the nation’s religious heritage and workshop identity after 70 years of exile",
+    "description": "After returning from the Babylonian captivity, the Jewish people completed the reconstruction of the temple on March 12, 515 BC. Its dedication was a pivotal moment in preserving the nation\u2019s religious heritage and workshop identity after 70 years of exile",
     "scriptureRefs": [
       "Ezra 6:13-18; Hag 1-2"
     ],
@@ -1085,14 +1093,14 @@
   },
   {
     "id": "rebuilding-jerusalems-walls",
-    "name": "The rebuilding of Jerusalem’s Walls",
+    "name": "The rebuilding of Jerusalem\u2019s Walls",
     "year": 444,
     "era": "BC",
     "approximate": true,
     "priority": 2,
     "kingdom": "Judah",
     "track": "events",
-    "description": "Nehemiah led the effort to restore the city’s dilapidated walls to protect the inhabitants from external threats and prevent assimilation into surrounding cultures. Despite intense opposition, the project was remarkably completed in 52 Days.",
+    "description": "Nehemiah led the effort to restore the city\u2019s dilapidated walls to protect the inhabitants from external threats and prevent assimilation into surrounding cultures. Despite intense opposition, the project was remarkably completed in 52 Days.",
     "scriptureRefs": [
       "Neh 1-7; 12:27-47"
     ],

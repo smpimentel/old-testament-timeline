@@ -5,6 +5,7 @@ const LABEL_CHAR_WIDTH = 7;
 const MIN_LABEL_WIDTH = 56;
 const MAX_PERIOD_LABEL_WIDTH = 220;
 const MAX_NODE_LABEL_WIDTH = 200;
+const MAX_WRAPPED_LABEL_WIDTH = 120;
 const LABEL_GAP = 8;
 const PERIOD_LABEL_INSET = 4;
 export interface PeriodLabelInput {
@@ -27,6 +28,7 @@ export interface NodeLabelInput {
   name: string;
   priority: number;
   kingdom?: string;
+  labelWrap?: boolean;
 }
 
 function estimateLabelWidth(label: string, maxWidth: number): number {
@@ -93,7 +95,8 @@ export function computeNodeLabelVisibility(
     }
 
     const laneKey = `${node.type}:${node.kingdom ?? ''}:${node.swimlane}`;
-    const labelWidthEstimate = estimateLabelWidth(node.name, MAX_NODE_LABEL_WIDTH);
+    const maxWidth = node.labelWrap ? MAX_WRAPPED_LABEL_WIDTH : MAX_NODE_LABEL_WIDTH;
+    const labelWidthEstimate = estimateLabelWidth(node.name, maxWidth);
     const isPointNode = node.width <= 32;
     const labelWidth = isPointNode
       ? labelWidthEstimate

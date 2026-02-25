@@ -24,11 +24,12 @@ export function PeriodBand({ period, x, width, totalHeight, labelLane = 0 }: Per
         height: totalHeight,
         background: 'transparent',
         borderRight: '1px solid rgba(111, 98, 84, 0.22)',
+        zIndex: 2,
       }}
     >
       <div
         className="absolute left-4"
-        style={{ top: labelTop }}
+        style={{ top: labelTop, zIndex: 5 }}
       >
         <div
           className="whitespace-nowrap overflow-hidden text-ellipsis"
@@ -61,7 +62,41 @@ export function PeriodBand({ period, x, width, totalHeight, labelLane = 0 }: Per
   );
 }
 
-// ===== TIME GRID =====
+// ===== TIME GRID (minor lines — rendered behind backgrounds) =====
+interface MinorGridProps {
+  startYear: number;
+  endYear: number;
+  height: number;
+}
+
+export function MinorGridLines({ startYear, endYear, height }: MinorGridProps) {
+  const lines = [];
+  const majorInterval = 100;
+  const minorInterval = 20;
+
+  for (let year = Math.ceil(endYear / minorInterval) * minorInterval; year <= startYear; year += minorInterval) {
+    if (year % majorInterval !== 0) {
+      const x = scaleYearToX(year);
+      lines.push(
+        <div
+          key={`minor-${year}`}
+          className="absolute top-0"
+          style={{
+            left: x,
+            height,
+            width: '1px',
+            background: 'var(--color-base-grid-minor)',
+            zIndex: -1,
+          }}
+        />
+      );
+    }
+  }
+
+  return <>{lines}</>;
+}
+
+// ===== TIME GRID (major lines, axis, ticks) =====
 interface TimeGridProps {
   startYear: number;
   endYear: number;
@@ -75,14 +110,13 @@ export function TimeGrid({
   height,
   axisY: axisYOverride,
 }: TimeGridProps) {
-  const gridLines = [];
+  const majorLines = [];
   const majorInterval = 100;
-  const minorInterval = 20;
 
   // Major grid lines (100-year intervals)
   for (let year = Math.ceil(endYear / majorInterval) * majorInterval; year <= startYear; year += majorInterval) {
     const x = scaleYearToX(year);
-    gridLines.push(
+    majorLines.push(
       <div
         key={`major-${year}`}
         className="absolute top-0"
@@ -91,6 +125,7 @@ export function TimeGrid({
           height,
           width: '1px',
           background: 'var(--color-base-grid-major)',
+          zIndex: 1,
         }}
       >
         {year <= LOG_BOUNDARY && (
@@ -108,25 +143,6 @@ export function TimeGrid({
         )}
       </div>
     );
-  }
-
-  // Minor grid lines (20-year intervals)
-  for (let year = Math.ceil(endYear / minorInterval) * minorInterval; year <= startYear; year += minorInterval) {
-    if (year % majorInterval !== 0) {
-      const x = scaleYearToX(year);
-      gridLines.push(
-        <div
-          key={`minor-${year}`}
-          className="absolute top-0"
-          style={{
-            left: x,
-            height,
-            width: '1px',
-            background: 'var(--color-base-grid-minor)',
-          }}
-        />
-      );
-    }
   }
 
   // Timeline axis
@@ -167,7 +183,7 @@ export function TimeGrid({
 
   return (
     <>
-      {gridLines}
+      {majorLines}
       {axisLine}
       {axisTicks}
     </>
@@ -220,6 +236,7 @@ interface TimelineNodeProps {
   breadcrumbNumber?: number;
   labelVisible?: boolean;
   forcePointNode?: boolean;
+  overrideColor?: string;
   onClick: () => void;
   onMouseEnter: (e: React.MouseEvent) => void;
   onMouseLeave: () => void;
@@ -239,6 +256,7 @@ export function TimelineNode({
   breadcrumbNumber,
   labelVisible,
   forcePointNode = false,
+  overrideColor,
   onClick,
   onMouseEnter,
   onMouseLeave,
@@ -256,7 +274,9 @@ export function TimelineNode({
 
   // Get color based on type (default per entity type)
   let backgroundColor = entity.type === 'person' ? 'var(--person-fill)' : '#D4D9DE';
-  if (entity.type === 'person' && entity.role) {
+  if (overrideColor) {
+    backgroundColor = overrideColor;
+  } else if (entity.type === 'person' && entity.role) {
     backgroundColor = roleColors[entity.role];
   } else if (entity.type === 'event' && entity.category) {
     backgroundColor = eventColors[entity.category];
@@ -366,25 +386,84 @@ export function TimelineNode({
 
       {/* Label */}
       {showLabel && (() => {
+        const bookLabelLeftIds = new Set(['amos', 'habakkuk']);
         const isInsidePerson = entity.type === 'person' && nodeHeight >= 16;
-        const isInsideBook = entity.type === 'book' && nodeHeight >= 14;
-        const isInside = isInsidePerson || isInsideBook;
+        const bookLabelWidth = entity.name.length * 8 + 16;
+        const isInsideBook = entity.type === 'book' && nodeHeight >= 16 && nodeWidth >= bookLabelWidth;
+        const isInsideEvent = entity.type === 'event' && !isPointNode && nodeWidth >= 80;
+        const isInside = isInsidePerson || isInsideBook || isInsideEvent;
         const isEvent = entity.type === 'event';
-        const usePointLabel = isEvent || forcePointNode;
+        const usePointLabel = (isEvent || forcePointNode) && entity.type !== 'book' && !isInsideEvent;
 
         if (usePointLabel) {
-          // All point event labels: right of node, vertically centered
+          const wrap = entity.labelWrap;
           return (
             <div
-              className="absolute whitespace-nowrap pointer-events-none"
+              className="absolute pointer-events-none"
               style={{
                 left: isPointNode ? nodeHeight + 6 : nodeWidth + 6,
                 top: '50%',
                 transform: 'translateY(-50%)',
-                fontSize: '11px',
+                width: wrap ? '120px' : '200px',
+                fontSize: '14px',
                 fontWeight: 400,
-                fontFamily: 'var(--font-timeline)',
-                color: 'var(--text-label)',
+                fontFamily: 'var(--font-timeline-serif)',
+                color: '#5C5545',
+                textShadow: '0 1px 3px rgba(92, 85, 69, 0.25)',
+                lineHeight: 1.15,
+                textAlign: 'left',
+                ...(wrap ? {
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical' as const,
+                  overflow: 'hidden',
+                  whiteSpace: 'normal' as const,
+                } : {}),
+              }}
+            >
+              {entity.name}
+            </div>
+          );
+        }
+
+        if (entity.type === 'book' && isPointNode) {
+          // Circle book labels: right of node, book font style
+          return (
+            <div
+              className="absolute whitespace-nowrap pointer-events-none"
+              style={{
+                left: nodeHeight + 6,
+                top: '50%',
+                transform: 'translateY(-50%)',
+                fontSize: '14px',
+                fontWeight: 400,
+                fontFamily: 'var(--font-timeline-serif)',
+                color: '#5C5545',
+                textShadow: '0 1px 3px rgba(92, 85, 69, 0.25)',
+              }}
+            >
+              {entity.name}
+            </div>
+          );
+        }
+
+        if (entity.type === 'book' && !isInsideBook && !isPointNode) {
+          // Narrow book bar: label outside the bar
+          const labelLeft = bookLabelLeftIds.has(entity.id);
+          return (
+            <div
+              className="absolute whitespace-nowrap pointer-events-none"
+              style={{
+                ...(labelLeft
+                  ? { right: '100%', marginRight: 6 }
+                  : { left: nodeWidth + 6 }),
+                top: '50%',
+                transform: 'translateY(-50%)',
+                fontSize: '14px',
+                fontWeight: 400,
+                fontFamily: 'var(--font-timeline-serif)',
+                color: '#5C5545',
+                textShadow: '0 1px 3px rgba(92, 85, 69, 0.25)',
               }}
             >
               {entity.name}
@@ -402,11 +481,11 @@ export function TimelineNode({
                 top: '50%',
                 transform: 'translateY(-50%)',
                 maxWidth: nodeWidth - 16,
-                fontSize: isInsideBook ? '20px' : '14px',
+                fontSize: '14px',
                 fontWeight: 400,
                 fontFamily: 'var(--font-timeline-serif)',
-                color: isInsideBook ? 'var(--text-book)' : 'var(--text-dark)',
-                textShadow: 'var(--shadow-text)',
+                color: isInsideBook ? 'var(--text-book)' : isInsideEvent ? '#5C5545' : 'var(--text-dark)',
+                textShadow: isInsideEvent ? '0 1px 3px rgba(92, 85, 69, 0.25)' : 'var(--shadow-text)',
               }}
             >
               {entity.name}

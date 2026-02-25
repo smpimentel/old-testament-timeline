@@ -7,6 +7,7 @@ import booksData from './compiled/books.json';
 import periodsData from './compiled/periods.json';
 import themesData from './compiled/themes.json';
 import relationshipsData from './compiled/relationships.json';
+import themeNodesData from './raw/theme-nodes.json';
 
 // ===== TYPES =====
 export type EntityType = 'person' | 'event' | 'book';
@@ -70,6 +71,9 @@ export interface TimelineEntity {
   details?: string;
   source?: string;
   timelineStory?: 'Active' | 'Life';
+  labelWrap?: boolean;
+  themeOverlay?: ThemeTag;
+  linkedEntityId?: string;
 }
 
 export interface Period {
@@ -84,6 +88,8 @@ export interface Theme {
   id: ThemeTag;
   color: string;
   description: string;
+  theologicalDevelopment?: string;
+  sources?: string[];
 }
 
 // Relationship type literals
@@ -128,6 +134,8 @@ interface ThemeLike {
   id: string;
   color: string;
   description?: string;
+  theologicalDevelopment?: string;
+  sources?: string[];
 }
 
 const eventCategorySet = new Set<string>(EVENT_CATEGORIES);
@@ -336,6 +344,7 @@ function transformEvents(data: typeof eventsData): TimelineEntity[] {
       scripture: e.scriptureRefs?.join(', '),
       swimlane: e.swimlane || 0,
       source: raw.source as string | undefined,
+      labelWrap: (raw.labelWrap as boolean) || undefined,
     };
   });
 }
@@ -343,6 +352,8 @@ function transformEvents(data: typeof eventsData): TimelineEntity[] {
 function transformBooks(data: typeof booksData): TimelineEntity[] {
   return data.map((b: (typeof booksData)[number]) => {
     const categories = b.categories || [];
+    const raw = b as Record<string, unknown>;
+    const sources = raw.sources as string[] | undefined;
 
     return {
       id: b.id,
@@ -356,7 +367,7 @@ function transformBooks(data: typeof booksData): TimelineEntity[] {
       genre: mapBookCategory(categories),
       themes: (b.themes as ThemeTag[]) || undefined,
       relationships: relationshipMap.get(b.id),
-      scripture: b.scriptureRefs?.join(', '),
+      source: sources?.join(' | '),
       notes: `Author: ${b.author || 'Unknown'}`,
       swimlane: b.swimlane || 0,
     };
@@ -417,6 +428,8 @@ function transformThemes(data: typeof themesData): Theme[] {
       id: normalizedId,
       color: theme.color,
       description: theme.description || '',
+      theologicalDevelopment: theme.theologicalDevelopment,
+      sources: theme.sources,
     });
   }
 
@@ -479,6 +492,22 @@ export function assignSwimlanes(entities: TimelineEntity[]): TimelineEntity[] {
     if (entity.id in overrides) entity.swimlane = (entity.swimlane ?? 0) + overrides[entity.id];
   }
 
+  // Absolute swimlane assignments for books (matching Figma layout)
+  const bookLanes: Record<string, number> = {
+    genesis: 0, joshua: 0, judges: 0, isaiah: 0, amos: 0, nahum: 0, haggai: 0, daniel: 0,
+    'exodus-book': 1, ruth: 1, '1-samuel': 1, micah: 1, jonah: 1, zephaniah: 1, ezekiel: 1, zechariah: 1,
+    leviticus: 2, '2-samuel': 2, joel: 2, hosea: 2, habakkuk: 2, lamentations: 2,
+    numbers: 3, '1-kings': 3, jeremiah: 3, malachi: 3,
+    obadiah: 3,
+    deuteronomy: 4, '1-chronicles': 4, '2-kings': 4, ezra: 4,
+    '2-chronicles': 5, esther: 5, nehemiah: 5,
+  };
+  for (const entity of entities) {
+    if (entity.type === 'book' && entity.id in bookLanes) {
+      entity.swimlane = bookLanes[entity.id];
+    }
+  }
+
   return entities;
 }
 
@@ -509,11 +538,73 @@ export function computeTimelineDomain(
   };
 }
 
+// ===== THEME OVERLAY NODES =====
+interface RawThemeNode {
+  id: string;
+  theme: string;
+  name: string;
+  startYear: number;
+  endYear: number;
+  description: string;
+  scripture: string;
+  priority: number;
+  linkedEntityId?: string;
+}
+
+function transformThemeNodes(data: RawThemeNode[]): TimelineEntity[] {
+  return data.map((n) => {
+    const tag = normalizeThemeTag(n.theme);
+    return {
+      id: n.id,
+      type: 'event' as EntityType,
+      name: n.name,
+      startYear: n.startYear,
+      endYear: n.endYear !== n.startYear ? n.endYear : undefined,
+      certainty: 'approximate' as DateCertainty,
+      priority: (n.priority || 2) as 1 | 2 | 3 | 4,
+      description: n.description || '',
+      category: 'event' as EventCategory,
+      themes: tag ? [tag] : [],
+      scripture: n.scripture,
+      themeOverlay: tag,
+      linkedEntityId: n.linkedEntityId,
+      swimlane: 0,
+    };
+  });
+}
+
+const allThemeOverlayNodes = transformThemeNodes(themeNodesData as RawThemeNode[]);
+
+// Assign swimlanes per theme (each theme gets its own lane layout)
+const OVERLAY_THEMES: ThemeTag[] = ['Covenant', 'Kingship', 'Land', 'Messiah'];
+
+function buildThemeOverlayMap(nodes: TimelineEntity[]): Record<string, TimelineEntity[]> {
+  const map: Record<string, TimelineEntity[]> = {};
+  for (const theme of OVERLAY_THEMES) {
+    const group = nodes.filter(n => n.themeOverlay === theme);
+    assignLanesToGroup(group);
+    map[theme] = group;
+  }
+  // Manual fixes: nudge overlay nodes that collide with main-track labels
+  const overlayOverrides: Record<string, number> = {
+    'king-david-anointed': 1,
+  };
+  for (const group of Object.values(map)) {
+    for (const node of group) {
+      if (node.id in overlayOverrides) node.swimlane = (node.swimlane ?? 0) + overlayOverrides[node.id];
+    }
+  }
+  return map;
+}
+
 // ===== EXPORT DATA =====
 export const periods: Period[] = transformPeriods(periodsData);
 export const themes: Theme[] = transformThemes(themesData);
 export const themeTags: ThemeTag[] = themes.map((theme) => theme.id);
+export const themeById = new Map<ThemeTag, Theme>(themes.map(t => [t.id, t]));
 export const relationships: Relationship[] = relationshipsData as Relationship[];
+export const themeOverlayByTheme: Record<string, TimelineEntity[]> = buildThemeOverlayMap(allThemeOverlayNodes);
+export const OVERLAY_THEME_IDS = OVERLAY_THEMES;
 
 // Combine all entities
 const allEntities: TimelineEntity[] = [
