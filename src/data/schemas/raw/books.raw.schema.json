@@ -65,6 +65,18 @@
         "items": {
           "type": "string"
         }
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "themes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       }
     },
     "required": ["id", "name", "startYear", "endYear", "era", "category", "priority", "track"],

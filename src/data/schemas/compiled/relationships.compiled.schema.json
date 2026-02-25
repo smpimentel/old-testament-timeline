@@ -35,12 +35,6 @@
       "confidence": {
         "type": "string",
         "enum": ["high", "medium", "low"]
-      },
-      "scriptureRef": {
-        "type": "string"
-      },
-      "notes": {
-        "type": "string"
       }
     },
     "required": ["id", "sourceId", "targetId", "type"],

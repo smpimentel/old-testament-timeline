@@ -233,7 +233,9 @@
     "categories": [
       "Other"
     ],
-    "themes": ["Messiah"],
+    "themes": [
+      "Messiah"
+    ],
     "priority": 2,
     "description": "Judah was the fourth son of Jacob and Leah, whose tribe became the ruling tribe of Israel. The Messianic line passed through Judah, fulfilling Jacob's prophecy that the scepter would not depart from his descendants.",
     "bio": "",
@@ -277,7 +279,9 @@
     "categories": [
       "Priest"
     ],
-    "themes": ["Covenant"],
+    "themes": [
+      "Covenant"
+    ],
     "priority": 2,
     "description": "Aaron was Moses' older brother and Israel's first high priest. He served as Moses' spokesman before Pharaoh and was consecrated to lead Israel's priesthood, though he also led the people in making the golden calf.",
     "scriptureRefs": [
@@ -323,7 +327,10 @@
     "categories": [
       "Judge"
     ],
-    "themes": ["Covenant", "Land"],
+    "themes": [
+      "Covenant",
+      "Land"
+    ],
     "priority": 2,
     "description": "(originally named Hoshea) was Moses’ longtime assistant and the faithful military leader who succeeded him as the commander of Israel. He courageously led the Israelites across the Jordan River into the Promised Land, directed the conquest of Canaan.",
     "scriptureRefs": [
@@ -343,7 +350,9 @@
     "categories": [
       "Other"
     ],
-    "themes": ["Messiah"],
+    "themes": [
+      "Messiah"
+    ],
     "priority": 2,
     "description": "Boaz was a wealthy and godly landowner in Bethlehem who served as the kinsman-redeemer for Ruth. He married Ruth, and their son Obed became the grandfather of King David.",
     "scriptureRefs": [
@@ -1510,7 +1519,9 @@
     "categories": [
       "Prophet"
     ],
-    "themes": ["Messiah"],
+    "themes": [
+      "Messiah"
+    ],
     "priority": 2,
     "description": "Daniel was a young Jewish nobleman taken captive to Babylon who rose to serve as a high official under multiple empires. He remained faithful to God throughout his life, receiving apocalyptic visions and surviving the lions' den.",
     "scriptureRefs": [
@@ -1698,7 +1709,9 @@
     "categories": [
       "Prophet"
     ],
-    "themes": ["Messiah"],
+    "themes": [
+      "Messiah"
+    ],
     "priority": 2,
     "description": "Malachi was the last Old Testament prophet, ministering to the post-exilic community in Jerusalem. He confronted the people's spiritual apathy, corrupt worship, and broken covenants, while pointing ahead to the coming messenger who would prepare the way for the Lord.",
     "scriptureRefs": [

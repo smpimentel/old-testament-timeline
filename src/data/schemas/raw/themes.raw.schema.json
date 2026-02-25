@@ -16,6 +16,15 @@
       },
       "description": {
         "type": "string"
+      },
+      "theologicalDevelopment": {
+        "type": "string"
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       }
     },
     "required": ["id", "color"],
