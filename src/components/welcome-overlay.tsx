@@ -78,7 +78,7 @@ export function WelcomeOverlay({ onClose }: WelcomeOverlayProps) {
                   color: 'var(--color-base-text-secondary)',
                 }}
               >
-                Explore 3,600 years of biblical history through an interactive journey
+                Explore over 3,600 years of biblical history through an interactive journey
               </p>
             </div>
             <button

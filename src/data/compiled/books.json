@@ -13,8 +13,9 @@
     "priority": 1,
     "author": "Moses (traditional)",
     "description": "Creation, Fall, Flood, Patriarchs",
-    "scriptureRefs": [
-      "Genesis 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
     "swimlane": 0
   },
@@ -32,27 +33,9 @@
     "priority": 1,
     "author": "Moses",
     "description": "Israel's deliverance from Egypt and receiving the Law at Sinai",
-    "scriptureRefs": [
-      "Exodus 1:1"
-    ],
-    "swimlane": 0
-  },
-  {
-    "id": "psalms",
-    "type": "book",
-    "name": "Psalms",
-    "startYear": 1000,
-    "endYear": 400,
-    "certainty": "approximate",
-    "categories": [
-      "Poetry"
-    ],
-    "themes": [],
-    "priority": 1,
-    "author": "David, Asaph, Sons of Korah, others",
-    "description": "Songs of worship, lament, and praise spanning centuries",
-    "scriptureRefs": [
-      "Psalm 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
     "swimlane": 0
   },
@@ -70,8 +53,9 @@
     "priority": 2,
     "author": "Moses",
     "description": "Laws for holiness, worship, sacrifices, and priestly ministry.",
-    "scriptureRefs": [
-      "Leviticus 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
     "swimlane": 1
   },
@@ -89,8 +73,9 @@
     "priority": 2,
     "author": "Moses",
     "description": "Wilderness journey, censuses, rebellion, and preparation to enter Canaan.",
-    "scriptureRefs": [
-      "Numbers 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
     "swimlane": 2
   },
@@ -108,8 +93,9 @@
     "priority": 2,
     "author": "Moses",
     "description": "Moses final covenant sermons before Israel enters the land.",
-    "scriptureRefs": [
-      "Deuteronomy 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
     "swimlane": 3
   },
@@ -127,10 +113,11 @@
     "priority": 2,
     "author": "Samuel, Gad, Nathan (traditional)",
     "description": "Transition from judges to monarchy; Saul reign and David rise.",
-    "scriptureRefs": [
-      "1 Samuel 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
-    "swimlane": 0
+    "swimlane": 2
   },
   {
     "id": "2-samuel",
@@ -146,10 +133,11 @@
     "priority": 2,
     "author": "Gad, Nathan (traditional)",
     "description": "David reign over Israel, covenant promise, victories, and failures.",
-    "scriptureRefs": [
-      "2 Samuel 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
-    "swimlane": 1
+    "swimlane": 0
   },
   {
     "id": "1-kings",
@@ -165,8 +153,9 @@
     "priority": 2,
     "author": "Jeremiah (traditional)",
     "description": "Solomon reign, temple construction, and division of the kingdom.",
-    "scriptureRefs": [
-      "1 Kings 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
     "swimlane": 2
   },
@@ -184,10 +173,11 @@
     "priority": 2,
     "author": "Jeremiah (traditional)",
     "description": "History of divided kingdoms through exile and Jerusalem destruction.",
-    "scriptureRefs": [
-      "2 Kings 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
-    "swimlane": 1
+    "swimlane": 0
   },
   {
     "id": "jeremiah",
@@ -203,10 +193,11 @@
     "priority": 2,
     "author": "Jeremiah",
     "description": "Prophetic warnings, calls to repentance, and hope amid coming judgment.",
-    "scriptureRefs": [
-      "Jeremiah 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
-    "swimlane": 2
+    "swimlane": 4
   },
   {
     "id": "ezra",
@@ -222,10 +213,11 @@
     "priority": 2,
     "author": "Ezra",
     "description": "Return from exile and restoration of worship and covenant life.",
-    "scriptureRefs": [
-      "Ezra 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
-    "swimlane": 1
+    "swimlane": 0
   },
   {
     "id": "nehemiah",
@@ -241,8 +233,449 @@
     "priority": 2,
     "author": "Nehemiah",
     "description": "Rebuilding Jerusalem walls and spiritual reform in Judah.",
-    "scriptureRefs": [
-      "Nehemiah 1:1"
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "joshua",
+    "type": "book",
+    "name": "Joshua",
+    "startYear": 1406,
+    "endYear": 1375,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Joshua (traditional)",
+    "description": "Conquest and settlement of the Promised Land under Joshua.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 4
+  },
+  {
+    "id": "judges",
+    "type": "book",
+    "name": "Judges",
+    "startYear": 1375,
+    "endYear": 1050,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Samuel (traditional)",
+    "description": "Cycles of sin, oppression, and deliverance through judges.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 0
+  },
+  {
+    "id": "ruth",
+    "type": "book",
+    "name": "Ruth",
+    "startYear": 1150,
+    "endYear": 1100,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Samuel (traditional)",
+    "description": "Story of loyalty and redemption in the time of judges.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "1-chronicles",
+    "type": "book",
+    "name": "1 Chronicles",
+    "startYear": 1010,
+    "endYear": 970,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Ezra (traditional)",
+    "description": "Genealogies and David's reign from a priestly perspective.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "2-chronicles",
+    "type": "book",
+    "name": "2 Chronicles",
+    "startYear": 970,
+    "endYear": 586,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Ezra (traditional)",
+    "description": "History of Judah's kings from Solomon to exile.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 3
+  },
+  {
+    "id": "esther",
+    "type": "book",
+    "name": "Esther",
+    "startYear": 486,
+    "endYear": 465,
+    "certainty": "approximate",
+    "categories": [
+      "History"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Unknown",
+    "description": "God's providence preserving Jews in Persian exile.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "isaiah",
+    "type": "book",
+    "name": "Isaiah",
+    "startYear": 740,
+    "endYear": 680,
+    "certainty": "approximate",
+    "categories": [
+      "Major Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Isaiah",
+    "description": "Prophecies of judgment, comfort, and messianic hope.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "lamentations",
+    "type": "book",
+    "name": "Lamentations",
+    "startYear": 586,
+    "endYear": 585,
+    "certainty": "approximate",
+    "categories": [
+      "Major Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Jeremiah (traditional)",
+    "description": "Poetic mourning over the destruction of Jerusalem.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 5
+  },
+  {
+    "id": "ezekiel",
+    "type": "book",
+    "name": "Ezekiel",
+    "startYear": 593,
+    "endYear": 571,
+    "certainty": "approximate",
+    "categories": [
+      "Major Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Ezekiel",
+    "description": "Visions of judgment and restoration from Babylonian exile.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "daniel",
+    "type": "book",
+    "name": "Daniel",
+    "startYear": 605,
+    "endYear": 536,
+    "certainty": "approximate",
+    "categories": [
+      "Major Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Daniel",
+    "description": "Faithfulness in exile and apocalyptic visions of future kingdoms.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "hosea",
+    "type": "book",
+    "name": "Hosea",
+    "startYear": 755,
+    "endYear": 715,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Hosea",
+    "description": "God's faithful love depicted through Hosea's marriage.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 4
+  },
+  {
+    "id": "joel",
+    "type": "book",
+    "name": "Joel",
+    "startYear": 835,
+    "endYear": 796,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Joel",
+    "description": "Call to repentance and promise of the Spirit's outpouring.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "amos",
+    "type": "book",
+    "name": "Amos",
+    "startYear": 760,
+    "endYear": 750,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Amos",
+    "description": "Warnings of judgment against social injustice.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "obadiah",
+    "type": "book",
+    "name": "Obadiah",
+    "startYear": 845,
+    "endYear": 840,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Obadiah",
+    "description": "Judgment against Edom for betraying Judah.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "jonah",
+    "type": "book",
+    "name": "Jonah",
+    "startYear": 780,
+    "endYear": 750,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Jonah (traditional)",
+    "description": "God's mercy extending beyond Israel to Nineveh.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "micah",
+    "type": "book",
+    "name": "Micah",
+    "startYear": 735,
+    "endYear": 700,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Micah",
+    "description": "Justice, mercy, and messianic promises from Bethlehem.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "nahum",
+    "type": "book",
+    "name": "Nahum",
+    "startYear": 663,
+    "endYear": 612,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Nahum",
+    "description": "Prophecy of Nineveh's destruction and God's justice.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "habakkuk",
+    "type": "book",
+    "name": "Habakkuk",
+    "startYear": 608,
+    "endYear": 598,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Habakkuk",
+    "description": "Wrestling with God's justice and living by faith.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "zephaniah",
+    "type": "book",
+    "name": "Zephaniah",
+    "startYear": 640,
+    "endYear": 609,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Zephaniah",
+    "description": "Day of the Lord judgment and promise of a faithful remnant.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "haggai",
+    "type": "book",
+    "name": "Haggai",
+    "startYear": 520,
+    "endYear": 520,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Haggai",
+    "description": "Call to rebuild the temple after exile.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 1
+  },
+  {
+    "id": "zechariah",
+    "type": "book",
+    "name": "Zechariah",
+    "startYear": 520,
+    "endYear": 480,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Zechariah",
+    "description": "Visions of restoration and messianic prophecies.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
+    ],
+    "swimlane": 2
+  },
+  {
+    "id": "malachi",
+    "type": "book",
+    "name": "Malachi",
+    "startYear": 460,
+    "endYear": 430,
+    "certainty": "approximate",
+    "categories": [
+      "Minor Prophets"
+    ],
+    "themes": [],
+    "priority": 2,
+    "author": "Malachi",
+    "description": "Final prophetic call to covenant faithfulness.",
+    "sources": [
+      "Hindson & Yates, The Essence of the Old Testament (B&H Academic, 2012)",
+      "Walton, Chronological and Background Charts of the Old Testament (Zondervan, 1994)"
     ],
     "swimlane": 1
   }

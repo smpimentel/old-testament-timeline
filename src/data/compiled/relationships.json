@@ -637,6 +637,13 @@
     "confidence": "high"
   },
   {
+    "id": "rel-150",
+    "sourceId": "samuel",
+    "targetId": "1-chronicles",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
     "id": "rel-151",
     "sourceId": "jesse",
     "targetId": "david",
@@ -742,9 +749,9 @@
     "confidence": "high"
   },
   {
-    "id": "rel-176",
+    "id": "rel-175",
     "sourceId": "david",
-    "targetId": "psalms",
+    "targetId": "1-chronicles",
     "type": "book-subject",
     "confidence": "high"
   },
@@ -773,6 +780,13 @@
     "id": "rel-185",
     "sourceId": "solomon",
     "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-186",
+    "sourceId": "solomon",
+    "targetId": "2-chronicles",
     "type": "book-subject",
     "confidence": "high"
   },
@@ -1050,6 +1064,13 @@
     "confidence": "high"
   },
   {
+    "id": "rel-249",
+    "sourceId": "isaiah",
+    "targetId": "2-chronicles",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
     "id": "rel-252",
     "sourceId": "micah",
     "targetId": "isaiah",
@@ -1162,9 +1183,23 @@
     "confidence": "high"
   },
   {
+    "id": "rel-272",
+    "sourceId": "jeremiah",
+    "targetId": "lamentations",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
     "id": "rel-273",
     "sourceId": "jeremiah",
     "targetId": "2-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-274",
+    "sourceId": "jeremiah",
+    "targetId": "2-chronicles",
     "type": "book-subject",
     "confidence": "high"
   },
@@ -1610,10 +1645,24 @@
     "confidence": "high"
   },
   {
+    "id": "rel-355",
+    "sourceId": "the-era-of-the-judges",
+    "targetId": "judges",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
     "id": "rel-357",
     "sourceId": "othniel",
     "targetId": "othniel",
     "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-359",
+    "sourceId": "othniel",
+    "targetId": "judges",
+    "type": "book-subject",
     "confidence": "high"
   },
   {
@@ -1624,10 +1673,24 @@
     "confidence": "high"
   },
   {
+    "id": "rel-361",
+    "sourceId": "ehud",
+    "targetId": "judges",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
     "id": "rel-364",
     "sourceId": "deborah",
     "targetId": "deborah",
     "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-367",
+    "sourceId": "deborah",
+    "targetId": "judges",
+    "type": "book-subject",
     "confidence": "high"
   },
   {
@@ -1638,6 +1701,13 @@
     "confidence": "high"
   },
   {
+    "id": "rel-369",
+    "sourceId": "gideon",
+    "targetId": "judges",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
     "id": "rel-370",
     "sourceId": "samson",
     "targetId": "samson",
@@ -1645,10 +1715,24 @@
     "confidence": "high"
   },
   {
+    "id": "rel-372",
+    "sourceId": "samson",
+    "targetId": "judges",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
     "id": "rel-373",
     "sourceId": "jephthah",
     "targetId": "jephthah",
     "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-374",
+    "sourceId": "jephthah",
+    "targetId": "judges",
+    "type": "book-subject",
     "confidence": "high"
   },
   {
@@ -1701,9 +1785,9 @@
     "confidence": "high"
   },
   {
-    "id": "rel-386",
+    "id": "rel-385",
     "sourceId": "reign-of-king-david",
-    "targetId": "psalms",
+    "targetId": "1-chronicles",
     "type": "book-subject",
     "confidence": "high"
   },
@@ -1722,6 +1806,13 @@
     "confidence": "high"
   },
   {
+    "id": "rel-389",
+    "sourceId": "temple-built",
+    "targetId": "2-chronicles",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
     "id": "rel-390",
     "sourceId": "division-of-the-kingdom",
     "targetId": "rehoboam",
@@ -1732,6 +1823,13 @@
     "id": "rel-392",
     "sourceId": "division-of-the-kingdom",
     "targetId": "1-kings",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-393",
+    "sourceId": "division-of-the-kingdom",
+    "targetId": "2-chronicles",
     "type": "book-subject",
     "confidence": "high"
   },
@@ -1890,6 +1988,20 @@
     "confidence": "high"
   },
   {
+    "id": "rel-425",
+    "sourceId": "destruction-of-jerusalem",
+    "targetId": "2-chronicles",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-427",
+    "sourceId": "destruction-of-jerusalem",
+    "targetId": "lamentations",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
     "id": "rel-432",
     "sourceId": "return-from-exile",
     "targetId": "ezra",
@@ -1914,6 +2026,13 @@
     "id": "rel-435",
     "sourceId": "return-from-exile",
     "targetId": "ezra",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-436",
+    "sourceId": "return-from-exile",
+    "targetId": "2-chronicles",
     "type": "book-subject",
     "confidence": "high"
   },
@@ -2108,113 +2227,155 @@
   },
   {
     "id": "rel-478",
-    "sourceId": "psalms",
-    "targetId": "david",
-    "type": "book-subject",
-    "confidence": "high"
-  },
-  {
-    "id": "rel-479",
     "sourceId": "leviticus",
     "targetId": "moses",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-480",
+    "id": "rel-479",
     "sourceId": "numbers",
     "targetId": "moses",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-481",
+    "id": "rel-480",
     "sourceId": "deuteronomy",
     "targetId": "moses",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-482",
+    "id": "rel-481",
     "sourceId": "1-samuel",
     "targetId": "samuel",
     "type": "book-subject",
     "confidence": "high"
   },
   {
-    "id": "rel-483",
+    "id": "rel-482",
     "sourceId": "1-samuel",
     "targetId": "selection-of-king-saul",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-484",
+    "id": "rel-483",
     "sourceId": "2-samuel",
     "targetId": "reign-of-king-david",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-485",
+    "id": "rel-484",
     "sourceId": "1-kings",
     "targetId": "temple-built",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-486",
+    "id": "rel-485",
     "sourceId": "1-kings",
     "targetId": "reign-of-king-david",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-487",
+    "id": "rel-486",
     "sourceId": "1-kings",
     "targetId": "division-of-the-kingdom",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-488",
+    "id": "rel-487",
     "sourceId": "2-kings",
     "targetId": "fall-of-northern-kingdom",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-489",
+    "id": "rel-488",
     "sourceId": "2-kings",
     "targetId": "destruction-of-jerusalem",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-490",
+    "id": "rel-489",
     "sourceId": "jeremiah",
     "targetId": "destruction-of-jerusalem",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-491",
+    "id": "rel-490",
     "sourceId": "ezra",
     "targetId": "return-from-exile",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-492",
+    "id": "rel-491",
     "sourceId": "ezra",
     "targetId": "dedication-of-second-temple",
     "type": "event-participant",
     "confidence": "high"
   },
   {
-    "id": "rel-493",
+    "id": "rel-492",
     "sourceId": "nehemiah",
     "targetId": "rebuilding-jerusalems-walls",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-493",
+    "sourceId": "joshua",
+    "targetId": "joshua",
+    "type": "book-subject",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-494",
+    "sourceId": "joshua",
+    "targetId": "conquest-of-canaan",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-495",
+    "sourceId": "1-chronicles",
+    "targetId": "reign-of-king-david",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-496",
+    "sourceId": "2-chronicles",
+    "targetId": "temple-built",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-497",
+    "sourceId": "2-chronicles",
+    "targetId": "destruction-of-jerusalem",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-498",
+    "sourceId": "lamentations",
+    "targetId": "destruction-of-jerusalem",
+    "type": "event-participant",
+    "confidence": "high"
+  },
+  {
+    "id": "rel-499",
+    "sourceId": "haggai",
+    "targetId": "dedication-of-second-temple",
     "type": "event-participant",
     "confidence": "high"
   }

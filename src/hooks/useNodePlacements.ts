@@ -36,6 +36,7 @@ export function useNodePlacements({
   tracks,
   unknownEntityXById,
   unknownVisualEndYear,
+  unknownBandStartX,
   zoomLevel,
 }: {
   filteredEntities: TimelineEntity[];
@@ -44,17 +45,25 @@ export function useNodePlacements({
   tracks: SectionTracks;
   unknownEntityXById: Map<string, number>;
   unknownVisualEndYear: number;
+  unknownBandStartX: number;
   zoomLevel: number;
 }) {
+  const forceCirclePersonIds = new Set(['levi', 'judah']);
+
   const nodePlacements = useMemo(() => {
     return filteredEntities.map((entity) => {
       const isUnknownEraEntity = entity.startYear > unknownVisualEndYear;
       const shouldCompressUnknownX = entity.type !== 'book' && isUnknownEraEntity;
+      // Books starting in unknown era: snap to band left edge
+      const isUnknownBook = entity.type === 'book' && isUnknownEraEntity;
       const x = shouldCompressUnknownX
         ? (unknownEntityXById.get(entity.id) ?? yearToX(entity.startYear))
-        : yearToX(entity.startYear);
+        : isUnknownBook
+          ? unknownBandStartX
+          : yearToX(entity.startYear);
+      const endX = entity.endYear ? yearToX(entity.endYear) : x;
       const width = entity.endYear
-        ? (entity.startYear - entity.endYear) * pixelsPerYear
+        ? Math.max(0, endX - x)
         : 32;
 
       let trackBand: TrackBand | KingdomBand = tracks.events;
@@ -73,14 +82,15 @@ export function useNodePlacements({
         x,
         width,
         trackBand,
-        forcePointNode: entity.type === 'person' && (
+        forcePointNode: (entity.type === 'person' && (
           isUnknownEraEntity ||
           !entity.endYear ||
-          (entity.startYear - (entity.endYear ?? entity.startYear)) <= 10
-        ),
+          (entity.startYear - (entity.endYear ?? entity.startYear)) <= 10 ||
+          forceCirclePersonIds.has(entity.id)
+        )) || (entity.type === 'book' && (entity.startYear - (entity.endYear ?? entity.startYear)) <= 1),
       };
     });
-  }, [filteredEntities, yearToX, pixelsPerYear, tracks, unknownEntityXById, unknownVisualEndYear]);
+  }, [filteredEntities, yearToX, pixelsPerYear, tracks, unknownEntityXById, unknownVisualEndYear, unknownBandStartX]);
 
   const nodeLabelVisibility = useMemo(() => {
     return computeNodeLabelVisibility(
@@ -93,6 +103,7 @@ export function useNodePlacements({
         name: entity.name,
         priority: entity.priority,
         kingdom: entity.kingdom,
+        labelWrap: entity.labelWrap,
       })),
       zoomLevel,
     );

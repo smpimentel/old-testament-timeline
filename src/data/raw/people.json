@@ -209,7 +209,8 @@
     "role": "Patriarch",
     "priority": 2,
     "themes": [
-      "Judgment"
+      "Judgment",
+      "Covenant"
     ],
     "track": "people",
     "description": "Noah was a righteous man who walked with God. He built the ark and preserved humanity and animal kinds through the Flood.",
@@ -298,7 +299,7 @@
       "Covenant"
     ],
     "track": "people",
-    "description": "Isaac was the promised son born to Abraham and Sarah in their old age. He became the father of Jacob (Israel) and continued God’s covenant line.",
+    "description": "Isaac was the promised son born to Abraham and Sarah in their old age. He became the father of Jacob (Israel) and continued God\u2019s covenant line.",
     "bio": "The promised son of Abraham and Sarah, born when they were elderly. Nearly sacrificed by Abraham as a test of faith. Married Rebekah and fathered Jacob and Esau.",
     "scriptureRefs": [
       "Gen 21-28; 35:27-29; Heb 11:20"
@@ -431,7 +432,9 @@
     "approximate": true,
     "role": "Other",
     "priority": 2,
-    "themes": [],
+    "themes": [
+      "Messiah"
+    ],
     "track": "people",
     "description": "Judah was the fourth son of Jacob and Leah, whose tribe became the ruling tribe of Israel. The Messianic line passed through Judah, fulfilling Jacob's prophecy that the scepter would not depart from his descendants.",
     "bio": "",
@@ -534,6 +537,9 @@
       "exodus-book",
       "leviticus",
       "numbers"
+    ],
+    "themes": [
+      "Covenant"
     ]
   },
   {
@@ -547,10 +553,12 @@
     "priority": 2,
     "themes": [
       "Covenant",
-      "Deliverance"
+      "Deliverance",
+      "Land",
+      "Messiah"
     ],
     "track": "people",
-    "description": "Born during Pharaoh’s infanticide, Moses was raised in Pharaoh’s court, fled to Midian, and later led Israel out of Egypt. He received the Law at Sinai.",
+    "description": "Born during Pharaoh\u2019s infanticide, Moses was raised in Pharaoh\u2019s court, fled to Midian, and later led Israel out of Egypt. He received the Law at Sinai.",
     "bio": "Born in Egypt during Hebrew slavery, Moses was rescued by Pharaoh's daughter. Called by God at the burning bush, he led Israel out of Egypt and received the Law at Sinai.",
     "scriptureRefs": [
       "Exod 2-Deut 34; Heb 11:23-29"
@@ -593,7 +601,7 @@
     "role": "Judge",
     "priority": 2,
     "track": "people",
-    "description": "(originally named Hoshea) was Moses’ longtime assistant and the faithful military leader who succeeded him as the commander of Israel. He courageously led the Israelites across the Jordan River into the Promised Land, directed the conquest of Canaan.",
+    "description": "(originally named Hoshea) was Moses\u2019 longtime assistant and the faithful military leader who succeeded him as the commander of Israel. He courageously led the Israelites across the Jordan River into the Promised Land, directed the conquest of Canaan.",
     "timelineStory": "Active",
     "source": "Hindson, Ed, and Gary Yates, editors. The Essence of the Old Testament: A Survey. B&H Academic, 2012. Walton, John H. Chronological and Background Charts of the Old Testament. Revised and Expanded ed., Zondervan Academic, 1994. The Holy Bible, New International Version. Zondervan, 2011.",
     "scriptureRefs": [
@@ -614,6 +622,10 @@
       "numbers",
       "deuteronomy",
       "joshua-book"
+    ],
+    "themes": [
+      "Covenant",
+      "Land"
     ]
   },
   {
@@ -643,6 +655,9 @@
     ],
     "relatedBooks": [
       "ruth-book"
+    ],
+    "themes": [
+      "Messiah"
     ]
   },
   {
@@ -687,7 +702,7 @@
       "Kingship"
     ],
     "track": "people",
-    "description": "Samuel was the last judge, a prophet, and priest. He anointed Israel’s first two kings (Saul and David) and called the nation back to faithfulness to God.",
+    "description": "Samuel was the last judge, a prophet, and priest. He anointed Israel\u2019s first two kings (Saul and David) and called the nation back to faithfulness to God.",
     "bio": "Samuel was the last judge, a prophet, and priest. He anointed Israel's first two kings (Saul and David) and called the nation back to faithfulness to God.",
     "scriptureRefs": [
       "1 Sam 1-25; 28:3-20"
@@ -769,7 +784,8 @@
     "priority": 2,
     "themes": [
       "Kingship",
-      "Messiah"
+      "Messiah",
+      "Covenant"
     ],
     "track": "people",
     "description": "David was a shepherd boy anointed by Samuel who became Israel's greatest king, uniting the nation and establishing Jerusalem as its capital. He was called a man after God's own heart and received the covenant promise that his throne would endure forever.",
@@ -819,7 +835,8 @@
     "priority": 2,
     "themes": [
       "Kingship",
-      "Temple"
+      "Temple",
+      "Covenant"
     ],
     "track": "people",
     "description": "Solomon was the son of David and Bathsheba who succeeded his father as king of Israel. Renowned for his God-given wisdom, he built the first temple in Jerusalem but later turned to idolatry through his many foreign wives.",
@@ -1061,7 +1078,7 @@
     "track": "people",
     "timelineStory": "Active",
     "scriptureRefs": [
-      "1 Kgs 16:21–22"
+      "1 Kgs 16:21\u201322"
     ]
   },
   {
@@ -1233,7 +1250,7 @@
     "track": "people",
     "timelineStory": "Active",
     "scriptureRefs": [
-      "2 Kgs 8:16–17; 2 Chr 21:5"
+      "2 Kgs 8:16\u201317; 2 Chr 21:5"
     ],
     "relatedPeople": [
       "elijah"
@@ -1493,7 +1510,7 @@
     "track": "people",
     "timelineStory": "Active",
     "scriptureRefs": [
-      "2 Kgs 14:1–2; 2 Chr 25:1"
+      "2 Kgs 14:1\u20132; 2 Chr 25:1"
     ]
   },
   {
@@ -1546,7 +1563,7 @@
     "track": "people",
     "timelineStory": "Active",
     "scriptureRefs": [
-      "2 Kgs 15:1–2; 2 Chr 26:3"
+      "2 Kgs 15:1\u20132; 2 Chr 26:3"
     ],
     "relatedPeople": [
       "isaiah"
@@ -1758,7 +1775,7 @@
     "track": "people",
     "timelineStory": "Active",
     "scriptureRefs": [
-      "2 Kgs 15:32–33; 2 Chr 27:1"
+      "2 Kgs 15:32\u201333; 2 Chr 27:1"
     ],
     "relatedPeople": [
       "isaiah",
@@ -2039,7 +2056,8 @@
     "priority": 2,
     "themes": [
       "Judgment",
-      "Covenant"
+      "Covenant",
+      "Messiah"
     ],
     "track": "people",
     "description": "Jeremiah was called as a prophet while still young and ministered to Judah for over 40 years leading up to and during the Babylonian exile. Known as the weeping prophet, he faithfully proclaimed God's judgment despite intense personal suffering and rejection.",
@@ -2207,6 +2225,9 @@
     "relatedBooks": [
       "daniel-book",
       "ezekiel-book"
+    ],
+    "themes": [
+      "Messiah"
     ]
   },
   {
@@ -2453,6 +2474,9 @@
     ],
     "relatedBooks": [
       "malachi-book"
+    ],
+    "themes": [
+      "Messiah"
     ]
   }
 ]

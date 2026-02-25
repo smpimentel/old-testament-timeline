@@ -1,0 +1,690 @@
+[
+  {
+    "id": "cov-adamic-covenant",
+    "theme": "Covenant",
+    "name": "Adamic Covenant",
+    "startYear": 4004,
+    "endYear": 4004,
+    "description": "Dominion mandate + prohibition. God's first arrangement with humanity.",
+    "scripture": "Gen 1:28-30; 2:15-17",
+    "priority": 2
+  },
+  {
+    "id": "cov-noahic-covenant",
+    "theme": "Covenant",
+    "name": "Noahic Covenant",
+    "startYear": 2500,
+    "endYear": 2500,
+    "description": "Universal covenant — rainbow sign. Never again destroy by flood.",
+    "scripture": "Gen 8:20-9:17",
+    "priority": 2
+  },
+  {
+    "id": "cov-abrahamic-covenant",
+    "theme": "Covenant",
+    "name": "Abrahamic Covenant",
+    "startYear": 2091,
+    "endYear": 2091,
+    "description": "Land, seed, blessing — unconditional. Smoking firepot ratification.",
+    "scripture": "Gen 12:1-3; 15:1-21",
+    "linkedEntityId": "call-of-abraham",
+    "priority": 2
+  },
+  {
+    "id": "cov-circumcision",
+    "theme": "Covenant",
+    "name": "Covenant of Circumcision",
+    "startYear": 2080,
+    "endYear": 2080,
+    "description": "Sign of the covenant given to Abraham.",
+    "scripture": "Gen 17:1-14",
+    "priority": 2
+  },
+  {
+    "id": "cov-confirmed-isaac",
+    "theme": "Covenant",
+    "name": "Covenant Confirmed to Isaac",
+    "startYear": 2050,
+    "endYear": 2050,
+    "description": "God reaffirms Abrahamic promises to Isaac.",
+    "scripture": "Gen 26:2-5",
+    "priority": 2
+  },
+  {
+    "id": "cov-confirmed-jacob",
+    "theme": "Covenant",
+    "name": "Covenant Confirmed to Jacob",
+    "startYear": 1928,
+    "endYear": 1928,
+    "description": "Bethel vision — promises renewed to Jacob.",
+    "scripture": "Gen 28:13-15; 35:9-12",
+    "priority": 2
+  },
+  {
+    "id": "cov-mosaic-sinai",
+    "theme": "Covenant",
+    "name": "Mosaic Covenant (Sinai)",
+    "startYear": 1446,
+    "endYear": 1446,
+    "description": "Conditional/bilateral — law, sacrificial system, priesthood.",
+    "scripture": "Exod 19-24",
+    "linkedEntityId": "mosaic-covenant",
+    "priority": 2
+  },
+  {
+    "id": "cov-renewal-moab",
+    "theme": "Covenant",
+    "name": "Covenant Renewal (Moab)",
+    "startYear": 1406,
+    "endYear": 1406,
+    "description": "Moses renews the covenant before entering the land.",
+    "scripture": "Deut 29-30",
+    "priority": 2
+  },
+  {
+    "id": "cov-shechem",
+    "theme": "Covenant",
+    "name": "Covenant at Shechem",
+    "startYear": 1375,
+    "endYear": 1375,
+    "description": "Joshua's \"choose this day\" renewal.",
+    "scripture": "Josh 24:1-27",
+    "priority": 2
+  },
+  {
+    "id": "cov-phinehas-priestly",
+    "theme": "Covenant",
+    "name": "Phinehas / Priestly Covenant",
+    "startYear": 1400,
+    "endYear": 1400,
+    "description": "Perpetual priesthood promised to Phinehas' line.",
+    "scripture": "Num 25:10-13",
+    "priority": 2
+  },
+  {
+    "id": "cov-davidic",
+    "theme": "Covenant",
+    "name": "Davidic Covenant",
+    "startYear": 1000,
+    "endYear": 1000,
+    "description": "Eternal throne promise — unconditional.",
+    "scripture": "2 Sam 7:8-16",
+    "priority": 2
+  },
+  {
+    "id": "cov-temple-dedication",
+    "theme": "Covenant",
+    "name": "Solomon's Temple Dedication",
+    "startYear": 959,
+    "endYear": 959,
+    "description": "Covenant prayers at dedication of the First Temple.",
+    "scripture": "1 Kgs 8:22-53",
+    "linkedEntityId": "temple-built",
+    "priority": 2
+  },
+  {
+    "id": "cov-broken-north",
+    "theme": "Covenant",
+    "name": "Covenant Broken (Northern Kingdom)",
+    "startYear": 931,
+    "endYear": 721,
+    "description": "Progressive covenant unfaithfulness leading to exile.",
+    "scripture": "2 Kgs 17:15-18",
+    "priority": 2
+  },
+  {
+    "id": "cov-josiah-renewal",
+    "theme": "Covenant",
+    "name": "Josiah's Covenant Renewal",
+    "startYear": 622,
+    "endYear": 622,
+    "description": "Discovery of law book, public renewal.",
+    "scripture": "2 Kgs 23:1-3",
+    "linkedEntityId": "josiahs-reform",
+    "priority": 2
+  },
+  {
+    "id": "cov-new-covenant-prophesied",
+    "theme": "Covenant",
+    "name": "New Covenant Prophesied",
+    "startYear": 627,
+    "endYear": 627,
+    "description": "\"Written on their hearts\" — the ultimate covenant promise.",
+    "scripture": "Jer 31:31-34",
+    "priority": 2
+  },
+  {
+    "id": "cov-ezekiel-peace",
+    "theme": "Covenant",
+    "name": "Ezekiel's Covenant of Peace",
+    "startYear": 590,
+    "endYear": 590,
+    "description": "Everlasting covenant with restored Israel.",
+    "scripture": "Ezek 37:26-28",
+    "priority": 2
+  },
+  {
+    "id": "cov-post-exile-renewal",
+    "theme": "Covenant",
+    "name": "Post-Exile Covenant Renewal",
+    "startYear": 444,
+    "endYear": 444,
+    "description": "Ezra/Nehemiah lead public confession and covenant signing.",
+    "scripture": "Neh 9-10",
+    "priority": 2
+  },
+
+  {
+    "id": "land-eden",
+    "theme": "Land",
+    "name": "Eden \u2014 The First Land",
+    "startYear": 4004,
+    "endYear": 4000,
+    "description": "God places humanity in a garden-home.",
+    "scripture": "Gen 2:8-15",
+    "priority": 2
+  },
+  {
+    "id": "land-exile-eden",
+    "theme": "Land",
+    "name": "Exile from Eden",
+    "startYear": 4000,
+    "endYear": 4000,
+    "description": "First land loss — driven out.",
+    "scripture": "Gen 3:23-24",
+    "priority": 2
+  },
+  {
+    "id": "land-promise-abraham",
+    "theme": "Land",
+    "name": "Land Promise to Abraham",
+    "startYear": 2091,
+    "endYear": 2091,
+    "description": "\"To your offspring I give this land\" — from Nile to Euphrates.",
+    "scripture": "Gen 12:7; 15:18-21",
+    "priority": 2
+  },
+  {
+    "id": "land-patriarchs-sojourn",
+    "theme": "Land",
+    "name": "Patriarchs Sojourn in Canaan",
+    "startYear": 2091,
+    "endYear": 1876,
+    "description": "Abraham/Isaac/Jacob as strangers in the promised land.",
+    "scripture": "Gen 12-46",
+    "priority": 2
+  },
+  {
+    "id": "land-sojourn-egypt",
+    "theme": "Land",
+    "name": "Sojourn in Egypt",
+    "startYear": 1876,
+    "endYear": 1446,
+    "description": "~430 years away from the promised land.",
+    "scripture": "Gen 46-Exod 12",
+    "priority": 2
+  },
+  {
+    "id": "land-wilderness",
+    "theme": "Land",
+    "name": "Wilderness \u2014 At the Doorstep",
+    "startYear": 1446,
+    "endYear": 1406,
+    "description": "40 years — so close yet barred by unbelief.",
+    "scripture": "Num-Deut",
+    "linkedEntityId": "the-wilderness-wanderings",
+    "priority": 2
+  },
+  {
+    "id": "land-conquest",
+    "theme": "Land",
+    "name": "Conquest of the Land",
+    "startYear": 1406,
+    "endYear": 1400,
+    "description": "Joshua leads Israel into possession.",
+    "scripture": "Josh 1-12",
+    "linkedEntityId": "conquest-of-canaan",
+    "priority": 2
+  },
+  {
+    "id": "land-tribal-allotments",
+    "theme": "Land",
+    "name": "Division / Tribal Allotments",
+    "startYear": 1400,
+    "endYear": 1390,
+    "description": "12 tribes receive their inheritance.",
+    "scripture": "Josh 13-22",
+    "linkedEntityId": "division-of-the-land",
+    "priority": 2
+  },
+  {
+    "id": "land-incomplete-possession",
+    "theme": "Land",
+    "name": "Incomplete Possession (Judges)",
+    "startYear": 1390,
+    "endYear": 1050,
+    "description": "Tribes fail to drive out inhabitants — land insecure.",
+    "scripture": "Judg 1:27-36; 2:1-3",
+    "linkedEntityId": "the-era-of-the-judges",
+    "priority": 2
+  },
+  {
+    "id": "land-full-possession",
+    "theme": "Land",
+    "name": "Full Possession (United Kingdom)",
+    "startYear": 1010,
+    "endYear": 931,
+    "description": "David/Solomon — greatest territorial extent, \"from Dan to Beersheba.\"",
+    "scripture": "2 Sam 8; 1 Kgs 4:21",
+    "priority": 2
+  },
+  {
+    "id": "land-divided",
+    "theme": "Land",
+    "name": "Land Divided",
+    "startYear": 931,
+    "endYear": 931,
+    "description": "North/South split.",
+    "scripture": "1 Kgs 12",
+    "linkedEntityId": "division-of-the-kingdom",
+    "priority": 2
+  },
+  {
+    "id": "land-north-lost",
+    "theme": "Land",
+    "name": "Northern Land Lost",
+    "startYear": 721,
+    "endYear": 721,
+    "description": "Assyria deports Israel, resettles foreigners.",
+    "scripture": "2 Kgs 17",
+    "linkedEntityId": "fall-of-northern-kingdom",
+    "priority": 2
+  },
+  {
+    "id": "land-south-lost",
+    "theme": "Land",
+    "name": "Southern Land Lost",
+    "startYear": 586,
+    "endYear": 586,
+    "description": "Jerusalem destroyed, Judah exiled.",
+    "scripture": "2 Kgs 25",
+    "linkedEntityId": "destruction-of-jerusalem",
+    "priority": 2
+  },
+  {
+    "id": "land-exile-landless",
+    "theme": "Land",
+    "name": "Exile \u2014 Landless",
+    "startYear": 586,
+    "endYear": 538,
+    "description": "\"By the rivers of Babylon we wept.\"",
+    "scripture": "Ps 137; Lam",
+    "priority": 2
+  },
+  {
+    "id": "land-return",
+    "theme": "Land",
+    "name": "Return to the Land",
+    "startYear": 538,
+    "endYear": 538,
+    "description": "Cyrus decree — remnant returns.",
+    "scripture": "Ezra 1-2",
+    "linkedEntityId": "return-from-exile",
+    "priority": 2
+  },
+  {
+    "id": "land-foreign-rule",
+    "theme": "Land",
+    "name": "Land Under Foreign Rule",
+    "startYear": 538,
+    "endYear": 430,
+    "description": "Back in the land but not sovereign — Persian rule.",
+    "scripture": "Ezra-Neh",
+    "priority": 2
+  },
+
+  {
+    "id": "king-god-as-king",
+    "theme": "Kingship",
+    "name": "God as King (Theocracy)",
+    "startYear": 4004,
+    "endYear": 1050,
+    "description": "God rules directly — no human king needed.",
+    "scripture": "Exod 15:18; Judg 8:23",
+    "priority": 2
+  },
+  {
+    "id": "king-israel-demands",
+    "theme": "Kingship",
+    "name": "Israel Demands a King",
+    "startYear": 1050,
+    "endYear": 1050,
+    "description": "\"Give us a king like the nations\" — rejection of God's direct rule.",
+    "scripture": "1 Sam 8:4-22",
+    "priority": 2
+  },
+  {
+    "id": "king-saul-anointed",
+    "theme": "Kingship",
+    "name": "Saul Anointed",
+    "startYear": 1050,
+    "endYear": 1050,
+    "description": "First king — chosen by God through Samuel.",
+    "scripture": "1 Sam 9-10",
+    "linkedEntityId": "selection-of-king-saul",
+    "priority": 2
+  },
+  {
+    "id": "king-saul-rejected",
+    "theme": "Kingship",
+    "name": "Saul Rejected",
+    "startYear": 1020,
+    "endYear": 1020,
+    "description": "\"The LORD has torn the kingdom from you.\"",
+    "scripture": "1 Sam 15:10-29",
+    "priority": 2
+  },
+  {
+    "id": "king-david-anointed",
+    "theme": "Kingship",
+    "name": "David Anointed",
+    "startYear": 1025,
+    "endYear": 1025,
+    "description": "Shepherd boy secretly anointed — God's chosen king.",
+    "scripture": "1 Sam 16:1-13",
+    "priority": 2
+  },
+  {
+    "id": "king-united-kingdom",
+    "theme": "Kingship",
+    "name": "United Kingdom",
+    "startYear": 1050,
+    "endYear": 931,
+    "description": "Saul \u2192 David \u2192 Solomon — the monarchy's rise and peak.",
+    "scripture": "1 Sam-1 Kgs 11",
+    "priority": 2
+  },
+  {
+    "id": "king-davidic-covenant",
+    "theme": "Kingship",
+    "name": "Davidic Covenant",
+    "startYear": 1000,
+    "endYear": 1000,
+    "description": "\"Your throne shall be established forever.\"",
+    "scripture": "2 Sam 7:8-16",
+    "priority": 2
+  },
+  {
+    "id": "king-divides",
+    "theme": "Kingship",
+    "name": "Kingdom Divides",
+    "startYear": 931,
+    "endYear": 931,
+    "description": "Rehoboam's folly splits the kingdom.",
+    "scripture": "1 Kgs 12",
+    "linkedEntityId": "division-of-the-kingdom",
+    "priority": 2
+  },
+  {
+    "id": "king-northern-kingdom",
+    "theme": "Kingship",
+    "name": "Northern Kingdom (Israel)",
+    "startYear": 931,
+    "endYear": 721,
+    "description": "19 kings — all evil, 9 dynasties, ends in Assyrian exile.",
+    "scripture": "1 Kgs 12-2 Kgs 17",
+    "priority": 2
+  },
+  {
+    "id": "king-southern-kingdom",
+    "theme": "Kingship",
+    "name": "Southern Kingdom (Judah)",
+    "startYear": 931,
+    "endYear": 586,
+    "description": "20 kings — Davidic line preserved, some good kings.",
+    "scripture": "1 Kgs 12-2 Kgs 25",
+    "priority": 2
+  },
+  {
+    "id": "king-end-northern",
+    "theme": "Kingship",
+    "name": "End of Northern Kings",
+    "startYear": 721,
+    "endYear": 721,
+    "description": "Hoshea — last king of Israel.",
+    "scripture": "2 Kgs 17",
+    "linkedEntityId": "fall-of-northern-kingdom",
+    "priority": 2
+  },
+  {
+    "id": "king-end-davidic-throne",
+    "theme": "Kingship",
+    "name": "End of Davidic Throne",
+    "startYear": 586,
+    "endYear": 586,
+    "description": "Zedekiah blinded — no Davidic king on earth's throne.",
+    "scripture": "2 Kgs 25:7",
+    "priority": 2
+  },
+  {
+    "id": "king-no-king-exile",
+    "theme": "Kingship",
+    "name": "No King \u2014 Exile",
+    "startYear": 586,
+    "endYear": 538,
+    "description": "Kingless period — only prophetic hope remains.",
+    "scripture": "Lam; Dan",
+    "priority": 2
+  },
+  {
+    "id": "king-zerubbabel",
+    "theme": "Kingship",
+    "name": "Zerubbabel \u2014 Davidic Heir",
+    "startYear": 538,
+    "endYear": 538,
+    "description": "Davidic descendant leads return but is NOT crowned king.",
+    "scripture": "Ezra 2:2; Hag 2:23",
+    "priority": 2
+  },
+  {
+    "id": "king-prophetic-hope",
+    "theme": "Kingship",
+    "name": "Prophetic Hope: Future King",
+    "startYear": 740,
+    "endYear": 435,
+    "description": "Prophets look forward to the ultimate Davidic king.",
+    "scripture": "Isa 9:6-7; Jer 23:5; Ezek 37:24; Dan 7:13-14",
+    "priority": 2
+  },
+
+  {
+    "id": "mes-protoevangelium",
+    "theme": "Messiah",
+    "name": "Protoevangelium \u2014 Seed of the Woman",
+    "startYear": 4000,
+    "endYear": 4000,
+    "description": "First messianic promise: \"He will crush your head.\"",
+    "scripture": "Gen 3:15",
+    "priority": 2
+  },
+  {
+    "id": "mes-seed-abraham",
+    "theme": "Messiah",
+    "name": "Seed of Abraham",
+    "startYear": 2091,
+    "endYear": 2091,
+    "description": "\"Through your offspring all nations will be blessed.\"",
+    "scripture": "Gen 22:18",
+    "priority": 2
+  },
+  {
+    "id": "mes-scepter-judah",
+    "theme": "Messiah",
+    "name": "Scepter of Judah",
+    "startYear": 1859,
+    "endYear": 1859,
+    "description": "\"The scepter shall not depart from Judah\" — Jacob's prophecy.",
+    "scripture": "Gen 49:10",
+    "priority": 2
+  },
+  {
+    "id": "mes-star-jacob",
+    "theme": "Messiah",
+    "name": "Star of Jacob",
+    "startYear": 1406,
+    "endYear": 1406,
+    "description": "Balaam's prophecy: \"A star will come out of Jacob.\"",
+    "scripture": "Num 24:17",
+    "priority": 2
+  },
+  {
+    "id": "mes-prophet-like-moses",
+    "theme": "Messiah",
+    "name": "Prophet Like Moses",
+    "startYear": 1406,
+    "endYear": 1406,
+    "description": "\"The LORD will raise up a prophet like me.\"",
+    "scripture": "Deut 18:15-18",
+    "priority": 2
+  },
+  {
+    "id": "mes-kinsman-redeemer",
+    "theme": "Messiah",
+    "name": "Kinsman-Redeemer (Boaz)",
+    "startYear": 1150,
+    "endYear": 1100,
+    "description": "Boaz as type of Christ — redeems Ruth/Naomi.",
+    "scripture": "Ruth 2-4",
+    "priority": 2
+  },
+  {
+    "id": "mes-davidic-covenant",
+    "theme": "Messiah",
+    "name": "Davidic Covenant",
+    "startYear": 1000,
+    "endYear": 1000,
+    "description": "Eternal throne = eternal King to come.",
+    "scripture": "2 Sam 7:12-16",
+    "priority": 2
+  },
+  {
+    "id": "mes-royal-psalms",
+    "theme": "Messiah",
+    "name": "Royal/Messianic Psalms",
+    "startYear": 1000,
+    "endYear": 900,
+    "description": "David's psalms describe a coming divine king/priest.",
+    "scripture": "Ps 2; 16; 22; 45; 72; 110",
+    "priority": 2
+  },
+  {
+    "id": "mes-immanuel",
+    "theme": "Messiah",
+    "name": "Immanuel \u2014 Virgin Birth",
+    "startYear": 735,
+    "endYear": 735,
+    "description": "\"A virgin shall conceive and bear a son.\"",
+    "scripture": "Isa 7:14",
+    "priority": 2
+  },
+  {
+    "id": "mes-prince-of-peace",
+    "theme": "Messiah",
+    "name": "Prince of Peace",
+    "startYear": 730,
+    "endYear": 730,
+    "description": "\"Wonderful Counselor, Mighty God, Everlasting Father.\"",
+    "scripture": "Isa 9:6-7",
+    "priority": 2
+  },
+  {
+    "id": "mes-root-of-jesse",
+    "theme": "Messiah",
+    "name": "Root of Jesse",
+    "startYear": 730,
+    "endYear": 730,
+    "description": "\"A shoot from the stump of Jesse\" — Davidic restoration.",
+    "scripture": "Isa 11:1-10",
+    "priority": 2
+  },
+  {
+    "id": "mes-suffering-servant",
+    "theme": "Messiah",
+    "name": "Suffering Servant",
+    "startYear": 700,
+    "endYear": 700,
+    "description": "He was \"pierced for our transgressions.\"",
+    "scripture": "Isa 52:13-53:12",
+    "priority": 2
+  },
+  {
+    "id": "mes-born-bethlehem",
+    "theme": "Messiah",
+    "name": "Born in Bethlehem",
+    "startYear": 720,
+    "endYear": 720,
+    "description": "\"Out of you will come a ruler over Israel.\"",
+    "scripture": "Mic 5:2",
+    "priority": 2
+  },
+  {
+    "id": "mes-righteous-branch",
+    "theme": "Messiah",
+    "name": "Righteous Branch",
+    "startYear": 600,
+    "endYear": 600,
+    "description": "\"A King who will reign wisely\" — from David's line.",
+    "scripture": "Jer 23:5-6",
+    "priority": 2
+  },
+  {
+    "id": "mes-new-covenant",
+    "theme": "Messiah",
+    "name": "New Covenant",
+    "startYear": 627,
+    "endYear": 627,
+    "description": "The Messiah's covenant — written on hearts.",
+    "scripture": "Jer 31:31-34",
+    "priority": 2
+  },
+  {
+    "id": "mes-son-of-man",
+    "theme": "Messiah",
+    "name": "Son of Man",
+    "startYear": 553,
+    "endYear": 553,
+    "description": "\"Given dominion, glory, and a kingdom\" — heavenly ruler.",
+    "scripture": "Dan 7:13-14",
+    "priority": 2
+  },
+  {
+    "id": "mes-humble-king",
+    "theme": "Messiah",
+    "name": "Humble King on a Donkey",
+    "startYear": 520,
+    "endYear": 520,
+    "description": "\"Your king comes to you, gentle and riding on a donkey.\"",
+    "scripture": "Zech 9:9",
+    "priority": 2
+  },
+  {
+    "id": "mes-pierced-one",
+    "theme": "Messiah",
+    "name": "Pierced One",
+    "startYear": 520,
+    "endYear": 520,
+    "description": "\"They will look on me, the one they have pierced.\"",
+    "scripture": "Zech 12:10",
+    "priority": 2
+  },
+  {
+    "id": "mes-messenger-covenant",
+    "theme": "Messiah",
+    "name": "Messenger of the Covenant",
+    "startYear": 435,
+    "endYear": 435,
+    "description": "\"I will send my messenger\" — last OT messianic word.",
+    "scripture": "Mal 3:1; 4:5-6",
+    "priority": 2
+  }
+]

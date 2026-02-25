@@ -1,6 +1,7 @@
 interface KingdomBackgroundProps {
   yearToX: (year: number) => number;
   topOffset: number;
+  showLabels?: boolean;
 }
 
 const FIGMA_WIDTH = 8962;
@@ -12,7 +13,7 @@ const EXILE_YEAR = 586;    // BC — start of Exile period
  * Renders kingdom background at exact Figma scale.
  * Positioned so Rectangle 9 left edge sits at 586 BC (Exile start).
  */
-export function KingdomBackground({ yearToX, topOffset }: KingdomBackgroundProps) {
+export function KingdomBackground({ yearToX, topOffset, showLabels = false }: KingdomBackgroundProps) {
   const left = yearToX(EXILE_YEAR) - RECT9_LEFT_X;
 
   return (
@@ -51,6 +52,18 @@ export function KingdomBackground({ yearToX, topOffset }: KingdomBackgroundProps
         <g id="Rectangle 10" filter="url(#filter4_d_147_23)">
           <path d="M8402 430C8402 418.954 8410.95 410 8422 410H8934C8945.05 410 8954 418.954 8954 430V780C8954 791.046 8945.05 800 8934 800H8422C8410.95 800 8402 791.046 8402 780V430Z" fill="#B7CCA9" />
         </g>
+        {showLabels && (
+          <>
+            <rect x="6700" y="172" width="520" height="40" rx="6" fill="#ABC6C3" opacity="0.95" />
+            <text x="6720" y="200" fill="#3A5E5A" opacity="0.85" fontSize="28" fontWeight="700" fontFamily="var(--font-timeline)" letterSpacing="0.12em" textAnchor="start">
+              NORTHERN KINGDOM (ISRAEL)
+            </text>
+            <rect x="6700" y="592" width="520" height="40" rx="6" fill="#EBCF88" opacity="0.95" />
+            <text x="6720" y="620" fill="#6B5520" opacity="0.85" fontSize="28" fontWeight="700" fontFamily="var(--font-timeline)" letterSpacing="0.12em" textAnchor="start">
+              SOUTHERN KINGDOM (JUDAH)
+            </text>
+          </>
+        )}
       </g>
       <defs>
         <filter id="filter0_d_147_23" x="0" y="0" width="6817.17" height="816" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">

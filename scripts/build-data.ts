@@ -97,7 +97,7 @@ interface RawBook {
     themes?: string[];
     author?: string;
     description?: string;
-    scriptureRefs?: string[];
+    sources?: string[];
     relatedPeople?: string[];
     relatedEvents?: string[];
     [key: string]: unknown;
@@ -107,6 +107,8 @@ interface RawTheme {
     id: string;
     color: string;
     description?: string;
+    theologicalDevelopment?: string;
+    sources?: string[];
 }
 
 interface RawPeriod {
@@ -193,7 +195,7 @@ function transformBook(raw: RawBook): TimelineEntity {
         priority: raw.priority,
         author: raw.author,
         description: raw.description,
-        scriptureRefs: raw.scriptureRefs,
+        ...(raw.sources && { sources: raw.sources }),
     };
 }
 
@@ -246,12 +248,13 @@ function dedupePeriodsByRange(periods: TimelineEntity[]): TimelineEntity[] {
         .map((entry) => entry.period);
 }
 
-function transformTheme(raw: RawTheme): { id: string; color: string; description?: string } {
-    // Themes stay as-is; id is uppercase, no name field
+function transformTheme(raw: RawTheme): { id: string; color: string; description?: string; theologicalDevelopment?: string; sources?: string[] } {
     return {
         id: raw.id,
         color: raw.color,
         description: raw.description,
+        ...(raw.theologicalDevelopment && { theologicalDevelopment: raw.theologicalDevelopment }),
+        ...(raw.sources && { sources: raw.sources }),
     };
 }
 

@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Search, Route, X, PanelLeftClose, PanelLeftOpen } from 'lucide-react';
-import { periods, themeColors, themeTags, type ThemeTag } from '../data/timeline-data';
+import { periods, themeColors, type ThemeTag } from '../data/timeline-data';
 
-/** Only show the first 6 themes in the sidebar */
-const NAV_THEMES = themeTags.slice(0, 6);
+/** Only show 4 primary themes in the sidebar */
+const NAV_THEMES: ThemeTag[] = ['Covenant', 'Kingship', 'Land', 'Messiah'];
 
 /** Periods hidden from sidebar nav */
 const HIDDEN_PERIODS = new Set(['dates-unknown']);

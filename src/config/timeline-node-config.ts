@@ -18,7 +18,7 @@ export interface NodeMetrics {
 const FIGMA_SIZES: Record<EntityType, NodeMetrics> = {
   event:  { height: 20, minHeight: 20, showLabel: true, showBadges: true },
   person: { height: 20, minHeight: 20, showLabel: true, showBadges: true },
-  book:   { height: 40, minHeight: 40, showLabel: true, showBadges: true },
+  book:   { height: 20, minHeight: 20, showLabel: true, showBadges: true },
 };
 
 export interface ZoomTier {
@@ -45,11 +45,11 @@ const eventZoomTiers: ZoomTier[] = [
 ];
 
 const bookZoomTiers: ZoomTier[] = [
-  { maxZoom: 0.4, metrics: { height: 3, minHeight: 6, showLabel: true, showBadges: false } },
-  { maxZoom: 0.65, metrics: { height: 6, minHeight: 6, showLabel: true, showBadges: false } },
-  { maxZoom: 0.75, metrics: { height: 12, minHeight: 12, showLabel: true, showBadges: false } },
-  { maxZoom: 1.0, metrics: { height: 12, minHeight: 12, showLabel: true, showBadges: false } },
-  { maxZoom: Infinity, metrics: { height: 18, minHeight: 18, showLabel: true, showBadges: true } },
+  { maxZoom: 0.4, metrics: { height: 6, minHeight: 10, showLabel: true, showBadges: false } },
+  { maxZoom: 0.65, metrics: { height: 10, minHeight: 10, showLabel: true, showBadges: false } },
+  { maxZoom: 0.75, metrics: { height: 16, minHeight: 16, showLabel: true, showBadges: false } },
+  { maxZoom: 1.0, metrics: { height: 16, minHeight: 16, showLabel: true, showBadges: false } },
+  { maxZoom: Infinity, metrics: { height: 20, minHeight: 20, showLabel: true, showBadges: true } },
 ];
 
 const zoomTiersByType: Record<EntityType, ZoomTier[]> = {

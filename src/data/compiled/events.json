@@ -24,8 +24,8 @@
     "id": "adam-eve",
     "type": "event",
     "name": "Adam & Eve",
-    "startYear": 4003,
-    "endYear": 4003,
+    "startYear": 4004,
+    "endYear": 4004,
     "certainty": "estimated",
     "categories": [
       "creation"
@@ -292,7 +292,7 @@
     "categories": [
       "wandering"
     ],
-    "themes": [],
+    "themes": ["Land"],
     "priority": 2,
     "description": "Israel wandered 40 years in the wilderness due to unbelief. God provided manna, water, and the Law while preparing a new generation to enter the Promised Land.",
     "scriptureRefs": [
@@ -581,7 +581,8 @@
       "monarchy"
     ],
     "themes": [
-      "Temple"
+      "Temple",
+      "Covenant"
     ],
     "priority": 2,
     "description": "King Solomon built the magnificent Temple in Jerusalem as a permanent dwelling place for God’s presence among Israel. It took seven years to complete.",
@@ -700,7 +701,9 @@
       "exile"
     ],
     "themes": [
-      "Judgment"
+      "Judgment",
+      "Land",
+      "Kingship"
     ],
     "priority": 2,
     "description": "Assyria conquered the northern kingdom of Israel, deported its people, and resettled the land with foreigners. This ended the northern kingdom.",
@@ -826,7 +829,8 @@
       "exile"
     ],
     "themes": [
-      "Judgment"
+      "Judgment",
+      "Land"
     ],
     "priority": 2,
     "description": "Babylon destroyed Jerusalem and the Temple and deported most of Judah. This began the 70-year exile prophesied by Jeremiah.",
@@ -849,7 +853,8 @@
     ],
     "themes": [
       "Restoration",
-      "Deliverance"
+      "Deliverance",
+      "Land"
     ],
     "priority": 2,
     "description": "Persian king Cyrus issued a decree allowing the Jews to return to Jerusalem and rebuild the Temple. About 50,000 returned under Zerubbabel.",

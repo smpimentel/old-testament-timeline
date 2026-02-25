@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { AnimatePresence } from 'motion/react';
-import { timelineData, periods, kingdomLanes, type TimelineEntity } from './data/timeline-data';
+import { timelineData, periods, kingdomLanes, themeById, themeOverlayByTheme, OVERLAY_THEME_IDS, themeColors, type TimelineEntity, type ThemeTag, type Theme } from './data/timeline-data';
 import { computeTrackLayout, createConfigFromEntities } from './lib/timeline-track-layout';
 import { PeriodSection } from './components/period-section';
 import { UnknownEraBand } from './components/unknown-era-band';
@@ -8,10 +8,11 @@ import { RelationshipOverlay } from './components/relationship-overlay';
 import { TimelineCanvas } from './components/timeline-canvas';
 import { TrackLabels } from './components/track-labels';
 import { SideNavigator, SIDEBAR_WIDTH_OPEN, SIDEBAR_WIDTH_CLOSED } from './components/side-navigator';
-import { TimelineNode, TimeGrid } from './components/timeline-nodes';
+import { TimelineNode, TimeGrid, MinorGridLines } from './components/timeline-nodes';
 import { KingdomBackground } from './components/kingdom-background';
 import { KingdomLaneDivider } from './components/kingdom-lane-divider';
-import { RightRail } from './components/right-rail';
+import { RightRail, type RightRailContent } from './components/right-rail';
+import { ThemeCard } from './components/theme-card';
 import { HoverTooltip } from './components/hover-tooltip';
 import { WelcomeOverlay } from './components/welcome-overlay';
 import {
@@ -33,11 +34,9 @@ const laneStride = trackLayout.events.laneStride; // 28px
 const eventsBaseY = MAIN_TOP + 48;
 
 // Kingdom bands centered in SVG background rectangles
-// Blue rect (Israel): SVG y=0..390, center at SVG y=195
 const northBandHeight = kingdomLanes.northLaneCount * laneStride;
 const kingdomNorthBaseY = MAIN_TOP + 195 - northBandHeight / 2;
 
-// Gold rect (Judah): SVG y=410..800, center at SVG y=605
 const southBandHeight = kingdomLanes.southLaneCount * laneStride;
 const kingdomSouthBaseY = MAIN_TOP + 605 - southBandHeight / 2;
 
@@ -76,10 +75,17 @@ function App() {
   const railWidth = isMobile ? 0 : 360;
   const sidebarWidth = isMobile ? 0 : (sidebarOpen ? SIDEBAR_WIDTH_OPEN : SIDEBAR_WIDTH_CLOSED);
 
+  // Right-rail: unified content (entity or theme)
+  const [rightRailContent, setRightRailContent] = useState<RightRailContent | null>(null);
+
+  // Theme card: shows most-recently-toggled theme
+  const [themeCardId, setThemeCardId] = useState<ThemeTag | null>(null);
+  const [themeCardDismissed, setThemeCardDismissed] = useState(false);
+
   const { pathMode, breadcrumbs, togglePathMode, addBreadcrumb, handleClearBreadcrumbs, breadcrumbEntities, getBreadcrumbNumber } = usePathTracing();
-  const { searchQuery, setSearchQuery, selectedPeriod, setSelectedPeriod, activeThemes, handleThemeToggle, filteredEntities, showSecularContext, handleSecularContextToggle } = useEntityFilter();
-  const { selectedEntity, hoveredEntity, hoverPosition, handleEntityClick: baseHandleEntityClick, handleEntityHover, handleEntityLeave, closeSelection, setSelectedEntity } = useEntitySelection();
-  const { panX, panY, zoomLevel, isDragging, canvasRef, pixelsPerYear, yearToX, panToCenterOnYear, fitYearRangeToView, canvasEventHandlers } = useViewport({ selectedEntityOpen: !!selectedEntity, railWidth });
+  const { searchQuery, setSearchQuery, selectedPeriod, setSelectedPeriod, activeThemes, handleThemeToggle: baseHandleThemeToggle, filteredEntities, showSecularContext, handleSecularContextToggle } = useEntityFilter();
+  const { hoveredEntity, hoverPosition, handleEntityClick: baseHandleEntityClick, handleEntityHover, handleEntityLeave, closeSelection, setSelectedEntity } = useEntitySelection();
+  const { panX, panY, zoomLevel, isDragging, canvasRef, pixelsPerYear, yearToX, panToCenterOnYear, fitYearRangeToView, canvasEventHandlers } = useViewport({ selectedEntityOpen: !!rightRailContent, railWidth });
 
   const handlePeriodSelect = (periodId: string) => {
     const period = periods.find(p => p.id === periodId);
@@ -92,17 +98,37 @@ function App() {
   const handleEntityClick = (entity: TimelineEntity) => {
     if (pathMode) addBreadcrumb(entity.id);
     baseHandleEntityClick(entity);
+    setRightRailContent({ kind: 'entity', entity });
   };
 
   const handleViewRelationship = (targetId: string) => {
     const entity = timelineData.find(e => e.id === targetId);
     if (!entity) return;
     if (pathMode) {
-      if (selectedEntity) addBreadcrumb(selectedEntity.id);
+      const current = rightRailContent?.kind === 'entity' ? rightRailContent.entity : null;
+      if (current) addBreadcrumb(current.id);
       addBreadcrumb(targetId);
     }
     panToCenterOnYear(entity.startYear);
     setSelectedEntity(entity);
+    setRightRailContent({ kind: 'entity', entity });
+  };
+
+  // From theme detail → click associated entity
+  const handleViewEntity = useCallback((entity: TimelineEntity) => {
+    panToCenterOnYear(entity.startYear);
+    setSelectedEntity(entity);
+    setRightRailContent({ kind: 'entity', entity });
+  }, [panToCenterOnYear, setSelectedEntity]);
+
+  // From entity detail → click theme pill
+  const handleViewTheme = useCallback((theme: Theme) => {
+    setRightRailContent({ kind: 'theme', theme });
+  }, []);
+
+  const handleCloseRail = () => {
+    setRightRailContent(null);
+    closeSelection();
   };
 
   const handleSearchSubmit = () => {
@@ -110,9 +136,38 @@ function App() {
     const entity = timelineData.find(e => e.name.toLowerCase().includes(searchQuery.toLowerCase()));
     if (entity) {
       panToCenterOnYear(entity.startYear);
-      setTimeout(() => setSelectedEntity(entity), 300);
+      setTimeout(() => {
+        setSelectedEntity(entity);
+        setRightRailContent({ kind: 'entity', entity });
+      }, 300);
     }
   };
+
+  // Theme toggle: update filter + show card for newly activated theme
+  const handleThemeToggle = (theme: ThemeTag) => {
+    const wasActive = activeThemes.includes(theme);
+    baseHandleThemeToggle(theme);
+
+    if (!wasActive) {
+      // Activating a theme → show card
+      setThemeCardId(theme);
+      setThemeCardDismissed(false);
+    } else if (activeThemes.length === 1 && activeThemes[0] === theme) {
+      // Deactivating last theme → hide card
+      setThemeCardId(null);
+    }
+    // If deactivating but others remain, keep current card
+  };
+
+  // Theme card click → open right-rail theme detail
+  const handleThemeCardClick = () => {
+    if (!themeCardId) return;
+    const theme = themeById.get(themeCardId);
+    if (theme) setRightRailContent({ kind: 'theme', theme });
+  };
+
+  const themeCardTheme = themeCardId ? themeById.get(themeCardId) : null;
+  const showThemeCard = themeCardTheme && !themeCardDismissed && !rightRailContent;
 
   const { unknownVisualBand, unknownEntityXById } = useUnknownEra({
     yearToX, unknownVisualStartYear: UNKNOWN_VISUAL_START_YEAR, unknownVisualEndYear: UNKNOWN_VISUAL_END_YEAR,
@@ -120,8 +175,47 @@ function App() {
 
   const { nodePlacements, nodeLabelVisibility } = useNodePlacements({
     filteredEntities, yearToX, pixelsPerYear, tracks: sectionLayout.tracks,
-    unknownEntityXById, unknownVisualEndYear: UNKNOWN_VISUAL_END_YEAR, zoomLevel,
+    unknownEntityXById, unknownVisualEndYear: UNKNOWN_VISUAL_END_YEAR,
+    unknownBandStartX: unknownVisualBand.startX, zoomLevel,
   });
+
+  // Theme overlay nodes: show when a main theme (Covenant/Kingship/Land/Messiah) is active
+  const activeOverlayTheme = activeThemes.find(t => (OVERLAY_THEME_IDS as readonly string[]).includes(t)) as ThemeTag | undefined;
+  const allOverlayNodes = useMemo(() => {
+    if (!activeOverlayTheme) return [];
+    return themeOverlayByTheme[activeOverlayTheme] || [];
+  }, [activeOverlayTheme]);
+
+  // Split: linked overlay nodes color their main event; unlinked ones render in overlay band
+  const { overlayOnlyNodes, linkedEntityIds } = useMemo(() => {
+    const linked = new Set<string>();
+    const unlinked = allOverlayNodes.filter(n => {
+      if (n.linkedEntityId) { linked.add(n.linkedEntityId); return false; }
+      return true;
+    });
+    return { overlayOnlyNodes: unlinked, linkedEntityIds: linked };
+  }, [allOverlayNodes]);
+
+  const OVERLAY_LANE_STRIDE = 28;
+  const OVERLAY_BASE_Y = 80; // inside period header area
+  const overlayMaxLane = useMemo(() => {
+    return overlayOnlyNodes.reduce((m, n) => Math.max(m, (n.swimlane ?? 0) + 1), 0);
+  }, [overlayOnlyNodes]);
+  const overlayBandHeight = overlayMaxLane * OVERLAY_LANE_STRIDE + 16;
+  const overlayColor = activeOverlayTheme ? themeColors[activeOverlayTheme] : '#F4D19B';
+
+  const overlayPlacements = useMemo(() => {
+    return overlayOnlyNodes.map(entity => {
+      const isUnknownEra = entity.startYear > UNKNOWN_VISUAL_END_YEAR;
+      const x = isUnknownEra
+        ? (unknownEntityXById.get(entity.id) ?? yearToX(entity.startYear))
+        : yearToX(entity.startYear);
+      const endX = entity.endYear ? yearToX(entity.endYear) : x;
+      const width = entity.endYear ? Math.max(0, endX - x) : 32;
+      const isPoint = !entity.endYear;
+      return { entity, x, width, isPoint };
+    });
+  }, [overlayOnlyNodes, yearToX, unknownEntityXById]);
 
   return (
     <div className="h-screen w-screen overflow-hidden" style={{ background: '#F5EDD6' }}>
@@ -139,39 +233,83 @@ function App() {
         canvasRef={canvasRef} canvasEventHandlers={canvasEventHandlers}
         panX={panX} panY={panY} zoomLevel={zoomLevel} isDragging={isDragging}
         sidebarWidth={sidebarWidth} railWidth={railWidth}
-        selectedEntityOpen={!!selectedEntity} foundationHeight={sectionLayout.foundationHeight}
+        selectedEntityOpen={!!rightRailContent} foundationHeight={sectionLayout.foundationHeight}
       >
+        <MinorGridLines startYear={START_YEAR} endYear={END_YEAR} height={sectionLayout.foundationHeight} />
         <div className="absolute pointer-events-none" style={{ left: 0, top: sectionLayout.mainSectionTop, width: TIMELINE_WIDTH, height: 1, background: '#D8CBB7' }} />
         <div className="absolute pointer-events-none" style={{ left: 0, top: sectionLayout.booksSectionTop, width: TIMELINE_WIDTH, height: sectionLayout.booksSectionHeight, background: 'rgba(255, 253, 247, 0.38)', borderTop: '1px solid #D8CBB7' }} />
         <UnknownEraBand startX={unknownVisualBand.startX} width={unknownVisualBand.width} mainSectionTop={sectionLayout.mainSectionTop} mainSectionHeight={sectionLayout.mainSectionHeight} />
         <PeriodSection yearToX={yearToX} pixelsPerYear={pixelsPerYear} totalHeight={sectionLayout.periodSectionHeight} unknownVisualStartYear={UNKNOWN_VISUAL_START_YEAR} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} />
-        <KingdomBackground yearToX={yearToX} topOffset={sectionLayout.mainSectionTop} />
+        {/* Theme overlay band */}
+        {activeOverlayTheme && overlayPlacements.length > 0 && (
+          <>
+            <div
+              className="absolute pointer-events-none"
+              style={{
+                left: 0,
+                top: OVERLAY_BASE_Y - 8,
+                width: TIMELINE_WIDTH,
+                height: overlayBandHeight,
+                background: `${overlayColor}18`,
+                borderTop: `1px solid ${overlayColor}55`,
+                borderBottom: `1px solid ${overlayColor}55`,
+              }}
+            />
+            {/* Overlay theme label */}
+            <div
+              className="absolute pointer-events-none"
+              style={{
+                left: unknownVisualBand.startX + unknownVisualBand.width + 12,
+                top: OVERLAY_BASE_Y - 6,
+                fontSize: '11px',
+                fontWeight: 700,
+                fontFamily: 'var(--font-body)',
+                textTransform: 'uppercase',
+                letterSpacing: '0.06em',
+                color: overlayColor,
+                opacity: 0.8,
+              }}
+            >
+              {activeOverlayTheme} Theme
+            </div>
+            {overlayPlacements.map(({ entity, x, width, isPoint }) => {
+              const nodeHeight = 20;
+              const nodeWidth = isPoint ? nodeHeight : width;
+              const swimlaneOffset = (entity.swimlane ?? 0) * OVERLAY_LANE_STRIDE;
+              return (
+                <TimelineNode
+                  key={`overlay-${entity.id}`}
+                  entity={entity}
+                  x={x}
+                  y={OVERLAY_BASE_Y + swimlaneOffset}
+                  width={nodeWidth}
+                  height={OVERLAY_LANE_STRIDE}
+                  laneStride={OVERLAY_LANE_STRIDE}
+                  zoomLevel={zoomLevel}
+                  isHighlighted={true}
+                  isDimmed={false}
+                  isInBreadcrumb={false}
+                  labelVisible={true}
+                  forcePointNode={isPoint}
+                  overrideColor={overlayColor}
+                  onClick={() => handleEntityClick(entity)}
+                  onMouseEnter={(e) => handleEntityHover(entity, e)}
+                  onMouseLeave={handleEntityLeave}
+                />
+              );
+            })}
+          </>
+        )}
+        <KingdomBackground yearToX={yearToX} topOffset={sectionLayout.mainSectionTop} showLabels={activeOverlayTheme === 'Land'} />
         <TimeGrid startYear={START_YEAR} endYear={END_YEAR} height={sectionLayout.foundationHeight} axisY={sectionLayout.mainSectionTop + 2} />
         <TrackLabels tracks={sectionLayout.tracks} startX={unknownVisualBand.startX} />
         <KingdomLaneDivider yearToX={yearToX} dividerY={MAIN_TOP + 400} />
         <RelationshipOverlay breadcrumbEntities={breadcrumbEntities} unknownVisualEndYear={UNKNOWN_VISUAL_END_YEAR} unknownEntityXById={unknownEntityXById} yearToX={yearToX} tracks={sectionLayout.tracks} />
-        {/* Books coming soon overlay */}
-        <div
-          className="absolute flex items-center justify-center pointer-events-none"
-          style={{
-            left: 0,
-            top: sectionLayout.booksSectionTop,
-            width: TIMELINE_WIDTH,
-            height: sectionLayout.booksSectionHeight,
-            color: 'var(--color-base-text-secondary)',
-            fontSize: '14px',
-            fontFamily: 'var(--font-timeline)',
-            fontStyle: 'italic',
-            letterSpacing: '0.05em',
-          }}
-        >
-          Coming Soon
-        </div>
-        {nodePlacements.filter(({ entity }) => entity.type !== 'book').map(({ entity, x, width, trackBand, forcePointNode }) => {
+        {nodePlacements.map(({ entity, x, width, trackBand, forcePointNode }) => {
           const isHighlighted = activeThemes.length > 0 && entity.themes?.some(t => activeThemes.includes(t));
-          const isDimmed = activeThemes.length > 0 && !isHighlighted;
+          const isLinkedToTheme = linkedEntityIds.has(entity.id);
+          const isDimmed = activeThemes.length > 0 && !isHighlighted && !isLinkedToTheme;
           const breadcrumbNumber = getBreadcrumbNumber(entity.id);
-          // Center "Division of the Kingdom" at Solomon's Y (SVG y=400)
           const y = entity.id === 'division-of-the-kingdom'
             ? MAIN_TOP + 400 - trackBand.laneStride / 2
             : trackBand.baseY;
@@ -179,9 +317,10 @@ function App() {
             <TimelineNode
               key={`${entity.type}-${entity.id}`} entity={entity} x={x} y={y} width={width}
               height={trackBand.laneStride} laneStride={trackBand.laneStride} zoomLevel={zoomLevel}
-              isHighlighted={isHighlighted || false} isDimmed={isDimmed}
+              isHighlighted={isHighlighted || isLinkedToTheme} isDimmed={isDimmed}
               isInBreadcrumb={breadcrumbNumber !== undefined} breadcrumbNumber={breadcrumbNumber}
               labelVisible={nodeLabelVisibility[entity.id]} forcePointNode={forcePointNode}
+              overrideColor={isLinkedToTheme ? overlayColor : undefined}
               onClick={() => handleEntityClick(entity)}
               onMouseEnter={(e) => handleEntityHover(entity, e)}
               onMouseLeave={handleEntityLeave}
@@ -191,13 +330,30 @@ function App() {
       </TimelineCanvas>
 
       <AnimatePresence>
-        {hoveredEntity && !selectedEntity && (
+        {hoveredEntity && !rightRailContent && (
           <HoverTooltip entity={hoveredEntity} x={hoverPosition.x} y={hoverPosition.y} />
         )}
       </AnimatePresence>
       <AnimatePresence>
-        {selectedEntity && (
-          <RightRail entity={selectedEntity} onClose={closeSelection} onViewRelationship={handleViewRelationship} pathMode={pathMode} />
+        {rightRailContent && (
+          <RightRail
+            content={rightRailContent}
+            onClose={handleCloseRail}
+            onViewRelationship={handleViewRelationship}
+            onViewEntity={handleViewEntity}
+            onViewTheme={handleViewTheme}
+            pathMode={pathMode}
+          />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {showThemeCard && themeCardTheme && (
+          <ThemeCard
+            theme={themeCardTheme}
+            sidebarWidth={sidebarWidth}
+            onDismiss={() => setThemeCardDismissed(true)}
+            onClick={handleThemeCardClick}
+          />
         )}
       </AnimatePresence>
       <AnimatePresence>

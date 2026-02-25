@@ -3,7 +3,7 @@
     "id": "adam",
     "type": "person",
     "name": "Adam",
-    "startYear": 4003,
+    "startYear": 4004,
     "endYear": 3074,
     "certainty": "estimated",
     "categories": [
@@ -26,7 +26,7 @@
     "id": "eve",
     "type": "person",
     "name": "Eve",
-    "startYear": 4003,
+    "startYear": 4004,
     "endYear": 3074,
     "certainty": "estimated",
     "categories": [
@@ -119,7 +119,8 @@
       "Patriarch"
     ],
     "themes": [
-      "Judgment"
+      "Judgment",
+      "Covenant"
     ],
     "priority": 2,
     "description": "Noah was a righteous man who walked with God. He built the ark and preserved humanity and animal kinds through the Flood.",
@@ -206,7 +207,7 @@
     "type": "person",
     "name": "Levi",
     "startYear": 1919,
-    "endYear": 1919,
+    "endYear": 1782,
     "certainty": "approximate",
     "categories": [
       "Other"
@@ -227,12 +228,12 @@
     "type": "person",
     "name": "Judah",
     "startYear": 1918,
-    "endYear": 1918,
+    "endYear": 1906,
     "certainty": "approximate",
     "categories": [
       "Other"
     ],
-    "themes": [],
+    "themes": ["Messiah"],
     "priority": 2,
     "description": "Judah was the fourth son of Jacob and Leah, whose tribe became the ruling tribe of Israel. The Messianic line passed through Judah, fulfilling Jacob's prophecy that the scepter would not depart from his descendants.",
     "bio": "",
@@ -276,7 +277,7 @@
     "categories": [
       "Priest"
     ],
-    "themes": [],
+    "themes": ["Covenant"],
     "priority": 2,
     "description": "Aaron was Moses' older brother and Israel's first high priest. He served as Moses' spokesman before Pharaoh and was consecrated to lead Israel's priesthood, though he also led the people in making the golden calf.",
     "scriptureRefs": [
@@ -298,7 +299,9 @@
     ],
     "themes": [
       "Covenant",
-      "Deliverance"
+      "Deliverance",
+      "Land",
+      "Messiah"
     ],
     "priority": 2,
     "description": "Born during Pharaoh’s infanticide, Moses was raised in Pharaoh’s court, fled to Midian, and later led Israel out of Egypt. He received the Law at Sinai.",
@@ -320,7 +323,7 @@
     "categories": [
       "Judge"
     ],
-    "themes": [],
+    "themes": ["Covenant", "Land"],
     "priority": 2,
     "description": "(originally named Hoshea) was Moses’ longtime assistant and the faithful military leader who succeeded him as the commander of Israel. He courageously led the Israelites across the Jordan River into the Promised Land, directed the conquest of Canaan.",
     "scriptureRefs": [
@@ -340,7 +343,7 @@
     "categories": [
       "Other"
     ],
-    "themes": [],
+    "themes": ["Messiah"],
     "priority": 2,
     "description": "Boaz was a wealthy and godly landowner in Bethlehem who served as the kinsman-redeemer for Ruth. He married Ruth, and their son Obed became the grandfather of King David.",
     "scriptureRefs": [
@@ -428,7 +431,8 @@
     ],
     "themes": [
       "Kingship",
-      "Messiah"
+      "Messiah",
+      "Covenant"
     ],
     "priority": 2,
     "description": "David was a shepherd boy anointed by Samuel who became Israel's greatest king, uniting the nation and establishing Jerusalem as its capital. He was called a man after God's own heart and received the covenant promise that his throne would endure forever.",
@@ -452,7 +456,8 @@
     ],
     "themes": [
       "Kingship",
-      "Temple"
+      "Temple",
+      "Covenant"
     ],
     "priority": 2,
     "description": "Solomon was the son of David and Bathsheba who succeeded his father as king of Israel. Renowned for his God-given wisdom, he built the first temple in Jerusalem but later turned to idolatry through his many foreign wives.",
@@ -1410,7 +1415,8 @@
     ],
     "themes": [
       "Judgment",
-      "Covenant"
+      "Covenant",
+      "Messiah"
     ],
     "priority": 2,
     "description": "Jeremiah was called as a prophet while still young and ministered to Judah for over 40 years leading up to and during the Babylonian exile. Known as the weeping prophet, he faithfully proclaimed God's judgment despite intense personal suffering and rejection.",
@@ -1504,7 +1510,7 @@
     "categories": [
       "Prophet"
     ],
-    "themes": [],
+    "themes": ["Messiah"],
     "priority": 2,
     "description": "Daniel was a young Jewish nobleman taken captive to Babylon who rose to serve as a high official under multiple empires. He remained faithful to God throughout his life, receiving apocalyptic visions and surviving the lions' den.",
     "scriptureRefs": [
@@ -1692,7 +1698,7 @@
     "categories": [
       "Prophet"
     ],
-    "themes": [],
+    "themes": ["Messiah"],
     "priority": 2,
     "description": "Malachi was the last Old Testament prophet, ministering to the post-exilic community in Jerusalem. He confronted the people's spiritual apathy, corrupt worship, and broken covenants, while pointing ahead to the coming messenger who would prepare the way for the Lord.",
     "scriptureRefs": [

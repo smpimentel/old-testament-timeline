@@ -43,6 +43,8 @@ export function TimelineCanvas({
       <div
         style={{
           position: 'relative',
+          isolation: 'isolate',
+          background: '#F5EDD6',
           width: TIMELINE_WIDTH,
           height: foundationHeight,
           transform: `translate(${panX}px, ${panY}px) scale(${zoomLevel})`,
