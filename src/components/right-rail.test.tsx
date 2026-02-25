@@ -45,13 +45,13 @@ describe('RightRail a11y', () => {
   let onClose: ReturnType<typeof vi.fn<() => void>>;
   let onViewRelationship: ReturnType<typeof vi.fn<(targetId: string) => void>>;
   let onViewEntity: ReturnType<typeof vi.fn<(entity: TimelineEntity) => void>>;
-  let onViewTheme: ReturnType<typeof vi.fn>;
+  let onViewTheme: ReturnType<typeof vi.fn<(theme: import('../data/timeline-data').Theme) => void>>;
 
   beforeEach(() => {
     onClose = vi.fn<() => void>();
     onViewRelationship = vi.fn<(targetId: string) => void>();
     onViewEntity = vi.fn<(entity: TimelineEntity) => void>();
-    onViewTheme = vi.fn();
+    onViewTheme = vi.fn<(theme: import('../data/timeline-data').Theme) => void>();
   });
 
   afterEach(() => {
