@@ -59,6 +59,12 @@
         "items": {
           "type": "string"
         }
+      },
+      "sources": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
       }
     },
     "required": ["id", "type", "name", "startYear", "endYear", "certainty", "categories"],
