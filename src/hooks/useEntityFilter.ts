@@ -25,9 +25,7 @@ export function useEntityFilter(): UseEntityFilterReturn {
 
   const handleThemeToggle = useCallback((theme: ThemeTag) => {
     setActiveThemes(prev =>
-      prev.includes(theme)
-        ? prev.filter(t => t !== theme)
-        : [...prev, theme]
+      prev.includes(theme) ? [] : [theme]
     );
   }, []);
 

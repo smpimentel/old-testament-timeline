@@ -54,7 +54,7 @@
       "description": {
         "type": "string"
       },
-      "scriptureRefs": {
+      "sources": {
         "type": "array",
         "items": {
           "type": "string"
